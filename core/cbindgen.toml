@@ -1,0 +1,10 @@
+language = "C"
+include_guard = "ZPE_IOT_H"
+pragma_once = true
+usize_is_size_t = true
+
+[parse]
+parse_deps = false
+
+[export]
+include = ["zpe_iot_config_t"]
