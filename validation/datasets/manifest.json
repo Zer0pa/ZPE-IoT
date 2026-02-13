@@ -1,0 +1,53 @@
+{
+  "DS-01": {
+    "status": "READY",
+    "name": "UCI Gas Sensor Array",
+    "url": "https://archive.ics.uci.edu/ml/machine-learning-databases/00322/"
+  },
+  "DS-02": {
+    "status": "READY",
+    "name": "FEMTO Bearing Vibration",
+    "url": "https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/"
+  },
+  "DS-03": {
+    "status": "READY",
+    "provenance": "proxy_generated_unavailable",
+    "name": "Intel Lab Temperature",
+    "url": "http://db.csail.mit.edu/labdata/labdata.html"
+  },
+  "DS-04": {
+    "status": "READY",
+    "name": "SHL Locomotion IMU",
+    "url": "http://www.shl-dataset.org/"
+  },
+  "DS-05": {
+    "status": "READY",
+    "name": "NOAA Weather Hourly",
+    "url": "https://www.ncei.noaa.gov/data/global-hourly/"
+  },
+  "DS-06": {
+    "status": "READY",
+    "name": "Numenta NAB",
+    "url": "https://github.com/numenta/NAB"
+  },
+  "DS-07": {
+    "status": "READY",
+    "name": "GeoLife GPS",
+    "url": "https://www.microsoft.com/en-us/download/details.aspx?id=52367"
+  },
+  "DS-08": {
+    "status": "READY",
+    "name": "DEBS 2012 Manufacturing",
+    "url": "https://debs.org/grand-challenges/2012/"
+  },
+  "DS-09": {
+    "status": "READY",
+    "name": "Synthetic White Noise",
+    "generated": true
+  },
+  "DS-10": {
+    "status": "READY",
+    "name": "Synthetic Sine Sweep",
+    "generated": true
+  }
+}
