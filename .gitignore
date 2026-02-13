@@ -12,6 +12,8 @@ python/build/
 python/dist/
 *.egg-info/
 /results/
+examples/rust/embedded_demo/target/
+examples/c/arduino_demo/*.o
 
 validation/results/**/*.png
 validation/results/**/*.json
