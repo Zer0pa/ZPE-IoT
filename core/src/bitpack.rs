@@ -107,7 +107,7 @@ pub fn pack<const N: usize>(stream: &EncodedStream<N>, output: &mut [u8]) -> Res
                     if idx + 2 + 2 > output.len() {
                         return Err(PackError::OutputTooSmall);
                     }
-                    let chunk = remaining.min(127) as u16;
+                    let chunk = remaining.min(127);
                     let token: u16 = ((d as u16 & 0x07) << 13)
                         | ((m as u16 & 0x3F) << 7)
                         | (chunk & 0x7F);
@@ -186,7 +186,7 @@ pub fn unpack<const N: usize>(bytes: &[u8]) -> Result<EncodedStream<N>, UnpackEr
                 idx += 2;
                 let d = ((token >> 13) & 0x07) as u8;
                 let m = ((token >> 7) & 0x3F) as u8;
-                let count = (token & 0x7F) as u16;
+                let count = token & 0x7F;
                 if count == 0 {
                     continue;
                 }

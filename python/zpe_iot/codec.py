@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import os
+import zlib
 from dataclasses import dataclass
 from enum import Enum
 from typing import Iterable, List, Sequence, Tuple, Union
@@ -19,6 +21,10 @@ ADAPTIVE_ALPHA = 0.95
 PACKET_MAGIC = 0x5A50
 PACKET_VERSION = 0x01
 CRC_POLY = 0x1021
+WI1_MAGIC = b"ZW1"
+WI1_VERSION = 1
+ZH1_MAGIC = b"ZH1"
+ZH1_VERSION = 1
 
 DIRECTION_DELTAS = {
     0: 0.0,
@@ -321,6 +327,85 @@ def _fixed_to_step(step_fixed: int) -> float:
     return float(step_fixed) / 10000.0
 
 
+def _wi1_enabled() -> bool:
+    return os.getenv("ZPE_IOT_WI1_ENTROPY_STAGE", "0") == "1"
+
+
+def _zh1_enabled() -> bool:
+    return os.getenv("ZPE_IOT_ZH1_DERIVATIVE_STAGE", "0") == "1"
+
+
+def _delta_encode_bytes(payload: bytes) -> bytes:
+    if not payload:
+        return payload
+    out = bytearray(len(payload))
+    prev = payload[0]
+    out[0] = prev
+    for i in range(1, len(payload)):
+        cur = payload[i]
+        out[i] = (cur - prev) & 0xFF
+        prev = cur
+    return bytes(out)
+
+
+def _delta_decode_bytes(payload: bytes) -> bytes:
+    if not payload:
+        return payload
+    out = bytearray(len(payload))
+    acc = payload[0]
+    out[0] = acc
+    for i in range(1, len(payload)):
+        acc = (acc + payload[i]) & 0xFF
+        out[i] = acc
+    return bytes(out)
+
+
+def _maybe_wrap_wi1(packet: bytes) -> bytes:
+    if not _wi1_enabled():
+        return packet
+
+    # WI-1 (experimental): entropy-stage wrapper over the deterministic packet stream.
+    compressed = zlib.compress(packet, level=1)
+    wrapped = WI1_MAGIC + bytes([WI1_VERSION]) + len(packet).to_bytes(4, "little") + compressed
+    return wrapped if len(wrapped) < len(packet) else packet
+
+
+def _maybe_unwrap_wi1(packet: bytes) -> bytes:
+    if len(packet) < 8 or packet[:3] != WI1_MAGIC:
+        return packet
+
+    if packet[3] != WI1_VERSION:
+        raise ValueError("Unsupported WI-1 packet version")
+
+    expected_len = int.from_bytes(packet[4:8], "little")
+    inner = zlib.decompress(packet[8:])
+    if expected_len > 0 and len(inner) != expected_len:
+        raise ValueError("WI-1 payload length mismatch")
+    return inner
+
+
+def _maybe_wrap_zh1(packet: bytes) -> bytes:
+    if not _zh1_enabled():
+        return packet
+    shaped = _delta_encode_bytes(packet)
+    compressed = zlib.compress(shaped, level=1)
+    wrapped = ZH1_MAGIC + bytes([ZH1_VERSION]) + len(packet).to_bytes(4, "little") + compressed
+    return wrapped if len(wrapped) < len(packet) else packet
+
+
+def _maybe_unwrap_zh1(packet: bytes) -> bytes:
+    if len(packet) < 8 or packet[:3] != ZH1_MAGIC:
+        return packet
+    if packet[3] != ZH1_VERSION:
+        raise ValueError("Unsupported ZH-1 packet version")
+    expected_len = int.from_bytes(packet[4:8], "little")
+    shaped = zlib.decompress(packet[8:])
+    inner = _delta_decode_bytes(shaped)
+    if expected_len > 0 and len(inner) != expected_len:
+        raise ValueError("ZH-1 payload length mismatch")
+    return inner
+
+
 def pack_stream(stream: EncodedStream) -> bytes:
     header = bytearray()
     header += int(PACKET_MAGIC).to_bytes(2, "little")
@@ -353,10 +438,11 @@ def pack_stream(stream: EncodedStream) -> bytes:
 
     packet = bytes(header + payload)
     crc = _crc16_ccitt(packet)
-    return packet + int(crc).to_bytes(2, "little")
+    return _maybe_wrap_zh1(_maybe_wrap_wi1(packet + int(crc).to_bytes(2, "little")))
 
 
 def unpack_stream(packet: bytes) -> EncodedStream:
+    packet = _maybe_unwrap_wi1(_maybe_unwrap_zh1(packet))
     if len(packet) < 14:
         raise ValueError("Packet too short")
 

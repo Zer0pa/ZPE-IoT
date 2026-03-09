@@ -51,3 +51,23 @@ def test_monotonicity_threshold_vs_cr():
     ratios = [zpe_iot.encode(x, preset="vibration", threshold=t).compression_ratio for t in thresholds]
 
     assert all(ratios[i] <= ratios[i + 1] + 1e-9 for i in range(len(ratios) - 1))
+
+
+def test_wi1_entropy_stage_roundtrip(monkeypatch):
+    x = np.repeat(np.sin(np.linspace(0, 8 * np.pi, 1024)), 2)
+    monkeypatch.setenv("ZPE_IOT_WI1_ENTROPY_STAGE", "1")
+    packet = zpe_iot.encode(x, preset="generic").to_bytes()
+    y = zpe_iot.decode(packet)
+
+    assert len(y) == len(x)
+    assert np.isfinite(y).all()
+
+
+def test_zh1_derivative_stage_roundtrip(monkeypatch):
+    x = np.sin(np.linspace(0, 16 * np.pi, 2048)) + 0.1 * np.sin(np.linspace(0, 64 * np.pi, 2048))
+    monkeypatch.setenv("ZPE_IOT_ZH1_DERIVATIVE_STAGE", "1")
+    packet = zpe_iot.encode(x, preset="voltage").to_bytes()
+    y = zpe_iot.decode(packet)
+
+    assert len(y) == len(x)
+    assert np.isfinite(y).all()

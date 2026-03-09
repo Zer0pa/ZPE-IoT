@@ -1,0 +1,47 @@
+[
+  {
+    "id": "braille_cell_scan",
+    "source": "Braille reading sweep (active tactile exploration; fingers scan left-right and micro-correct)",
+    "citation": "Lederman & Klatzky (1987) exploratory procedures; Johansson & Flanagan (2009)",
+    "receptor": "RA_I",
+    "region": "INDEX_TIP",
+    "directions": [0, 0, 0, 4, 0, 0],
+    "pressure_profile": [2, 2, 3, 2, 3, 2]
+  },
+  {
+    "id": "edge_contour_follow",
+    "source": "Edge contour-following while identifying object boundary",
+    "citation": "Lederman & Klatzky (1987); DiCarlo & Johnson (2000)",
+    "receptor": "SA_I",
+    "region": "INDEX_TIP",
+    "directions": [0, 0, 6, 6, 4, 4, 2, 2],
+    "pressure_profile": [3, 3, 3, 3, 3, 3, 3, 3]
+  },
+  {
+    "id": "grip_force_ramp",
+    "source": "Grip force increase then release during object manipulation",
+    "citation": "Johansson & Flanagan (2009)",
+    "receptor": "SA_II",
+    "region": "THUMB_TIP",
+    "directions": [2, 2, 2, 6, 6, 6],
+    "pressure_profile": [1, 3, 5, 5, 3, 1]
+  },
+  {
+    "id": "slip_correction",
+    "source": "Micro-slip correction with rapid lateral movement",
+    "citation": "Johansson & Flanagan (2009)",
+    "receptor": "RA_I",
+    "region": "INDEX_TIP",
+    "directions": [0, 4, 0, 4, 0],
+    "pressure_profile": [2, 2, 2, 2, 2]
+  },
+  {
+    "id": "texture_probe_pacinian",
+    "source": "Texture discrimination via vibrotactile channel during lateral scan",
+    "citation": "Hollins & Risner (2000); Bensmaia & Hollins (2003)",
+    "receptor": "RA_II",
+    "region": "INDEX_TIP",
+    "directions": [0, 0, 0, 0],
+    "pressure_profile": [1, 3, 5, 7]
+  }
+]

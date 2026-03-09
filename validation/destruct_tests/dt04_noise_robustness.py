@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""DT-04: Noise Robustness. PASS if mean NRMSE < 8% on noisy DS-01..DS-08 windows."""
+"""DT-04: Noise Robustness. Passes at 8% default with ratified DS-03/DS-08 overrides."""
 
 from __future__ import annotations
 
 import numpy as np
 
 from _common import available_or_skip, dataset_preset, ensure_datasets, log_result, print_case, safe_encode_decode, windows
+from thresholds import MAX_NRMSE_NOISY_BY_DATASET, MAX_NRMSE_NOISY_DEFAULT
 from validation.datasets.loader import load_dataset
+from validation.metrics.fidelity import FidelityMode, fidelity_label, nrmse
+
+DT04_MODE = FidelityMode.DATASET_NORMALIZED
 
 
 def add_noise_10db(x: np.ndarray, rng: np.random.Generator) -> np.ndarray:
@@ -39,16 +43,15 @@ def main() -> int:
         for w in ds_windows:
             noisy = add_noise_10db(w, rng)
             _, recon = safe_encode_decode(noisy, preset=preset, mode="balanced")
-            nrmse = float(np.sqrt(np.mean((noisy - recon) ** 2)) / max(1e-9, ds_range))
-            errs.append(nrmse)
+            errs.append(nrmse(noisy, recon, mode=DT04_MODE, dataset_range=ds_range))
 
         mean_err = float(np.mean(errs))
-        limit = 0.12 if ds in {"DS-03", "DS-08"} else 0.08
+        limit = float(MAX_NRMSE_NOISY_BY_DATASET.get(ds, MAX_NRMSE_NOISY_DEFAULT))
         if mean_err > limit:
             ok = False
-            print_case("FAIL", f"{ds} mean NRMSE={mean_err:.4f} > {limit:.2f}")
+            print_case("FAIL", f"{ds} mean {fidelity_label(DT04_MODE)}={mean_err:.4f} > {limit:.2f}")
         else:
-            print_case("PASS", f"{ds} mean NRMSE={mean_err:.4f} (limit {limit:.2f})")
+            print_case("PASS", f"{ds} mean {fidelity_label(DT04_MODE)}={mean_err:.4f} (limit {limit:.2f})")
 
     log_result("DT-04", "PASS" if ok else "FAIL", {"datasets": len(datasets)})
     return 0 if ok else 1

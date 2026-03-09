@@ -1,0 +1,42 @@
+[phase2_fresh_env_smoke] start_utc=2026-02-20T18:04:09Z
+tmp_root=validation/results/fresh_env_phase2_20260220T180409
+wheel=python/dist/zpe_iot-0.1.0-py3-none-any.whl
+Requirement already satisfied: pip in ./validation/results/fresh_env_phase2_20260220T180409/venv/lib/python3.14/site-packages (25.3)
+Collecting pip
+  Using cached pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)
+Using cached pip-26.0.1-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 25.3
+    Uninstalling pip-25.3:
+      Successfully uninstalled pip-25.3
+Successfully installed pip-26.0.1
+Processing ./python/dist/zpe_iot-0.1.0-py3-none-any.whl
+Collecting numpy>=1.24 (from zpe-iot==0.1.0)
+  Using cached numpy-2.4.2-cp314-cp314-macosx_14_0_x86_64.whl.metadata (6.6 kB)
+Collecting click>=8.0 (from zpe-iot==0.1.0)
+  Using cached click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting cffi>=1.16 (from zpe-iot==0.1.0)
+  Using cached cffi-2.0.0-cp314-cp314-macosx_10_13_x86_64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=1.16->zpe-iot==0.1.0)
+  Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Using cached cffi-2.0.0-cp314-cp314-macosx_10_13_x86_64.whl (185 kB)
+Using cached click-8.3.1-py3-none-any.whl (108 kB)
+Using cached numpy-2.4.2-cp314-cp314-macosx_14_0_x86_64.whl (6.5 MB)
+Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+Installing collected packages: pycparser, numpy, click, cffi, zpe-iot
+
+Successfully installed cffi-2.0.0 click-8.3.1 numpy-2.4.2 pycparser-3.0 zpe-iot-0.1.0
+Wrote validation/results/fresh_env_phase2_20260220T180409/packet.zpk
+Samples: 10
+Packed size: 20 bytes
+Compression ratio: 4.00x
+{"adaptive": true, "command": "info", "compression_ratio": 4.0, "exit_code": 0, "mode": "balanced", "native_available": false, "packed_size": 20, "preset_id": 8, "sample_count": 10, "step": 0.0045}
+Wrote validation/results/fresh_env_phase2_20260220T180409/restored.csv
+Recovered 10 samples
+zpe-iot CR: 4.00x
+zpe-iot NRMSE(window-normalized): 0.0029
+zlib CR: 1.63x
+{"argv0": "validation/results/fresh_env_phase2_20260220T180409/venv/bin/zpe-iot", "chemosense_available": true, "chemosense_error": null, "chemosense_modules": ["mental", "smell", "taste", "touch", "ChemosenseError", "ChemosenseSchemaError", "ChemosensePacketError", "encode_smell_payload", "decode_smell_payload", "encode_taste_payload", "decode_taste_payload", "encode_touch_payload", "decode_touch_payload", "encode_mental_payload", "decode_mental_payload", "run_smoke_flow"], "command": "diagnostics", "exit_code": 0, "implementation": "CPython", "native_available": false, "native_lib_env": null, "platform": "macOS-15.5-x86_64-i386-64bit-Mach-O", "python_version": "3.14.0"}
+[phase2_fresh_env_smoke] end_utc=2026-02-20T18:04:22Z
+phase2_fresh_env_gate=PASS

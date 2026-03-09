@@ -1,0 +1,162 @@
+{
+  "timestamp": "20260220T035756",
+  "bundle_path": "/Users/prinivenpillay/ZPE IoT/zpe-iot/release/RC_CHEMOSENSE_20260220T035756",
+  "file_count": 31,
+  "files": [
+    {
+      "path": "docs/ARCH_TIGHTNESS_AUDIT.md",
+      "sha256": "88be109bda08f925f97ad7e90bd9e38252d41b794dec1adc5df084c4b579bd27",
+      "bytes": 5767
+    },
+    {
+      "path": "docs/BENCHMARKS.md",
+      "sha256": "59c9b99fb137d1fe07dc290deedc953efa3dad7fe041a3ee0b58c6dc0b84e73c",
+      "bytes": 3319
+    },
+    {
+      "path": "docs/CHEMOSENSE_EXTENSION.md",
+      "sha256": "c61b82f9be3e1ca7e7da186cb278208ce9fd3827bdacbf71e33bcb4f39631b18",
+      "bytes": 2925
+    },
+    {
+      "path": "docs/CLI_CONTRACT.md",
+      "sha256": "a6b2496aada316689d32747f38c075b59119b65a426231e52aa3afdad7436a01",
+      "bytes": 1630
+    },
+    {
+      "path": "docs/OUTREACH_TEMPLATE.md",
+      "sha256": "bb6bb58a04edbe66fb58086936e810baf4cbd40a6d5c55a01a4e8ca2a40902b9",
+      "bytes": 739
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "fec0477cfabc99ab4e2cf3661e57437e46298d8700ff4ac981dc411b7f468df5",
+      "bytes": 2857
+    },
+    {
+      "path": "docs/RELEASE_CHECKLIST.md",
+      "sha256": "f633218b4d12841bd81a8e8f3c066c3db9cd0e02515409a71a4120417f174857",
+      "bytes": 1620
+    },
+    {
+      "path": "docs/ZPE_IOT_SALES_BRIEF.md",
+      "sha256": "96ca437da4af0e8d6a378c2c80cc94d525259083d9f397dc4ed8083bc50b7792",
+      "bytes": 1284
+    },
+    {
+      "path": "docs/perf/chemosense_profile_20260220T033607.md",
+      "sha256": "86fd06da1738e784578be05822c7b96ccfa3cf843cf63affbf79a412fbfa4402",
+      "bytes": 724
+    },
+    {
+      "path": "docs/perf/chemosense_profile_20260220T035037.md",
+      "sha256": "2c3891e5410a8f937e5684bbb4b50c95a5461dfd3d032d33aa572442d1a47b06",
+      "bytes": 724
+    },
+    {
+      "path": "validation_datasets/manifest_chemosense.json",
+      "sha256": "bd0143490bc9404084c035e511452ead76a7f68c09a7bca967abb586b148d147",
+      "bytes": 2530
+    },
+    {
+      "path": "validation_datasets/raw_chemosense/CS-01_smell_airquality_extract.csv",
+      "sha256": "122fcb444a2900832309a4bccd9701fede3a21aa9da50b5e397de71bb5c9f930",
+      "bytes": 87832
+    },
+    {
+      "path": "validation_datasets/raw_chemosense/CS-02_taste_wine_extract.csv",
+      "sha256": "11bf86ddb220530b5942a6fc26c4db12b383d5d14612da1e5d4982602f391f15",
+      "bytes": 56637
+    },
+    {
+      "path": "validation_datasets/raw_chemosense/CS-02_winequality_red_raw.csv",
+      "sha256": "4a402cf041b025d4566d954c3b9ba8635a3a8a01e039005d97d6a710278cf05e",
+      "bytes": 84199
+    },
+    {
+      "path": "validation_datasets/raw_chemosense/CS-03_fusion_proxy.jsonl",
+      "sha256": "c1eed60278fe339a129c7d5bcd9f6e3b059dd855a212c039fb229379fb2069fd",
+      "bytes": 136362
+    },
+    {
+      "path": "validation_datasets/raw_chemosense/CS-03_fusion_proxy_raw.csv",
+      "sha256": "7baea823a0f89b3a54a215f35e97962817330fdf595498f6f684bd82e3dda89a",
+      "bytes": 60210
+    },
+    {
+      "path": "validation_results/bench_summary_20260220T035021.json",
+      "sha256": "6784abd736e5848141bf3732d2fe6d49a508fec132bf1090a50a9e7cd85a89d4",
+      "bytes": 5512
+    },
+    {
+      "path": "validation_results/bench_summary_E0_proxy_20260220T035021.json",
+      "sha256": "8d4ecd00a072f9c374dad69ac627a1d062fe8e787cc3d25c541f8022defae76a",
+      "bytes": 2109
+    },
+    {
+      "path": "validation_results/bench_summary_E1_real_public_20260220T035021.json",
+      "sha256": "6784abd736e5848141bf3732d2fe6d49a508fec132bf1090a50a9e7cd85a89d4",
+      "bytes": 5512
+    },
+    {
+      "path": "validation_results/bench_summary_E2_real_customer_20260220T035021.json",
+      "sha256": "7ec905b9e2fe41e39748f9617c61018f956c9dd888f1e3071b28d6fd53533456",
+      "bytes": 2109
+    },
+    {
+      "path": "validation_results/bench_summary_chemosense_20260220T035032.json",
+      "sha256": "27c41a226b5b12fcb94f8ac460444ee7236af527e0738c5bf9abf2dcdd7411c3",
+      "bytes": 2122
+    },
+    {
+      "path": "validation_results/dt_results_20260220T035752.json",
+      "sha256": "3d111410a28c302133491ed4ba0b7850c194310e936c91e79047699e1238b339",
+      "bytes": 843
+    },
+    {
+      "path": "validation_results/license_manifest_20260219T011534.json",
+      "sha256": "7c0eabe333e65f17ab57a0dc1c99005631269a40d0a7b85744f6eebd479c7fc5",
+      "bytes": 15682
+    },
+    {
+      "path": "validation_results/perf_profile_chemosense_20260220T035037.json",
+      "sha256": "c7ddcc7b4fc7bc4dd6008f68505f9151b9efac10b35acd8c4ffbc86f8a3bb1fb",
+      "bytes": 1513
+    },
+    {
+      "path": "validation_results/perf_profile_hot_paths_20260219T023929.json",
+      "sha256": "dc9f92c77db899df03bff49f61341880da99e89a4560f27f4b5c45bf6164d83b",
+      "bytes": 3020
+    },
+    {
+      "path": "validation_results/release_manifest_20260219T011534.json",
+      "sha256": "5d0aedd450e1c9fa20abe35d624068c927e89476114fa8cd6eb7fbdb7fc098e3",
+      "bytes": 2682
+    },
+    {
+      "path": "validation_results/sbom_20260219T011534.json",
+      "sha256": "ba5c29f99f0d23f8684da6975e0d19cc90fc4b90fa8b5750f1e9a501b114c3c7",
+      "bytes": 527
+    },
+    {
+      "path": "validation_results/sbom_python_20260219T011534.json",
+      "sha256": "07a43a99b6ff349c68d1318e62839ec9810994c2e247544fe7e0f9f1aab0eb3f",
+      "bytes": 111715
+    },
+    {
+      "path": "validation_results/sbom_rust_20260219T011534.json",
+      "sha256": "b7a9277e340450e45301f34c1e592ab09a3a8e0214e443caa90d7189e0558794",
+      "bytes": 7070
+    },
+    {
+      "path": "validation_results/wi1_ablation_20260219T025552.json",
+      "sha256": "62f34a3b157c917cc2ef333cf5d25f39127b685019b68f2834eacfc321f74855",
+      "bytes": 13592
+    },
+    {
+      "path": "validation_results/zh1_ablation_20260219T030327.json",
+      "sha256": "18f2694ae3f5856165bfa085d391a90b3bf971cc47b3ef4d9295e96d1ebee678",
+      "bytes": 8595
+    }
+  ]
+}

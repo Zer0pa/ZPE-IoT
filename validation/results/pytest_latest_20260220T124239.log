@@ -1,0 +1,52 @@
+...............................................................          [100%]
+================================ tests coverage ================================
+_______________ coverage: platform darwin, python 3.14.0-final-0 _______________
+
+Name                                            Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------------
+zpe_iot/__init__.py                                 5      0   100%
+zpe_iot/_native.py                                 74     13    82%   46, 124, 126, 138, 148-158
+zpe_iot/chemosense/__init__.py                      3      0   100%
+zpe_iot/chemosense/common/__init__.py               3      0   100%
+zpe_iot/chemosense/common/constants.py             18      0   100%
+zpe_iot/chemosense/common/quantize.py              90      3    97%   80-81, 89
+zpe_iot/chemosense/contract.py                    340    105    69%   25, 31, 33, 39, 51, 57, 62-69, 78, 80, 96-97, 111, 123-124, 129, 134-141, 146, 151-158, 172, 175, 187-188, 193, 198-205, 210, 215-222, 227, 232-239, 249, 251, 262, 264, 273, 277, 281, 297-298, 311, 316, 323-324, 331-332, 356, 361, 367-368, 375-376, 403, 408, 413, 417-418, 425-426, 450, 455, 460, 464-465, 472-473
+zpe_iot/chemosense/mental/__init__.py               7      0   100%
+zpe_iot/chemosense/mental/codec.py                  8      2    75%   14, 20
+zpe_iot/chemosense/mental/form_constants.py        54      0   100%
+zpe_iot/chemosense/mental/ingest.py                70      4    94%   102, 104-105, 108
+zpe_iot/chemosense/mental/pack.py                 276     24    91%   95, 120, 125, 160, 165, 170, 189, 194, 198, 200, 204, 206, 256, 275, 342, 397-398, 402, 409, 415, 419, 421, 467, 469
+zpe_iot/chemosense/mental/symmetry.py              50     13    74%   13, 15, 18-20, 24, 26, 28, 31, 53, 70, 75, 77, 86
+zpe_iot/chemosense/mental/types.py                 93     20    78%   78-86, 125-136, 157, 159, 163, 165, 167
+zpe_iot/chemosense/smell/__init__.py                7      0   100%
+zpe_iot/chemosense/smell/adaptation.py             31      1    97%   17
+zpe_iot/chemosense/smell/codec.py                  30      1    97%   36
+zpe_iot/chemosense/smell/molecular_bridge.py       62     14    77%   33, 37, 65, 68-71, 77, 79, 83-86, 104-106
+zpe_iot/chemosense/smell/odor_space.py             86      4    95%   38, 94-95, 113
+zpe_iot/chemosense/smell/pack.py                  132     18    86%   35, 55, 101, 127-128, 131, 135-136, 140-141, 146-147, 156-158, 166, 170, 174
+zpe_iot/chemosense/smell/phase5_augment.py        366     56    85%   43, 46, 48, 50, 63, 68, 70, 82, 86, 101-109, 114, 143, 145, 147, 156, 158, 163, 168, 170, 174, 177, 185-192, 199, 201, 206, 213, 227, 246, 258, 261, 332, 403-404, 408-409, 413-414, 418-419, 428-430, 439, 442, 516, 584
+zpe_iot/chemosense/smell/types.py                  63      9    86%   12, 14, 53, 58, 72, 76, 78, 80, 83
+zpe_iot/chemosense/taste/__init__.py                7      0   100%
+zpe_iot/chemosense/taste/codec.py                  30      4    87%   39, 50, 54-56
+zpe_iot/chemosense/taste/fusion_scheduler.py      171     19    89%   29, 63, 88, 125, 138, 144, 147, 164, 166, 170, 173, 181, 183, 192-195, 209, 211
+zpe_iot/chemosense/taste/pack.py                  290     39    87%   56, 85-86, 92, 102, 124, 126, 163, 183-185, 188, 193-195, 208-210, 223, 237, 259, 295-296, 301, 305, 319, 355, 371, 384-386, 395, 398-400, 405-407, 483
+zpe_iot/chemosense/taste/taste_space.py           160      5    97%   45, 69, 98, 135-136
+zpe_iot/chemosense/taste/temporal_codebook.py      45      2    96%   27, 69
+zpe_iot/chemosense/taste/types.py                 121     13    89%   14, 16, 75, 81, 83, 96, 101, 103, 108, 133, 154, 156, 160
+zpe_iot/chemosense/touch/__init__.py                7      0   100%
+zpe_iot/chemosense/touch/anatomy.py                18      1    94%   51
+zpe_iot/chemosense/touch/codec.py                   8      2    75%   13, 19
+zpe_iot/chemosense/touch/pack.py                  321     45    86%   68, 70, 81, 83, 113, 115, 126, 128, 137, 158, 162, 164, 166, 168, 181, 194, 202, 207, 209, 216, 218, 225, 241, 280-281, 298, 300, 311, 313, 329, 334, 353-354, 358-360, 368-371, 407, 409, 412, 444, 495-496
+zpe_iot/chemosense/touch/phase5_extensions.py     137     16    88%   97, 99, 110, 112, 127, 145, 147, 158, 160, 178, 180, 182, 197, 199, 219, 224
+zpe_iot/chemosense/touch/proprioception.py         47      6    87%   33, 35, 40, 46, 64, 66
+zpe_iot/chemosense/touch/receptor_model.py         39      2    95%   57, 102
+zpe_iot/chemosense/touch/types.py                 121     30    75%   32, 35, 86, 90, 92, 108-125, 141, 144, 148, 151, 160, 163-175
+zpe_iot/cli.py                                    189     32    83%   41, 52, 132, 134, 136, 194, 221-227, 229-235, 256-257, 262-263, 287-290, 312-315
+zpe_iot/codec.py                                  342     43    87%   101, 105, 117, 148, 170, 180-183, 196, 198, 206, 226-227, 267, 275, 284, 294, 300, 305-306, 340, 353, 378, 383, 400, 405, 424-429, 450, 452, 457, 463, 476-480, 483
+zpe_iot/presets.py                                 21      2    90%   89, 94
+-----------------------------------------------------------------------------
+TOTAL                                            3942    548    86%
+Coverage HTML written to dir ../validation/results/coverage/python_html
+Coverage XML written to file ../validation/results/coverage/python_coverage.xml
+Required test coverage of 85% reached. Total coverage: 86.10%
+63 passed in 17.78s

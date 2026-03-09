@@ -1,0 +1,36 @@
+{
+  "timestamp_utc": "2026-02-20T18:02:27.874290+00:00",
+  "commit_sha": "d95254a9b62f79b8ead3087665a338fb5c70bfcf",
+  "build_toolchain": {
+    "python": "Python 3.14.0",
+    "pip": "pip 26.0.1 from /Users/prinivenpillay/ZPE IoT/zpe-iot/.venv/lib/python3.14/site-packages/pip (python 3.14)",
+    "cargo": "cargo 1.90.0 (840b83a10 2025-07-30)",
+    "rustc": "rustc 1.90.0 (1159e78c4 2025-09-14)\nbinary: rustc\ncommit-hash: 1159e78c4747b02ef996e55082b704c09b970588\ncommit-date: 2025-09-14\nhost: aarch64-apple-darwin\nrelease: 1.90.0\nLLVM version: 20.1.8"
+  },
+  "build_toolchain_hashes": {
+    "python": "9f56a79652b8183c6cb257de9ccfb1be424e19112651611840eab3c4e1c867b3",
+    "pip": "62bc41e08b0ecf04fc3b64f7ff892a52aa19c363ebf80123885051deb1296a07",
+    "cargo": "da2b28a845602c049d30d9c8615451e0082fcdf61fbefa810ea221163ee1c893",
+    "rustc": "49a733de9bcc5e2734dd19f5b11d248ade480fd9a9413d4b462afe7181e32d36"
+  },
+  "benchmark_artifacts": [
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T200218.json"
+  ],
+  "dt_artifacts": [
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/dt_results_20260220T195944.json"
+  ],
+  "security_artifacts": [
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/vulnerability_scan_20260220T180221.json",
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/sbom_20260220T180226.json",
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/license_manifest_20260220T180226.json"
+  ],
+  "artifact_sha256": {
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/dt_results_20260220T195944.json": "e6a8d52623471f775f2029b89b8267de74877f4625a26d62bf545e9889827c82",
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T200218.json": "ab737ecff43fb71e310d4d69d1d7ba367093f6c2090d11d8036b5c9350806aa4",
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/vulnerability_scan_20260220T180221.json": "41da52b7aa4014c88b627d205aef42e9d4e1cca897dfa5a4a613b4e7830fee12",
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/sbom_python_20260220T180226.json": "07a43a99b6ff349c68d1318e62839ec9810994c2e247544fe7e0f9f1aab0eb3f",
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/sbom_rust_20260220T180226.json": "0d8f6f8293cc5620dbfb839132c068a3261b1aa42bcbc771cd2879945ce7196a",
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/sbom_20260220T180226.json": "f4046949748c01964ed496bc6954e0f9442c823369523eb55f89af5b55540639",
+    "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/license_manifest_20260220T180226.json": "990964358ce73d944ee95b09526bd7e34000224b0ab3aa1db9eea8d544de7b9e"
+  }
+}

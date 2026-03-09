@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-02-20T01:57:52.235516+00:00",
+  "strict_gates": true,
+  "baseline_tag": null,
+  "mandatory_failures": [],
+  "results": [
+    {
+      "dt": 19,
+      "name": "Claim-Tier Compliance",
+      "priority": "P1",
+      "status": "PASS",
+      "output": "[PASS] Claim tier compliance verified for E1",
+      "returncode": 0
+    },
+    {
+      "dt": 21,
+      "name": "Architecture Tightness",
+      "priority": "P1",
+      "status": "PASS",
+      "output": "[PASS] Architecture tightness constraints satisfied",
+      "returncode": 0
+    },
+    {
+      "dt": 25,
+      "name": "Chemosense Malformed Resilience",
+      "priority": "P0",
+      "status": "PASS",
+      "output": "[PASS] Malformed packets are rejected, provenance floor is E1, and chemosense benchmark baseline metadata is pinned",
+      "returncode": 0
+    }
+  ]
+}

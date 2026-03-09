@@ -11,8 +11,29 @@ from _common import available_sensor_datasets, benchmark_dataset, save_results
 
 def main() -> int:
     compressor = zstd.ZstdCompressor(level=3)
-    rows = [benchmark_dataset(ds, "zstd", compressor.compress) for ds in available_sensor_datasets()]
-    path = save_results("bench_vs_zstd", rows)
+    decompressor = zstd.ZstdDecompressor()
+    rows = [
+        benchmark_dataset(
+            ds,
+            "zstd",
+            compressor.compress,
+            decompressor.decompress,
+            repeats=5,
+            warmup=1,
+        )
+        for ds in available_sensor_datasets()
+    ]
+    path = save_results(
+        "bench_vs_zstd",
+        rows,
+        method_metadata={
+            "comparator": "zstd",
+            "level": 3,
+            "repeats": 5,
+            "warmup": 1,
+            "encode_decode_pathway": "zpe:wire_bytes, zstd:raw_bytes",
+        },
+    )
     print(f"Saved {path}")
     return 0
 

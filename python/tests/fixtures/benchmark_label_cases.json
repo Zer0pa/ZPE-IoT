@@ -1,0 +1,23 @@
+[
+  {
+    "name": "e2_zero_dataset_not_available",
+    "evidence_class": "E2",
+    "total": 0,
+    "expected_label": "NOT_AVAILABLE",
+    "expected_status": "NOT_AVAILABLE"
+  },
+  {
+    "name": "e0_with_data_provisional",
+    "evidence_class": "E0",
+    "total": 1,
+    "expected_label": "PROVISIONAL",
+    "expected_status": "PASS"
+  },
+  {
+    "name": "e1_with_data_final",
+    "evidence_class": "E1",
+    "total": 1,
+    "expected_label": "FINAL",
+    "expected_status": "PASS"
+  }
+]

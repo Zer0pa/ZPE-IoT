@@ -1,0 +1,252 @@
+{
+  "timestamp": "20260220T201556",
+  "bundle_path": "/Users/prinivenpillay/ZPE IoT/zpe-iot/release/RC_20260220T201556",
+  "file_count": 49,
+  "files": [
+    {
+      "path": "docs/ARCH_TIGHTNESS_AUDIT.md",
+      "sha256": "c1ac35b8f6a8799f69b0da3fef4b5105e3be27d0a4bc8adda17fcf9214bd9058",
+      "bytes": 5767
+    },
+    {
+      "path": "docs/BENCHMARKS.md",
+      "sha256": "4f6f6e1efe3f55db2ff00f46e37a46ebe06408f5b4de97d5832f63c4b8a91906",
+      "bytes": 3319
+    },
+    {
+      "path": "docs/CI_POLICY.md",
+      "sha256": "7a5813dea6589f6feb89cde8f68f274db951ed8de6fa7066830a73045abf16f4",
+      "bytes": 1073
+    },
+    {
+      "path": "docs/CLI_CONTRACT.md",
+      "sha256": "a6b2496aada316689d32747f38c075b59119b65a426231e52aa3afdad7436a01",
+      "bytes": 1630
+    },
+    {
+      "path": "docs/CONTRIBUTING.md",
+      "sha256": "2cd5a2e1bb03f8a551055067cc1b9fef54b19cad72c740b43e6fbf2c09206735",
+      "bytes": 922
+    },
+    {
+      "path": "docs/FIDELITY_SEMANTICS.md",
+      "sha256": "c0009fd0c497449962172d0abe547270efa89029fcb1c9b7c88170debd35d66d",
+      "bytes": 1116
+    },
+    {
+      "path": "docs/LICENSE",
+      "sha256": "1b68d05145af2ebfca70e1e5fd580f96075fc016c1ae0dc4c4068abb6d94733d",
+      "bytes": 1063
+    },
+    {
+      "path": "docs/OUTREACH_TEMPLATE.md",
+      "sha256": "83350a264ee5aaaa42d6695261e597740fad34b2ec7ac58fc2c74ef2ff5d0f5f",
+      "bytes": 820
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "a597ffe9fd1f75f27a904cbb2884a01a2904b15a301eb2698c3f9a95dbf832a0",
+      "bytes": 3544
+    },
+    {
+      "path": "docs/RELEASE_CHECKLIST.md",
+      "sha256": "f633218b4d12841bd81a8e8f3c066c3db9cd0e02515409a71a4120417f174857",
+      "bytes": 1620
+    },
+    {
+      "path": "docs/SECURITY.md",
+      "sha256": "c935462e70fb745b3bbc2b167adcc7497c0b1754d6a04ba262cfbe6a1f3c893b",
+      "bytes": 884
+    },
+    {
+      "path": "docs/SUPPORT.md",
+      "sha256": "354cc146a60fd5e0f7d0db406a5c344f36e7517d358aff5a2a681f729730ebc6",
+      "bytes": 624
+    },
+    {
+      "path": "docs/TEST_MATRIX.md",
+      "sha256": "c0a07daf5475de8d29fd9214097cd07081c8d1a2e505f12f63fb65ea6c02f2c4",
+      "bytes": 2459
+    },
+    {
+      "path": "docs/ZPE_IOT_SALES_BRIEF.md",
+      "sha256": "f32eeb8a86214eb2ce460fafe30df15abaec9908361f2ad422f0d69d2c3b45a0",
+      "bytes": 1366
+    },
+    {
+      "path": "project_docs/PRD_06_ENTERPRISE_EXECUTION_v1.0.md",
+      "sha256": "04c5b2f2987ebd0a2df266db635334ec297a1bee73ccfc78d881ca8154505cf7",
+      "bytes": 16260
+    },
+    {
+      "path": "project_docs/REPO_TOPOLOGY.md",
+      "sha256": "41be6aee4e4cc703b7e7f8f5b93fb3ada00c886b32cd94b6ad08b82267e9abea",
+      "bytes": 1013
+    },
+    {
+      "path": "project_docs/RUNBOOK_00_MASTER.md",
+      "sha256": "e202b8d306106007b043bfab846c4a783f1974113b1479b1f823c9986be8c8b1",
+      "bytes": 36690
+    },
+    {
+      "path": "project_docs/RUNBOOK_01_CORE_CODEC.md",
+      "sha256": "9eec1ad0d3da54dd842db80d81c595bc34b9a3e4279d5b8092e5eb76ac00ee36",
+      "bytes": 26007
+    },
+    {
+      "path": "project_docs/RUNBOOK_02_FALSIFICATION.md",
+      "sha256": "15614ad1f8b2a075e2698c8a772000d252eb30abce976672dd5b1f4e5f544e20",
+      "bytes": 22304
+    },
+    {
+      "path": "project_docs/RUNBOOK_03_SDK_PACKAGE.md",
+      "sha256": "c32d890d7cd2d8afc46f0b8663c167cd20a360455c085a51cb27af5f2800605d",
+      "bytes": 7792
+    },
+    {
+      "path": "project_docs/RUNBOOK_04_BENCHMARKS.md",
+      "sha256": "daf87818dc26e5097d67b443f8b3bc5459976260d084d5e096480c2f61fe66b0",
+      "bytes": 13486
+    },
+    {
+      "path": "project_docs/RUNBOOK_05_LAUNCH.md",
+      "sha256": "ddfbf26738e101fe8787ce9d86c04c9223aa8d1dbbfed6bed803add96c5bd75a",
+      "bytes": 13128
+    },
+    {
+      "path": "project_docs/RUNBOOK_IOT_Rx_STRICT_STABILITY.md",
+      "sha256": "043a63110a3961101035b05bdbbdc5bcb3e261354fe169b58b76bd981ff1191c",
+      "bytes": 2052
+    },
+    {
+      "path": "project_docs/SYNC_HISTORY.md",
+      "sha256": "10778413ac2f445ccc46d2bb022851396a3b1e5221f5ebf9009b83387de1b9ec",
+      "bytes": 10746
+    },
+    {
+      "path": "project_docs/ZPE_IOT_SENSOR_COMPRESSION_SDK_PRD_v1.0.md",
+      "sha256": "9153240b192cd3ff6f42dc063b9db01350331036e6389c9e4429f7b7f4f43598",
+      "bytes": 66534
+    },
+    {
+      "path": "python_dist/zpe_iot-0.1.0-py3-none-any.whl",
+      "sha256": "70c6caf62b9c6d4de075f142e139ce8c7991e92abcb45f8f8fc931512d5e2219",
+      "bytes": 69886
+    },
+    {
+      "path": "python_dist/zpe_iot-0.1.0.tar.gz",
+      "sha256": "58e088d91f81992675acb9f99b4ca10d830db460a876bcc1bf4198a2604eca8b",
+      "bytes": 69879
+    },
+    {
+      "path": "validation_results/bench_summary_20260220T201459.json",
+      "sha256": "f59aaf2024354d7597ffe0a83b51618012d02736e134f5de705ee52e744d7233",
+      "bytes": 5512
+    },
+    {
+      "path": "validation_results/bench_summary_E0_proxy_20260220T201459.json",
+      "sha256": "4724e471229c2748d93f4a32de6e0eee21bd08c4db0b76ff268cc16cae48b3df",
+      "bytes": 2109
+    },
+    {
+      "path": "validation_results/bench_summary_E1_real_public_20260220T201459.json",
+      "sha256": "f59aaf2024354d7597ffe0a83b51618012d02736e134f5de705ee52e744d7233",
+      "bytes": 5512
+    },
+    {
+      "path": "validation_results/bench_summary_E2_real_customer_20260220T201459.json",
+      "sha256": "73686d167e0d193066b65956ed744385b4e4b0ca71bb1de66ff1889bbd269a8b",
+      "bytes": 2109
+    },
+    {
+      "path": "validation_results/bench_vs_gorilla_20260220T201459.json",
+      "sha256": "d6bb95b4ca282fe27267b35d7ceaec0c5534def76f50c66346533c7c684df1a9",
+      "bytes": 12370
+    },
+    {
+      "path": "validation_results/bench_vs_lz4_20260220T201356.json",
+      "sha256": "b85aa846f7a6c69e5e44eb5f022398cbc3a25e03d711e0839c1a1816ea61af70",
+      "bytes": 12423
+    },
+    {
+      "path": "validation_results/bench_vs_zlib_20260220T201426.json",
+      "sha256": "4c9968e4527edd55622a30887a15dbcb6e8fdefa8e2f799f04579341a377d59f",
+      "bytes": 12363
+    },
+    {
+      "path": "validation_results/bench_vs_zstd_20260220T201325.json",
+      "sha256": "5d301d844921ccfcaa31d2221749e7843d9dd1a9b263890adb33a9d68d0350e3",
+      "bytes": 12409
+    },
+    {
+      "path": "validation_results/coverage/python_coverage.xml",
+      "sha256": "5e3805c0293d46da3749aece05579a91ef11747f0743ca1ac263f4074d6f45a9",
+      "bytes": 148529
+    },
+    {
+      "path": "validation_results/dt_results_20260220T201254.json",
+      "sha256": "52961da4d7ce7659ec8877e862e7e5b93c9bd3958d20759d1201b7f1bebefd17",
+      "bytes": 8966
+    },
+    {
+      "path": "validation_results/iot_wave1_phase2_checksums.txt",
+      "sha256": "a4fcdcc1a1aa6a8c9fd4fa5e6e1a8cf0a7f2749e1c91df09a2dd12628b38de7b",
+      "bytes": 2111
+    },
+    {
+      "path": "validation_results/license_manifest_20260220T181533.json",
+      "sha256": "666cbfd84b02eef70f10f739a68979dc1b3ab02e9d2050e1e6513dba603c8906",
+      "bytes": 15682
+    },
+    {
+      "path": "validation_results/perf_profile_hot_paths_20260219T023929.json",
+      "sha256": "dc9f92c77db899df03bff49f61341880da99e89a4560f27f4b5c45bf6164d83b",
+      "bytes": 3020
+    },
+    {
+      "path": "validation_results/release_checksums_20260220T180815.txt",
+      "sha256": "684c3ac3a7bb5a413d1021857fa95f3f947dc334f79ab3c33e5cd2188385c34a",
+      "bytes": 2111
+    },
+    {
+      "path": "validation_results/release_manifest_20260220T181533.json",
+      "sha256": "ef2c6ef6b9f720a1bf146c698d4f3b269b6e6dee172185380bae08a687dfc848",
+      "bytes": 2682
+    },
+    {
+      "path": "validation_results/sbom_20260220T181533.json",
+      "sha256": "66d0819c86a8834fb5d1fe6eb66c939fa7b98fff82a10b631ea469b2b84db32f",
+      "bytes": 527
+    },
+    {
+      "path": "validation_results/sbom_python_20260220T181533.json",
+      "sha256": "07a43a99b6ff349c68d1318e62839ec9810994c2e247544fe7e0f9f1aab0eb3f",
+      "bytes": 111715
+    },
+    {
+      "path": "validation_results/sbom_rust_20260220T181533.json",
+      "sha256": "fcfc36165d4fd850d39aa2607c5a98df0f56ab7d3984caa9fa576e2e9b2c4d3b",
+      "bytes": 7070
+    },
+    {
+      "path": "validation_results/vulnerability_scan_20260220T181501.json",
+      "sha256": "1fab7c3334d00111a2dd976b9feaed81f495f7e0b2a1fd1bc9aee453ffba5e89",
+      "bytes": 745
+    },
+    {
+      "path": "validation_results/vulnerability_scan_20260220T181501.sha256",
+      "sha256": "b182f13262b96882ac747ba5749f2eb5d5b5f23af3571f405248034830055868",
+      "bytes": 106
+    },
+    {
+      "path": "validation_results/wi1_ablation_20260220T050410.json",
+      "sha256": "563564a84bdc6fbea2f58f0eddbd4dc39c2366685c47d55fb920322d09c64faa",
+      "bytes": 13579
+    },
+    {
+      "path": "validation_results/zh1_ablation_20260219T030327.json",
+      "sha256": "18f2694ae3f5856165bfa085d391a90b3bf971cc47b3ef4d9295e96d1ebee678",
+      "bytes": 8595
+    }
+  ]
+}

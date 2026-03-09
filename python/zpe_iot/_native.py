@@ -122,18 +122,22 @@ def encode(samples: np.ndarray, config: Optional[Config] = None) -> bytes:
     x = np.asarray(samples, dtype=np.float64)
     if x.ndim != 1:
         raise ValueError("samples must be a 1D array")
+    if not x.flags.c_contiguous:
+        x = np.ascontiguousarray(x, dtype=np.float64)
     cfg = config or Config()
 
-    in_buf = _FFI.new("double[]", x.tolist())
+    # Zero-copy view over NumPy storage avoids per-call list materialization.
+    in_buf = _FFI.from_buffer("double[]", x)
     # generous output capacity to avoid retries
     out_cap = max(256, x.size * 4)
-    out_buf = _FFI.new("uint8_t[]", out_cap)
+    out_raw = bytearray(out_cap)
+    out_buf = _FFI.from_buffer("uint8_t[]", out_raw)
 
     n = lib.zpe_iot_encode(in_buf, x.size, _to_c_config(cfg), out_buf, out_cap)
     if n < 0:
         raise RuntimeError(f"native encode failed with status={n}")
 
-    return bytes(_FFI.buffer(out_buf, n))
+    return bytes(out_raw[:n])
 
 
 def decode(packet: bytes) -> np.ndarray:

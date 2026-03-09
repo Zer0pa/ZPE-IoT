@@ -217,27 +217,40 @@ pub fn decode_into<const N: usize>(stream: &EncodedStream<N>, output: &mut [f64]
     let mut idx = 1usize;
     let mut value = stream.start_value;
 
-    for &(d, m_idx, count) in stream.rle_tokens.iter() {
-        let delta = match stream.mode {
-            Mode::Fast => DIRECTION_DELTAS[d as usize] * stream.step,
-            Mode::Balanced | Mode::LosslessDelta => {
-                if d == 0 {
+    match stream.mode {
+        Mode::Fast => {
+            for &(d, _m_idx, count) in stream.rle_tokens.iter() {
+                let delta = DIRECTION_DELTAS[d as usize] * stream.step;
+                let mut i = 0u16;
+                while i < count {
+                    if idx >= target {
+                        return Ok(idx);
+                    }
+                    value += delta;
+                    output[idx] = value;
+                    idx += 1;
+                    i += 1;
+                }
+            }
+        }
+        Mode::Balanced | Mode::LosslessDelta => {
+            for &(d, m_idx, count) in stream.rle_tokens.iter() {
+                let delta = if d == 0 {
                     0.0
                 } else {
                     direction_sign(d) * magnitude_value(m_idx) * stream.step
+                };
+                let mut i = 0u16;
+                while i < count {
+                    if idx >= target {
+                        return Ok(idx);
+                    }
+                    value += delta;
+                    output[idx] = value;
+                    idx += 1;
+                    i += 1;
                 }
             }
-        };
-
-        let mut i = 0u16;
-        while i < count {
-            if idx >= target {
-                return Ok(idx);
-            }
-            value += delta;
-            output[idx] = value;
-            idx += 1;
-            i += 1;
         }
     }
 

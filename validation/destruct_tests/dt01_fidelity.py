@@ -15,6 +15,10 @@ from _common import (
     safe_encode_decode,
     windows,
 )
+from thresholds import MAX_NRMSE
+from validation.metrics.fidelity import FidelityMode, fidelity_label, nrmse
+
+DT01_MODE = FidelityMode.DATASET_NORMALIZED
 
 
 def main() -> int:
@@ -36,16 +40,20 @@ def main() -> int:
         for w in ds_windows:
             preset = dataset_preset(ds)
             _, recon = safe_encode_decode(w, preset=preset, mode="balanced")
-            err = float(np.sqrt(np.mean((w - recon) ** 2)) / max(1e-9, ds_range))
+            err = nrmse(w, recon, mode=DT01_MODE, dataset_range=ds_range)
             errs.append(err)
 
         stats = metric_summary(errs)
         report[ds] = stats
-        if stats["max"] >= 0.05:
+        if stats["max"] >= MAX_NRMSE:
             overall_pass = False
-            print_case("FAIL", f"{ds} max NRMSE={stats['max']:.4f} >= 0.05")
+            print_case("FAIL", f"{ds} max {fidelity_label(DT01_MODE)}={stats['max']:.4f} >= {MAX_NRMSE:.2f}")
         else:
-            print_case("PASS", f"{ds} mean={stats['mean']:.4f} p95={stats['p95']:.4f} max={stats['max']:.4f}")
+            print_case(
+                "PASS",
+                f"{ds} {fidelity_label(DT01_MODE)} mean={stats['mean']:.4f} "
+                f"p95={stats['p95']:.4f} max={stats['max']:.4f}",
+            )
 
     log_result("DT-01", "PASS" if overall_pass else "FAIL", {"datasets": len(datasets)}, notes=str(report))
     return 0 if overall_pass else 1

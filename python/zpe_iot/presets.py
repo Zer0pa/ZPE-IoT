@@ -18,9 +18,9 @@ class Preset(str, Enum):
 
 PRESET_CONFIGS: Dict[str, dict] = {
     "temperature": {
-        "mode": "fast",
+        "mode": "balanced",
         "threshold": 0.05,
-        "step": 0.1,
+        "step": 0.0,
         "bands": (1.0, 2.0, 4.0),
         "preset_id": 0,
     },
@@ -48,7 +48,7 @@ PRESET_CONFIGS: Dict[str, dict] = {
     "gps_track": {
         "mode": "balanced",
         "threshold": 0.001,
-        "step": 0.0001,
+        "step": 0.0,
         "bands": (1.0, 4.0, 16.0),
         "preset_id": 4,
     },
@@ -67,9 +67,9 @@ PRESET_CONFIGS: Dict[str, dict] = {
         "preset_id": 6,
     },
     "flow": {
-        "mode": "fast",
-        "threshold": 0.03,
-        "step": 0.1,
+        "mode": "balanced",
+        "threshold": 0.05,
+        "step": 0.0,
         "bands": (1.0, 2.0, 8.0),
         "preset_id": 7,
     },

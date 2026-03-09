@@ -1,0 +1,56 @@
+{
+  "timestamp": "20260220T200218",
+  "evidence_class": "E0",
+  "datasets": [],
+  "wins": 0,
+  "total": 0,
+  "pt6_pass": false,
+  "pt6_status": "NOT_AVAILABLE",
+  "pt6_label": "NOT_AVAILABLE",
+  "mean_cr": 0.0,
+  "fidelity_metric_mode": "window-normalized",
+  "fidelity_metric_label": "NRMSE(window-normalized)",
+  "method_metadata": {
+    "encode_decode_pathway": "zpe:encode_to_packet_bytes_then_decode_from_packet_bytes; baselines:compress_raw_bytes_then_decompress_raw_bytes",
+    "fidelity_mode": "window-normalized",
+    "fidelity_label": "NRMSE(window-normalized)",
+    "warmup_strategy": "drop first warmup iteration from timing stats",
+    "iteration_count": 5,
+    "warmup_iterations": 1,
+    "hardware_profile": {
+      "machine": "x86_64",
+      "processor": "i386",
+      "platform": "macOS-15.5-x86_64-i386-64bit-Mach-O"
+    }
+  },
+  "reproducibility": {
+    "manifest_sha256": "48256bed9307af723a01c8f4bb4fd3422361afeff7a94de3512ccad3fdc6839e",
+    "commands": {
+      "run_benchmarks": "python validation/benchmarks/run_benchmarks.py",
+      "comparators": [
+        "python validation/benchmarks/bench_vs_zstd.py",
+        "python validation/benchmarks/bench_vs_lz4.py",
+        "python validation/benchmarks/bench_vs_zlib.py",
+        "python validation/benchmarks/bench_vs_gorilla.py"
+      ]
+    },
+    "toolchain": {
+      "python": "3.14.0",
+      "numpy": "2.4.2",
+      "zstandard": "0.25.0",
+      "lz4": "4.4.5",
+      "cargo": "cargo 1.90.0 (840b83a10 2025-07-30)"
+    },
+    "hardware_profile": {
+      "machine": "x86_64",
+      "processor": "i386",
+      "platform": "macOS-15.5-x86_64-i386-64bit-Mach-O"
+    },
+    "inputs": {
+      "zstd": "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_vs_zstd_20260220T200016.json",
+      "lz4": "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_vs_lz4_20260220T200050.json",
+      "zlib": "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_vs_zlib_20260220T200135.json",
+      "gorilla": "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_vs_gorilla_20260220T200218.json"
+    }
+  }
+}

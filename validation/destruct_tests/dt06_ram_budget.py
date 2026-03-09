@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 import subprocess
 
 from _common import ROOT, log_result, print_case
@@ -33,6 +34,11 @@ def _parse_data_bss(text: str) -> int | None:
 
 
 def main() -> int:
+    if os.getenv("ZPE_IOT_FORCE_SKIP_DT06") == "1":
+        print_case("SKIP", "Forced skip for strict-gate self-test")
+        log_result("DT-06", "SKIPPED", {}, notes="forced skip for DT-18")
+        return 0
+
     core = ROOT / "core"
 
     build_cmd = [
@@ -71,12 +77,9 @@ def main() -> int:
         log_result("DT-06", "PASS" if ok else "FAIL", {"ram_bytes": total})
         return 0 if ok else 1
     except Exception as exc:
-        # Proxy fallback when target/tools unavailable.
-        print_case("SKIP", f"ARM size tooling unavailable, using host proxy: {exc}")
-        proxy = 2048
-        ok = proxy < 4096
-        log_result("DT-06", "PASS" if ok else "FAIL", {"ram_bytes_proxy": proxy}, notes="proxy measurement")
-        return 0 if ok else 1
+        print_case("SKIP", f"ARM size tooling unavailable: {exc}")
+        log_result("DT-06", "SKIPPED", {}, notes=f"missing prerequisites: {exc}")
+        return 0
 
 
 if __name__ == "__main__":

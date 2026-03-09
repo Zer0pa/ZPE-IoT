@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""DT-12: Preset Coverage. PASS if each preset meets mean CR>=5 and mean NRMSE<5%."""
+"""DT-12: Preset Coverage. PASS if each preset meets ratified E1 floors."""
 
 from __future__ import annotations
 
 import numpy as np
 
 from _common import ensure_datasets, log_result, print_case, windows
+from thresholds import PRESET_MAX_MEAN_NRMSE, PRESET_MIN_MEAN_CR
 from validation.datasets.loader import list_available_datasets
-from zpe_iot import compute_nrmse, decode, encode
+from validation.metrics.fidelity import FidelityMode, fidelity_label, nrmse
+from zpe_iot import decode, encode
 
 MAPPING = {
     "temperature": "DS-03",
@@ -20,6 +22,7 @@ MAPPING = {
     "flow": "DS-03",
     "generic": "DS-06",
 }
+DT12_MODE = FidelityMode.WINDOW_NORMALIZED
 
 
 def main() -> int:
@@ -38,12 +41,15 @@ def main() -> int:
             s = encode(w, preset=preset)
             y = decode(s)
             crs.append(s.compression_ratio)
-            errs.append(compute_nrmse(w, y))
+            errs.append(nrmse(w, y, mode=DT12_MODE))
 
         mean_cr = float(np.mean(crs))
         mean_err = float(np.mean(errs))
-        pass_case = mean_cr >= 5.0 and mean_err < 0.05
-        print_case("PASS" if pass_case else "FAIL", f"{preset}: mean CR={mean_cr:.2f}, mean NRMSE={mean_err:.4f}")
+        pass_case = mean_cr >= PRESET_MIN_MEAN_CR and mean_err < PRESET_MAX_MEAN_NRMSE
+        print_case(
+            "PASS" if pass_case else "FAIL",
+            f"{preset}: mean CR={mean_cr:.2f}, mean {fidelity_label(DT12_MODE)}={mean_err:.4f}",
+        )
         ok = ok and pass_case
 
     log_result("DT-12", "PASS" if ok else "FAIL", {})

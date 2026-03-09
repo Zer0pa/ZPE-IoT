@@ -63,7 +63,13 @@ impl From<Config> for zpe_iot_config_t {
 }
 
 #[no_mangle]
-pub extern "C" fn zpe_iot_encode(
+/// # Safety
+///
+/// Callers must provide valid, non-null pointers:
+/// - `samples` references `n_samples` contiguous `f64` values.
+/// - `config` references one valid `zpe_iot_config_t`.
+/// - `out_bytes` references `out_capacity` writable bytes.
+pub unsafe extern "C" fn zpe_iot_encode(
     samples: *const f64,
     n_samples: usize,
     config: *const zpe_iot_config_t,
@@ -90,7 +96,12 @@ pub extern "C" fn zpe_iot_encode(
 }
 
 #[no_mangle]
-pub extern "C" fn zpe_iot_decode(
+/// # Safety
+///
+/// Callers must provide valid, non-null pointers:
+/// - `packed` references `packed_len` bytes containing one packed stream.
+/// - `out_samples` references `out_capacity` writable `f64` slots.
+pub unsafe extern "C" fn zpe_iot_decode(
     packed: *const u8,
     packed_len: usize,
     out_samples: *mut f64,
