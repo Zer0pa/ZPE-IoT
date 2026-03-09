@@ -1,21 +1,65 @@
-# zpe-iot — Compress Sensor Data 5-10x on Any MCU
+# ZPE-IoT
 
-**GPU-free. Deterministic. 4 KB RAM. Tuned for IoT time-series.**
+Deterministic sensor compression and chemosense packetization for IoT time-series.
+
+## Current Status
+
+This repository is the canonical private-stage repo candidate for ZPE-IoT.
+
+It is not a public release and it is not yet proven ready for PyPI or crates.io publication.
+
+Latest local managed evidence on 2026-03-09:
+
+- `cargo test --release`: PASS
+- `python -m pytest -q`: PASS (`70 passed`, `86.53%` coverage)
+- `python validation/destruct_tests/run_all_dts.py --strict-gates`: PASS (`27/27`)
+- benchmark refresh: PASS (`PT-6 FINAL`, `6/8` wins, mean E1 CR `4.37x`)
+- full release preflight: FAIL
+  - `C07_SBOM_RELEASE_MANIFEST`
+  - `C10_CHEMOSENSE_CLI_SMOKE` in the last managed run
+
+Start with:
+
+- `proofs/FINAL_STATUS.md`
+- `proofs/PROOF_INDEX.md`
+- `validation/results/release_preflight_report_20260309T040302.json`
+- `docs/BENCHMARKS.md`
+
+## Local Install
+
+Python editable install:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e './python[dev]'
+```
+
+Rust crate build/test from source:
+
+```bash
+cargo test --manifest-path core/Cargo.toml --release
+```
+
+Published install commands are intentionally omitted here because package publication has not been adjudicated.
 
 ## Quick Start (Python)
+
 ```python
 import numpy as np
 import zpe_iot
 
 signal = np.sin(np.linspace(0, 20, 1024))
-packet = zpe_iot.encode(signal, preset="vibration").to_bytes()
+stream = zpe_iot.encode(signal, preset="vibration")
+packet = stream.to_bytes()
 restored = zpe_iot.decode(packet)
-print("CR:", zpe_iot.encode(signal, preset="vibration").compression_ratio)
+print("CR:", stream.compression_ratio)
 ```
 
 ## Quick Start (Rust)
+
 ```rust
-use zpe_iot::{encode, decode_into, Preset};
+use zpe_iot::{decode_into, encode, Preset};
 
 let cfg = Preset::Vibration.config();
 let stream = encode::<2048>(&samples, &cfg)?;
@@ -24,40 +68,57 @@ let n = decode_into(&stream, &mut out)?;
 ```
 
 ## Benchmarks
-See [`docs/BENCHMARKS.md`](docs/BENCHMARKS.md) for full methodology, per-dataset tables, and charts.
 
-Current summary (latest local run):
-- PT-6: pass (zpe-iot wins on >50% of DS-01..DS-08)
-- Mean CR across DS-01..DS-08: see `validation/results/bench_summary_*.json`
+See `docs/BENCHMARKS.md` for the current evidence-labeled benchmark surface.
+
+Latest local summary:
+
+- E1 summary artifact: `validation/results/bench_summary_E1_real_public_20260309T060843.json`
+- mean E1 compression ratio: `4.37x`
+- PT-6 FINAL: `PASS (6/8 wins)`
+- E2 customer claim tier: `NOT_AVAILABLE`
 
 ![CR comparison](docs/benchmarks/cr_comparison.png)
 
-## Supported Sensor Types
+## Chemosense Extension
+
+The Python package includes `zpe_iot.chemosense` for smell, taste, touch, and mental packetization.
+
+Module smoke path that passed in the latest managed preflight:
+
+```bash
+python -m zpe_iot.cli chemosense-smoke --json
+```
+
+The installed `zpe-iot` console-script entrypoint failed in the latest full preflight because the local virtualenv still carried a stale shebang from an older machine path. A local editable reinstall on 2026-03-09 repaired that wrapper and standalone CLI smoke now passes again, but the full managed preflight has not been rerun yet.
+
+Latest chemosense artifacts:
+
+- `validation/results/bench_summary_chemosense_20260309T060913.json`
+- `validation/results/perf_profile_chemosense_20260309T060912.json`
+
+## Supported Sensor Presets
+
 | Preset | Use Case |
 |---|---|
-| `temperature` | Thermistor/weather trend data |
-| `vibration` | Machinery/bearing vibration |
+| `temperature` | Thermistor and weather trend data |
+| `vibration` | Machinery and bearing vibration |
 | `accelerometer` | IMU motion streams |
-| `pressure` | Barometric/process pressure |
+| `pressure` | Barometric and process pressure |
 | `gps_track` | GPS trajectory deltas |
 | `voltage` | Electrical telemetry |
 | `current` | Current waveforms |
 | `flow` | Process flow sensors |
-| `generic` | Unknown/mixed sensors |
+| `generic` | Unknown or mixed sensors |
 
-## Why Not Just Use zstd/LZ4?
-General compressors often achieve 2-3x on raw sensor streams.
-zpe-iot uses signal-aware directional quantisation + RLE to push higher CR on IoT patterns while preserving deterministic embedded behavior.
+## Repo Guide
 
-## Installation
-```bash
-pip install zpe-iot
-cargo add zpe-iot
-```
+- `docs/README.md`: docs front door
+- `docs/family/`: IMC alignment and compatibility surfaces
+- `validation/`: tests, datasets, DTs, benchmarks
+- `proofs/`: proof index, status routing, audit pointers
+- `project_docs/`: operator mirror and historical planning material
 
 ## License
-MIT (free for evaluation and small deployments).
-Commercial licensing for large deployments: contact `sales@zer0pa.com`.
 
-## ROI Calculator
-Use [`scripts/savings_calculator.py`](scripts/savings_calculator.py) or see [`docs/BENCHMARKS.md#roi-calculator`](docs/BENCHMARKS.md#roi-calculator).
+This repo currently ships under MIT. Commercial posture and any publication packaging remain owner-controlled decisions.

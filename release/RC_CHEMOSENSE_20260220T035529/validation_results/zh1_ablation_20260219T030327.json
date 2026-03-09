@@ -1,0 +1,263 @@
+{
+  "timestamp": "20260219T030327",
+  "workstream": "ZH-1",
+  "threshold_cr_gain": 0.08,
+  "datasets": [
+    {
+      "dataset": "DS-01",
+      "baseline": {
+        "cr": 3.9870953387473578,
+        "nrmse": 0.002882718699807656,
+        "encode_ms": 4.304553559548887,
+        "decode_ms": 1.2346195373018938,
+        "encode_p50_ms": 4.242750001139939,
+        "encode_p99_ms": 5.044634827063408,
+        "decode_p50_ms": 1.2087909854017198,
+        "decode_p99_ms": 1.3588759332196787
+      },
+      "zh1_candidate": {
+        "cr": 4.052464947987336,
+        "nrmse": 0.002882718699807656,
+        "encode_ms": 4.339270274919857,
+        "decode_ms": 1.2381656334868498,
+        "encode_p50_ms": 4.261166992364451,
+        "encode_p99_ms": 6.705588931217787,
+        "decode_p50_ms": 1.2314999767113477,
+        "decode_p99_ms": 1.3939096510875968
+      },
+      "cr_improvement": 0.016395296246042593,
+      "nrmse_delta": 0.0
+    },
+    {
+      "dataset": "DS-02",
+      "baseline": {
+        "cr": 4.046431217584589,
+        "nrmse": 0.01508862891670099,
+        "encode_ms": 3.9385703385050874,
+        "decode_ms": 1.1833749867946608,
+        "encode_p50_ms": 3.9115630061132833,
+        "encode_p99_ms": 4.451105641492177,
+        "decode_p50_ms": 1.1465624993434176,
+        "decode_p99_ms": 1.7046199974720255
+      },
+      "zh1_candidate": {
+        "cr": 4.259456648901599,
+        "nrmse": 0.01508862891670099,
+        "encode_ms": 3.9517952736787265,
+        "decode_ms": 1.2036396637995495,
+        "encode_p50_ms": 3.9418954984284937,
+        "encode_p99_ms": 4.137937465857248,
+        "decode_p50_ms": 1.1922500125365332,
+        "decode_p99_ms": 1.3138095720205454
+      },
+      "cr_improvement": 0.05264526192642675,
+      "nrmse_delta": 0.0
+    },
+    {
+      "dataset": "DS-03",
+      "baseline": {
+        "cr": 5.123802822407256,
+        "nrmse": 0.007503839526465217,
+        "encode_ms": 3.55734100103291,
+        "decode_ms": 0.9156174575764453,
+        "encode_p50_ms": 3.5573750064941123,
+        "encode_p99_ms": 5.6766715281992255,
+        "decode_p50_ms": 0.9274159965571016,
+        "decode_p99_ms": 1.1316664953483269
+      },
+      "zh1_candidate": {
+        "cr": 5.6865441766632685,
+        "nrmse": 0.007503839526465217,
+        "encode_ms": 3.555071790378861,
+        "decode_ms": 0.9464541871238907,
+        "encode_p50_ms": 3.6319164937594905,
+        "encode_p99_ms": 4.045426237862557,
+        "decode_p50_ms": 0.9722709946800023,
+        "decode_p99_ms": 1.128993729071226
+      },
+      "cr_improvement": 0.10982884661272481,
+      "nrmse_delta": 0.0
+    },
+    {
+      "dataset": "DS-04",
+      "baseline": {
+        "cr": 4.482626538987688,
+        "nrmse": 0.03548572708611798,
+        "encode_ms": 3.7982311602263508,
+        "decode_ms": 1.0616729361117905,
+        "encode_p50_ms": 3.7328129983507097,
+        "encode_p99_ms": 6.319931889884176,
+        "decode_p50_ms": 1.0713539959397167,
+        "decode_p99_ms": 1.3147628636215818
+      },
+      "zh1_candidate": {
+        "cr": 5.713314299413726,
+        "nrmse": 0.03548572708611798,
+        "encode_ms": 3.8434787529240566,
+        "decode_ms": 1.1060491706757603,
+        "encode_p50_ms": 3.801000493695028,
+        "encode_p99_ms": 5.189681995252629,
+        "decode_p50_ms": 1.1126454919576645,
+        "decode_p99_ms": 1.3230726268375292
+      },
+      "cr_improvement": 0.274546128195628,
+      "nrmse_delta": 0.0
+    },
+    {
+      "dataset": "DS-05",
+      "baseline": {
+        "cr": 4.575258307735269,
+        "nrmse": 0.004069836457596158,
+        "encode_ms": 3.555467248952482,
+        "decode_ms": 1.004030762851471,
+        "encode_p50_ms": 3.5708754876395687,
+        "encode_p99_ms": 3.77786942088278,
+        "decode_p50_ms": 1.0066879913210869,
+        "decode_p99_ms": 1.10281735251192
+      },
+      "zh1_candidate": {
+        "cr": 5.164381402679275,
+        "nrmse": 0.004069836457596158,
+        "encode_ms": 3.6641437734942883,
+        "decode_ms": 1.0637021008733427,
+        "encode_p50_ms": 3.683249989990145,
+        "encode_p99_ms": 3.9201475740992464,
+        "decode_p50_ms": 1.0647919989423826,
+        "decode_p99_ms": 1.1671760748140514
+      },
+      "cr_improvement": 0.1287628053585502,
+      "nrmse_delta": 0.0
+    },
+    {
+      "dataset": "DS-06",
+      "baseline": {
+        "cr": 4.087824351297405,
+        "nrmse": 0.317491546771405,
+        "encode_ms": 4.289327905717073,
+        "decode_ms": 1.1834170857036952,
+        "encode_p50_ms": 4.2053119832417,
+        "encode_p99_ms": 6.469353009888436,
+        "decode_p50_ms": 1.1558955011423677,
+        "decode_p99_ms": 1.3714624120620988
+      },
+      "zh1_candidate": {
+        "cr": 4.099279423538831,
+        "nrmse": 0.317491546771405,
+        "encode_ms": 4.757041020056931,
+        "decode_ms": 1.3101669058960397,
+        "encode_p50_ms": 4.337020989623852,
+        "encode_p99_ms": 13.50160849222446,
+        "decode_p50_ms": 1.1843335087178275,
+        "decode_p99_ms": 4.465418671607033
+      },
+      "cr_improvement": 0.0028022417934347654,
+      "nrmse_delta": 0.0
+    },
+    {
+      "dataset": "DS-07",
+      "baseline": {
+        "cr": 4.700111162907448,
+        "nrmse": 0.019449649351441077,
+        "encode_ms": 3.6771310493804776,
+        "decode_ms": 0.9892062625112885,
+        "encode_p50_ms": 3.778187499847263,
+        "encode_p99_ms": 4.243323119881097,
+        "decode_p50_ms": 1.0298545093974099,
+        "decode_p99_ms": 1.2427373867831193
+      },
+      "zh1_candidate": {
+        "cr": 4.961371765997312,
+        "nrmse": 0.019449649351441077,
+        "encode_ms": 3.766425959111075,
+        "decode_ms": 1.0199359469424962,
+        "encode_p50_ms": 3.842666483251378,
+        "encode_p99_ms": 4.336396255821455,
+        "decode_p50_ms": 1.069417005055584,
+        "decode_p99_ms": 1.3191426324192435
+      },
+      "cr_improvement": 0.05558604765599858,
+      "nrmse_delta": 0.0
+    },
+    {
+      "dataset": "DS-08",
+      "baseline": {
+        "cr": 4.15481662281675,
+        "nrmse": 0.02836986083821768,
+        "encode_ms": 4.112604555484722,
+        "decode_ms": 1.2128953704177547,
+        "encode_p50_ms": 3.8934375043027103,
+        "encode_p99_ms": 8.122269380837688,
+        "decode_p50_ms": 1.138437510235235,
+        "decode_p99_ms": 3.525383002997842
+      },
+      "zh1_candidate": {
+        "cr": 4.280251449097886,
+        "nrmse": 0.02836986083821768,
+        "encode_ms": 4.520426903445696,
+        "decode_ms": 1.3391210855388636,
+        "encode_p50_ms": 3.904187513398938,
+        "encode_p99_ms": 11.854401998571127,
+        "decode_p50_ms": 1.1755835002986714,
+        "decode_p99_ms": 3.345671251881868
+      },
+      "cr_improvement": 0.030190219609764132,
+      "nrmse_delta": 0.0
+    }
+  ],
+  "mean_baseline_cr": 4.39474579531047,
+  "mean_candidate_cr": 4.777133014284905,
+  "mean_cr_gain": 0.08701008813353232,
+  "mean_baseline_nrmse": 0.05379272595596897,
+  "mean_candidate_nrmse": 0.05379272595596897,
+  "mean_nrmse_delta": 0.0,
+  "aggregate_latency_wire_ms": {
+    "baseline_encode_p50_ms": 3.8010420103091747,
+    "baseline_encode_p99_ms": 6.055746988859024,
+    "baseline_decode_p50_ms": 1.093792001483962,
+    "baseline_decode_p99_ms": 1.5016024746000767,
+    "candidate_encode_p50_ms": 3.8490419974550605,
+    "candidate_encode_p99_ms": 9.22956199094186,
+    "candidate_decode_p50_ms": 1.1231660027988255,
+    "candidate_decode_p99_ms": 2.912356464075854
+  },
+  "retained": false,
+  "reason": "Rejected: gain=8.70%, nrmse_delta=0.000e+00, gate_regression_detected=True",
+  "feature_flag": "ZPE_IOT_ZH1_DERIVATIVE_STAGE",
+  "default_enabled": false,
+  "gate_regression_detected": true,
+  "strict_gate_differential": {
+    "baseline": {
+      "strict_rc": 0,
+      "result_path": "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/dt_results_20260219T030009.json",
+      "mandatory_failures": [],
+      "strict_pass": true
+    },
+    "candidate": {
+      "strict_rc": 1,
+      "result_path": "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/dt_results_20260219T030327.json",
+      "mandatory_failures": [
+        {
+          "dt": 10,
+          "status": "FAIL",
+          "name": "Monotonicity"
+        },
+        {
+          "dt": 11,
+          "status": "FAIL",
+          "name": "Cross-Platform Parity"
+        }
+      ],
+      "strict_pass": false
+    },
+    "introduced_failures": [
+      "(10, 'FAIL')",
+      "(11, 'FAIL')"
+    ]
+  },
+  "measurement_protocol": {
+    "pathway": "encode_to_packet_bytes_then_decode_from_packet_bytes",
+    "repeats": 5,
+    "warmup": 1,
+    "window_size": 256
+  }
+}

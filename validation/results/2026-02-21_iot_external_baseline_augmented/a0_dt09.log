@@ -1,0 +1,3 @@
+[INFO] Python mean=0.073ms p99=0.104ms
+[INFO] Native mean=0.010ms p99=0.015ms
+[PASS] python(mean=0.073ms,p99=0.104ms) native(mean=0.010ms,p99=0.015ms) thresholds(mean<0.500ms,p99<2.000ms)

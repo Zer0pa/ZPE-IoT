@@ -1,0 +1,47 @@
+{
+  "CS-01": {
+    "status": "READY",
+    "name": "AirQualityUCI gas-channel smell proxy extract",
+    "provenance_class": "real_public",
+    "evidence_class": "E1",
+    "source_url": "https://archive.ics.uci.edu/ml/machine-learning-databases/00360/AirQualityUCI.zip",
+    "license": "CC BY 4.0 (UCI repository terms)",
+    "retrieval_date_utc": "2026-02-20T01:50:43.609648Z",
+    "raw_artifact": "validation/datasets/raw/DS-01/AirQualityUCI.zip",
+    "raw_sha256": "d4a64013fb385288a8a48d9d193ca7079b2e1bbddf6f8d458feb8c08ab2b8a2a",
+    "transform_artifact": "validation/datasets/raw/chemosense/CS-01_smell_airquality_extract.csv",
+    "transform_sha256": "122fcb444a2900832309a4bccd9701fede3a21aa9da50b5e397de71bb5c9f930",
+    "rows": 827,
+    "notes": "Filtered valid gas-sensor rows from AirQualityUCI.csv; removed sentinel -200 values."
+  },
+  "CS-02": {
+    "status": "READY",
+    "name": "Wine Quality red-chemistry taste proxy extract",
+    "provenance_class": "real_public",
+    "evidence_class": "E1",
+    "source_url": "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv",
+    "license": "CC BY 4.0 (UCI repository terms)",
+    "retrieval_date_utc": "2026-02-20T01:50:43.609648Z",
+    "raw_artifact": "validation/datasets/raw/chemosense/CS-02_winequality_red_raw.csv",
+    "raw_sha256": "4a402cf041b025d4566d954c3b9ba8635a3a8a01e039005d97d6a710278cf05e",
+    "transform_artifact": "validation/datasets/raw/chemosense/CS-02_taste_wine_extract.csv",
+    "transform_sha256": "11bf86ddb220530b5942a6fc26c4db12b383d5d14612da1e5d4982602f391f15",
+    "rows": 1024,
+    "notes": "Extracted continuous chemistry channels as taste-intensity proxy vectors."
+  },
+  "CS-03": {
+    "status": "READY",
+    "name": "Chemosense multimodal fusion proxy pairs",
+    "provenance_class": "real_public",
+    "evidence_class": "E1",
+    "source_url": "derived: CS-01 + CS-02 (public UCI datasets)",
+    "license": "Derived from CC BY 4.0 upstream datasets",
+    "retrieval_date_utc": "2026-02-20T01:50:43.609648Z",
+    "raw_artifact": "validation/datasets/raw/chemosense/CS-03_fusion_proxy_raw.csv",
+    "raw_sha256": "7baea823a0f89b3a54a215f35e97962817330fdf595498f6f684bd82e3dda89a",
+    "transform_artifact": "validation/datasets/raw/chemosense/CS-03_fusion_proxy.jsonl",
+    "transform_sha256": "c1eed60278fe339a129c7d5bcd9f6e3b059dd855a212c039fb229379fb2069fd",
+    "rows": 827,
+    "notes": "Frame-aligned smell/taste rows with deterministic touch proxy for fusion scheduling validation."
+  }
+}

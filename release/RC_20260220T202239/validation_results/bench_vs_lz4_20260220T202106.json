@@ -1,0 +1,355 @@
+{
+  "timestamp": "20260220T202106",
+  "results": [
+    {
+      "dataset": "DS-01",
+      "name": "UCI AirQuality (CO channel)",
+      "zpe_iot": {
+        "cr": 3.9873890008950217,
+        "nrmse": 0.0028827186998076565,
+        "encode_ms": 13.70079617720746,
+        "decode_ms": 2.739030965562311,
+        "encode_p50_ms": 13.438165999104967,
+        "encode_p99_ms": 14.3254078393511,
+        "decode_p50_ms": 2.7169999993930105,
+        "decode_p99_ms": 3.1119907583342865,
+        "peak_bytes": 85159,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "wire_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      },
+      "lz4": {
+        "cr": 2.4917896487216793,
+        "encode_ms": 0.11540840059751645,
+        "decode_ms": 0.03429159987717867,
+        "encode_p50_ms": 0.11325000014039688,
+        "encode_p99_ms": 0.12246167985722423,
+        "decode_p50_ms": 0.03370799822732806,
+        "decode_p99_ms": 0.03696032188599929,
+        "peak_bytes": 244813,
+        "compressed_bytes": 28866,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "raw_bytes_encode_then_decode_bytes"
+      },
+      "winner": "zpe-iot",
+      "method": {
+        "repeats": 5,
+        "warmup": 1,
+        "zpe_pathway": "wire_bytes_encode_then_decode_bytes",
+        "baseline_pathway": "raw_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      }
+    },
+    {
+      "dataset": "DS-02",
+      "name": "PHM 2012 Bearing Challenge (Learning_set/Bearing1_1)",
+      "zpe_iot": {
+        "cr": 4.047528788354687,
+        "nrmse": 0.015088628916700986,
+        "encode_ms": 11.810611962391704,
+        "decode_ms": 2.2708421624884068,
+        "encode_p50_ms": 12.056479499733541,
+        "encode_p99_ms": 12.52849982072803,
+        "decode_p50_ms": 2.307728998857783,
+        "decode_p99_ms": 2.4462993888300844,
+        "peak_bytes": 40389,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "wire_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      },
+      "lz4": {
+        "cr": 1.5895221925782197,
+        "encode_ms": 0.009116600995184854,
+        "decode_ms": 0.006333399505820125,
+        "encode_p50_ms": 0.008000002708286047,
+        "encode_p99_ms": 0.013604679697891697,
+        "decode_p50_ms": 0.006207999831531197,
+        "decode_p99_ms": 0.007948359125293791,
+        "peak_bytes": 119082,
+        "compressed_bytes": 20615,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "raw_bytes_encode_then_decode_bytes"
+      },
+      "winner": "zpe-iot",
+      "method": {
+        "repeats": 5,
+        "warmup": 1,
+        "zpe_pathway": "wire_bytes_encode_then_decode_bytes",
+        "baseline_pathway": "raw_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      }
+    },
+    {
+      "dataset": "DS-03",
+      "name": "MIT Intel Lab Data (temperature)",
+      "zpe_iot": {
+        "cr": 4.987158174795029,
+        "nrmse": 0.0060415249635933106,
+        "encode_ms": 10.802877749995332,
+        "decode_ms": 1.8502725155258304,
+        "encode_p50_ms": 10.973062500852393,
+        "encode_p99_ms": 11.765164231073868,
+        "decode_p50_ms": 1.8886039997596527,
+        "decode_p99_ms": 2.1021725193349994,
+        "peak_bytes": 49807,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "wire_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      },
+      "lz4": {
+        "cr": 2.325662272219166,
+        "encode_ms": 0.2556081999500748,
+        "decode_ms": 0.05342500007827766,
+        "encode_p50_ms": 0.2540419991419185,
+        "encode_p99_ms": 0.26260896076564677,
+        "decode_p50_ms": 0.04920799983665347,
+        "decode_p99_ms": 0.06216000096173957,
+        "peak_bytes": 449738,
+        "compressed_bytes": 56359,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "raw_bytes_encode_then_decode_bytes"
+      },
+      "winner": "zpe-iot",
+      "method": {
+        "repeats": 5,
+        "warmup": 1,
+        "zpe_pathway": "wire_bytes_encode_then_decode_bytes",
+        "baseline_pathway": "raw_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      }
+    },
+    {
+      "dataset": "DS-04",
+      "name": "UCI HAR Smartphone Inertial Signals (body_acc_x)",
+      "zpe_iot": {
+        "cr": 4.5764605320746625,
+        "nrmse": 0.04398747013196421,
+        "encode_ms": 10.968104925132138,
+        "decode_ms": 2.030878659263635,
+        "encode_p50_ms": 11.066958499213797,
+        "encode_p99_ms": 12.020184311841149,
+        "decode_p50_ms": 2.0543334994727047,
+        "decode_p99_ms": 2.361278269236209,
+        "peak_bytes": 50171,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "wire_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      },
+      "lz4": {
+        "cr": 0.9997940487723018,
+        "encode_ms": 0.027041800785809755,
+        "decode_ms": 0.012083199544576928,
+        "encode_p50_ms": 0.026166999305132776,
+        "encode_p99_ms": 0.03308168117655441,
+        "decode_p50_ms": 0.011832999007310718,
+        "decode_p99_ms": 0.013519677886506543,
+        "peak_bytes": 524536,
+        "compressed_bytes": 131099,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "raw_bytes_encode_then_decode_bytes"
+      },
+      "winner": "zpe-iot",
+      "method": {
+        "repeats": 5,
+        "warmup": 1,
+        "zpe_pathway": "wire_bytes_encode_then_decode_bytes",
+        "baseline_pathway": "raw_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      }
+    },
+    {
+      "dataset": "DS-05",
+      "name": "NOAA Global Hourly (station 01001099999)",
+      "zpe_iot": {
+        "cr": 4.582866611384806,
+        "nrmse": 0.004069836457596158,
+        "encode_ms": 10.48864062499888,
+        "decode_ms": 1.9238437751482707,
+        "encode_p50_ms": 10.6261255004938,
+        "encode_p99_ms": 11.326935500183026,
+        "decode_p50_ms": 1.9488124999043066,
+        "decode_p99_ms": 2.127911860661697,
+        "peak_bytes": 18331,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "wire_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      },
+      "lz4": {
+        "cr": 2.9142653859836356,
+        "encode_ms": 0.045341799705056474,
+        "decode_ms": 0.016275000962195918,
+        "encode_p50_ms": 0.04312499731895514,
+        "encode_p99_ms": 0.05432335863588378,
+        "decode_p50_ms": 0.015416000678669661,
+        "decode_p99_ms": 0.018326681602047756,
+        "peak_bytes": 109711,
+        "compressed_bytes": 11244,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "raw_bytes_encode_then_decode_bytes"
+      },
+      "winner": "zpe-iot",
+      "method": {
+        "repeats": 5,
+        "warmup": 1,
+        "zpe_pathway": "wire_bytes_encode_then_decode_bytes",
+        "baseline_pathway": "raw_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      }
+    },
+    {
+      "dataset": "DS-06",
+      "name": "Numenta NAB NYC Taxi",
+      "zpe_iot": {
+        "cr": 4.088670377562233,
+        "nrmse": 0.317491546771405,
+        "encode_ms": 12.346939605031366,
+        "decode_ms": 2.300477920089179,
+        "encode_p50_ms": 12.490020500990795,
+        "encode_p99_ms": 12.72178733117471,
+        "decode_p50_ms": 2.319353998245788,
+        "decode_p99_ms": 2.447294077683182,
+        "peak_bytes": 33765,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "wire_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      },
+      "lz4": {
+        "cr": 1.8373205741626795,
+        "encode_ms": 0.16794999974081293,
+        "decode_ms": 0.039125001057982445,
+        "encode_p50_ms": 0.16858299932209775,
+        "encode_p99_ms": 0.17178331909235567,
+        "decode_p50_ms": 0.03870900036417879,
+        "decode_p99_ms": 0.04039604187710211,
+        "peak_bytes": 292778,
+        "compressed_bytes": 44935,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "raw_bytes_encode_then_decode_bytes"
+      },
+      "winner": "zpe-iot",
+      "method": {
+        "repeats": 5,
+        "warmup": 1,
+        "zpe_pathway": "wire_bytes_encode_then_decode_bytes",
+        "baseline_pathway": "raw_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      }
+    },
+    {
+      "dataset": "DS-07",
+      "name": "UCI GPS Trajectories (go_track trackpoints)",
+      "zpe_iot": {
+        "cr": 4.540166036513051,
+        "nrmse": 0.01736154505253017,
+        "encode_ms": 11.58955598745024,
+        "decode_ms": 2.1673032313060503,
+        "encode_p50_ms": 11.63456249923911,
+        "encode_p99_ms": 13.110685270221438,
+        "decode_p50_ms": 2.1395834992290474,
+        "decode_p99_ms": 2.557510001133778,
+        "peak_bytes": 50663,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "wire_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      },
+      "lz4": {
+        "cr": 1.248269097073417,
+        "encode_ms": 0.11858340003527701,
+        "decode_ms": 0.027883400616701692,
+        "encode_p50_ms": 0.1233750008395873,
+        "encode_p99_ms": 0.13635532042826526,
+        "decode_p50_ms": 0.02245799987576902,
+        "decode_p99_ms": 0.05335136069334112,
+        "peak_bytes": 498382,
+        "compressed_bytes": 105003,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "raw_bytes_encode_then_decode_bytes"
+      },
+      "winner": "zpe-iot",
+      "method": {
+        "repeats": 5,
+        "warmup": 1,
+        "zpe_pathway": "wire_bytes_encode_then_decode_bytes",
+        "baseline_pathway": "raw_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      }
+    },
+    {
+      "dataset": "DS-08",
+      "name": "UCI Household Power Consumption (Voltage channel)",
+      "zpe_iot": {
+        "cr": 4.142597282763207,
+        "nrmse": 0.029885473583957923,
+        "encode_ms": 11.427460287654867,
+        "decode_ms": 2.2002596219067527,
+        "encode_p50_ms": 11.498457999550737,
+        "encode_p99_ms": 11.877884040295612,
+        "decode_p50_ms": 2.203853999162675,
+        "decode_p99_ms": 2.3617287509478047,
+        "peak_bytes": 50011,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "wire_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      },
+      "lz4": {
+        "cr": 2.1220392766363916,
+        "encode_ms": 0.23252500031958334,
+        "decode_ms": 0.056833399867173284,
+        "encode_p50_ms": 0.22941600036574528,
+        "encode_p99_ms": 0.24626731901662424,
+        "decode_p50_ms": 0.05662500188918784,
+        "decode_p99_ms": 0.0648246805940289,
+        "peak_bytes": 455146,
+        "compressed_bytes": 61767,
+        "iterations": 5,
+        "warmup_iterations": 1,
+        "pathway": "raw_bytes_encode_then_decode_bytes"
+      },
+      "winner": "zpe-iot",
+      "method": {
+        "repeats": 5,
+        "warmup": 1,
+        "zpe_pathway": "wire_bytes_encode_then_decode_bytes",
+        "baseline_pathway": "raw_bytes_encode_then_decode_bytes",
+        "fidelity_mode": "window-normalized",
+        "fidelity_label": "NRMSE(window-normalized)"
+      }
+    }
+  ],
+  "method_metadata": {
+    "comparator": "lz4",
+    "repeats": 5,
+    "warmup": 1,
+    "encode_decode_pathway": "zpe:wire_bytes, lz4:raw_bytes"
+  }
+}

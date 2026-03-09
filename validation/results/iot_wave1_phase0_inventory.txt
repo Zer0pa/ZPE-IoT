@@ -1,0 +1,214 @@
+[phase0_inventory] ts_utc=2026-02-20T17:39:10Z
+cwd=/Users/prinivenpillay/ZPE IoT/zpe-iot
+
+## IMC Freeze Verification
+expected_contract_version=wave1.0
+expected_vector_sha256=9c8b905f6c1d30d057955aa9adf0f7ff9139853494dca673e5fbe69f24fba10e
+actual_vector_sha256=9c8b905f6c1d30d057955aa9adf0f7ff9139853494dca673e5fbe69f24fba10e
+actual_contract_version_vector=wave1.0
+contract_file_line=3:Contract Version: `wave1.0`
+imc_freeze_status=PASS
+
+## Package Metadata
+python_project_name=zpe-iot
+python_project_version=0.1.0
+python_requires=>=3.10
+
+## CLI Command Map
+Usage: python -m zpe_iot.cli [OPTIONS] COMMAND [ARGS]...
+
+  zpe-iot CLI.
+
+  Examples:   zpe-iot compress input.csv --preset vibration --output out.zpk
+  zpe-iot info out.zpk   zpe-iot decompress out.zpk --output restored.csv
+  zpe-iot benchmark input.csv --compare zstd,lz4,zlib   zpe-iot diagnostics
+  --json
+
+Options:
+  -h, --help  Show this message and exit.
+
+Commands:
+  benchmark         Benchmark zpe-iot vs selected compressors on one CSV...
+  chemosense-smoke  Run deterministic smell+taste+touch+mental smoke flow.
+  compress          Compress a CSV file into packet bytes (.zpk).
+  decompress        Decompress packet bytes (.zpk) into CSV.
+  diagnostics       Print runtime diagnostics for automation and operator...
+  info              Print packet metadata from a .zpk file.
+
+## Test Inventory
+python_test_files=18
+rust_test_files=3
+destruct_test_files=27
+
+## Release Checklist Snapshot
+# Release Checklist (Deferred Publish)
+
+Date: 2026-02-19
+
+## RC Build Preconditions
+
+- [x] `cargo test` passes
+- [x] `cargo clippy -- -D warnings` passes
+- [x] `pytest -q` passes with coverage >= 85%
+- [x] strict DT run passes (`SKIPPED=0` for mandatory set)
+- [x] benchmark split artifacts regenerated (E0/E1/E2)
+- [ ] security scan artifact generated with high/critical = 0
+- [ ] SBOM + license manifest + release manifest generated
+
+## Package Validation
+
+- [ ] `python -m build` warning-free
+- [ ] fresh-venv install smoke (`compress/info/decompress/benchmark/diagnostics`)
+- [x] chemosense CLI smoke passes (`zpe-iot chemosense-smoke --json`)
+- [x] chemosense module smoke passes (`python -m zpe_iot.cli chemosense-smoke --json`)
+- [x] chemosense contract tests pass (`python/tests/test_chemosense_contract.py`)
+- [x] chemosense perf profile artifact generated (`validation/results/perf_profile_chemosense_<timestamp>.json`)
+- [x] chemosense benchmark summary artifact generated (`validation/results/bench_summary_chemosense_<timestamp>.json`)
+- [x] chemosense provenance manifest verified (`validation/datasets/manifest_chemosense.json`)
+
+## Release Bundle
+
+- [x] `release/RC_CHEMOSENSE_<timestamp>/` (or `release/RC_<timestamp>/`) generated
+- [x] bundle manifest hash file generated
+- [ ] memory-doc snapshot synced from root into `project_docs/`
+
+## Deferred Steps (Require Explicit User Ratification)
+
+- [ ] push git tag
+- [ ] publish to PyPI
+- [ ] publish to crates.io
+- [ ] outreach execution
+
+## One-Command Preflight
+
+```bash
+cd '/Users/prinivenpillay/ZPE IoT/zpe-iot'
+bash scripts/release_preflight.sh
+```
+
+## Current Git Status (short)
+ M README.md
+ M core/src/bitpack.rs
+ M core/src/codec.rs
+ M core/src/ffi.rs
+ M docs/BENCHMARKS.md
+ M docs/OUTREACH_TEMPLATE.md
+ M docs/SESSION_LOG.md
+ M docs/ZPE_IOT_SALES_BRIEF.md
+ M docs/benchmarks/cr_comparison.png
+ M docs/benchmarks/latency_comparison.png
+ M docs/benchmarks/memory_comparison.png
+ M python/pyproject.toml
+ M python/tests/test_codec.py
+ M python/zpe_iot/__init__.py
+ M python/zpe_iot/_native.py
+ M python/zpe_iot/cli.py
+ M python/zpe_iot/codec.py
+ M python/zpe_iot/presets.py
+ M scripts/customer_demo.py
+ M validation/benchmarks/_common.py
+ M validation/benchmarks/bench_vs_gorilla.py
+ M validation/benchmarks/bench_vs_lz4.py
+ M validation/benchmarks/bench_vs_zlib.py
+ M validation/benchmarks/bench_vs_zstd.py
+ M validation/benchmarks/generate_report.py
+ M validation/benchmarks/run_benchmarks.py
+ M validation/datasets/DS-01/data.npz
+ M validation/datasets/DS-02/data.npz
+ M validation/datasets/DS-03/data.npz
+ M validation/datasets/DS-04/data.npz
+ M validation/datasets/DS-05/data.npz
+ M validation/datasets/DS-06/data.npz
+ M validation/datasets/DS-07/data.npz
+ M validation/datasets/DS-08/data.npz
+ M validation/datasets/README.md
+ M validation/datasets/download_datasets.py
+ M validation/datasets/manifest.json
+ M validation/destruct_tests/dt01_fidelity.py
+ M validation/destruct_tests/dt04_noise_robustness.py
+ M validation/destruct_tests/dt06_ram_budget.py
+ M validation/destruct_tests/dt09_latency.py
+ M validation/destruct_tests/dt12_preset_coverage.py
+ M validation/destruct_tests/dt15_adaptive_stability.py
+ M validation/destruct_tests/dt16_benchmark_regression.py
+ M validation/destruct_tests/run_all_dts.py
+?? .coverage
+?? .github/
+?? CONTRIBUTING.md
+?? SECURITY.md
+?? SUPPORT.md
+?? core/tests/test_invariance.rs
+?? docs/ARCH_TIGHTNESS_AUDIT.md
+?? docs/CHEMOSENSE_EXTENSION.md
+?? docs/CI_POLICY.md
+?? docs/CLI_CONTRACT.md
+?? docs/FIDELITY_SEMANTICS.md
+?? docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.md
+?? docs/RELEASE_CHECKLIST.md
+?? docs/STARTUP_PROMPT_IOT_WAVE1_RELEASE_REFINEMENT.md
+?? docs/TEST_MATRIX.md
+?? docs/THRESHOLD_GOVERNANCE_AUDIT.md
+?? docs/perf/
+?? project_docs/
+?? python/.coverage
+?? python/README.md
+?? python/tests/fixtures/
+?? python/tests/test_benchmark_label_golden.py
+?? python/tests/test_benchmark_labels.py
+?? python/tests/test_chemosense.py
+?? python/tests/test_chemosense_contract.py
+?? python/tests/test_chemosense_extended.py
+?? python/tests/test_chemosense_mental.py
+?? python/tests/test_chemosense_rc_bundle_strict.py
+?? python/tests/test_chemosense_touch.py
+?? python/tests/test_cli.py
+?? python/tests/test_dt16_baseline_immutability.py
+?? python/tests/test_fidelity_semantics.py
+?? python/tests/test_native.py
+?? python/zpe_iot/chemosense/
+?? release/
+?? scripts/build_chemosense_rc_bundle.py
+?? scripts/build_release_bundle.py
+?? scripts/generate_release_artifacts.py
+?? scripts/profile_hot_paths.py
+?? scripts/release_preflight.sh
+?? scripts/security_scan.py
+?? scripts/sync_memory_docs.sh
+?? validation/benchmarks/pin_baseline.py
+?? validation/benchmarks/profile_chemosense.py
+?? validation/benchmarks/run_chemosense_benchmarks.py
+?? validation/benchmarks/run_wi1_ablation.py
+?? validation/benchmarks/run_zh1_ablation.py
+?? validation/datasets/build_chemosense_adapters.py
+?? validation/datasets/manifest_chemosense.json
+?? validation/datasets/raw/
+?? validation/datasets/verify_chemosense_provenance.py
+?? validation/datasets/verify_provenance.py
+?? validation/destruct_tests/dt17_provenance_integrity.py
+?? validation/destruct_tests/dt18_strict_gate_enforcement.py
+?? validation/destruct_tests/dt19_claim_tier_compliance.py
+?? validation/destruct_tests/dt20_workstream_ablation.py
+?? validation/destruct_tests/dt21_architecture_tightness.py
+?? validation/destruct_tests/dt22_modality_bit_collision.py
+?? validation/destruct_tests/dt23_zlayer_decode_integrity.py
+?? validation/destruct_tests/dt24_fusion_order_determinism.py
+?? validation/destruct_tests/dt25_malformed_packet_resilience.py
+?? validation/destruct_tests/dt26_import_hygiene.py
+?? validation/destruct_tests/dt27_cross_modality_contamination.py
+?? validation/destruct_tests/thresholds.py
+?? validation/metrics/
+?? validation/results/baseline/
+?? validation/results/claim_status_delta_20260220T121754.md
+?? validation/results/command_log_20260220T114632.txt
+?? validation/results/command_log_20260220T121754.txt
+?? validation/results/command_log_pytest_tmp.txt
+?? validation/results/coverage/
+?? validation/results/falsification_results_20260220T121754.md
+?? validation/results/iot_wave1_phase0_inventory.txt
+?? validation/results/pytest_latest_20260220T124239.log
+?? validation/results/root_cause_dt09_20260220T121754.md
+?? validation/results/strict_replay_summary_20260220T114632.md
+?? validation/results/strict_replay_summary_20260220T121754.md
+?? validation/results/vulnerability_scan_20260219T003635.sha256
+?? validation/results/vulnerability_scan_20260219T003747.sha256
+?? validation/runbooks/

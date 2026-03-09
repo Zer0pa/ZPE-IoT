@@ -1,0 +1,142 @@
+[
+  {
+    "id": "K01",
+    "source": "Kluver 1928",
+    "description": "Class I tunnel with radial converging rays",
+    "expected_form_class": "TUNNEL",
+    "kluver_class": "I"
+  },
+  {
+    "id": "K02",
+    "source": "Kluver 1928",
+    "description": "Funnel form with concentric narrowing toward a center",
+    "expected_form_class": "TUNNEL",
+    "kluver_class": "I"
+  },
+  {
+    "id": "K03",
+    "source": "Occipital stimulation reports",
+    "description": "Concentric radial tunnel pattern during stimulation",
+    "expected_form_class": "TUNNEL",
+    "kluver_class": "I"
+  },
+  {
+    "id": "K04",
+    "source": "Bressloff et al. 2001",
+    "description": "Clockwise rotating spiral arm pattern",
+    "expected_form_class": "SPIRAL",
+    "kluver_class": "II"
+  },
+  {
+    "id": "K05",
+    "source": "Bressloff et al. 2001",
+    "description": "Counter-clockwise spiral trajectory in visual field",
+    "expected_form_class": "SPIRAL",
+    "kluver_class": "II"
+  },
+  {
+    "id": "K06",
+    "source": "Hallucination survey",
+    "description": "Helical vortex swirl with rotational drift",
+    "expected_form_class": "SPIRAL",
+    "kluver_class": "II"
+  },
+  {
+    "id": "K07",
+    "source": "Kluver 1928",
+    "description": "Checkerboard lattice covering full field",
+    "expected_form_class": "LATTICE",
+    "kluver_class": "III"
+  },
+  {
+    "id": "K08",
+    "source": "Kluver 1928",
+    "description": "Honeycomb hexagonal lattice with repeating cells",
+    "expected_form_class": "LATTICE",
+    "kluver_class": "III"
+  },
+  {
+    "id": "K09",
+    "source": "Migraine aura reports",
+    "description": "Fortification zigzag grid and checkerboard shimmer",
+    "expected_form_class": "LATTICE",
+    "kluver_class": "III"
+  },
+  {
+    "id": "K10",
+    "source": "Kluver 1928",
+    "description": "Cobweb filigree branching arcs",
+    "expected_form_class": "COBWEB",
+    "kluver_class": "IV"
+  },
+  {
+    "id": "K11",
+    "source": "Kluver 1928",
+    "description": "Spiderweb pattern with branching filigree lines",
+    "expected_form_class": "COBWEB",
+    "kluver_class": "IV"
+  },
+  {
+    "id": "K12",
+    "source": "Electrical stimulation reports",
+    "description": "Tree-like branching phosphene cluster",
+    "expected_form_class": "COBWEB",
+    "kluver_class": "IV"
+  },
+  {
+    "id": "K13",
+    "source": "Bressloff et al. 2001",
+    "description": "Hexagonal tiling with stable honeycomb symmetry",
+    "expected_form_class": "LATTICE",
+    "kluver_class": "III"
+  },
+  {
+    "id": "K14",
+    "source": "Migraine aura reports",
+    "description": "Scintillating arc with swirl and rotating edge",
+    "expected_form_class": "SPIRAL",
+    "kluver_class": "II"
+  },
+  {
+    "id": "K15",
+    "source": "Occipital stimulation reports",
+    "description": "Radial rays and converging tunnel sensation",
+    "expected_form_class": "TUNNEL",
+    "kluver_class": "I"
+  },
+  {
+    "id": "K16",
+    "source": "Phosphene case notes",
+    "description": "Grid lattice becomes honeycomb and then checkerboard",
+    "expected_form_class": "LATTICE",
+    "kluver_class": "III"
+  },
+  {
+    "id": "K17",
+    "source": "Phosphene case notes",
+    "description": "Filigree web branching from a bright center",
+    "expected_form_class": "COBWEB",
+    "kluver_class": "IV"
+  },
+  {
+    "id": "K18",
+    "source": "Phosphene case notes",
+    "description": "Spiral coil transitioning into vortex",
+    "expected_form_class": "SPIRAL",
+    "kluver_class": "II"
+  },
+  {
+    "id": "K19",
+    "source": "Clinical notes",
+    "description": "Diffuse cloud with no stable geometry",
+    "expected_form_class": null,
+    "kluver_class": null
+  },
+  {
+    "id": "K20",
+    "source": "Clinical notes",
+    "description": "Brightness pulse without describable form",
+    "expected_form_class": null,
+    "kluver_class": null
+  }
+]

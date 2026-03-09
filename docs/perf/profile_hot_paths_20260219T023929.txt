@@ -1,0 +1,38 @@
+         8294081 function calls (8293682 primitive calls) in 9.350 seconds
+
+   Ordered by: cumulative time
+   List reduced from 633 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        8    0.015    0.002    9.293    1.162 /Users/prinivenpillay/ZPE IoT/zpe-iot/scripts/profile_hot_paths.py:33(_run_windows)
+     1120    1.268    0.001    6.028    0.005 /Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/codec.py:188(encode)
+   526450    0.538    0.000    2.411    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/.venv/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:48(_wrapfunc)
+   286720    0.397    0.000    2.390    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/.venv/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:2207(clip)
+     2240    1.904    0.001    1.904    0.001 /Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/codec.py:309(_crc16_ccitt)
+     1120    0.356    0.000    1.722    0.002 /Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/codec.py:261(decode)
+   239730    0.886    0.000    1.611    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/codec.py:146(_find_magnitude)
+   286720    0.458    0.000    1.544    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/.venv/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:38(_wrapit)
+     1120    0.001    0.000    1.526    0.001 /Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/codec.py:87(to_bytes)
+     1120    0.417    0.000    1.525    0.001 /Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/codec.py:409(pack_stream)
+     1120    0.255    0.000    1.332    0.001 /Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/codec.py:444(unpack_stream)
+   286720    0.163    0.000    0.862    0.000 {method 'clip' of 'numpy.ndarray' objects}
+   286720    0.693    0.000    0.699    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/.venv/lib/python3.14/site-packages/numpy/_core/_methods.py:96(_clip)
+   239730    0.272    0.000    0.689    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/.venv/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:1321(argmin)
+   285600    0.236    0.000    0.408    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/codec.py:120(_quantise_delta)
+   239730    0.228    0.000    0.228    0.000 {method 'argmin' of 'numpy.ndarray' objects}
+  1006002    0.202    0.000    0.202    0.000 {built-in method builtins.max}
+   813820    0.154    0.000    0.154    0.000 {built-in method builtins.getattr}
+   810930    0.133    0.000    0.133    0.000 {built-in method builtins.abs}
+   519539    0.127    0.000    0.127    0.000 {method 'append' of 'list' objects}
+   286752    0.090    0.000    0.090    0.000 {method 'wrap' of 'numpy._core._multiarray_umath._array_converter' objects}
+   286720    0.079    0.000    0.079    0.000 {method 'as_arrays' of 'numpy._core._multiarray_umath._array_converter' objects}
+   470470    0.074    0.000    0.074    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/codec.py:112(_direction_sign)
+   262750    0.064    0.000    0.064    0.000 {method 'to_bytes' of 'int' objects}
+   262798    0.052    0.000    0.052    0.000 {built-in method from_bytes}
+   259863    0.050    0.000    0.050    0.000 {built-in method builtins.min}
+   286720    0.042    0.000    0.042    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/.venv/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:2202(_clip_dispatcher)
+        8    0.000    0.000    0.037    0.005 /Users/prinivenpillay/ZPE IoT/zpe-iot/validation/datasets/loader.py:12(load_dataset)
+   239730    0.035    0.000    0.035    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/.venv/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:1317(_argmin_dispatcher)
+      640    0.002    0.000    0.035    0.000 /Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/codec.py:153(_auto_step)
+
+

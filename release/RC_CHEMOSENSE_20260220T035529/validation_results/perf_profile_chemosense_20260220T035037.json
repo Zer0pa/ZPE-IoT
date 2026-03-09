@@ -1,0 +1,51 @@
+{
+  "timestamp": "20260220T035037",
+  "timestamp_utc": "2026-02-20T01:50:37.820285+00:00",
+  "method": {
+    "repeats": 9,
+    "warmup": 2,
+    "smell_stroke_count": 64,
+    "taste_event_count": 64,
+    "fused_word_count": 1088,
+    "pathway": "encode_words_then_decode_words"
+  },
+  "smell": {
+    "encode_ms_mean": 1.2918570012386357,
+    "encode_ms_p50": 1.2750409950967878,
+    "encode_ms_p99": 1.4358225016621873,
+    "decode_ms_mean": 1.0001014327696924,
+    "decode_ms_p50": 0.9949170053005219,
+    "decode_ms_p99": 1.0175639833323658
+  },
+  "taste": {
+    "encode_ms_mean": 3.276440581040723,
+    "encode_ms_p50": 3.281542012700811,
+    "encode_ms_p99": 3.5184969642432407,
+    "decode_ms_mean": 1.385392716786425,
+    "decode_ms_p50": 1.321207993896678,
+    "decode_ms_p99": 1.5590455231722444
+  },
+  "fusion": {
+    "legacy_ingest_ms_mean": 3.60518532882755,
+    "legacy_ingest_ms_p50": 3.5890409781131893,
+    "legacy_ingest_ms_p99": 3.8030020042788237,
+    "current_ingest_ms_mean": 2.870801108656451,
+    "current_ingest_ms_p50": 2.900624996982515,
+    "current_ingest_ms_p99": 3.091778075322509,
+    "median_improvement_ratio": 0.19181056592242776,
+    "median_improvement_pct": 19.181056592242776,
+    "improved": true,
+    "legacy_counts": {
+      "taste_packets": 64,
+      "smell_packets": 64,
+      "touch_packets": 64,
+      "fused_events": 64
+    },
+    "current_counts": {
+      "taste_packets": 64,
+      "smell_packets": 64,
+      "touch_packets": 64,
+      "fused_events": 64
+    }
+  }
+}

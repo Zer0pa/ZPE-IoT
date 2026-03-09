@@ -1,0 +1,14 @@
+# Global ownership
+* @zer0pa-lab
+
+# Core codec and FFI
+/core/ @zer0pa-lab
+/c/ @zer0pa-lab
+
+# Python package and CLI
+/python/ @zer0pa-lab
+
+# Validation and benchmark evidence
+/validation/ @zer0pa-lab
+/docs/ @zer0pa-lab
+/scripts/ @zer0pa-lab

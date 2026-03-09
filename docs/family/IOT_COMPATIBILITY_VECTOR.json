@@ -1,0 +1,78 @@
+{
+  "iot_package_version": "0.1.0",
+  "imc_contract_version_consumed": "wave1.0",
+  "imc_vector_sha256": "9c8b905f6c1d30d057955aa9adf0f7ff9139853494dca673e5fbe69f24fba10e",
+  "imc_vector_path": "/Users/Zer0pa/ZPE-IMC-REPO/v0.0/docs/family/IMC_COMPATIBILITY_VECTOR.json",
+  "canonical_demo_metric_authority": {
+    "source": "IMC_COMPATIBILITY_VECTOR.json",
+    "metric": "canonical_demo_metrics.total_words",
+    "value": 844,
+    "policy": "authoritative_for_wave1",
+    "note": "Family coordination uses IMC vector authority; local CLI demo variants are non-authoritative for coordination metrics."
+  },
+  "packet_version_matrix": {
+    "iot_core_packet": {
+      "magic": "0x5A50",
+      "packet_version": 1,
+      "crc": "CRC16-CCITT",
+      "decode_policy": "reject_unsupported_version"
+    },
+    "iot_wi1_wrapper": {
+      "magic": "ZW1",
+      "wrapper_version": 1,
+      "feature_flag": "ZPE_IOT_WI1_ENTROPY_STAGE",
+      "status": "experimental"
+    },
+    "iot_zh1_wrapper": {
+      "magic": "ZH1",
+      "wrapper_version": 1,
+      "feature_flag": "ZPE_IOT_ZH1_DERIVATIVE_STAGE",
+      "status": "experimental"
+    },
+    "imc_contract_word_layout": {
+      "bits_total": 20,
+      "mode_bits": "[19:18]",
+      "version_bits": "[17:16]",
+      "payload_bits": "[15:0]",
+      "payload_mask": "0xFFFF"
+    }
+  },
+  "multimodal_alignment_assumptions": [
+    "IoT consumes IMC contract artifacts as static governance inputs, not runtime imports.",
+    "Chemosense modality collision and contamination guards (DT-22/DT-27) remain mandatory local gates.",
+    "Wave-1 cross-family comparisons use IMC canonical vector metrics for narrative consistency."
+  ],
+  "wire_compatibility_guarantees": [
+    "Current IoT decoder preserves backward decode for packet_version=1 fixtures.",
+    "Unsupported packet versions are rejected explicitly with deterministic errors.",
+    "Strict malformed behavior is enforced via packet compatibility tests and DT-25."
+  ],
+  "known_divergences": [
+    "IoT packet framing (0x5A50 + CRC16) is not byte-identical to IMC word-stream framing.",
+    "IoT chemosense smoke counts are local validation metrics and do not override IMC canonical demo authority.",
+    "WI-1/ZH-1 wrappers are feature-flagged and not default wave-1 wire surface."
+  ],
+  "breaking_change_policy": {
+    "requires": [
+      "packet_version_increment_or_wrapper_version_increment",
+      "golden_fixture_regeneration",
+      "strict_dt_replay",
+      "updated_family_alignment_docs"
+    ],
+    "family_coordination": "Any change affecting word layout markers, packet version semantics, or dispatch assumptions requires explicit wave-note update across IMC/Bio/IoT."
+  },
+  "suite_linkage_scope_2026_03_09": {
+    "required_now_for_private_staging": [
+      "current IMC compatibility vector pin remains valid",
+      "local family-linkage files remain present and honest"
+    ],
+    "required_only_for_public_release": [
+      "non-TBD suite interlocks across central/public coordination surfaces",
+      "cold-clone release verification"
+    ],
+    "deferrable_without_corrupting_repo_prep": [
+      "live-status mirror cleanup",
+      "public suite-promotion narrative surfaces"
+    ]
+  }
+}

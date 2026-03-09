@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "2026-02-20T17:54:58.360148+00:00",
+  "python_sbom": {
+    "path": "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/sbom_python_20260220T175457.json",
+    "sha256": "07a43a99b6ff349c68d1318e62839ec9810994c2e247544fe7e0f9f1aab0eb3f",
+    "component_count": 94
+  },
+  "rust_sbom": {
+    "path": "/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/sbom_rust_20260220T175457.json",
+    "sha256": "22fd15da841d7d6ebcc43d715a03d304ef1bf78a1d453a475d9f99ca6d784b57",
+    "component_count": 5
+  }
+}

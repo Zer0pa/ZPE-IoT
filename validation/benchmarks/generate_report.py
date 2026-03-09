@@ -16,7 +16,10 @@ DOC_BENCH.mkdir(parents=True, exist_ok=True)
 
 
 def latest(prefix: str) -> Path:
-    files = sorted(RESULTS.glob(f"{prefix}_*.json"))
+    pattern = f"{prefix}_*.json"
+    if prefix == "bench_summary":
+        pattern = "bench_summary_[0-9]*.json"
+    files = sorted(RESULTS.glob(pattern))
     if not files:
         raise FileNotFoundError(f"No files for {prefix}")
     return files[-1]
@@ -26,12 +29,43 @@ def load(path: Path) -> dict:
     return json.loads(path.read_text())
 
 
+def rel(path: Path) -> str:
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
+
+def _pick_claim_tier(e0: dict, e1: dict, e2: dict) -> tuple[str, dict]:
+    if int(e2.get("total", 0)) > 0:
+        return "E2", e2
+    if int(e1.get("total", 0)) > 0:
+        return "E1", e1
+    return "E0", e0
+
+
+def _pt6_status(payload: dict) -> str:
+    total = int(payload.get("total", 0))
+    if total == 0:
+        return "NOT_AVAILABLE"
+    return "PASS" if bool(payload.get("pt6_pass", False)) else "FAIL"
+
+
 def main() -> int:
     summary = load(latest("bench_summary"))
+    e0 = load(latest("bench_summary_E0_proxy"))
+    e1 = load(latest("bench_summary_E1_real_public"))
+    e2 = load(latest("bench_summary_E2_real_customer"))
+
     zstd = load(latest("bench_vs_zstd"))["results"]
     lz4 = load(latest("bench_vs_lz4"))["results"]
     zlib = load(latest("bench_vs_zlib"))["results"]
     gor = load(latest("bench_vs_gorilla"))["results"]
+
+    claim_tier, claim_payload = _pick_claim_tier(e0, e1, e2)
+    pt6_final_status = _pt6_status(claim_payload)
+    pt6_provisional_status = _pt6_status(e0)
+    nrmse_label = summary.get("fidelity_metric_label", "NRMSE(window-normalized)")
 
     ds = [r["dataset"] for r in summary["datasets"]]
     zpe_cr = [r["zpe_iot_cr"] for r in summary["datasets"]]
@@ -58,7 +92,7 @@ def main() -> int:
     plt.savefig(cr_png)
     plt.close()
 
-    # 2) Pareto scatter
+    # 2) Pareto scatter (if available)
     pareto_files = sorted(RESULTS.glob("pareto_frontier_*.json"))
     if pareto_files:
         pareto = load(pareto_files[-1])
@@ -73,25 +107,16 @@ def main() -> int:
         plt.title("CR vs NRMSE Pareto Frontier")
         plt.legend()
         plt.tight_layout()
-        pareto_png = DOC_BENCH / "pareto_frontier.png"
-        plt.savefig(pareto_png)
+        plt.savefig(DOC_BENCH / "pareto_frontier.png")
         plt.close()
 
     # 3/4) Latency + memory
     comp_names = ["zpe-iot", "zstd", "lz4", "zlib", "gorilla"]
 
     def avg_metric(rows: list[dict], key: str, comp: str) -> float:
-        vals = []
-        for r in rows:
-            vals.append(float(r[comp][key]))
-        return float(np.mean(vals))
+        return float(np.mean([float(r[comp][key]) for r in rows]))
 
-    zstd_map = {r["dataset"]: r for r in zstd}
-    lz4_map = {r["dataset"]: r for r in lz4}
-    zlib_map = {r["dataset"]: r for r in zlib}
-    gor_map = {r["dataset"]: r for r in gor}
-
-    zpe_lat = np.mean([r["zpe_iot"]["encode_ms"] for r in zstd])
+    zpe_lat = float(np.mean([r["zpe_iot"]["encode_ms"] for r in zstd]))
     zstd_lat = avg_metric(zstd, "encode_ms", "zstd")
     lz4_lat = avg_metric(lz4, "encode_ms", "lz4")
     zlib_lat = avg_metric(zlib, "encode_ms", "zlib")
@@ -106,7 +131,7 @@ def main() -> int:
     plt.savefig(latency_png)
     plt.close()
 
-    zpe_mem = np.mean([r["zpe_iot"]["peak_bytes"] for r in zstd])
+    zpe_mem = float(np.mean([r["zpe_iot"]["peak_bytes"] for r in zstd]))
     zstd_mem = avg_metric(zstd, "peak_bytes", "zstd")
     lz4_mem = avg_metric(lz4, "peak_bytes", "lz4")
     zlib_mem = avg_metric(zlib, "peak_bytes", "zlib")
@@ -121,33 +146,56 @@ def main() -> int:
     plt.savefig(mem_png)
     plt.close()
 
-    # markdown report
-    lines = []
+    # Markdown report
+    lines: list[str] = []
     lines.append("# ZPE-IoT Benchmark Results")
+    lines.append("")
+    lines.append("## Evidence Labeling")
+    lines.append(f"- Evidence Class: **{claim_tier}**")
+    lines.append(f"- PT-6 FINAL ({claim_tier}): **{pt6_final_status}** ({claim_payload.get('wins', 0)}/{claim_payload.get('total', 0)} wins)")
+    lines.append(f"- PT-6 PROVISIONAL (E0): **{pt6_provisional_status}** ({e0.get('wins', 0)}/{e0.get('total', 0)} wins)")
     lines.append("")
     lines.append("## Methodology")
     lines.append("- Benchmarks run on DS-01..DS-08 with identical raw float64 inputs for all compressors.")
     lines.append("- Comparators: zstd(level=3), LZ4, zlib(level=6), Gorilla-proxy.")
-    lines.append(f"- Latest summary artifact: `{latest('bench_summary')}`")
+    lines.append(f"- Fidelity metric in benchmark table: `{nrmse_label}`")
+    method_meta = summary.get("method_metadata", {})
+    if method_meta:
+        lines.append(f"- Encode/decode pathway: `{method_meta.get('encode_decode_pathway', 'unspecified')}`")
+        lines.append(
+            f"- Iterations: {method_meta.get('iteration_count', 'n/a')} "
+            f"(warmup {method_meta.get('warmup_iterations', 'n/a')})"
+        )
+    lines.append(f"- Overall summary artifact: `{rel(latest('bench_summary'))}`")
+    lines.append(f"- E0 summary artifact: `{rel(latest('bench_summary_E0_proxy'))}`")
+    lines.append(f"- E1 summary artifact: `{rel(latest('bench_summary_E1_real_public'))}`")
+    lines.append(f"- E2 summary artifact: `{rel(latest('bench_summary_E2_real_customer'))}`")
     lines.append("")
     lines.append("## Results Summary")
-    lines.append(f"- PT-6 status: **{'PASS' if summary['pt6_pass'] else 'FAIL'}** ({summary['wins']}/{summary['total']} wins for zpe-iot)")
     lines.append(f"- Mean zpe-iot CR across DS-01..DS-08: **{summary['mean_cr']:.2f}x**")
+    lines.append(f"- Active claim tier mean CR ({claim_tier}): **{claim_payload['mean_cr']:.2f}x**")
     lines.append("")
     lines.append("## Detailed Results")
     lines.append("")
-    lines.append("| Dataset | zpe-iot CR | zpe-iot NRMSE | zstd CR | LZ4 CR | zlib CR | Gorilla CR | Winner |")
-    lines.append("|---|---:|---:|---:|---:|---:|---:|---|")
+    lines.append(f"| Dataset | Evidence | zpe-iot CR | zpe-iot {nrmse_label} | zstd CR | LZ4 CR | zlib CR | Gorilla CR | Winner |")
+    lines.append("|---|---|---:|---:|---:|---:|---:|---:|---|")
     for r in summary["datasets"]:
         lines.append(
-            f"| {r['dataset']} | {r['zpe_iot_cr']:.2f} | {r['zpe_iot_nrmse']:.4f} | {r['zstd_cr']:.2f} | {r['lz4_cr']:.2f} | {r['zlib_cr']:.2f} | {r['gorilla_cr']:.2f} | {r['winner']} |"
+            f"| {r['dataset']} | {r.get('evidence_class', 'E0')} | {r['zpe_iot_cr']:.2f} | {r['zpe_iot_nrmse']:.4f} | {r['zstd_cr']:.2f} | {r['lz4_cr']:.2f} | {r['zlib_cr']:.2f} | {r['gorilla_cr']:.2f} | {r['winner']} |"
         )
     lines.append("")
     lines.append("### Charts")
     lines.append(f"![CR comparison](benchmarks/{cr_png.name})")
-    lines.append(f"![Pareto frontier](benchmarks/pareto_frontier.png)")
+    lines.append("![Pareto frontier](benchmarks/pareto_frontier.png)")
     lines.append(f"![Latency comparison](benchmarks/{latency_png.name})")
     lines.append(f"![Memory comparison](benchmarks/{mem_png.name})")
+    lines.append("")
+    lines.append("## Reproducibility Envelope")
+    repro = summary.get("reproducibility", {})
+    lines.append(f"- Dataset manifest SHA256: `{repro.get('manifest_sha256', 'unknown')}`")
+    lines.append(f"- Toolchain: `{json.dumps(repro.get('toolchain', {}), sort_keys=True)}`")
+    lines.append(f"- Hardware profile: `{json.dumps(repro.get('hardware_profile', {}), sort_keys=True)}`")
+    lines.append(f"- Commands: `{json.dumps(repro.get('commands', {}), sort_keys=True)}`")
     lines.append("")
     lines.append("## When NOT to Use ZPE-IoT")
     lines.append("- Already compressed payloads.")
@@ -156,16 +204,14 @@ def main() -> int:
     lines.append("")
     lines.append("## How to Reproduce")
     lines.append("```bash")
-    lines.append("cd /Users/prinivenpillay/ZPE\\ IoT/zpe-iot")
+    lines.append('ZPE_IOT_ROOT="${ZPE_IOT_ROOT:-$(pwd)}"')
+    lines.append('cd "$ZPE_IOT_ROOT"')
     lines.append("source .venv/bin/activate")
     lines.append("python validation/benchmarks/run_benchmarks.py")
     lines.append("python validation/benchmarks/generate_report.py")
+    lines.append("python validation/benchmarks/run_wi1_ablation.py --repeats 5")
+    lines.append("python validation/benchmarks/run_zh1_ablation.py --repeats 5")
     lines.append("```")
-    lines.append("")
-    lines.append("## ROI Calculator")
-    lines.append("Example: 10,000 devices × 1 MB/day × $1.00/MB = $3.65M/year")
-    lines.append("At 5x compression: $0.73M/year")
-    lines.append("Savings: $2.92M/year; $50K license implies ~58x ROI.")
 
     (ROOT / "docs" / "BENCHMARKS.md").write_text("\n".join(lines) + "\n")
     print("Updated docs/BENCHMARKS.md and charts")

@@ -6,6 +6,7 @@ from __future__ import annotations
 import numpy as np
 
 from _common import ensure_datasets, log_result, print_case
+from thresholds import ADAPTIVE_THR_MAX, ADAPTIVE_THR_MIN
 from validation.datasets.loader import load_dataset
 from zpe_iot import Config, Mode, encode
 
@@ -20,7 +21,7 @@ def main() -> int:
 
     # indirect check: encoding succeeds and bounded config remains valid over long stream
     stream = encode(x, config=cfg)
-    ok = stream.sample_count == len(x) and 0.001 <= cfg.thr_min <= cfg.thr_max <= 1.0
+    ok = stream.sample_count == len(x) and ADAPTIVE_THR_MIN <= cfg.thr_min <= cfg.thr_max <= ADAPTIVE_THR_MAX
 
     print_case("PASS" if ok else "FAIL", f"samples={stream.sample_count}, thr=[{cfg.thr_min}, {cfg.thr_max}]")
     log_result("DT-15", "PASS" if ok else "FAIL", {"samples": stream.sample_count})
