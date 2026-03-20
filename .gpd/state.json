@@ -2,7 +2,7 @@
     "project_reference": {
         "project_md_updated": "2026-03-20",
         "core_research_question": "Can ZPE-IoT honestly claim a commercial wedge on the unchanged real public E1 surface while maintaining truthful release, portability, and packaging evidence?",
-        "current_focus": "Phase 01: Authority Baseline Reconciliation And Diagnostic Harness"
+        "current_focus": "Phase 02: Targeted Compression Uplift"
     },
   "project_contract": {
     "schema_version": 1,
@@ -626,20 +626,18 @@
       ]
     }
   },
-  "position": {
-    "current_phase": null,
-    "current_phase_name": null,
-    "total_phases": null,
-    "current_plan": null,
-    "total_plans_in_phase": null,
-    "status": null,
-    "last_activity": null,
-    "last_activity_desc": null,
-    "progress_percent": 0,
-    "paused_at": null
-  },
-  "active_calculations": [],
-  "intermediate_results": [],
+  "active_calculations": [
+    "Plan Phase 2 uplift work against the frozen March 20 E1 authority surface.",
+    "Keep WI-1 and ZH-1 in scope only if DT-10 and DT-11 can remain green.",
+    "Prepare compact portability closure work without generating bulky duplicate artifacts."
+  ],
+  "intermediate_results": [
+    "Release authority baseline frozen at 17 PASS, 0 FAIL, 1 DEFERRED, 0 critical failures.",
+    "Strict DT baseline frozen at 27/27 PASS with mandatory_failures=[].",
+    "Benchmark baseline frozen at mean CR 4.369104600542837x, PT-6 6/8, losses DS-01 and DS-05.",
+    "Phase 1 status reconciliation artifact created at proofs/artifacts/STATUS_RECONCILIATION.md.",
+    "Phase 1 loss diagnosis artifacts created at proofs/artifacts/LOSS_DIAGNOSIS_COMPACT.json and proofs/artifacts/LOSS_DIAGNOSIS.md."
+  ],
   "open_questions": [
     "Can the current E1 benchmark surface be lifted from mean CR 4.3691x to at least 5.0x without invalid benchmarking?",
     "Can PT-6 be improved from 6/8 to at least 7/8 on the real public benchmark surface?",
@@ -647,10 +645,21 @@
     "What exact artifact combination is still required beyond the current 17 PASS + 1 DEFERRED preflight state to support an engineering-complete commercial position?"
   ],
   "performance_metrics": {
-    "rows": []
+    "rows": [
+      {
+        "label": "Bootstrap",
+        "duration": "2026-03-20 session",
+        "tasks": "Contract persistence and project init",
+        "files": ".gpd/*"
+      },
+      {
+        "label": "Phase 1",
+        "duration": "2026-03-20 session",
+        "tasks": "Research, plan, reconcile authority, and build the loss harness",
+        "files": ".gpd/phases/01-*, proofs/artifacts/STATUS_RECONCILIATION.md, validation/benchmarks/phase1_loss_scan.py, proofs/artifacts/LOSS_DIAGNOSIS*"
+      }
+    ]
   },
-  "decisions": [],
-  "approximations": [],
   "convention_lock": {
     "metric_signature": null,
     "fourier_convention": null,
@@ -672,12 +681,15 @@
     "creation_annihilation_order": null,
     "custom_conventions": {}
   },
-  "propagated_uncertainties": [],
   "pending_todos": [],
-  "blockers": [],
+  "blockers": [
+    "The governing E1 wedge target is still unmet at mean CR 4.369104600542837x and PT-6 6/8.",
+    "Blind-clone and cold-wheel verification are not yet closed.",
+    "Local disk headroom is tight enough that duplicate heavy artifacts are themselves a workflow risk."
+  ],
   "session": {
-    "last_date": null,
-    "stopped_at": null,
-    "resume_file": null
+    "last_date": "2026-03-20",
+    "stopped_at": "Phase 1 complete; Phase 2 uplift planning is next.",
+    "resume_file": ".gpd/STATE.md"
   }
 }

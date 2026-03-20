@@ -8,17 +8,17 @@ This roadmap starts from the real March 20, 2026 authority surface rather than t
 
 | Contract Item | Advanced By Phase(s) | Status |
 | ------------- | -------------------- | ------ |
-| `claim-release-completion` | Phase 1, Phase 3, Phase 4 | Planned |
-| `claim-benchmark-wedge` | Phase 1, Phase 2, Phase 4 | Planned |
-| `claim-honest-positioning` | Phase 1, Phase 3, Phase 4 | Planned |
-| `deliv-loss-diagnosis` | Phase 1, Phase 2 | Planned |
+| `claim-release-completion` | Phase 1, Phase 3, Phase 4 | Phase 1 baseline complete |
+| `claim-benchmark-wedge` | Phase 1, Phase 2, Phase 4 | Phase 1 diagnosis complete |
+| `claim-honest-positioning` | Phase 1, Phase 3, Phase 4 | Phase 1 baseline complete |
+| `deliv-loss-diagnosis` | Phase 1, Phase 2 | Phase 1 initial artifact complete |
 | `deliv-blind-clone` | Phase 3 | Planned |
 | `deliv-wheel-verification` | Phase 3 | Planned |
 | `deliv-wedge-verdict` | Phase 4 | Planned |
 
 ## Phases
 
-- [ ] **Phase 1: Authority Baseline Reconciliation And Diagnostic Harness** - Reconcile the March 20 truth surface, freeze the live baseline, and build the DS-01 / DS-05 diagnostic harness.
+- [x] **Phase 1: Authority Baseline Reconciliation And Diagnostic Harness** - Reconcile the March 20 truth surface, freeze the live baseline, and build the DS-01 / DS-05 diagnostic harness.
 - [ ] **Phase 2: Targeted Compression Uplift** - Attempt honest E1 uplift on the unchanged benchmark surface and decide whether the wedge threshold is realistically attainable.
 - [ ] **Phase 3: Portability, Blind-Clone, And Wheel Verification** - Close clean-environment and wheel-install evidence without relying on hidden local state.
 - [ ] **Phase 4: Honest Wedge Verdict And Engineering Completion** - Reconcile status docs and issue the bounded commercial verdict from the full authority surface.
@@ -44,8 +44,8 @@ This roadmap starts from the real March 20, 2026 authority surface rather than t
 
 Plans:
 
-- [ ] `01-01`: Reconcile March 20 authority artifacts against stale project docs and freeze the baseline.
-- [ ] `01-02`: Build the DS-01 / DS-05 diagnostic harness on the real public E1 surface.
+- [x] `01-01`: Reconcile March 20 authority artifacts against stale project docs and freeze the baseline.
+- [x] `01-02`: Build the DS-01 / DS-05 diagnostic harness on the real public E1 surface.
 
 ### Phase 2: Targeted Compression Uplift
 
@@ -120,7 +120,7 @@ Phases execute in numeric order: `1 -> 2 -> 3 -> 4`
 
 | Phase | Plans Complete | Status | Completed |
 | ----- | -------------- | ------ | --------- |
-| 1. Authority Baseline Reconciliation And Diagnostic Harness | 0/2 | Not started | - |
+| 1. Authority Baseline Reconciliation And Diagnostic Harness | 2/2 | Complete | 2026-03-20 |
 | 2. Targeted Compression Uplift | 0/2 | Not started | - |
 | 3. Portability, Blind-Clone, And Wheel Verification | 0/2 | Not started | - |
 | 4. Honest Wedge Verdict And Engineering Completion | 0/2 | Not started | - |
