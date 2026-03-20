@@ -1,0 +1,683 @@
+{
+    "project_reference": {
+        "project_md_updated": "2026-03-20",
+        "core_research_question": "Can ZPE-IoT honestly claim a commercial wedge on the unchanged real public E1 surface while maintaining truthful release, portability, and packaging evidence?",
+        "current_focus": "Phase 01: Authority Baseline Reconciliation And Diagnostic Harness"
+    },
+  "project_contract": {
+    "schema_version": 1,
+    "scope": {
+      "question": "Can ZPE-IoT earn a truthful commercial wedge by proving reproducible compression advantage on structurally suitable telemetry while also closing release, portability, and packaging gates?",
+      "in_scope": [
+        "Reconcile project truth surfaces to the current March 20, 2026 authority artifacts for release preflight, DT, and E1 benchmark status.",
+        "Diagnose the structural causes of the remaining E1 losses, especially DS-01 and DS-05, and identify whether they are fixable or intrinsic.",
+        "Run targeted benchmark uplift work aimed at mean E1 compression ratio >= 5.0x and PT-6 >= 7/8 without gaming the benchmark mix.",
+        "Close portability, blind-clone, and cold wheel installation evidence needed for an honest engineering-complete position.",
+        "Produce an explicit wedge verdict that states where the product is commercially strong, where it is weak, and what claims remain unjustified."
+      ],
+      "out_of_scope": [
+        "Actual public package publication or marketplace release during this project.",
+        "Treating Chemosense or any non-E1 dataset win as a substitute for the governing IoT benchmark surface.",
+        "E2 customer validation claims without new external customer evidence.",
+        "RunPod or other paid infrastructure work unless the user explicitly approves it."
+      ],
+      "unresolved_questions": [
+        "Can the current E1 benchmark surface be lifted from mean CR 4.3691x to at least 5.0x without invalid benchmarking?",
+        "Can PT-6 be improved from 6/8 to at least 7/8 on the real public benchmark surface?",
+        "Is DS-05 an intrinsic loss case for the current approach or a parameterization failure?",
+        "What exact artifact combination is still required beyond the current 17 PASS + 1 DEFERRED preflight state to support an engineering-complete commercial position?"
+      ]
+    },
+    "context_intake": {
+      "must_read_refs": [
+        "ref-preflight-20260320",
+        "ref-dt-20260320",
+        "ref-bench-e1-20260320",
+        "ref-wave2-brief",
+        "ref-public-audit",
+        "ref-concerns-map",
+        "ref-team-status-summary"
+      ],
+      "must_include_prior_outputs": [
+        "/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/proofs/artifacts/WAVE2_GPD_BRIEF_20260320.md",
+        "/Users/Zer0pa/ZPE/ZPE IoT/team_status_packet_2026-03-20/00_STATUS_AND_AUGMENTATION_SUMMARY.md",
+        "/Users/Zer0pa/ZPE/ZPE IoT/team_status_packet_2026-03-20/04_BENCHMARKS.md"
+      ],
+      "user_asserted_anchors": [
+        "March 20, 2026 managed preflight report with 17 PASS, 0 FAIL, 1 DEFERRED publish item, and 0 critical failures.",
+        "March 20, 2026 strict DT report with mandatory checks fully passing.",
+        "March 20, 2026 real public E1 benchmark summary with mean CR 4.3691x and PT-6 = 6/8."
+      ],
+      "known_good_baselines": [
+        "Release authority baseline is the March 20, 2026 preflight plus DT pair, not the older March 9 blocked state.",
+        "Current benchmark baseline is mean CR 4.369104600542837 and wins 6/8 on E1 real public.",
+        "DS-01 and DS-05 are the current benchmark losses that still block an unqualified wedge claim."
+      ],
+      "context_gaps": [
+        "Blind-clone reproducibility evidence is not yet closed in a current receipt-sized artifact set.",
+        "Cold wheel installation evidence is not yet anchored in the GPD project outputs.",
+        "The exact structural reason for DS-01 and DS-05 under the current preset surface is not yet pinned down."
+      ],
+      "crucial_inputs": [
+        "Do not convert stale March 9 release-blocker narratives into live truth once March 20 authority artifacts exist.",
+        "Do not substitute Chemosense or other auxiliary datasets for the governing E1/IoT benchmark surface.",
+        "Keep disk usage tight on the Mac M1 Air and prefer compact artifacts over bulky duplicate outputs."
+      ]
+    },
+    "approach_policy": {
+      "formulations": [
+        "Treat March 20 authority artifacts as canonical starting state and propagate that state into every downstream plan and verdict.",
+        "Investigate DS-01 and DS-05 on the real public E1 surface before broadening to auxiliary datasets or narrative framing."
+      ],
+      "allowed_estimator_families": [
+        "Measured release-preflight and DT artifact comparison",
+        "Real public E1 benchmark analysis",
+        "Clean-environment reproducibility checks"
+      ],
+      "forbidden_estimator_families": [
+        "Proxy-only storytelling based on non-authority datasets",
+        "Cherry-picked benchmark subsets that remove current losses"
+      ],
+      "allowed_fit_families": [
+        "Preset or parameter changes that are evaluated on the unchanged real public E1 benchmark surface",
+        "Operational verification that uses clean clones and cold environments"
+      ],
+      "forbidden_fit_families": [
+        "Benchmark reshaping that weakens the governing acceptance gate",
+        "Documentation-only completion claims without matching authority evidence"
+      ],
+      "stop_and_rethink_conditions": [
+        "Any proposed win depends on weakening the real E1 authority metric or substituting a softer benchmark surface.",
+        "A status-document rewrite outruns the actual evidence and starts claiming more than the March 20 artifacts support.",
+        "Disk pressure forces generation of bulky duplicate artifacts without material progress on DS-01, DS-05, or reproducibility closure."
+      ]
+    },
+    "observables": [
+      {
+        "id": "obs-release-authority",
+        "name": "March 20 release authority status",
+        "kind": "other",
+        "definition": "Combined managed preflight and strict DT status on March 20, 2026.",
+        "regime": null,
+        "units": null
+      },
+      {
+        "id": "obs-e1-mean-cr",
+        "name": "E1 mean compression ratio",
+        "kind": "scalar",
+        "definition": "Mean compression ratio on the real public E1 benchmark surface.",
+        "regime": null,
+        "units": "x"
+      },
+      {
+        "id": "obs-e1-pt6",
+        "name": "E1 PT-6 win rate",
+        "kind": "scalar",
+        "definition": "Number of real public E1 datasets that ZPE-IoT wins under PT-6 style evaluation.",
+        "regime": null,
+        "units": null
+      },
+      {
+        "id": "obs-loss-diagnosis",
+        "name": "Loss-case diagnosis",
+        "kind": "other",
+        "definition": "Evidence-backed explanation of why DS-01 and DS-05 currently lose and whether the losses are intrinsic or fixable.",
+        "regime": null,
+        "units": null
+      },
+      {
+        "id": "obs-portability-evidence",
+        "name": "Portability and packaging evidence",
+        "kind": "other",
+        "definition": "Evidence that clean clone and cold wheel installation work without hidden local state.",
+        "regime": null,
+        "units": null
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-release-completion",
+        "statement": "ZPE-IoT has closed the substantive release-preflight and DT gates needed for engineering completion, with only publish and deployment steps intentionally deferred.",
+        "observables": [
+          "obs-release-authority"
+        ],
+        "deliverables": [
+          "deliv-status-docs"
+        ],
+        "acceptance_tests": [
+          "test-preflight-full"
+        ],
+        "references": [
+          "ref-preflight-20260320",
+          "ref-dt-20260320"
+        ]
+      },
+      {
+        "id": "claim-benchmark-wedge",
+        "statement": "ZPE-IoT has a commercially meaningful benchmark wedge only if the real E1 surface demonstrates sufficient average compression strength and win rate on structurally suitable telemetry, or if the project explicitly records why that standard is not yet met.",
+        "observables": [
+          "obs-e1-mean-cr",
+          "obs-e1-pt6",
+          "obs-loss-diagnosis"
+        ],
+        "deliverables": [
+          "deliv-bench-summary",
+          "deliv-loss-diagnosis",
+          "deliv-wedge-verdict"
+        ],
+        "acceptance_tests": [
+          "test-bench-target",
+          "test-loss-diagnosis",
+          "test-honest-verdict"
+        ],
+        "references": [
+          "ref-bench-e1-20260320",
+          "ref-wave2-brief",
+          "ref-concerns-map"
+        ]
+      },
+      {
+        "id": "claim-honest-positioning",
+        "statement": "Project status messaging and completion documents must reflect the March 20 authority surface rather than stale March 9 blocker narratives and must clearly separate closed gates from deferred publication work.",
+        "observables": [
+          "obs-release-authority",
+          "obs-portability-evidence"
+        ],
+        "deliverables": [
+          "deliv-status-docs",
+          "deliv-blind-clone",
+          "deliv-wheel-verification",
+          "deliv-wedge-verdict"
+        ],
+        "acceptance_tests": [
+          "test-blind-clone",
+          "test-wheel-install",
+          "test-honest-verdict"
+        ],
+        "references": [
+          "ref-preflight-20260320",
+          "ref-public-audit",
+          "ref-team-status-summary"
+        ]
+      }
+    ],
+    "deliverables": [
+      {
+        "id": "deliv-status-docs",
+        "kind": "report",
+        "path": "proofs/artifacts/STATUS_RECONCILIATION.md",
+        "description": "Updated status artifact set that reflects the March 20 authority truth and separates closed gates from deferred publish steps.",
+        "must_contain": [
+          "March 20 authority baseline",
+          "17 PASS + 1 DEFERRED",
+          "stale-doc mismatch inventory"
+        ]
+      },
+      {
+        "id": "deliv-bench-summary",
+        "kind": "report",
+        "path": "validation/results/bench_summary_E1_real_public_latest.json",
+        "description": "Authority benchmark summary for the real public E1 surface, including current mean CR, win count, and any validated uplift.",
+        "must_contain": [
+          "mean CR",
+          "wins/total",
+          "dataset-level outcomes"
+        ]
+      },
+      {
+        "id": "deliv-loss-diagnosis",
+        "kind": "report",
+        "path": "proofs/artifacts/LOSS_DIAGNOSIS.md",
+        "description": "Diagnosis dossier for DS-01 and DS-05, including fixability, intrinsic limits, and evidence trail.",
+        "must_contain": [
+          "DS-01",
+          "DS-05",
+          "structural vs fixable verdict"
+        ]
+      },
+      {
+        "id": "deliv-blind-clone",
+        "kind": "report",
+        "path": "proofs/artifacts/BLIND_CLONE_VERIFICATION.md",
+        "description": "Evidence that a clean checkout can reproduce the essential install and validation surface without hidden local state.",
+        "must_contain": [
+          "clean checkout",
+          "reproduction steps",
+          "result summary"
+        ]
+      },
+      {
+        "id": "deliv-wheel-verification",
+        "kind": "report",
+        "path": "proofs/artifacts/WHEEL_VERIFICATION.md",
+        "description": "Evidence that a cold environment can install and import the built wheel and exercise the smoke path.",
+        "must_contain": [
+          "wheel install",
+          "cold environment",
+          "import or smoke result"
+        ]
+      },
+      {
+        "id": "deliv-wedge-verdict",
+        "kind": "report",
+        "path": "proofs/artifacts/WEDGE_VERDICT.md",
+        "description": "Direct verdict on whether ZPE-IoT currently has an honest commercial wedge and where claim boundaries must remain.",
+        "must_contain": [
+          "wedge verdict",
+          "supported claims",
+          "unsupported claims"
+        ]
+      }
+    ],
+    "acceptance_tests": [
+      {
+        "id": "test-preflight-full",
+        "subject": "claim-release-completion",
+        "kind": "consistency",
+        "procedure": "Verify that the March 20 managed preflight and strict DT artifacts are the active release authority baseline and that deferred publish is described accurately.",
+        "pass_condition": "The authoritative release status is documented as March 20 preflight plus DT with no critical failures and only deferred publish/deployment left outside the closed gate set.",
+        "evidence_required": [
+          "deliv-status-docs",
+          "ref-preflight-20260320",
+          "ref-dt-20260320"
+        ],
+        "automation": "hybrid"
+      },
+      {
+        "id": "test-blind-clone",
+        "subject": "claim-honest-positioning",
+        "kind": "reproducibility",
+        "procedure": "Run a clean-checkout or equivalently clean-workspace reproduction of the essential install and validation surface and capture the result.",
+        "pass_condition": "The clean environment reproduces the intended essential surface without undocumented local dependencies, or the specific blocker is recorded honestly.",
+        "evidence_required": [
+          "deliv-blind-clone",
+          "deliv-status-docs"
+        ],
+        "automation": "hybrid"
+      },
+      {
+        "id": "test-wheel-install",
+        "subject": "claim-honest-positioning",
+        "kind": "reproducibility",
+        "procedure": "Build the wheel, install it into a cold environment, and verify import or smoke-path behavior.",
+        "pass_condition": "The wheel install path works in a cold environment, or the failure is captured as an open blocker with exact evidence.",
+        "evidence_required": [
+          "deliv-wheel-verification",
+          "claim-release-completion"
+        ],
+        "automation": "hybrid"
+      },
+      {
+        "id": "test-bench-target",
+        "subject": "claim-benchmark-wedge",
+        "kind": "benchmark",
+        "procedure": "Evaluate the unchanged real public E1 benchmark surface after targeted uplift work and compare the result to the wedge threshold.",
+        "pass_condition": "Either mean CR >= 5.0x and PT-6 >= 7/8 on the real public E1 surface, or the project records a verified, non-handwavy reason that the wedge target is not currently met.",
+        "evidence_required": [
+          "deliv-bench-summary",
+          "ref-bench-e1-20260320",
+          "deliv-wedge-verdict"
+        ],
+        "automation": "hybrid"
+      },
+      {
+        "id": "test-loss-diagnosis",
+        "subject": "claim-benchmark-wedge",
+        "kind": "human_review",
+        "procedure": "Inspect DS-01 and DS-05 results, parameter surfaces, and benchmark evidence until each current loss has an explicit diagnosis.",
+        "pass_condition": "DS-01 and DS-05 each have an evidence-backed explanation categorized as fixable, intrinsic, or still unresolved with concrete reasons.",
+        "evidence_required": [
+          "deliv-loss-diagnosis",
+          "deliv-bench-summary",
+          "ref-bench-e1-20260320"
+        ],
+        "automation": "hybrid"
+      },
+      {
+        "id": "test-honest-verdict",
+        "subject": "claim-benchmark-wedge",
+        "kind": "human_review",
+        "procedure": "Compare the final wedge verdict and status wording against the live authority artifacts and forbidden proxies.",
+        "pass_condition": "The final verdict makes only claims supported by the March 20 authority artifacts and explicitly rejects stale or proxy-based success narratives.",
+        "evidence_required": [
+          "deliv-wedge-verdict",
+          "deliv-status-docs",
+          "ref-preflight-20260320",
+          "ref-bench-e1-20260320"
+        ],
+        "automation": "human"
+      }
+    ],
+    "references": [
+      {
+        "id": "ref-preflight-20260320",
+        "kind": "prior_artifact",
+        "locator": "/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/release_preflight_report_20260320T154022.json",
+        "aliases": [
+          "March 20 managed preflight"
+        ],
+        "role": "other",
+        "why_it_matters": "Defines the live release-preflight authority surface and supersedes the older blocked state.",
+        "applies_to": [
+          "claim-release-completion",
+          "claim-honest-positioning"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification",
+          "writing"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "compare",
+          "cite"
+        ]
+      },
+      {
+        "id": "ref-dt-20260320",
+        "kind": "prior_artifact",
+        "locator": "/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/dt_results_20260320T174518.json",
+        "aliases": [
+          "March 20 strict DT"
+        ],
+        "role": "other",
+        "why_it_matters": "Confirms the strict mandatory DT surface is closed on March 20, 2026.",
+        "applies_to": [
+          "claim-release-completion"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification",
+          "writing"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "compare",
+          "cite"
+        ]
+      },
+      {
+        "id": "ref-bench-e1-20260320",
+        "kind": "prior_artifact",
+        "locator": "/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/bench_summary_E1_real_public_20260320T174720.json",
+        "aliases": [
+          "March 20 E1 real public benchmark"
+        ],
+        "role": "benchmark",
+        "why_it_matters": "Defines the current benchmark authority surface, including mean CR 4.3691x, wins 6/8, and the DS-01/DS-05 losses.",
+        "applies_to": [
+          "claim-benchmark-wedge",
+          "deliv-bench-summary",
+          "deliv-loss-diagnosis"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification",
+          "writing"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "compare",
+          "cite"
+        ]
+      },
+      {
+        "id": "ref-wave2-brief",
+        "kind": "prior_artifact",
+        "locator": "/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/proofs/artifacts/WAVE2_GPD_BRIEF_20260320.md",
+        "aliases": [
+          "Wave 2 GPD brief"
+        ],
+        "role": "background",
+        "why_it_matters": "Captures the execution brief and objective framing that must stay visible through planning.",
+        "applies_to": [
+          "claim-benchmark-wedge"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "use"
+        ]
+      },
+      {
+        "id": "ref-public-audit",
+        "kind": "prior_artifact",
+        "locator": "/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/PUBLIC_AUDIT_LIMITS.md",
+        "aliases": [
+          "Public audit limits"
+        ],
+        "role": "must_consider",
+        "why_it_matters": "Shows the older blocked-state narrative that now has to be reconciled against March 20 authority artifacts.",
+        "applies_to": [
+          "claim-honest-positioning",
+          "deliv-status-docs"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "compare",
+          "avoid"
+        ]
+      },
+      {
+        "id": "ref-concerns-map",
+        "kind": "prior_artifact",
+        "locator": "/Users/Zer0pa/ZPE/ZPE IoT/.gpd/research-map/CONCERNS.md",
+        "aliases": [
+          "Outer concerns map"
+        ],
+        "role": "must_consider",
+        "why_it_matters": "Captures the commercial wedge concerns and anti-proxy discipline that govern the project.",
+        "applies_to": [
+          "claim-benchmark-wedge",
+          "deliv-wedge-verdict"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification",
+          "writing"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "use"
+        ]
+      },
+      {
+        "id": "ref-team-status-summary",
+        "kind": "prior_artifact",
+        "locator": "/Users/Zer0pa/ZPE/ZPE IoT/team_status_packet_2026-03-20/00_STATUS_AND_AUGMENTATION_SUMMARY.md",
+        "aliases": [
+          "March 20 status packet summary"
+        ],
+        "role": "background",
+        "why_it_matters": "Provides the March 20 project status framing and augmentation priorities that should align with the new project docs.",
+        "applies_to": [
+          "claim-honest-positioning",
+          "deliv-status-docs"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "writing"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "use"
+        ]
+      }
+    ],
+    "forbidden_proxies": [
+      {
+        "id": "fp-stale-release-docs",
+        "subject": "claim-honest-positioning",
+        "proxy": "Treat stale March 9 blocker documents as if they still describe the live release authority surface.",
+        "reason": "That would understate actual closure on release gates and poison downstream planning with obsolete blockers."
+      },
+      {
+        "id": "fp-chemosense-substitution",
+        "subject": "claim-benchmark-wedge",
+        "proxy": "Use Chemosense or another auxiliary dataset as a substitute for the governing E1/IoT benchmark surface.",
+        "reason": "It would narrate a softer win while leaving the authority benchmark unresolved."
+      },
+      {
+        "id": "fp-cherrypicked-benchmark",
+        "subject": "claim-benchmark-wedge",
+        "proxy": "Claim a wedge on cherry-picked winners, excluded losses, or benchmark reshaping that removes DS-01 or DS-05 from the authority surface.",
+        "reason": "That would weaken the acceptance gate instead of meeting it."
+      },
+      {
+        "id": "fp-microfix-narrative",
+        "subject": "claim-honest-positioning",
+        "proxy": "Declare success from micro-fixes or document polish that do not materially improve or honestly bound the governing authority metrics.",
+        "reason": "That rewards narratable progress instead of the actual objective."
+      }
+    ],
+    "links": [
+      {
+        "id": "link-release-status",
+        "source": "claim-release-completion",
+        "target": "deliv-status-docs",
+        "relation": "supports",
+        "verified_by": [
+          "test-preflight-full"
+        ]
+      },
+      {
+        "id": "link-benchmark-summary",
+        "source": "claim-benchmark-wedge",
+        "target": "deliv-bench-summary",
+        "relation": "supports",
+        "verified_by": [
+          "test-bench-target"
+        ]
+      },
+      {
+        "id": "link-loss-diagnosis",
+        "source": "claim-benchmark-wedge",
+        "target": "deliv-loss-diagnosis",
+        "relation": "supports",
+        "verified_by": [
+          "test-loss-diagnosis"
+        ]
+      },
+      {
+        "id": "link-blind-clone",
+        "source": "claim-honest-positioning",
+        "target": "deliv-blind-clone",
+        "relation": "supports",
+        "verified_by": [
+          "test-blind-clone"
+        ]
+      },
+      {
+        "id": "link-wheel-verification",
+        "source": "claim-honest-positioning",
+        "target": "deliv-wheel-verification",
+        "relation": "supports",
+        "verified_by": [
+          "test-wheel-install"
+        ]
+      },
+      {
+        "id": "link-wedge-verdict",
+        "source": "claim-benchmark-wedge",
+        "target": "deliv-wedge-verdict",
+        "relation": "supports",
+        "verified_by": [
+          "test-honest-verdict",
+          "test-bench-target"
+        ]
+      }
+    ],
+    "uncertainty_markers": {
+      "weakest_anchors": [
+        "The current DS-01 and DS-05 loss mechanisms are not yet fully diagnosed from first principles.",
+        "The exact reproducibility evidence still needed for blind-clone and wheel-install closure is not yet compiled into the project surface."
+      ],
+      "unvalidated_assumptions": [
+        "A parameter or preset adjustment may still recover at least one of the remaining E1 losses without weakening the benchmark surface.",
+        "The clean-environment installation path will not introduce a new blocker after the current release closure evidence."
+      ],
+      "competing_explanations": [
+        "DS-05 may be an intrinsic mismatch between current compression strategy and that telemetry structure rather than a tuning issue.",
+        "Some apparent wedge weakness may come from status-doc drift rather than only algorithmic deficit, but that cannot substitute for metric improvement."
+      ],
+      "disconfirming_observations": [
+        "If real-public E1 remains below the wedge threshold after honest targeted uplift attempts, the project must conclude that the commercial wedge is not yet established.",
+        "If clean-clone or cold-wheel verification fails in a way that exposes hidden local dependencies, engineering-complete positioning must be narrowed immediately."
+      ]
+    }
+  },
+  "position": {
+    "current_phase": null,
+    "current_phase_name": null,
+    "total_phases": null,
+    "current_plan": null,
+    "total_plans_in_phase": null,
+    "status": null,
+    "last_activity": null,
+    "last_activity_desc": null,
+    "progress_percent": 0,
+    "paused_at": null
+  },
+  "active_calculations": [],
+  "intermediate_results": [],
+  "open_questions": [
+    "Can the current E1 benchmark surface be lifted from mean CR 4.3691x to at least 5.0x without invalid benchmarking?",
+    "Can PT-6 be improved from 6/8 to at least 7/8 on the real public benchmark surface?",
+    "Is DS-05 an intrinsic loss case for the current approach or a parameterization failure?",
+    "What exact artifact combination is still required beyond the current 17 PASS + 1 DEFERRED preflight state to support an engineering-complete commercial position?"
+  ],
+  "performance_metrics": {
+    "rows": []
+  },
+  "decisions": [],
+  "approximations": [],
+  "convention_lock": {
+    "metric_signature": null,
+    "fourier_convention": null,
+    "natural_units": null,
+    "gauge_choice": null,
+    "regularization_scheme": null,
+    "renormalization_scheme": null,
+    "coordinate_system": null,
+    "spin_basis": null,
+    "state_normalization": null,
+    "coupling_convention": null,
+    "index_positioning": null,
+    "time_ordering": null,
+    "commutation_convention": null,
+    "levi_civita_sign": null,
+    "generator_normalization": null,
+    "covariant_derivative_sign": null,
+    "gamma_matrix_convention": null,
+    "creation_annihilation_order": null,
+    "custom_conventions": {}
+  },
+  "propagated_uncertainties": [],
+  "pending_todos": [],
+  "blockers": [],
+  "session": {
+    "last_date": null,
+    "stopped_at": null,
+    "resume_file": null
+  }
+}
