@@ -12,7 +12,7 @@ Deterministic sensor compression and chemosense packetization for IoT time-serie
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-ZPE-IoT is the private-stage Zero-Point Encoding workstream for 1D IoT sensor compression. The canonical implementation surface is the Rust core in `core/`, exposed through the nested Python distribution in `python/` and a repo-local PyO3 native build in `python/native/`.
+ZPE-IoT is a private-stage sensor compression SDK for 1D IoT time-series. The canonical implementation surface is the Rust core in `core/`, exposed through the nested Python distribution in `python/` and a repo-local PyO3 native build in `python/native/`.
 
 This front door promotes only the March 21, 2026 repo-local authority surface. It does not claim public package availability, universal compressor dominance, or runtime coupling to ZPE-IMC.
 
@@ -21,7 +21,7 @@ This front door promotes only the March 21, 2026 repo-local authority surface. I
 </p>
 
 ```bash
-git clone https://github.com/Zer0pa/ZPE-IoT
+git clone https://github.com/Zer0pa/ZPE-IoT zpe-iot
 cd zpe-iot
 python -m pip install -e './python[dev]'
 cargo test --manifest-path core/Cargo.toml --release
@@ -30,18 +30,20 @@ python validation/destruct_tests/run_all_dts.py --strict-gates
 
 | Field | Current truth | Evidence |
 |---|---|---|
-| As of | `2026-03-21` | `proofs/FINAL_STATUS.md` |
-| Repository URL | `https://github.com/Zer0pa/ZPE-IoT` | `CITATION.cff` |
-| Repo classification | `private-stage multi-surface codec repo` | `proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md` |
-| Release unit | `python/` distribution with bundled native wheel; `core/` and `c/` remain sibling engineering surfaces | `proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md` |
-| Acquisition surface | Private repo checkout or owner-shared built wheel from `python/dist/` | `python/README.md` |
-| Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` | `validation/results/release_preflight_report_20260321T205127.json` |
-| Strict DT | `27/27 PASS` | `validation/results/dt_results_20260321T225304.json` |
-| Fresh install smoke | `PASS` on local arm64 macOS cold install | `validation/results/fresh_env_smoke_20260321T205515/smoke.log` |
-| Benchmark authority | `E1`, `10/11 wins`, `17.16x` mean CR | `validation/results/bench_summary_E1_real_public_20260321T225305.json` |
-| Known real blockers | `none` | `proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md` |
-| Publication posture | `tag/index publication and outreach deferred pending explicit owner approval` | `validation/results/release_preflight_report_20260321T205127.json` |
-| Canonical evidence entry | `proofs/PROOF_INDEX.md` | `proofs/PROOF_INDEX.md` |
+| As of | `2026-03-21` | [Final status](proofs/FINAL_STATUS.md) |
+| Repository URL | `https://github.com/Zer0pa/ZPE-IoT` | [Citation](CITATION.cff) |
+| Repo classification | `private-stage multi-surface codec repo` | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
+| Release unit | `python/` distribution with bundled native wheel; `core/` and `c/` remain sibling engineering surfaces | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
+| Acquisition surface | Private repo checkout or owner-shared built wheel from `python/dist/` | [Native wheel verification](proofs/artifacts/PHASE7_NATIVE_WHEEL_VERIFICATION_20260321.md) |
+| Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` | [Preflight report](validation/results/release_preflight_report_20260321T205127.json) |
+| Strict DT | `27/27 PASS` | [DT report](validation/results/dt_results_20260321T225304.json) |
+| Fresh install smoke | `PASS` on local arm64 macOS cold install | [Cold-install smoke](validation/results/fresh_env_smoke_20260321T205515/smoke.log) |
+| Benchmark authority | `E1`, `10/11 wins`, `17.16x` mean CR | [E1 summary](validation/results/bench_summary_E1_real_public_20260321T225305.json) |
+| Known real blockers | `none` | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
+| Publication posture | `tag/index publication and outreach deferred pending explicit owner approval` | [Preflight report](validation/results/release_preflight_report_20260321T205127.json) |
+| Canonical evidence entry | `proofs/PROOF_INDEX.md` | [Proof index](proofs/PROOF_INDEX.md) |
+
+`Managed preflight` is the build/install/release gate, `strict DT` is the destructive-test gate, and `E1` is the promoted real-public benchmark tier.
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE-IoT Secondary Masthead" width="100%">
@@ -93,7 +95,7 @@ python validation/destruct_tests/run_all_dts.py --strict-gates
 | Audit replay path | `AUDITOR_PLAYBOOK.md` |
 | Public audit boundary | `PUBLIC_AUDIT_LIMITS.md` |
 | Contribution rules | `CONTRIBUTING.md` |
-| Support routing | `docs/FAQ.md`, `docs/SUPPORT.md`, `SUPPORT.md` |
+| Support routing | `docs/FAQ.md` first, then `docs/SUPPORT.md`, then `SUPPORT.md` for repo-level policy |
 | Security reporting | `SECURITY.md` |
 | Legal/release boundary | `docs/LEGAL_BOUNDARIES.md`, `RELEASING.md` |
 

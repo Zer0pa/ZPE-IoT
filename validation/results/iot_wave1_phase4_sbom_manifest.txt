@@ -1,3 +1,0 @@
-Saved: /Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/sbom_20260220T180813.json
-Saved: /Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/license_manifest_20260220T180813.json
-Saved: /Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/release_manifest_20260220T180813.json

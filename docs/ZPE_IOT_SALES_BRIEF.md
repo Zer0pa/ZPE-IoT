@@ -1,33 +1,51 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # ZPE-IoT: Sensor Compression Brief (E1)
 
-## The Problem
-Every IoT device transmitting over cellular pays $0.50-$2.00/MB.
-At 10,000 devices × 1 MB/day, that's $1.8M-$7.3M/year in data costs alone.
+<p>
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
 
-## The Solution
-ZPE-IoT (E1) compresses sensor data with signal-aware geometric encoding.
-No GPU. No cloud. Runs on ESP32, STM32, nRF, RISC-V.
+## What This Brief Is
+
+This is an internal, truth-routed commercial brief. It should be read alongside [BENCHMARKS.md](BENCHMARKS.md), [LEGAL_BOUNDARIES.md](LEGAL_BOUNDARIES.md), and [../proofs/FINAL_STATUS.md](../proofs/FINAL_STATUS.md).
+
+## The Problem
+
+Networked sensors pay for payload size, not for elegance. Any credible wedge here depends on measured byte reduction on real-public data, not on storytelling about embedded intent.
 
 ## Proven Results
-Evidence class for this brief: **(E1)** real-public datasets.
-See `docs/BENCHMARKS.md` for latest benchmark tables, PT-6 FINAL/PROVISIONAL labels, and replication commands.
-Current E1 snapshot (2026-03-09): mean CR **4.37x**, PT-6 FINAL **PASS** (6/8 wins), E2 claim tier **NOT_AVAILABLE** (0 datasets). Artifact: `validation/results/bench_summary_E1_real_public_20260309T060843.json`.
 
-## How It Works
-1. `python -m pip install -e ./python` for local/private evaluation (or link the C library to firmware)
-2. `compressed = zpe_iot.encode(sensor_data, preset="vibration")`
-3. Send compressed bytes instead of raw data
-4. Receiver runs `zpe_iot.decode(compressed)`
+| Field | Current truth |
+|---|---|
+| Evidence class | `E1` real-public |
+| Active benchmark surface | `DS-01..DS-10`, `DS-12` |
+| Current result | `10/11` wins, `17.163613932777356x` mean CR |
+| Competitor win still present | `DS-12` |
+| Publication posture | Private-stage only; no public package-index claim |
+| Installable proof path | Local arm64 macOS native wheel cold-install is evidenced |
 
-Current limitation: public package publication has not been cleared. Use a private repo checkout or wheel for evaluation.
+See [BENCHMARKS.md](BENCHMARKS.md) for the dataset table and [../validation/results/bench_summary_E1_real_public_20260321T225305.json](../validation/results/bench_summary_E1_real_public_20260321T225305.json) for the raw benchmark authority artifact.
 
-## Pricing
-| Tier | Price | Includes |
-|------|-------|----------|
-| Free | $0 | Core SDK, CLI, evaluation workflows |
-| Pro | $25K-$100K/year | Full presets, tuning tools, support |
-| Embedded | Per-unit royalty | Certified library + integration support |
+## Boundary Honesty
+
+- This repo does not claim universal dominance. `DS-12` is a competitor win on the promoted surface.
+- This repo does not claim public PyPI or crates.io availability.
+- This repo does not claim customer or production outcomes beyond the cited repo artifacts.
+- Embedded deployment is an engineering direction, not a public release claim in this repo.
+
+## Evaluation Route
+
+1. Use a private repo checkout or owner-shared wheel.
+2. Run the current benchmark or a side-by-side comparison on your own telemetry.
+3. Compare payload reduction, reconstruction error, and operational constraints against your own baseline.
 
 ## Next Step
 Run a side-by-side trial on your own telemetry:
 `python scripts/customer_demo.py <your_data.csv> --preset <preset>`
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

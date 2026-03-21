@@ -1,2 +1,0 @@
-Saved: /Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/vulnerability_scan_20260220T180808.json
-High/Critical vulnerabilities: 0

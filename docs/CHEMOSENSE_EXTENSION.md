@@ -1,4 +1,12 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # Chemosense Extension
+
+<p>
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
 
 The chemosense stack adds deterministic smell+taste+touch+mental encoding and fusion to the Python SDK:
 
@@ -98,3 +106,7 @@ All payloads remain 20-bit word compatible. Mental uses mode2/mode3 wire lanes w
 - `python/tests/test_cli.py::test_cli_chemosense_smoke_json`
 
 These tests validate roundtrip behavior, schema/error contracts, z-layer integrity, deterministic fused frame emission, import hygiene, and cross-modality contamination safety.
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

@@ -14,8 +14,8 @@ Scope: current private-stage repo truth only
 | Field | Current truth |
 |---|---|
 | Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` |
-| Private staging | `ALLOWED` |
-| Public publish | `DEFERRED BY POLICY` |
+| Private staging | `engineering verification passed for private-stage use` |
+| Public publish | `owner-deferred pending explicit approval` |
 | Source of truth | `../validation/results/release_preflight_report_20260321T205127.json`, `../proofs/FINAL_STATUS.md` |
 
 <p>
@@ -74,3 +74,7 @@ The only deferred managed-preflight check is `D01_DEFERRED_PUBLISH`.
 ```bash
 bash scripts/release_preflight.sh
 ```
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

@@ -1,0 +1,167 @@
+{
+  "generated_at_utc": "2026-03-21T12:43:50.563165+00:00",
+  "authority_artifact": "validation/results/bench_summary_E1_real_public_20260320T174720.json",
+  "fidelity_metric_mode": "window-normalized",
+  "fidelity_metric_label": "NRMSE(window-normalized)",
+  "mechanism": {
+    "id": "count_aware_exact_fidelity_token_bitpack",
+    "description": "Balanced and lossless packets use a count-aware compact bitstream while decode semantics remain unchanged."
+  },
+  "subset_results": [
+    {
+      "dataset": "DS-05",
+      "preset": "pressure",
+      "window_count": 16,
+      "legacy_compression_ratio": 4.575258307735269,
+      "candidate_compression_ratio": 6.626491405460061,
+      "compression_ratio_gain": 2.0512330977247917,
+      "legacy_total_bytes": 7162,
+      "candidate_total_bytes": 4945,
+      "compressed_byte_delta": -2217,
+      "legacy_nrmse": 0.004069836457596158,
+      "candidate_nrmse": 0.004069836457596158,
+      "nrmse_delta": 0.0,
+      "decode_match": true,
+      "acceptance": {
+        "improved": true,
+        "fidelity_guardrail_pass": true,
+        "decode_match": true
+      }
+    },
+    {
+      "dataset": "DS-02",
+      "preset": "vibration",
+      "window_count": 16,
+      "legacy_compression_ratio": 4.046431217584589,
+      "candidate_compression_ratio": 6.233212859045083,
+      "compression_ratio_gain": 2.1867816414604944,
+      "legacy_total_bytes": 8098,
+      "candidate_total_bytes": 5257,
+      "compressed_byte_delta": -2841,
+      "legacy_nrmse": 0.015088628916700987,
+      "candidate_nrmse": 0.015088628916700987,
+      "nrmse_delta": 0.0,
+      "decode_match": true,
+      "acceptance": {
+        "improved": true,
+        "fidelity_guardrail_pass": true,
+        "decode_match": true
+      }
+    },
+    {
+      "dataset": "DS-08",
+      "preset": "voltage",
+      "window_count": 64,
+      "legacy_compression_ratio": 4.141557128412538,
+      "candidate_compression_ratio": 6.289443378119002,
+      "compression_ratio_gain": 2.147886249706464,
+      "legacy_total_bytes": 31648,
+      "candidate_total_bytes": 20840,
+      "compressed_byte_delta": -10808,
+      "legacy_nrmse": 0.029885473583957926,
+      "candidate_nrmse": 0.029885473583957926,
+      "nrmse_delta": 0.0,
+      "decode_match": true,
+      "acceptance": {
+        "improved": true,
+        "fidelity_guardrail_pass": true,
+        "decode_match": true
+      }
+    }
+  ],
+  "subset_acceptance": {
+    "improved_dataset_count": 3,
+    "minimum_required_improvements": 2,
+    "fidelity_failures": [],
+    "decode_failures": [],
+    "dt10_pass": true,
+    "dt11_pass": true,
+    "retained": true
+  },
+  "dt10": {
+    "threshold_rows": [
+      {
+        "threshold": 0.001,
+        "compression_ratio": 6.486144101346001,
+        "packet_bytes": 5052
+      },
+      {
+        "threshold": 0.002,
+        "compression_ratio": 6.486144101346001,
+        "packet_bytes": 5052
+      },
+      {
+        "threshold": 0.005,
+        "compression_ratio": 6.486144101346001,
+        "packet_bytes": 5052
+      },
+      {
+        "threshold": 0.01,
+        "compression_ratio": 6.486144101346001,
+        "packet_bytes": 5052
+      },
+      {
+        "threshold": 0.02,
+        "compression_ratio": 6.486144101346001,
+        "packet_bytes": 5052
+      },
+      {
+        "threshold": 0.05,
+        "compression_ratio": 6.486144101346001,
+        "packet_bytes": 5052
+      },
+      {
+        "threshold": 0.1,
+        "compression_ratio": 6.486144101346001,
+        "packet_bytes": 5052
+      },
+      {
+        "threshold": 0.2,
+        "compression_ratio": 6.488712871287129,
+        "packet_bytes": 5050
+      },
+      {
+        "threshold": 0.5,
+        "compression_ratio": 6.4938565200158544,
+        "packet_bytes": 5046
+      }
+    ],
+    "dt10_pass": true
+  },
+  "dt11": {
+    "dt11_pass": true,
+    "native_available": true,
+    "mismatch_index": null
+  },
+  "authority_projection_reference": {
+    "authority_mean_cr": 4.369104600542837,
+    "authority_wins": 6,
+    "authority_total": 8
+  },
+  "authority_verdict": {
+    "command": "/Users/prinivenpillay/.gpd/venv/bin/python validation/benchmarks/run_benchmarks.py",
+    "returncode": 0,
+    "stdout_tail": [
+      "Saved /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/bench_vs_lz4_20260321T144232.json",
+      "Saved /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/bench_vs_zlib_20260321T144310.json",
+      "Saved /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/bench_vs_gorilla_20260321T144350.json",
+      "[RUN] /Users/prinivenpillay/.gpd/venv/bin/python /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/benchmarks/bench_vs_zstd.py",
+      "[RUN] /Users/prinivenpillay/.gpd/venv/bin/python /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/benchmarks/bench_vs_lz4.py",
+      "[RUN] /Users/prinivenpillay/.gpd/venv/bin/python /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/benchmarks/bench_vs_zlib.py",
+      "[RUN] /Users/prinivenpillay/.gpd/venv/bin/python /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/benchmarks/bench_vs_gorilla.py",
+      "Saved summary: /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/bench_summary_20260321T144350.json",
+      "PT-6 PASS (7/8 wins, FINAL)",
+      "Evidence split artifacts: {'E0': '/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/bench_summary_E0_proxy_20260321T144350.json', 'E1': '/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/bench_summary_E1_real_public_20260321T144350.json', 'E2': '/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/bench_summary_E2_real_customer_20260321T144350.json'}"
+    ],
+    "stderr_tail": [],
+    "artifact": "validation/results/bench_summary_E1_real_public_20260321T144350.json",
+    "mean_cr": 6.557750648944099,
+    "wins": 7,
+    "total": 8,
+    "passes_gate": true
+  },
+  "verdict": {
+    "retained": true,
+    "summary": "The exact-fidelity token-bitpack line stays live only if the subset improves without any fidelity, parity, or monotonicity regression. If that clears, the full E1 rerun becomes admissible; otherwise Phase 2 should be downgraded from the failed subset result."
+  }
+}

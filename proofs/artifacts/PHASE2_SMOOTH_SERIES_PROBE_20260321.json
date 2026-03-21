@@ -1,0 +1,315 @@
+{
+  "generated_at_utc": "2026-03-21T02:13:47.594648+00:00",
+  "authority_artifact": "validation/results/bench_summary_E1_real_public_20260320T174720.json",
+  "fidelity_metric_mode": "window-normalized",
+  "fidelity_metric_label": "NRMSE(window-normalized)",
+  "mechanism": {
+    "id": "adaptive_threshold_gain_k_0_2",
+    "description": "Increase the adaptive threshold gain from k=0.15 to k=0.2 while leaving wrappers untouched.",
+    "overrides": {
+      "k": 0.2
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "DS-05",
+      "baseline": {
+        "dataset": "DS-05",
+        "preset": "pressure",
+        "window_count": 16,
+        "raw_total_bytes": 32768,
+        "total_compressed_bytes": 7162,
+        "bytes_per_256_window": 447.625,
+        "payload_bytes": 433.625,
+        "payload_total_bytes": 6938,
+        "fixed_packet_bytes": 14,
+        "compression_ratio": 4.575258307735269,
+        "nrmse": 0.004069836457596158,
+        "mean_token_count": 216.8125,
+        "zero_token_ratio": 0.3002450980392157
+      },
+      "candidate": {
+        "dataset": "DS-05",
+        "preset": "pressure",
+        "window_count": 16,
+        "raw_total_bytes": 32768,
+        "total_compressed_bytes": 6958,
+        "bytes_per_256_window": 434.875,
+        "payload_bytes": 420.875,
+        "payload_total_bytes": 6734,
+        "fixed_packet_bytes": 14,
+        "compression_ratio": 4.70939925265881,
+        "nrmse": 0.005947638111209452,
+        "mean_token_count": 210.4375,
+        "zero_token_ratio": 0.3475490196078431
+      },
+      "delta": {
+        "compression_ratio": 0.13414094492354067,
+        "bytes_per_256_window": -12.75,
+        "payload_bytes": -12.75,
+        "total_compressed_bytes": -204,
+        "nrmse": 0.0018778016536132938
+      },
+      "acceptance": {
+        "improved": true,
+        "fidelity_guardrail_pass": false,
+        "dt10_pass": true
+      },
+      "monotonicity": {
+        "threshold_rows": [
+          {
+            "threshold": 0.001,
+            "compression_ratio": 4.70939925265881,
+            "total_compressed_bytes": 6958
+          },
+          {
+            "threshold": 0.002,
+            "compression_ratio": 4.70939925265881,
+            "total_compressed_bytes": 6958
+          },
+          {
+            "threshold": 0.005,
+            "compression_ratio": 4.70939925265881,
+            "total_compressed_bytes": 6958
+          },
+          {
+            "threshold": 0.01,
+            "compression_ratio": 4.70939925265881,
+            "total_compressed_bytes": 6958
+          },
+          {
+            "threshold": 0.02,
+            "compression_ratio": 4.70939925265881,
+            "total_compressed_bytes": 6958
+          },
+          {
+            "threshold": 0.05,
+            "compression_ratio": 4.70939925265881,
+            "total_compressed_bytes": 6958
+          },
+          {
+            "threshold": 0.1,
+            "compression_ratio": 4.70939925265881,
+            "total_compressed_bytes": 6958
+          },
+          {
+            "threshold": 0.2,
+            "compression_ratio": 4.727062896710906,
+            "total_compressed_bytes": 6932
+          }
+        ],
+        "monotonic_breaks": [],
+        "dt10_pass": true
+      }
+    },
+    {
+      "dataset": "DS-02",
+      "baseline": {
+        "dataset": "DS-02",
+        "preset": "vibration",
+        "window_count": 16,
+        "raw_total_bytes": 32768,
+        "total_compressed_bytes": 8098,
+        "bytes_per_256_window": 506.125,
+        "payload_bytes": 492.125,
+        "payload_total_bytes": 7874,
+        "fixed_packet_bytes": 14,
+        "compression_ratio": 4.046431217584589,
+        "nrmse": 0.015088628916700987,
+        "mean_token_count": 246.0625,
+        "zero_token_ratio": 0.16519607843137254
+      },
+      "candidate": {
+        "dataset": "DS-02",
+        "preset": "vibration",
+        "window_count": 16,
+        "raw_total_bytes": 32768,
+        "total_compressed_bytes": 7912,
+        "bytes_per_256_window": 494.5,
+        "payload_bytes": 480.5,
+        "payload_total_bytes": 7688,
+        "fixed_packet_bytes": 14,
+        "compression_ratio": 4.141557128412538,
+        "nrmse": 0.022777047147840533,
+        "mean_token_count": 240.25,
+        "zero_token_ratio": 0.22647058823529412
+      },
+      "delta": {
+        "compression_ratio": 0.09512591082794941,
+        "bytes_per_256_window": -11.625,
+        "payload_bytes": -11.625,
+        "total_compressed_bytes": -186,
+        "nrmse": 0.007688418231139546
+      },
+      "acceptance": {
+        "improved": true,
+        "fidelity_guardrail_pass": false,
+        "dt10_pass": true
+      },
+      "monotonicity": {
+        "threshold_rows": [
+          {
+            "threshold": 0.001,
+            "compression_ratio": 4.141557128412538,
+            "total_compressed_bytes": 7912
+          },
+          {
+            "threshold": 0.002,
+            "compression_ratio": 4.141557128412538,
+            "total_compressed_bytes": 7912
+          },
+          {
+            "threshold": 0.005,
+            "compression_ratio": 4.141557128412538,
+            "total_compressed_bytes": 7912
+          },
+          {
+            "threshold": 0.01,
+            "compression_ratio": 4.141557128412538,
+            "total_compressed_bytes": 7912
+          },
+          {
+            "threshold": 0.02,
+            "compression_ratio": 4.141557128412538,
+            "total_compressed_bytes": 7912
+          },
+          {
+            "threshold": 0.05,
+            "compression_ratio": 4.143651997976733,
+            "total_compressed_bytes": 7908
+          },
+          {
+            "threshold": 0.1,
+            "compression_ratio": 4.144700227675183,
+            "total_compressed_bytes": 7906
+          },
+          {
+            "threshold": 0.2,
+            "compression_ratio": 4.15205271160669,
+            "total_compressed_bytes": 7892
+          }
+        ],
+        "monotonic_breaks": [],
+        "dt10_pass": true
+      }
+    },
+    {
+      "dataset": "DS-08",
+      "baseline": {
+        "dataset": "DS-08",
+        "preset": "voltage",
+        "window_count": 64,
+        "raw_total_bytes": 131072,
+        "total_compressed_bytes": 31648,
+        "bytes_per_256_window": 494.5,
+        "payload_bytes": 480.5,
+        "payload_total_bytes": 30752,
+        "fixed_packet_bytes": 14,
+        "compression_ratio": 4.141557128412538,
+        "nrmse": 0.029885473583957926,
+        "mean_token_count": 240.25,
+        "zero_token_ratio": 0.19246323529411766
+      },
+      "candidate": {
+        "dataset": "DS-08",
+        "preset": "voltage",
+        "window_count": 64,
+        "raw_total_bytes": 131072,
+        "total_compressed_bytes": 30804,
+        "bytes_per_256_window": 481.3125,
+        "payload_bytes": 467.3125,
+        "payload_total_bytes": 29908,
+        "fixed_packet_bytes": 14,
+        "compression_ratio": 4.255031814050123,
+        "nrmse": 0.031145847702171058,
+        "mean_token_count": 233.65625,
+        "zero_token_ratio": 0.2537990196078431
+      },
+      "delta": {
+        "compression_ratio": 0.113474685637585,
+        "bytes_per_256_window": -13.1875,
+        "payload_bytes": -13.1875,
+        "total_compressed_bytes": -844,
+        "nrmse": 0.0012603741182131319
+      },
+      "acceptance": {
+        "improved": true,
+        "fidelity_guardrail_pass": false,
+        "dt10_pass": true
+      },
+      "monotonicity": {
+        "threshold_rows": [
+          {
+            "threshold": 0.001,
+            "compression_ratio": 4.255031814050123,
+            "total_compressed_bytes": 30804
+          },
+          {
+            "threshold": 0.002,
+            "compression_ratio": 4.255031814050123,
+            "total_compressed_bytes": 30804
+          },
+          {
+            "threshold": 0.005,
+            "compression_ratio": 4.255031814050123,
+            "total_compressed_bytes": 30804
+          },
+          {
+            "threshold": 0.01,
+            "compression_ratio": 4.255031814050123,
+            "total_compressed_bytes": 30804
+          },
+          {
+            "threshold": 0.02,
+            "compression_ratio": 4.255031814050123,
+            "total_compressed_bytes": 30804
+          },
+          {
+            "threshold": 0.05,
+            "compression_ratio": 4.255031814050123,
+            "total_compressed_bytes": 30804
+          },
+          {
+            "threshold": 0.1,
+            "compression_ratio": 4.255584415584416,
+            "total_compressed_bytes": 30800
+          },
+          {
+            "threshold": 0.2,
+            "compression_ratio": 4.256413587062415,
+            "total_compressed_bytes": 30794
+          }
+        ],
+        "monotonic_breaks": [],
+        "dt10_pass": true
+      }
+    }
+  ],
+  "subset_acceptance": {
+    "improved_dataset_count": 3,
+    "minimum_required_improvements": 2,
+    "fidelity_guardrail_failures": [
+      "DS-05",
+      "DS-02",
+      "DS-08"
+    ],
+    "monotonicity_failures": [],
+    "hard_stop": true
+  },
+  "residual_budget": {
+    "authority_mean_cr": 4.369104600542837,
+    "projected_mean_cr_with_candidate_subset": 4.4107290396201835,
+    "mean_cr_gain_from_candidate_subset": 0.04162443907734659,
+    "authority_total_cr_budget": 34.952836804342695,
+    "projected_total_cr_budget_with_candidate_subset": 35.28583231696147,
+    "residual_total_cr_budget_to_5x": 4.714167683038532,
+    "residual_mean_cr_to_5x": 0.5892709603798165,
+    "ds06_required_verdict": "DS-06 not yet required",
+    "ds06_required_basis": "This mechanism failed the fidelity guardrail, so widening to DS-06 would be premature. The measured subset still leaves a positive residual to 5.0x, but the immediate next spend should be a second smooth-series mechanism that can hold or improve benchmark NRMSE."
+  },
+  "verdict": {
+    "retained": false,
+    "summary": "The k=0.2 adaptive-threshold gain is wrapper-neutral and improves compressed bytes on DS-05, DS-02, and DS-08, but it worsens benchmark NRMSE on all three datasets. Under the current benchmark contract that is a hard stop, so the mechanism is not admissible even though DT-10 remains green on the subset.",
+    "next_task": "Probe one more smooth-series payload-side mechanism that explicitly constrains NRMSE to stay at or below the current authority subset values before reconsidering any DS-06 spend."
+  }
+}

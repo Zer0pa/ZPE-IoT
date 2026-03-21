@@ -1,5 +1,0 @@
-vector_path=/Users/prinivenpillay/ZPE IoT/zpe-iot/docs/family/IOT_COMPATIBILITY_VECTOR.json
-missing_keys=[]
-imc_contract_version_consumed=wave1.0
-imc_vector_sha256=9c8b905f6c1d30d057955aa9adf0f7ff9139853494dca673e5fbe69f24fba10e
-phase5_alignment_gate=PASS

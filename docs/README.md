@@ -8,7 +8,7 @@
 
 This directory routes the current ZPE-IoT documentation surface.
 
-Promoted current-status values live in `../README.md` and `../proofs/FINAL_STATUS.md`. Use this directory to navigate depth, not to invent a second status warehouse.
+Promoted current-status values live in `../README.md` and `../proofs/FINAL_STATUS.md`. Use this directory to route depth, not to invent a second status warehouse.
 
 <p>
   <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
@@ -31,13 +31,11 @@ Promoted current-status values live in `../README.md` and `../proofs/FINAL_STATU
   <img src="../.github/assets/readme/section-bars/faq-and-support.svg" alt="FAQ AND SUPPORT" width="100%">
 </p>
 
-| Document | What it is |
-|---|---|
-| `FAQ.md` | Reader-facing questions about repo truth, install, and boundaries |
-| `SUPPORT.md` | Support routing and response expectations |
-| `../SUPPORT.md` | Root support policy and contact surface |
-| `../SECURITY.md` | Vulnerability reporting route |
-| `LEGAL_BOUNDARIES.md` | Compact license, publication, and family-linkage boundary note |
+- Start with `FAQ.md` for stable reader questions.
+- Use `SUPPORT.md` when you need issue routing or response expectations.
+- Use `../SUPPORT.md` only for the repo-level support policy.
+- Use `../SECURITY.md` for vulnerability handling.
+- Use `LEGAL_BOUNDARIES.md` for license, publication, and family-linkage boundaries.
 
 <p>
   <img src="../.github/assets/readme/section-bars/engineering-references.svg" alt="ENGINEERING REFERENCES" width="100%">
@@ -69,13 +67,14 @@ Promoted current-status values live in `../README.md` and `../proofs/FINAL_STATU
   <img src="../.github/assets/readme/section-bars/proof-corpus.svg" alt="PROOF CORPUS" width="100%">
 </p>
 
-| Need | Go to | Why |
-|---|---|---|
-| Current verdict | `../proofs/FINAL_STATUS.md` | Shortest current truth statement |
-| Current proof routing | `../proofs/PROOF_INDEX.md` | Current artifact entry point |
-| Audit replay | `../AUDITOR_PLAYBOOK.md` | Shortest honest verification path |
-| Public audit boundary | `../PUBLIC_AUDIT_LIMITS.md` | What the staged repo can and cannot establish |
-| Work receipts and phase notes | `../proofs/artifacts/`, `../proofs/runbooks/` | Material execution evidence and operational context |
+Proof routing is owned by `../proofs/PROOF_INDEX.md`.
+
+Use:
+
+- `../proofs/FINAL_STATUS.md` for the one-screen verdict
+- `../proofs/PROOF_INDEX.md` for proof navigation
+- `../AUDITOR_PLAYBOOK.md` for replay
+- `../PUBLIC_AUDIT_LIMITS.md` for audit-boundary rules
 
 <p>
   <img src="../.github/assets/readme/section-bars/what-this-directory-is-not.svg" alt="WHAT THIS DIRECTORY IS NOT" width="100%">
@@ -88,3 +87,7 @@ Treat the following as lineage rather than front-door truth:
 - `../project_docs/`
 - `../validation/runbooks/`
 - older `../release/RC_*` bundles
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

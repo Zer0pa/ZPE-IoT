@@ -8,7 +8,7 @@
   <img src="../.github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-This document defines the current public software architecture boundary for the ZPE-IoT private-stage repo.
+This document defines the current software architecture boundary for the ZPE-IoT private-stage repo.
 
 Canonical anchors:
 
@@ -28,6 +28,17 @@ Canonical anchors:
 | `c/` | Repo-local C surface | Example and local engineering surface, not a separate published package |
 | `validation/` | Dataset, benchmark, and DT surface | Current authority metrics come from here |
 | `proofs/` | Verdict, proof routing, and artifacts | Current status should route here, not to older release packets |
+
+<p>
+  <img src="../.github/assets/readme/section-bars/interface-contracts.svg" alt="INTERFACE CONTRACTS" width="100%">
+</p>
+
+| Stage | Encode responsibility | Decode responsibility | Canonical layer |
+|---|---|---|---|
+| Python package | Validate user input, resolve presets/config, and expose CLI/API entry points | Accept packet bytes or `EncodedStream` input for user-facing decode | Supporting wrapper |
+| Native extension | Accelerate Python encode/decode when the bundled module is available | Mirror packet semantics under the Python runtime | Supporting wrapper |
+| Rust core | Canonical packet construction, tokenization, bit-packing, CRC, and deterministic codec rules | Canonical packet parse and reconstruction rules | Canonical |
+| Validation surface | Benchmark, DT, and install-path replay | Re-verify declared behavior against artifacts | Canonical for proof, not runtime |
 
 <p>
   <img src="../.github/assets/readme/section-bars/public-api-contract.svg" alt="PUBLIC API CONTRACT" width="100%">
@@ -63,3 +74,7 @@ The following boundaries remain explicit:
 - ZPE-IoT aligns to ZPE-IMC by compatibility artifacts, not by runtime repo coupling.
 - The active E1 benchmark surface excludes `DS-11`, which remains explicitly blocked.
 - ZPE-IoT is a bounded-lossy codec and is not a strict lossless archive format.
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

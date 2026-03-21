@@ -1,9 +1,0 @@
-security_scan=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/vulnerability_scan_20260220T180808.json
-sbom=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/sbom_20260220T180813.json
-license_manifest=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/license_manifest_20260220T180813.json
-release_manifest=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/release_manifest_20260220T180813.json
-checksums=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/release_checksums_20260220T180815.txt
-rc_bundle=/Users/prinivenpillay/ZPE IoT/zpe-iot/release/RC_20260220T200815
-rc_manifest=/Users/prinivenpillay/ZPE IoT/zpe-iot/release/RC_20260220T200815/bundle_manifest.json
-rc_manifest_sha=/Users/prinivenpillay/ZPE IoT/zpe-iot/release/RC_20260220T200815/bundle_manifest.sha256
-phase4_attestation_gate=PASS

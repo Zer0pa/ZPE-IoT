@@ -1,7 +1,15 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # CLI Contract
 
 Date: 2026-02-19  
 Scope: `python/zpe_iot/cli.py`
+
+<p>
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
 
 ## Commands
 
@@ -44,3 +52,7 @@ zpe-iot diagnostics --json
 zpe-iot chemosense-smoke --json
 python -m zpe_iot.cli chemosense-smoke --json
 ```
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

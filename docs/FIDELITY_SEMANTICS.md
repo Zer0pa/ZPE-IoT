@@ -1,7 +1,15 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # Fidelity Semantics Policy
 
 Date: 2026-02-19  
 Authority: PRD_06 Phase E2
+
+<p>
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
 
 ## Objective
 
@@ -32,3 +40,7 @@ Prevent ambiguity between two valid NRMSE normalizations used in ZPE-IoT.
 
 - Mixing dataset-normalized and window-normalized values in one table without labels.
 - Reporting unlabeled `NRMSE` in customer-facing benchmark claims.
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

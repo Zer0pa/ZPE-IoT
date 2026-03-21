@@ -1,0 +1,184 @@
+{
+  "generated_at_utc": "2026-03-20T22:36:06.598089+00:00",
+  "authority_artifact": "validation/results/bench_summary_E1_real_public_20260320T174720.json",
+  "current_mean_cr": 4.369104600542837,
+  "current_total_cr_budget": 34.952836804342695,
+  "target_mean_cr": 5.0,
+  "target_total_cr_budget": 40.0,
+  "missing_total_cr_budget": 5.047163195657305,
+  "loss_only_ceiling": {
+    "datasets": [
+      "DS-01",
+      "DS-05"
+    ],
+    "ceiling_total_cr_budget": 37.664931403337555,
+    "ceiling_mean_cr": 4.708116425417194,
+    "residual_after_loss_only": 2.3350685966624454
+  },
+  "bridge_analysis": {
+    "ranked_by_gap_to_5x": [
+      {
+        "dataset": "DS-02",
+        "winner": "zpe-iot",
+        "current_cr": 4.047528788354687,
+        "best_baseline_cr": 1.6982637989116351,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.9524712116453129,
+        "raw_bytes": 163840,
+        "zpe_payload_bytes": 40490
+      },
+      {
+        "dataset": "DS-06",
+        "winner": "zpe-iot",
+        "current_cr": 4.088670377562233,
+        "best_baseline_cr": 2.985247324269598,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.9113296224377674,
+        "raw_bytes": 409600,
+        "zpe_payload_bytes": 100200
+      },
+      {
+        "dataset": "DS-08",
+        "winner": "zpe-iot",
+        "current_cr": 4.142597282763207,
+        "best_baseline_cr": 3.5722228278643846,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.8574027172367931,
+        "raw_bytes": 655360,
+        "zpe_payload_bytes": 158240
+      },
+      {
+        "dataset": "DS-07",
+        "winner": "zpe-iot",
+        "current_cr": 4.540166036513051,
+        "best_baseline_cr": 1.3718209030205346,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.4598339634869486,
+        "raw_bytes": 655360,
+        "zpe_payload_bytes": 146390
+      },
+      {
+        "dataset": "DS-04",
+        "winner": "zpe-iot",
+        "current_cr": 4.5764605320746625,
+        "best_baseline_cr": 1.0492811169105638,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.4235394679253375,
+        "raw_bytes": 655360,
+        "zpe_payload_bytes": 144920
+      },
+      {
+        "dataset": "DS-03",
+        "winner": "zpe-iot",
+        "current_cr": 4.987158174795029,
+        "best_baseline_cr": 3.8134473829682,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.012841825204970903,
+        "raw_bytes": 655360,
+        "zpe_payload_bytes": 132290
+      }
+    ],
+    "ranked_by_comparator_headroom": [
+      {
+        "dataset": "DS-05",
+        "winner": "competitor",
+        "current_cr": 4.582866611384806,
+        "best_baseline_cr": 7.021212770516391,
+        "comparator_headroom": 2.4383461591315854,
+        "gap_to_5x": 0.417133388615194,
+        "raw_bytes": 163840,
+        "zpe_payload_bytes": 35810
+      },
+      {
+        "dataset": "DS-01",
+        "winner": "competitor",
+        "current_cr": 3.9873890008950217,
+        "best_baseline_cr": 4.261137440758294,
+        "comparator_headroom": 0.2737484398632719,
+        "gap_to_5x": 1.0126109991049783,
+        "raw_bytes": 358400,
+        "zpe_payload_bytes": 89890
+      },
+      {
+        "dataset": "DS-02",
+        "winner": "zpe-iot",
+        "current_cr": 4.047528788354687,
+        "best_baseline_cr": 1.6982637989116351,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.9524712116453129,
+        "raw_bytes": 163840,
+        "zpe_payload_bytes": 40490
+      },
+      {
+        "dataset": "DS-03",
+        "winner": "zpe-iot",
+        "current_cr": 4.987158174795029,
+        "best_baseline_cr": 3.8134473829682,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.012841825204970903,
+        "raw_bytes": 655360,
+        "zpe_payload_bytes": 132290
+      },
+      {
+        "dataset": "DS-04",
+        "winner": "zpe-iot",
+        "current_cr": 4.5764605320746625,
+        "best_baseline_cr": 1.0492811169105638,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.4235394679253375,
+        "raw_bytes": 655360,
+        "zpe_payload_bytes": 144920
+      },
+      {
+        "dataset": "DS-06",
+        "winner": "zpe-iot",
+        "current_cr": 4.088670377562233,
+        "best_baseline_cr": 2.985247324269598,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.9113296224377674,
+        "raw_bytes": 409600,
+        "zpe_payload_bytes": 100200
+      },
+      {
+        "dataset": "DS-07",
+        "winner": "zpe-iot",
+        "current_cr": 4.540166036513051,
+        "best_baseline_cr": 1.3718209030205346,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.4598339634869486,
+        "raw_bytes": 655360,
+        "zpe_payload_bytes": 146390
+      },
+      {
+        "dataset": "DS-08",
+        "winner": "zpe-iot",
+        "current_cr": 4.142597282763207,
+        "best_baseline_cr": 3.5722228278643846,
+        "comparator_headroom": 0.0,
+        "gap_to_5x": 0.8574027172367931,
+        "raw_bytes": 655360,
+        "zpe_payload_bytes": 158240
+      }
+    ],
+    "single_bridge_dataset": null,
+    "single_bridge_dataset_supported": false,
+    "winning_bridge_set": [
+      "DS-02",
+      "DS-06",
+      "DS-08"
+    ],
+    "winning_bridge_gap_to_5x_total": 2.7212035513198733,
+    "triad_total_if_bridge_set_reaches_5x": 40.38613495465743,
+    "triad_mean_if_bridge_set_reaches_5x": 5.048266869332179
+  },
+  "verdict": {
+    "ds02_comparator_bridge_supported": false,
+    "summary": "The March 20 E1 authority artifact does not support DS-02 as a single comparator-headroom bridge dataset. DS-02 already beats the baselines on this surface, so the bridge problem must be framed as additional gap-to-5x recovery across multiple winners, not as DS-02 alone repaying the residual budget.",
+    "next_bridge_focus": [
+      "DS-05",
+      "DS-02",
+      "DS-08",
+      "DS-06"
+    ]
+  }
+}

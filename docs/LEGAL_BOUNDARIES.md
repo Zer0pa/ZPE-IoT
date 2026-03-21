@@ -30,6 +30,13 @@ The repo does not currently establish:
 
 Public publication and outreach remain owner-controlled.
 
+| Need | Go to |
+|---|---|
+| Legal source of truth | `../LICENSE` |
+| Release decision boundary | `../RELEASING.md` |
+| Family compatibility pin | `family/IOT_COMPATIBILITY_VECTOR.json` |
+| Family alignment note | `family/IOT_IMC_ALIGNMENT_REPORT.md` |
+
 <p>
   <img src="../.github/assets/readme/section-bars/compatibility-note-for-parallel-tracks.svg" alt="COMPATIBILITY NOTE FOR PARALLEL TRACKS" width="100%">
 </p>
@@ -39,3 +46,7 @@ The family relationship to ZPE-IMC is documentary and contractual:
 - `docs/family/IOT_COMPATIBILITY_VECTOR.json` pins the IMC `wave1.0` contract
 - ZPE-IoT does not claim runtime repo coupling to ZPE-IMC
 - downstream consumers should pin to the family artifacts, not infer guarantees from internal implementation details
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

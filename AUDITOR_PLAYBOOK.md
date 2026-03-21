@@ -1,10 +1,14 @@
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # Auditor Playbook
 
-This is the shortest honest audit path for the current ZPE-IoT private-stage repo.
+This is the shortest honest audit path for the current ZPE-IoT private-stage repo. It is not a public-release certification and not a claim of public package availability.
 
-It is not a public-release certification and not a claim of public package availability.
-
-## Start Here
+<p>
+  <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
+</p>
 
 1. Read `proofs/FINAL_STATUS.md`.
 2. Read `PUBLIC_AUDIT_LIMITS.md`.
@@ -22,7 +26,9 @@ It is not a public-release certification and not a claim of public package avail
    - `docs/family/IOT_COMPATIBILITY_VECTOR.json`
    - `docs/family/IOT_IMC_ALIGNMENT_REPORT.md`
 
-## Shortest Local Verification Path
+<p>
+  <img src=".github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">
+</p>
 
 ```bash
 python -m venv .venv
@@ -36,15 +42,21 @@ bash scripts/release_preflight.sh
 
 If you need to replay the native install path, build the wheel from `python/` and install the result from `python/dist/`.
 
-## Current Truth On 2026-03-21
+<p>
+  <img src=".github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
 
-- managed preflight: `17 PASS / 0 FAIL / 1 DEFERRED`
-- strict DT: `27/27 PASS`
-- active E1 benchmark: `10/11` wins, `17.16x` mean CR
-- local arm64 native wheel smoke: `PASS`
-- publication: deferred by policy
+| Surface | Current truth |
+|---|---|
+| Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` |
+| Strict DT | `27/27 PASS` |
+| Active E1 benchmark | `10/11` wins, `17.16x` mean CR |
+| Local arm64 native wheel smoke | `PASS` |
+| Publication | Deferred by policy |
 
-## What This Repo Currently Proves
+<p>
+  <img src=".github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
+</p>
 
 - the codebase is buildable and testable on the current private-stage surface
 - the managed release gate passes aside from deferred publication
@@ -52,7 +64,9 @@ If you need to replay the native install path, build the wheel from `python/` an
 - the IMC `wave1.0` compatibility pin remains intact
 - the repo can regenerate a current release bundle and supporting manifests
 
-## What This Repo Does Not Yet Prove
+<p>
+  <img src=".github/assets/readme/section-bars/out-of-scope.svg" alt="OUT OF SCOPE" width="100%">
+</p>
 
 - public PyPI or crates.io availability
 - multi-platform wheel publication beyond the locally verified arm64 macOS path
@@ -60,3 +74,7 @@ If you need to replay the native install path, build the wheel from `python/` an
 - production behavior beyond the cited local artifacts
 
 If a replay disagrees, treat it as a mismatch against the staged evidence, not as a narrative dispute.
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

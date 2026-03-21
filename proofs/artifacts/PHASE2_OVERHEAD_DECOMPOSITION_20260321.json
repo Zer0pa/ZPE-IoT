@@ -1,0 +1,163 @@
+{
+  "generated_at_utc": "2026-03-20T22:36:25.388421+00:00",
+  "authority_subset": [
+    "DS-05",
+    "DS-02",
+    "DS-06",
+    "DS-08",
+    "DS-01"
+  ],
+  "reference_dataset": "DS-05",
+  "datasets": [
+    {
+      "dataset": "DS-05",
+      "preset": "pressure",
+      "window_count": 16,
+      "bytes_per_256_window": 447.625,
+      "raw_bytes_per_256_window": 2048,
+      "header_bytes": 12,
+      "crc_bytes": 2,
+      "token_bytes": 433.625,
+      "payload_bytes": 433.625,
+      "fixed_overhead_share": 0.03127617983803407,
+      "payload_share": 0.9687238201619659,
+      "mean_token_count": 216.8125,
+      "mean_run_length": 1.1761314499855866,
+      "max_run_length": 9,
+      "zero_token_ratio": 0.3002450980392157,
+      "zero_delta_ratio": 0.22254901960784312,
+      "sign_change_ratio": 0.5570866141732284,
+      "median_abs_diff": 0.20000000000000018,
+      "p90_abs_diff": 0.7999999999999998,
+      "p99_abs_diff": 2.0999999999999996,
+      "dominant_sink": "smooth_low_entropy_payload",
+      "basis": "sink=smooth_low_entropy_payload fixed_share=0.0313 zero_token_ratio=0.3002 sign_change_ratio=0.5571 median_abs_diff=0.2000"
+    },
+    {
+      "dataset": "DS-02",
+      "preset": "vibration",
+      "window_count": 16,
+      "bytes_per_256_window": 506.125,
+      "raw_bytes_per_256_window": 2048,
+      "header_bytes": 12,
+      "crc_bytes": 2,
+      "token_bytes": 492.125,
+      "payload_bytes": 492.125,
+      "fixed_overhead_share": 0.02766115090145715,
+      "payload_share": 0.9723388490985428,
+      "mean_token_count": 246.0625,
+      "mean_run_length": 1.0363220726441453,
+      "max_run_length": 5,
+      "zero_token_ratio": 0.16519607843137254,
+      "zero_delta_ratio": 0.0,
+      "sign_change_ratio": 0.6087598425196851,
+      "median_abs_diff": 0.2746024733657178,
+      "p90_abs_diff": 0.7036090425785538,
+      "p99_abs_diff": 1.1041541407635145,
+      "dominant_sink": "smooth_low_entropy_payload",
+      "basis": "sink=smooth_low_entropy_payload fixed_share=0.0277 zero_token_ratio=0.1652 sign_change_ratio=0.6088 median_abs_diff=0.2746"
+    },
+    {
+      "dataset": "DS-06",
+      "preset": "generic",
+      "window_count": 40,
+      "bytes_per_256_window": 501.0,
+      "raw_bytes_per_256_window": 2048,
+      "header_bytes": 12,
+      "crc_bytes": 2,
+      "token_bytes": 487.0,
+      "payload_bytes": 487.0,
+      "fixed_overhead_share": 0.027944111776447105,
+      "payload_share": 0.9720558882235529,
+      "mean_token_count": 243.5,
+      "mean_run_length": 1.0472279260780288,
+      "max_run_length": 4,
+      "zero_token_ratio": 0.000588235294117647,
+      "zero_delta_ratio": 9.80392156862745e-05,
+      "sign_change_ratio": 0.2672244094488189,
+      "median_abs_diff": 985.0,
+      "p90_abs_diff": 2730.0,
+      "p99_abs_diff": 4808.090000000002,
+      "dominant_sink": "high_variance_payload",
+      "basis": "sink=high_variance_payload fixed_share=0.0279 zero_token_ratio=0.0006 sign_change_ratio=0.2672 median_abs_diff=985.0000"
+    },
+    {
+      "dataset": "DS-08",
+      "preset": "voltage",
+      "window_count": 64,
+      "bytes_per_256_window": 494.5,
+      "raw_bytes_per_256_window": 2048,
+      "header_bytes": 12,
+      "crc_bytes": 2,
+      "token_bytes": 480.5,
+      "payload_bytes": 480.5,
+      "fixed_overhead_share": 0.028311425682507583,
+      "payload_share": 0.9716885743174924,
+      "mean_token_count": 240.25,
+      "mean_run_length": 1.0613943808532778,
+      "max_run_length": 5,
+      "zero_token_ratio": 0.19246323529411766,
+      "zero_delta_ratio": 0.002696078431372549,
+      "sign_change_ratio": 0.5981791338582677,
+      "median_abs_diff": 1.039999999999992,
+      "p90_abs_diff": 2.8100000000000023,
+      "p99_abs_diff": 4.986199999999997,
+      "dominant_sink": "smooth_low_entropy_payload",
+      "basis": "sink=smooth_low_entropy_payload fixed_share=0.0283 zero_token_ratio=0.1925 sign_change_ratio=0.5982 median_abs_diff=1.0400"
+    },
+    {
+      "dataset": "DS-01",
+      "preset": "generic",
+      "window_count": 35,
+      "bytes_per_256_window": 513.6571428571428,
+      "raw_bytes_per_256_window": 2048,
+      "header_bytes": 12,
+      "crc_bytes": 2,
+      "token_bytes": 499.65714285714284,
+      "payload_bytes": 499.65714285714284,
+      "fixed_overhead_share": 0.027255534542218268,
+      "payload_share": 0.9727444654577817,
+      "mean_token_count": 249.82857142857142,
+      "mean_run_length": 1.0206999085086916,
+      "max_run_length": 3,
+      "zero_token_ratio": 0.012773109243697478,
+      "zero_delta_ratio": 0.0067226890756302525,
+      "sign_change_ratio": 0.40674915635545555,
+      "median_abs_diff": 51.0,
+      "p90_abs_diff": 164.0,
+      "p99_abs_diff": 362.0,
+      "dominant_sink": "irregular_payload",
+      "basis": "sink=irregular_payload fixed_share=0.0273 zero_token_ratio=0.0128 sign_change_ratio=0.4067 median_abs_diff=51.0000"
+    }
+  ],
+  "sink_family_verdicts": {
+    "DS-02": {
+      "same_sink_family": true,
+      "basis": "reference[sink=smooth_low_entropy_payload fixed_share=0.0313 zero_token_ratio=0.3002 sign_change_ratio=0.5571 median_abs_diff=0.2000] candidate[sink=smooth_low_entropy_payload fixed_share=0.0277 zero_token_ratio=0.1652 sign_change_ratio=0.6088 median_abs_diff=0.2746]"
+    },
+    "DS-06": {
+      "same_sink_family": false,
+      "basis": "reference[sink=smooth_low_entropy_payload fixed_share=0.0313 zero_token_ratio=0.3002 sign_change_ratio=0.5571 median_abs_diff=0.2000] candidate[sink=high_variance_payload fixed_share=0.0279 zero_token_ratio=0.0006 sign_change_ratio=0.2672 median_abs_diff=985.0000]"
+    },
+    "DS-08": {
+      "same_sink_family": true,
+      "basis": "reference[sink=smooth_low_entropy_payload fixed_share=0.0313 zero_token_ratio=0.3002 sign_change_ratio=0.5571 median_abs_diff=0.2000] candidate[sink=smooth_low_entropy_payload fixed_share=0.0283 zero_token_ratio=0.1925 sign_change_ratio=0.5982 median_abs_diff=1.0400]"
+    },
+    "DS-01": {
+      "same_sink_family": false,
+      "basis": "reference[sink=smooth_low_entropy_payload fixed_share=0.0313 zero_token_ratio=0.3002 sign_change_ratio=0.5571 median_abs_diff=0.2000] candidate[sink=irregular_payload fixed_share=0.0273 zero_token_ratio=0.0128 sign_change_ratio=0.4067 median_abs_diff=51.0000]"
+    }
+  },
+  "bridge_verdict": {
+    "ds05_ds02_same_sink_family": true,
+    "shared_smooth_series_family": [
+      "DS-02",
+      "DS-08"
+    ],
+    "non_matching_family": [
+      "DS-06",
+      "DS-01"
+    ],
+    "summary": "DS-05, DS-02, and DS-08 cluster as smooth low-entropy payload cases, while DS-06 and DS-01 do not. That means one payload-specialized mechanism might help the DS-05/DS-02/DS-08 slice, but it will not by itself close every winner-side deficit implied by the loss-only ceiling."
+  }
+}
