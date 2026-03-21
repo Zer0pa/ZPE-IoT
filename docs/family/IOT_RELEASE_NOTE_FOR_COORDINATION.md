@@ -2,13 +2,14 @@
 
 Release Wave: `Wave-1`
 IoT Package: `zpe-iot==0.1.0`
-Status Date: `2026-03-09`
+Status Date: `2026-03-21`
 
 ## Highlights
 1. Release preflight is now checklist-driven with machine-readable gating report output.
 2. Strict DT gate remains mandatory and non-weakened (`--strict-gates` policy retained).
 3. Wire compatibility hardening added with golden fixtures and malformed/version assertions.
-4. Security scan, provenance artifacts, and release bundle surfaces exist, but the latest managed preflight still fails `C07_SBOM_RELEASE_MANIFEST`.
+4. Managed preflight now closes at `17 PASS / 0 FAIL / 1 DEFERRED`, with only deferred publish left owner-controlled.
+5. The active E1 benchmark surface closes at `10/11` wins across 11 READY real-public datasets.
 
 ## IMC Alignment
 1. IMC contract consumed at `wave1.0`.
@@ -22,4 +23,4 @@ Status Date: `2026-03-09`
 
 ## Deferred Actions
 1. External publishing remains deferred pending explicit ratification.
-2. Public-release suite interlocks remain deferred until Phase 5 verification and central/public truth alignment are complete.
+2. Public-release suite interlocks remain deferred until owner-ratified publication and final public truth alignment are complete.

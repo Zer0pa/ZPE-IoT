@@ -1,6 +1,6 @@
 # IoT-IMC Alignment Report (Wave-1)
 
-Date: 2026-03-09
+Date: 2026-03-21
 Repo: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot`
 
 ## Consumed IMC Freeze
@@ -11,7 +11,7 @@ Repo: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot`
 ## Verification
 - `contract_version` consumed: `wave1.0`
 - IMC vector SHA-256: `9c8b905f6c1d30d057955aa9adf0f7ff9139853494dca673e5fbe69f24fba10e`
-- Result: PASS (matches frozen pin on 2026-03-09 local verification)
+- Result: PASS (matches frozen pin on the current March 21 local verification surface)
 
 ## Canonical Metric Authority
 - Coordination authority is IMC compatibility vector canonical metric:
@@ -33,3 +33,4 @@ Repo: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot`
 - `docs/family/IOT_RELEASE_NOTE_FOR_COORDINATION.md`
 - `validation/results/iot_wave1_phase5_alignment.txt`
 - `proofs/FINAL_STATUS.md`
+- `validation/results/release_preflight_report_20260321T205127.json`

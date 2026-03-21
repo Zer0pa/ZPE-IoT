@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-03-21
+
+- aligned the technical release surface around the nested Python distribution and bundled native wheel path
+- closed the managed preflight gate to `17 PASS / 0 FAIL / 1 DEFERRED`, with only deferred publish remaining owner-controlled
+- refreshed the active E1 benchmark authority to the 11-dataset March 21 surface (`10/11` wins, `17.16x` mean CR)
+- rewrote the root, audit, proof, and release docs to the March 21 authority surface
+- copied the ZPE-IMC readme asset system into this repo for GitHub-safe render parity
+
 ## 2026-03-09
 
 - normalized the repo front door for private GitHub staging
