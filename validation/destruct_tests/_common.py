@@ -19,6 +19,7 @@ if str(PYTHON_DIR) not in sys.path:
 
 from zpe_iot import Config, compute_nrmse, decode, encode
 from zpe_iot.presets import all_presets
+from zpe_iot.tracking import DEFAULT_CLASSIC_PROJECT, DEFAULT_WORKSPACE
 
 from validation.datasets.loader import iter_dataset_windows, list_available_datasets, load_dataset
 
@@ -72,7 +73,11 @@ def log_result(dt_name: str, status: str, metrics: dict, params: dict | None = N
             raise RuntimeError("Comet offline forced")
         import comet_ml  # type: ignore
 
-        exp = comet_ml.Experiment(project_name="zpe-iot", workspace="zer0pa", auto_metric_logging=False)
+        exp = comet_ml.Experiment(
+            project_name=DEFAULT_CLASSIC_PROJECT,
+            workspace=DEFAULT_WORKSPACE,
+            auto_metric_logging=False,
+        )
         exp.set_name(f"{dt_name.lower()}-{datetime.now().strftime('%Y%m%dT%H%M%S')}")
         for k, v in metrics.items():
             exp.log_metric(k, float(v) if isinstance(v, (int, float, np.floating)) else 0)

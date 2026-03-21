@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import os
+import platform
 import re
 import shutil
 import subprocess
@@ -17,8 +18,12 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
+from runtime_surface import python_executable, tool_command
+
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS_DIR = ROOT / "validation" / "results"
+PYTHON_BIN = str(python_executable())
+CLI_BIN = tool_command("zpe-iot")
 
 
 REPORT_SCHEMA = {
@@ -83,10 +88,45 @@ def _run(cmd: list[str], cwd: Path | None = None, env: dict[str, str] | None = N
     merged_env = os.environ.copy()
     if env:
         merged_env.update(env)
-    proc = subprocess.run(cmd, cwd=str(cwd or ROOT), capture_output=True, text=True, env=merged_env)
+    try:
+        proc = subprocess.run(cmd, cwd=str(cwd or ROOT), capture_output=True, text=True, env=merged_env)
+    except OSError as exc:
+        end = time.perf_counter()
+        return CmdResult(returncode=127, output=f"command launch failed: {exc}", duration_s=end - start)
     end = time.perf_counter()
     output = (proc.stdout or "") + (proc.stderr or "")
     return CmdResult(returncode=proc.returncode, output=output, duration_s=end - start)
+
+
+def _python_rust_target() -> str | None:
+    system = platform.system().lower()
+    machine = platform.machine().lower()
+    target_map = {
+        ("darwin", "x86_64"): "x86_64-apple-darwin",
+        ("darwin", "arm64"): "aarch64-apple-darwin",
+        ("darwin", "aarch64"): "aarch64-apple-darwin",
+        ("linux", "x86_64"): "x86_64-unknown-linux-gnu",
+        ("linux", "aarch64"): "aarch64-unknown-linux-gnu",
+        ("linux", "arm64"): "aarch64-unknown-linux-gnu",
+    }
+    return target_map.get((system, machine))
+
+
+def _build_and_run_dt_command() -> list[str]:
+    dt_cmd = [PYTHON_BIN, "validation/destruct_tests/run_all_dts.py", "--strict-gates"]
+    target = _python_rust_target()
+    if target is None:
+        return dt_cmd
+    build_cmd = ["cargo", "build", "--release", "--target", target]
+    return [
+        PYTHON_BIN,
+        "-c",
+        (
+            "import subprocess,sys; "
+            f"sys.exit(subprocess.run({build_cmd!r}, cwd={str(ROOT / 'core')!r}).returncode "
+            f"or subprocess.run({dt_cmd!r}, cwd={str(ROOT)!r}).returncode)"
+        ),
+    ]
 
 
 def _hash_sha256(path: Path) -> str:
@@ -154,10 +194,9 @@ def _fresh_env_smoke() -> tuple[bool, str, list[str]]:
     smoke_root.mkdir(parents=True, exist_ok=True)
     smoke_log = smoke_root / "smoke.log"
 
-    py = ROOT / ".venv" / "bin" / "python"
     venv_dir = smoke_root / "venv"
     commands: list[list[str]] = [
-        [str(py), "-m", "venv", str(venv_dir)],
+        [PYTHON_BIN, "-m", "venv", str(venv_dir)],
         [str(venv_dir / "bin" / "pip"), "install", "--upgrade", "pip"],
         [str(venv_dir / "bin" / "pip"), "install", str(wheel)],
     ]
@@ -268,7 +307,7 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         check_id="C03_PYTEST",
         description="pytest -q passes with coverage >= 85%",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "-m", "pytest", "-q"],
+        cmd=[PYTHON_BIN, "-m", "pytest", "-q"],
         cwd=ROOT / "python",
     )
 
@@ -283,7 +322,7 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         check_id="C04_STRICT_DT",
         description="strict DT run passes with mandatory SKIPPED=0",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "validation/destruct_tests/run_all_dts.py", "--strict-gates"],
+        cmd=_build_and_run_dt_command(),
         cwd=ROOT,
         validator=_dt_validator,
     )
@@ -302,12 +341,12 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         description="benchmark split artifacts (E0/E1/E2) regenerated",
         critical=True,
         cmd=[
-            str(ROOT / ".venv" / "bin" / "python"),
+            PYTHON_BIN,
             "-c",
             (
                 "import subprocess,sys; "
-                "sys.exit(subprocess.run([r'" + str(ROOT / ".venv" / "bin" / "python") + "', 'validation/benchmarks/run_benchmarks.py']).returncode "
-                "or subprocess.run([r'" + str(ROOT / ".venv" / "bin" / "python") + "', 'validation/benchmarks/generate_report.py']).returncode)"
+                "sys.exit(subprocess.run([r'" + PYTHON_BIN + "', 'validation/benchmarks/run_benchmarks.py']).returncode "
+                "or subprocess.run([r'" + PYTHON_BIN + "', 'validation/benchmarks/generate_report.py']).returncode)"
             ),
         ],
         cwd=ROOT,
@@ -326,7 +365,7 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         check_id="C06_SECURITY_SCAN",
         description="security scan artifact generated with high/critical=0",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "scripts/security_scan.py"],
+        cmd=[PYTHON_BIN, "scripts/security_scan.py"],
         cwd=ROOT,
         validator=_security_validator,
     )
@@ -347,7 +386,7 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         check_id="C07_SBOM_RELEASE_MANIFEST",
         description="SBOM + license manifest + release manifest generated",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "scripts/generate_release_artifacts.py"],
+        cmd=[PYTHON_BIN, "scripts/generate_release_artifacts.py"],
         cwd=ROOT,
         validator=_sbom_validator,
     )
@@ -362,7 +401,7 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         check_id="C08_PY_BUILD_WARNING_FREE",
         description="python -m build completes warning-free",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "-m", "build"],
+        cmd=[PYTHON_BIN, "-m", "build"],
         cwd=ROOT / "python",
         validator=_build_warning_validator,
     )
@@ -389,21 +428,21 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         check_id="C10_CHEMOSENSE_CLI_SMOKE",
         description="chemosense CLI smoke passes (zpe-iot chemosense-smoke --json)",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "zpe-iot"), "chemosense-smoke", "--json"],
+        cmd=[CLI_BIN, "chemosense-smoke", "--json"],
         cwd=ROOT,
     )
     run_check(
         check_id="C11_CHEMOSENSE_MODULE_SMOKE",
         description="chemosense module smoke passes (python -m zpe_iot.cli chemosense-smoke --json)",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "-m", "zpe_iot.cli", "chemosense-smoke", "--json"],
+        cmd=[PYTHON_BIN, "-m", "zpe_iot.cli", "chemosense-smoke", "--json"],
         cwd=ROOT / "python",
     )
     run_check(
         check_id="C12_CHEMOSENSE_CONTRACT_TEST",
         description="chemosense contract tests pass",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "-m", "pytest", "-q", "tests/test_chemosense_contract.py"],
+        cmd=[PYTHON_BIN, "-m", "pytest", "-q", "tests/test_chemosense_contract.py"],
         cwd=ROOT / "python",
         env={"PYTEST_ADDOPTS": "--no-cov"},
     )
@@ -416,7 +455,7 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         check_id="C13_CHEMOSENSE_PERF_PROFILE",
         description="chemosense perf profile artifact generated",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "validation/benchmarks/profile_chemosense.py"],
+        cmd=[PYTHON_BIN, "validation/benchmarks/profile_chemosense.py"],
         cwd=ROOT,
         validator=_perf_validator,
     )
@@ -429,7 +468,7 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         check_id="C14_CHEMOSENSE_BENCH_SUMMARY",
         description="chemosense benchmark summary artifact generated",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "validation/benchmarks/run_chemosense_benchmarks.py"],
+        cmd=[PYTHON_BIN, "validation/benchmarks/run_chemosense_benchmarks.py"],
         cwd=ROOT,
         validator=_chemo_bench_validator,
     )
@@ -437,7 +476,7 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         check_id="C15_CHEMOSENSE_PROVENANCE",
         description="chemosense provenance manifest verified",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "validation/datasets/verify_chemosense_provenance.py"],
+        cmd=[PYTHON_BIN, "validation/datasets/verify_chemosense_provenance.py"],
         cwd=ROOT,
     )
 
@@ -459,7 +498,7 @@ def run_preflight(report_json: Path, schema_json: Path | None) -> int:
         check_id="C16_RELEASE_BUNDLE",
         description="release RC bundle + bundle manifest hash generated",
         critical=True,
-        cmd=[str(ROOT / ".venv" / "bin" / "python"), "scripts/build_release_bundle.py"],
+        cmd=[PYTHON_BIN, "scripts/build_release_bundle.py"],
         cwd=ROOT,
         validator=_bundle_validator,
     )

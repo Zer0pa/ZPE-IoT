@@ -5,10 +5,11 @@
 ## Install
 
 ```bash
-python -m pip install -e .
+python -m pip install -e ".[dev]"
 ```
 
-Published package installation is not yet an approved claim.
+Built wheels bundle the Rust native extension on supported targets. If the native
+module is unavailable, the installed package falls back to the pure-Python codec.
 
 ## CLI
 

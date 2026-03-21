@@ -1,31 +1,32 @@
 {
-    "project_reference": {
-        "project_md_updated": "2026-03-20",
-        "core_research_question": "Can ZPE-IoT honestly claim a commercial wedge on the unchanged real public E1 surface while maintaining truthful release, portability, and packaging evidence?",
-        "current_focus": "Phase 02: Targeted Compression Uplift"
-    },
+  "project_reference": {
+    "project_md_updated": null,
+    "core_research_question": "Can ZPE-IoT turn the bounded March 21, 2026 wedge into a cleaner technical closure by resolving preset parity, DS-05, native wheel packaging, expanded real-public benchmarking, and canonical observability without regressing the authority surface?",
+    "current_focus": "Wave 2 technical closure on preset parity, DS-05, native wheel packaging, expanded real-public benchmarking, and canonical observability."
+  },
   "project_contract": {
     "schema_version": 1,
     "scope": {
-      "question": "Can ZPE-IoT earn a truthful commercial wedge by proving reproducible compression advantage on structurally suitable telemetry while also closing release, portability, and packaging gates?",
+      "question": "Can ZPE-IoT convert the bounded March 21, 2026 wedge into a cleaner technical closure by closing the remaining engineering gaps without regressing the authority surface?",
       "in_scope": [
-        "Reconcile project truth surfaces to the current March 20, 2026 authority artifacts for release preflight, DT, and E1 benchmark status.",
-        "Diagnose the structural causes of the remaining E1 losses, especially DS-01 and DS-05, and identify whether they are fixable or intrinsic.",
-        "Run targeted benchmark uplift work aimed at mean E1 compression ratio >= 5.0x and PT-6 >= 7/8 without gaming the benchmark mix.",
-        "Close portability, blind-clone, and cold wheel installation evidence needed for an honest engineering-complete position.",
-        "Produce an explicit wedge verdict that states where the product is commercially strong, where it is weak, and what claims remain unjustified."
+        "Canonicalize the Rust and Python preset tables for all 9 presets with explicit evidence for temperature, gps_track, and flow.",
+        "Run one bounded DS-05 structural closure line and rerun the authority surface only if fidelity and wider non-regression guardrails hold.",
+        "Align wheel packaging to the ZPE-IMC native-wheel pattern and verify cold native availability.",
+        "Expand the real-public benchmark surface from 8 to 12 datasets with reproducible provenance.",
+        "Instantiate the canonical Classic Comet and Opik benchmark adapters with local fallback when credentials are absent.",
+        "Perform a narrow March 21 truth-surface accuracy pass and rerun the final technical closure gate honestly."
       ],
       "out_of_scope": [
-        "Actual public package publication or marketplace release during this project.",
-        "Treating Chemosense or any non-E1 dataset win as a substitute for the governing IoT benchmark surface.",
-        "E2 customer validation claims without new external customer evidence.",
-        "RunPod or other paid infrastructure work unless the user explicitly approves it."
+        "Rewriting or weakening the March 21 authority packet by narrative rather than new evidence.",
+        "Treating non-authority datasets or local slices as substitutes for the governing benchmark surface.",
+        "Public release publication, marketplace launch, or customer-validation claims without new external evidence.",
+        "Inventing new packaging or observability conventions instead of matching the ZPE-IMC pattern."
       ],
       "unresolved_questions": [
-        "Can the current E1 benchmark surface be lifted from mean CR 4.3691x to at least 5.0x without invalid benchmarking?",
-        "Can PT-6 be improved from 6/8 to at least 7/8 on the real public benchmark surface?",
-        "Is DS-05 an intrinsic loss case for the current approach or a parameterization failure?",
-        "What exact artifact combination is still required beyond the current 17 PASS + 1 DEFERRED preflight state to support an engineering-complete commercial position?"
+        "Can DS-05 move honestly enough to justify a fresh authority rerun, or is it still a structural boundary?",
+        "Can a native-bundled wheel preserve pure-Python fallback while delivering cold-install native availability?",
+        "Does the expanded real-public benchmark surface preserve the current wedge strength once breadth increases?",
+        "Can the canonical Comet and Opik surfaces be restored without hidden credential or project-name drift?"
       ]
     },
     "context_intake": {
@@ -54,9 +55,8 @@
         "DS-01 and DS-05 are the current benchmark losses that still block an unqualified wedge claim."
       ],
       "context_gaps": [
-        "Blind-clone reproducibility evidence is not yet closed in a current receipt-sized artifact set.",
-        "Cold wheel installation evidence is not yet anchored in the GPD project outputs.",
-        "The exact structural reason for DS-01 and DS-05 under the current preset surface is not yet pinned down."
+        "The next-stage refinement target for `DS-05` is not yet chosen.",
+        "A native-bundled wheel strategy is not yet designed or costed."
       ],
       "crucial_inputs": [
         "Do not convert stale March 9 release-blocker narratives into live truth once March 20 authority artifacts exist.",
@@ -609,40 +609,70 @@
     ],
     "uncertainty_markers": {
       "weakest_anchors": [
-        "The current DS-01 and DS-05 loss mechanisms are not yet fully diagnosed from first principles.",
-        "The exact reproducibility evidence still needed for blind-clone and wheel-install closure is not yet compiled into the project surface."
+        "`DS-05` still loses to the best byte-compressor baseline on the authority surface.",
+        "The current wheel evidence is smoke-level for the pure-Python path, not bundled native parity."
       ],
       "unvalidated_assumptions": [
-        "A parameter or preset adjustment may still recover at least one of the remaining E1 losses without weakening the benchmark surface.",
-        "The clean-environment installation path will not introduce a new blocker after the current release closure evidence."
+        "A future `DS-05` refinement lane could widen the current authority margin without reopening benchmark risk.",
+        "Bundling the native library into wheel distribution would improve product ergonomics enough to justify the packaging cost."
       ],
       "competing_explanations": [
         "DS-05 may be an intrinsic mismatch between current compression strategy and that telemetry structure rather than a tuning issue.",
         "Some apparent wedge weakness may come from status-doc drift rather than only algorithmic deficit, but that cannot substitute for metric improvement."
       ],
       "disconfirming_observations": [
-        "If real-public E1 remains below the wedge threshold after honest targeted uplift attempts, the project must conclude that the commercial wedge is not yet established.",
-        "If clean-clone or cold-wheel verification fails in a way that exposes hidden local dependencies, engineering-complete positioning must be narrowed immediately."
+        "If a future refinement attempt degrades the March 21 authority surface, it should be treated as a regression, not as free experimentation.",
+        "If a future native-wheel effort adds fragility without measurable product value, the current pure-Python wheel boundary should remain the preferred claim."
       ]
     }
   },
+  "position": {
+    "current_phase": "08",
+    "current_phase_name": "Authority Surface Expansion",
+    "total_phases": 10,
+    "current_plan": "1",
+    "total_plans_in_phase": 1,
+    "status": "Executing",
+    "last_activity": "2026-03-21",
+    "last_activity_desc": "Closed Phase 7 with a cold-install native wheel proof, then opened Phase 8 authority-surface expansion.",
+    "progress_percent": 70,
+    "paused_at": null
+  },
   "active_calculations": [
-    "Plan Phase 2 uplift work against the frozen March 20 E1 authority surface.",
-    "Keep WI-1 and ZH-1 in scope only if DT-10 and DT-11 can remain green.",
-    "Prepare compact portability closure work without generating bulky duplicate artifacts."
+    "No PRD-blocking calculations remain open.",
+    "The final review packet lives under `proofs/team_assessment_packet_20260321`.",
+    "Any further work should be refinement only: widen the gap on `DS-05`, or decide whether native-bundled wheel packaging is worth the complexity."
   ],
   "intermediate_results": [
-    "Release authority baseline frozen at 17 PASS, 0 FAIL, 1 DEFERRED, 0 critical failures.",
-    "Strict DT baseline frozen at 27/27 PASS with mandatory_failures=[].",
-    "Benchmark baseline frozen at mean CR 4.369104600542837x, PT-6 6/8, losses DS-01 and DS-05.",
-    "Phase 1 status reconciliation artifact created at proofs/artifacts/STATUS_RECONCILIATION.md.",
-    "Phase 1 loss diagnosis artifacts created at proofs/artifacts/LOSS_DIAGNOSIS_COMPACT.json and proofs/artifacts/LOSS_DIAGNOSIS.md."
+    "`[R-00-01-release-baseline]` Release authority baseline: March 20 managed preflight reports `17 PASS`, `0 FAIL`, `1 DEFERRED`, `0 critical failures`.",
+    "`[R-00-02-dt-baseline]` Strict DT baseline: March 20 mandatory DT checks pass.",
+    "`[R-00-03-bench-baseline]` Benchmark baseline: March 20 real public E1 reports `mean CR 4.369104600542837`, `wins 6/8`, current losses `DS-01` and `DS-05`.",
+    "`[R-01-01-status-reconciliation]` Phase 1 produced `proofs/artifacts/STATUS_RECONCILIATION.md`, which freezes the March 20 authority surface and inventories the principal stale front-door contradictions.",
+    "`[R-01-02-loss-diagnosis]` Phase 1 produced `validation/benchmarks/phase1_loss_scan.py`, `proofs/artifacts/LOSS_DIAGNOSIS_COMPACT.json`, and `proofs/artifacts/LOSS_DIAGNOSIS.md`.",
+    "`[R-01-03-loss-verdict]` `DS-01` is not a simple threshold miss at near-current fidelity; `DS-05` is structurally weak under the current preset catalog relative to byte compressors.",
+    "`[R-02-01-native-boundary]` `python/zpe_iot/_native.py` now mirrors Python WI-1 and ZH-1 wrappers, and wrapped-path parity tests pass.",
+    "`[R-02-02-workstream-recheck]` Post-repair WI-1 and ZH-1 ablations still reject both candidates, but the only introduced strict failure is now `DT-10`.",
+    "`[R-02-03-monotonicity-probe]` `proofs/artifacts/PHASE2_MONOTONICITY_PROBE_20260320.json` shows the threshold `0.1 -> 0.2` wrapped-size inversion survives zlib levels `1` through `9` for both workstreams.",
+    "`[R-02-04-gap-budget]` Matching the current best baselines on `DS-01` and `DS-05` would lift the March 20 E1 mean only to about `4.7081x`, so Phase 2 must recover additional CR budget from already-winning datasets or a cross-dataset mechanism.",
+    "`[R-02-05-byte-sink-slice]` `proofs/artifacts/PHASE2_BYTE_SINK_EXECUTION_SLICE_20260320.md` freezes the immediate blocker as missing byte-sink decomposition on the authority subset and converts it into four concrete execution tasks with a hard stop rule before any full E1 rerun.",
+    "`[R-02-06-gap-budget]` `proofs/artifacts/PHASE2_GAP_BUDGET_20260321.json` proves the March 20 E1 artifact supports no single winning bridge dataset; after the generous `DS-01` plus `DS-05` ceiling, the smallest winning bridge set that can still clear the residual `2.3350685966624454` budget is `DS-02 + DS-06 + DS-08` if they each reach `5.0x`.",
+    "`[R-02-07-overhead-decomposition]` `proofs/artifacts/PHASE2_OVERHEAD_DECOMPOSITION_20260321.json` shows that `DS-05`, `DS-02`, and `DS-08` share a smooth low-entropy payload sink family, while `DS-06` does not.",
+    "`[R-02-08-candidate-shortlist]` `proofs/artifacts/PHASE2_CANDIDATE_SHORTLIST_20260321.md` converts the corrected blocker into three concrete solution tasks: smooth-series subset probe first, residual-budget recompute second, and DS-06-specific spend only if the subset still leaves a live path.",
+    "`[R-02-09-smooth-series-tasking]` `proofs/artifacts/PHASE2_SMOOTH_SERIES_TASKING_20260321.md` freezes the current highest-leverage blocker as one admissible smooth-series subset probe, with explicit owner files, acceptance gates, and hard-stop rules before any wider rerun.",
+    "`[R-02-10-smooth-series-probe]` `validation/benchmarks/phase2_smooth_series_probe.py` and `proofs/artifacts/PHASE2_SMOOTH_SERIES_PROBE_20260321.json` show the wrapper-neutral adaptive-threshold-gain candidate (`k=0.2`) improves compressed bytes on `DS-05`, `DS-02`, and `DS-08`, keeps subset `DT-10` monotonicity green, and lifts the projected E1 mean only to `4.4107x`, but it worsens benchmark `NRMSE(window-normalized)` on all three datasets, so the line hard-stops on fidelity before any `DS-06` spend or full E1 rerun.",
+    "`[R-02-11-bitpack-feasibility]` `proofs/artifacts/PHASE2_TOKEN_BITPACK_FEASIBILITY_20260321.json` shows that the current balanced payload is dominated by `count == 1` token chunks across the decisive subset and across all E1 datasets, making one exact-fidelity count-aware bitpack attempt an evidence-backed next line rather than a speculative rewrite.",
+    "`[R-02-12-bitpack-probe]` `proofs/artifacts/PHASE2_TOKEN_BITPACK_PROBE_20260321.json` shows the count-aware bitpack improves `DS-05`, `DS-02`, and `DS-08` with `NRMSE delta = 0.0`, keeps decode parity exact, and leaves both `DT-10` and `DT-11` green.",
+    "`[R-02-13-bench-rerun]` `validation/results/bench_summary_E1_real_public_20260321T144350.json` lifts the real public E1 authority surface to `mean CR 6.557750648944099x` and `7/8`; `DS-05` remains the only competitor win.",
+    "`[R-02-14-strict-dt-restored]` `validation/results/dt_results_20260321T144919.json` returns strict DT to `27 PASS`, `0 FAIL`, `0 SKIPPED`, `0 BLOCKED` after the raw E1 and Chemosense provenance inputs removed during disk cleanup were restored.",
+    "`[R-03-01-blind-clone]` `proofs/artifacts/BLIND_CLONE_VERIFICATION.md` shows an equivalently clean `/tmp` workspace can reproduce the essential install and validation surface; the only exposed assumptions were an in-workspace native build for `DT-11` and a generated Chemosense summary artifact for `DT-25`.",
+    "`[R-03-02-wheel]` `proofs/artifacts/WHEEL_VERIFICATION.md` shows `zpe_iot-0.1.0-py3-none-any.whl` builds cleanly and passes cold install/import/CLI smoke from `site-packages`, while keeping the pure-Python wheel boundary explicit via `native_available = false`.",
+    "`[R-04-01-packet]` `proofs/team_assessment_packet_20260321/` now acts as the compact science and engineering assessment surface for this PRD.",
+    "`[R-04-02-final-verdict]` `proofs/team_assessment_packet_20260321/05_FINAL_WEDGE_VERDICT.md` closes the PRD with explicit supported and unsupported claims."
   ],
   "open_questions": [
-    "Can the current E1 benchmark surface be lifted from mean CR 4.3691x to at least 5.0x without invalid benchmarking?",
-    "Can PT-6 be improved from 6/8 to at least 7/8 on the real public benchmark surface?",
-    "Is DS-05 an intrinsic loss case for the current approach or a parameterization failure?",
-    "What exact artifact combination is still required beyond the current 17 PASS + 1 DEFERRED preflight state to support an engineering-complete commercial position?"
+    "What measured follow-on has the highest chance of overturning the remaining `DS-05` competitor win?",
+    "Is bundling the native library into wheel distribution worth the added packaging and CI complexity?",
+    "Which refinement lane, if any, improves the authority surface enough to justify another project cycle?"
   ],
   "performance_metrics": {
     "rows": [
@@ -650,16 +680,110 @@
         "label": "Bootstrap",
         "duration": "2026-03-20 session",
         "tasks": "Contract persistence and project init",
-        "files": ".gpd/*"
+        "files": "`.gpd/*`"
       },
       {
         "label": "Phase 1",
         "duration": "2026-03-20 session",
-        "tasks": "Research, plan, reconcile authority, and build the loss harness",
-        "files": ".gpd/phases/01-*, proofs/artifacts/STATUS_RECONCILIATION.md, validation/benchmarks/phase1_loss_scan.py, proofs/artifacts/LOSS_DIAGNOSIS*"
+        "tasks": "Research, plan, reconcile authority, build loss harness",
+        "files": "`.gpd/phases/01-*`, `proofs/artifacts/STATUS_RECONCILIATION.md`, `validation/benchmarks/phase1_loss_scan.py`, `proofs/artifacts/LOSS_DIAGNOSIS*`"
+      },
+      {
+        "label": "Phase 2 plan 02-01",
+        "duration": "2026-03-20 session",
+        "tasks": "Repair native wrapper parity, rerun WI-1/ZH-1, and freeze the monotonicity verdict",
+        "files": "`.gpd/phases/02-*`, `python/zpe_iot/_native.py`, `python/tests/test_*`, `validation/benchmarks/phase2_monotonicity_probe.py`, `proofs/artifacts/PHASE2_*`"
+      },
+      {
+        "label": "Phase 2 plan 02-03",
+        "duration": "2026-03-21 session",
+        "tasks": "Ratify and implement exact-fidelity token bitpacking, rerun E1, and restore strict-DT provenance floor",
+        "files": "`.gpd/phases/02-*`, `python/zpe_iot/codec.py`, `core/src/bitpack.rs`, `validation/benchmarks/phase2_token_bitpack_*`, `proofs/artifacts/PHASE2_TOKEN_BITPACK_*`, `validation/results/bench_summary_E1_real_public_20260321T144350.json`, `validation/results/dt_results_20260321T144919.json`"
+      },
+      {
+        "label": "Phase 3",
+        "duration": "2026-03-21 session",
+        "tasks": "Verify clean-workspace reproduction and cold wheel smoke, then capture the honest portability boundaries",
+        "files": "`.gpd/phases/03-*`, `proofs/artifacts/BLIND_CLONE_VERIFICATION.md`, `proofs/artifacts/WHEEL_VERIFICATION.md`"
+      },
+      {
+        "label": "Phase 4",
+        "duration": "2026-03-21 session",
+        "tasks": "Assemble the compact team packet and close the bounded wedge verdict",
+        "files": "`.gpd/phases/04-*`, `proofs/team_assessment_packet_20260321/*`"
       }
     ]
   },
+  "decisions": [
+    {
+      "phase": null,
+      "summary": "March 20 authority artifacts are sovereign; March 9 blocker narratives are not.",
+      "rationale": null
+    },
+    {
+      "phase": null,
+      "summary": "Phase 1 is baseline reconciliation plus diagnostic harness, not premature uplift or status polishing.",
+      "rationale": null
+    },
+    {
+      "phase": null,
+      "summary": "DS-01 does not justify threshold-tuning optimism inside the current fidelity regime.",
+      "rationale": null
+    },
+    {
+      "phase": null,
+      "summary": "DS-05 is not meaningfully improved by the current preset catalog and likely requires algorithmic, not cosmetic, uplift work.",
+      "rationale": null
+    },
+    {
+      "phase": null,
+      "summary": "The smooth-series tuning line is closed; the only remaining admissible Phase 2 spend was one exact-fidelity count-aware token-bitpack attempt.",
+      "rationale": null
+    },
+    {
+      "phase": null,
+      "summary": "Raw E1 and Chemosense provenance artifacts are operationally required because strict DT depends on them; disk cleanup may remove only rebuildable outputs, not provenance floor inputs.",
+      "rationale": null
+    },
+    {
+      "phase": null,
+      "summary": "Clean-room native build and Chemosense benchmark-summary generation are explicit portability steps, not hidden local assumptions.",
+      "rationale": null
+    },
+    {
+      "phase": null,
+      "summary": "Cold wheel distribution is presently a pure-Python smoke claim, not bundled native parity.",
+      "rationale": null
+    },
+    {
+      "phase": "0",
+      "summary": "Start milestone v1.1 Wave 2 Technical Closure as a follow-on lane rather than pretending the closed v1.0 roadmap is still current.",
+      "rationale": "The March 21, 2026 authority surface is green but preset parity, DS-05, native wheel packaging, observability, and benchmark breadth remain open engineering gaps."
+    }
+  ],
+  "approximations": [
+    {
+      "name": "Equivalently clean workspace may stand in for a duplicate blind clone only if disk pressure blocks a full clone and the substitution is explicitly documented",
+      "validity_range": "Disk-constrained local runs",
+      "controlling_param": "Available free disk",
+      "current_value": "Used and verified",
+      "status": "Retired"
+    },
+    {
+      "name": "Compact artifact retention favored over bulky duplicate logs, but not over provenance-floor inputs",
+      "validity_range": "Current local workstation",
+      "controlling_param": "Disk headroom",
+      "current_value": "Restored",
+      "status": "Active"
+    },
+    {
+      "name": "Phase 1 loss diagnosis is valid only for the unchanged real public E1 benchmark contract",
+      "validity_range": "Phase 1 diagnostic artifacts",
+      "controlling_param": "Benchmark method lock",
+      "current_value": "Active",
+      "status": "Active"
+    }
+  ],
   "convention_lock": {
     "metric_signature": null,
     "fourier_convention": null,
@@ -679,17 +803,59 @@
     "covariant_derivative_sign": null,
     "gamma_matrix_convention": null,
     "creation_annihilation_order": null,
-    "custom_conventions": {}
+    "custom_conventions": {
+      "authority_baseline": "March 20 managed preflight + strict DT + real public E1 benchmark",
+      "benchmark_surface": "unchanged real public E1",
+      "success_gate": "`mean CR >= 5.0x` and `PT-6 >= 7/8`, or an explicit evidence-backed failure verdict",
+      "date_convention": "absolute dates only for authority statements",
+      "proxy_policy": "auxiliary datasets and stale docs may inform diagnosis but may not substitute for the authority gate"
+    }
   },
-  "pending_todos": [],
+  "propagated_uncertainties": [
+    {
+      "quantity": "`CR_mean`",
+      "value": "`6.557750648944099x`",
+      "uncertainty": "Current green authority value",
+      "phase": "Phase 2",
+      "method": "March 21 benchmark artifact"
+    },
+    {
+      "quantity": "`PT6`",
+      "value": "`7/8`",
+      "uncertainty": "Current green authority value",
+      "phase": "Phase 2",
+      "method": "March 21 benchmark artifact"
+    },
+    {
+      "quantity": "`DS-01`",
+      "value": "`6.184694121802311x` vs `4.261137440758294x` best baseline",
+      "uncertainty": "Closed on current authority surface",
+      "phase": "Phase 2",
+      "method": "March 21 benchmark artifact"
+    },
+    {
+      "quantity": "`DS-05`",
+      "value": "`6.631588755286225x` vs `7.021212770516391x` best baseline",
+      "uncertainty": "Remaining authority-surface competitor win",
+      "phase": "Phase 2",
+      "method": "March 21 benchmark artifact"
+    }
+  ],
+  "pending_todos": [
+    "optional follow-on: design a bounded `DS-05` refinement lane without reopening the closed PRD gate",
+    "optional follow-on: decide whether native-bundled wheel packaging is a worthwhile engineering investment",
+    "preserve provenance-floor inputs during future cleanup while continuing to delete rebuildable outputs aggressively"
+  ],
   "blockers": [
-    "The governing E1 wedge target is still unmet at mean CR 4.369104600542837x and PT-6 6/8.",
-    "Blind-clone and cold-wheel verification are not yet closed.",
-    "Local disk headroom is tight enough that duplicate heavy artifacts are themselves a workflow risk."
+    "`DS-05` remains the only competitor win on the green E1 surface, so the final wedge verdict must state that boundary explicitly rather than implying a clean sweep.",
+    "The cold wheel currently demonstrates pure-Python smoke only; native-bundled distribution remains a follow-on choice, not a completed claim.",
+    "The restored raw provenance artifacts now consume local disk again, so future cleanup must keep them intact while removing only rebuildable outputs."
   ],
   "session": {
-    "last_date": "2026-03-20",
-    "stopped_at": "Phase 1 complete; Phase 2 uplift planning is next.",
-    "resume_file": ".gpd/STATE.md"
-  }
+    "last_date": "2026-03-21",
+    "stopped_at": "`proofs/team_assessment_packet_20260321/05_FINAL_WEDGE_VERDICT.md` closes the PRD. The next action, if any, is refinement only: either widen the `DS-05` margin or decide whether wheel-native packaging should become a new scoped project.",
+    "resume_file": "`.gpd/STATE.md`"
+  },
+  "_version": 1,
+  "_synced_at": "2026-03-21T15:55:30.070113+00:00"
 }

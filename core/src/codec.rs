@@ -68,7 +68,18 @@ impl<const N: usize> EncodedStream<N> {
         let raw_bytes = (self.sample_count as usize) * 8;
         let payload_bytes = match self.mode {
             Mode::Fast => self.rle_tokens.len(),
-            Mode::Balanced | Mode::LosslessDelta => self.rle_tokens.len() * 2,
+            Mode::Balanced | Mode::LosslessDelta => {
+                let mut payload_bits = 0usize;
+                for &(_d, _m, count) in self.rle_tokens.iter() {
+                    let mut remaining = count;
+                    while remaining > 0 {
+                        let chunk = remaining.min(127);
+                        payload_bits += if chunk == 1 { 10 } else { 17 };
+                        remaining -= chunk;
+                    }
+                }
+                payload_bits.div_ceil(8)
+            }
         };
         let packed = 14 + payload_bytes;
         raw_bytes as f64 / packed.max(1) as f64

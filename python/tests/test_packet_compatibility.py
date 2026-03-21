@@ -7,7 +7,7 @@ import numpy as np
 import pytest
 
 from zpe_iot import compute_nrmse, decode, encode
-from zpe_iot.codec import PACKET_VERSION, _crc16_ccitt
+from zpe_iot.codec import EncodedStream, PACKET_VERSION, _crc16_ccitt, pack_stream
 
 FIXTURE_PATH = Path(__file__).resolve().parent / "fixtures" / "golden_packets_v1.json"
 
@@ -85,3 +85,17 @@ def test_upgrade_backward_packet_version_assertions() -> None:
     newer = _mutate_version(bytes.fromhex(payload["fixtures"][0]["packet_hex"]), PACKET_VERSION + 1)
     with pytest.raises(ValueError, match="Unsupported packet version"):
         decode(newer)
+
+
+def test_decode_accepts_legacy_balanced_packets() -> None:
+    payload = json.loads(FIXTURE_PATH.read_text(encoding="utf-8"))
+    fixture = payload["fixtures"][0]
+    signal = _signal(fixture["signal"])
+    stream = encode(signal, preset=fixture["preset"], mode=fixture["mode"])
+    legacy_packet = pack_stream(stream, compact=False)
+
+    restored_stream = EncodedStream.from_bytes(legacy_packet)
+    restored_signal = decode(legacy_packet)
+
+    assert restored_stream.rle_tokens == stream.rle_tokens
+    assert restored_signal.shape[0] == signal.shape[0]

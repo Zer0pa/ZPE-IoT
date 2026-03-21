@@ -5,9 +5,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import platform
 import subprocess
 import sys
+from dataclasses import asdict
 from datetime import datetime
 from importlib import metadata
 from pathlib import Path
@@ -18,6 +20,7 @@ if str(ROOT) not in sys.path:
 
 from validation.benchmarks._common import BENCHMARK_FIDELITY_MODE
 from validation.metrics.fidelity import fidelity_label
+from zpe_iot.tracking import create_tracking_bundle
 
 RESULTS_DIR = ROOT / "validation" / "results"
 MANIFEST = ROOT / "validation" / "datasets" / "manifest.json"
@@ -71,9 +74,9 @@ def _load_json(path: Path) -> dict:
 def _manifest_classes() -> dict[str, str]:
     manifest = _load_json(MANIFEST)
     out: dict[str, str] = {}
-    for i in range(1, 9):
-        ds = f"DS-{i:02d}"
-        entry = manifest.get(ds, {})
+    for ds, entry in manifest.items():
+        if not ds.startswith("DS-"):
+            continue
         out[ds] = str(entry.get("provenance_class", "proxy"))
     return out
 
@@ -211,7 +214,43 @@ def _write(path: Path, payload: dict) -> Path:
     return path
 
 
+def _git_head() -> str:
+    try:
+        return (
+            subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=str(ROOT), text=True, stderr=subprocess.DEVNULL)
+            .strip()
+        )
+    except Exception:
+        return ""
+
+
 def main() -> int:
+    ts = datetime.now().strftime("%Y%m%dT%H%M%S")
+    run_name = f"benchmarks-{ts}"
+    tracking = create_tracking_bundle(
+        run_name=run_name,
+        input_payload={
+            "runner": "validation/benchmarks/run_benchmarks.py",
+            "scripts": SCRIPTS,
+        },
+        metadata={
+            "lane": "zpe-iot",
+            "workspace": str(ROOT),
+            "git_head": _git_head(),
+        },
+    )
+    tracking.log_payload(
+        "run",
+        {
+            "runner": "validation/benchmarks/run_benchmarks.py",
+            "git_head": _git_head(),
+            "cwd": str(ROOT),
+            "python_version": platform.python_version(),
+            "comet_env_present": bool(os.environ.get("COMET_API_KEY")),
+            "opik_env_present": bool(os.environ.get("OPIK_API_KEY")),
+        },
+    )
+
     for script in SCRIPTS:
         cmd = [sys.executable, str(Path(__file__).resolve().parent / script)]
         print(f"[RUN] {' '.join(cmd)}")
@@ -238,8 +277,8 @@ def main() -> int:
         cls = classes.get(row["dataset"], "proxy")
         row["provenance_class"] = cls
         row["evidence_class"] = CLASS_TO_EVIDENCE.get(cls, "E0")
+        tracking.log_payload(f"dataset.{row['dataset']}", row)
 
-    ts = datetime.now().strftime("%Y%m%dT%H%M%S")
     manifest_hash = _sha256(MANIFEST)
     comparator_files = {k: str(v) for k, v in latest.items()}
 
@@ -261,9 +300,34 @@ def main() -> int:
         p = _write(RESULTS_DIR / fname, payload)
         split_paths[evidence] = str(p)
 
+    tracking_payload = tracking.finish(
+        artifact_paths=[str(overall_path), *split_paths.values(), *comparator_files.values()],
+        output_payload={
+            "timestamp": ts,
+            "wins": overall["wins"],
+            "total": overall["total"],
+            "mean_cr": overall["mean_cr"],
+            "pt6_status": overall["pt6_status"],
+        },
+    )
+    tracking_context = {
+        "timestamp": ts,
+        "run_name": run_name,
+        "tracking": tracking_payload,
+        "classic_check": asdict(tracking.classic_check),
+        "opik_check": asdict(tracking.opik_check),
+        "artifacts": {
+            "overall_summary": str(overall_path),
+            "evidence_splits": split_paths,
+            "comparators": comparator_files,
+        },
+    }
+    tracking_path = _write(RESULTS_DIR / f"benchmark_tracking_context_{ts}.json", tracking_context)
+
     print(f"Saved summary: {overall_path}")
     print(f"PT-6 {overall['pt6_status']} ({overall['wins']}/{overall['total']} wins, {overall['pt6_label']})")
     print(f"Evidence split artifacts: {split_paths}")
+    print(f"Tracking context: {tracking_path}")
 
     return 0 if overall["pt6_pass"] else 1
 

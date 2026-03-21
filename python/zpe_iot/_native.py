@@ -1,13 +1,21 @@
 from __future__ import annotations
 
 import os
+from importlib import import_module
 from pathlib import Path
 from typing import Optional
 
 import numpy as np
 from cffi import FFI
 
-from .codec import Config, Mode
+from .codec import (
+    Config,
+    Mode,
+    _maybe_unwrap_wi1,
+    _maybe_unwrap_zh1,
+    _maybe_wrap_wi1,
+    _maybe_wrap_zh1,
+)
 
 _FFI = FFI()
 _FFI.cdef(
@@ -37,6 +45,38 @@ _FFI.cdef(
 )
 
 _LIB = None
+_EXTENSION = None
+
+
+def _load_extension_module():
+    global _EXTENSION
+    if _EXTENSION is not None:
+        return _EXTENSION
+
+    for module_name in ("zpe_iot._zpe_iot_native", "_zpe_iot_native"):
+        try:
+            _EXTENSION = import_module(module_name)
+            return _EXTENSION
+        except Exception:
+            continue
+    return None
+
+
+def _candidate_bases(root: Path) -> list[Path]:
+    target_root = root / "core" / "target"
+    triples = [
+        "",
+        "x86_64-apple-darwin",
+        "aarch64-apple-darwin",
+        "x86_64-unknown-linux-gnu",
+        "aarch64-unknown-linux-gnu",
+    ]
+    bases: list[Path] = []
+    for triple in triples:
+        for profile in ("release", "debug"):
+            base = target_root / profile if not triple else target_root / triple / profile
+            bases.extend([base, base / "deps"])
+    return bases
 
 
 def _candidate_libs() -> list[Path]:
@@ -46,24 +86,14 @@ def _candidate_libs() -> list[Path]:
         candidates.append(Path(env_path))
 
     root = Path(__file__).resolve().parents[2]
-    target_root = root / "core" / "target"
-    triples = [
-        "",
-        "x86_64-apple-darwin",
-        "aarch64-apple-darwin",
-        "x86_64-unknown-linux-gnu",
-        "aarch64-unknown-linux-gnu",
-    ]
-    for triple in triples:
-        for profile in ("release", "debug"):
-            base = target_root / profile if not triple else target_root / triple / profile
-            candidates.extend(
-                [
-                    base / "libzpe_iot.dylib",
-                    base / "libzpe_iot.so",
-                    base / "zpe_iot.dll",
-                ]
-            )
+    for base in _candidate_bases(root):
+        candidates.extend(
+            [
+                base / "libzpe_iot.dylib",
+                base / "libzpe_iot.so",
+                base / "zpe_iot.dll",
+            ]
+        )
     return candidates
 
 
@@ -84,7 +114,7 @@ def _load_lib():
 
 
 def available() -> bool:
-    return _load_lib() is not None
+    return _load_extension_module() is not None or _load_lib() is not None
 
 
 def _to_c_config(config: Config):
@@ -109,22 +139,42 @@ def _to_c_config(config: Config):
 
 
 def _sample_count_from_packet(packet: bytes) -> int:
+    packet = _maybe_unwrap_wi1(_maybe_unwrap_zh1(packet))
     if len(packet) < 6:
         return 0
     return int.from_bytes(packet[4:6], "little")
 
 
 def encode(samples: np.ndarray, config: Optional[Config] = None) -> bytes:
-    lib = _load_lib()
-    if lib is None:
-        raise RuntimeError("zpe-iot native library not found")
-
     x = np.asarray(samples, dtype=np.float64)
     if x.ndim != 1:
         raise ValueError("samples must be a 1D array")
     if not x.flags.c_contiguous:
         x = np.ascontiguousarray(x, dtype=np.float64)
     cfg = config or Config()
+
+    ext = _load_extension_module()
+    if ext is not None:
+        packet = bytes(
+            ext.encode_packet(
+                x,
+                mode={Mode.FAST: 0, Mode.BALANCED: 1, Mode.LOSSLESS_DELTA: 2}[Mode(cfg.mode)],
+                threshold=float(cfg.threshold),
+                step=float(cfg.step),
+                bands=tuple(float(v) for v in cfg.bands),
+                adaptive=bool(cfg.adaptive),
+                thr_min=float(cfg.thr_min),
+                thr_max=float(cfg.thr_max),
+                alpha=float(cfg.alpha),
+                k=float(cfg.k),
+                preset_id=int(cfg.preset_id),
+            )
+        )
+        return _maybe_wrap_zh1(_maybe_wrap_wi1(packet))
+
+    lib = _load_lib()
+    if lib is None:
+        raise RuntimeError("zpe-iot native library not found")
 
     # Zero-copy view over NumPy storage avoids per-call list materialization.
     in_buf = _FFI.from_buffer("double[]", x)
@@ -137,17 +187,23 @@ def encode(samples: np.ndarray, config: Optional[Config] = None) -> bytes:
     if n < 0:
         raise RuntimeError(f"native encode failed with status={n}")
 
-    return bytes(out_raw[:n])
+    packet = bytes(out_raw[:n])
+    return _maybe_wrap_zh1(_maybe_wrap_wi1(packet))
 
 
 def decode(packet: bytes) -> np.ndarray:
-    lib = _load_lib()
-    if lib is None:
+    ext = _load_extension_module()
+    lib = None if ext is not None else _load_lib()
+    if ext is None and lib is None:
         raise RuntimeError("zpe-iot native library not found")
 
+    packet = _maybe_unwrap_wi1(_maybe_unwrap_zh1(packet))
     sample_count = _sample_count_from_packet(packet)
     if sample_count <= 0:
         return np.array([], dtype=np.float64)
+
+    if ext is not None:
+        return np.asarray(ext.decode_packet(packet), dtype=np.float64)
 
     in_buf = _FFI.new("uint8_t[]", packet)
     out_buf = _FFI.new("double[]", sample_count)

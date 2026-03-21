@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download/generate DS-01..DS-10 and emit provenance-rich manifest metadata."""
+"""Download/build DS-01..DS-12 and emit provenance-rich manifest metadata."""
 
 from __future__ import annotations
 
@@ -144,12 +144,17 @@ def _extract_intel_lab(raw_gz: Path) -> np.ndarray:
 
 
 def _extract_har(raw_outer_zip: Path) -> np.ndarray:
+    return _extract_har_body_acc(raw_outer_zip, split="train")
+
+
+def _extract_har_body_acc(raw_outer_zip: Path, split: str) -> np.ndarray:
     with zipfile.ZipFile(raw_outer_zip) as outer:
         inner_name = next(name for name in outer.namelist() if name.endswith(".zip"))
         inner_bytes = outer.read(inner_name)
 
     with zipfile.ZipFile(io.BytesIO(inner_bytes)) as inner:
-        target = next(name for name in inner.namelist() if name.endswith("train/Inertial Signals/body_acc_x_train.txt"))
+        suffix = f"{split}/Inertial Signals/body_acc_x_{split}.txt"
+        target = next(name for name in inner.namelist() if name.endswith(suffix))
         with inner.open(target) as f:
             values: list[float] = []
             for line in f:
@@ -250,15 +255,56 @@ def _extract_household_power(raw_zip: Path) -> np.ndarray:
     return np.asarray(out, dtype=np.float64)
 
 
-def _generate_proxy(ds_id: str, seed: int) -> tuple[np.ndarray, float]:
-    rng = np.random.default_rng(seed)
-    if ds_id == "DS-09":
-        return rng.standard_normal(1_000_000), 1000.0
-    if ds_id == "DS-10":
-        t = np.linspace(0, 20, 1_000_000)
-        sweep = np.sin(2 * np.pi * (1 + 25 * t / t.max()) * t)
-        return sweep, 1000.0
-    raise ValueError(f"Unknown synthetic dataset id: {ds_id}")
+def _extract_cwru_48k_drive_end(raw_mat: Path) -> np.ndarray:
+    try:
+        from scipy.io import loadmat
+    except ImportError as exc:
+        raise RuntimeError("scipy is required to parse the CWRU .mat source") from exc
+
+    payload = loadmat(raw_mat)
+    numeric_keys: list[tuple[str, np.ndarray]] = []
+    for key, value in payload.items():
+        if key.startswith("__"):
+            continue
+        if not isinstance(value, np.ndarray):
+            continue
+        if not np.issubdtype(value.dtype, np.number):
+            continue
+        arr = np.asarray(value, dtype=np.float64).reshape(-1)
+        if arr.size:
+            numeric_keys.append((key, arr))
+
+    for key, arr in numeric_keys:
+        if key.endswith("_DE_time") or "DE_time" in key:
+            return arr
+
+    if numeric_keys:
+        return numeric_keys[0][1]
+    raise RuntimeError(f"No numeric drive-end channel found in {raw_mat}")
+
+
+def _extract_har_test(raw_outer_zip: Path) -> np.ndarray:
+    return _extract_har_body_acc(raw_outer_zip, split="test")
+
+
+def _extract_electricity_load(raw_zip: Path) -> np.ndarray:
+    with zipfile.ZipFile(raw_zip) as zf:
+        txt_name = next(name for name in zf.namelist() if name.lower().endswith(".txt"))
+        with zf.open(txt_name) as f:
+            wrapper = io.TextIOWrapper(f, encoding="utf-8", errors="ignore", newline="")
+            rows = csv.reader(wrapper, delimiter=";")
+            header = next(rows)
+            if len(header) < 2:
+                raise RuntimeError("Electricity dataset missing meter columns")
+            out = []
+            for row in rows:
+                if len(row) < 2:
+                    continue
+                value = row[1].strip()
+                if not value:
+                    continue
+                out.append(float(value.replace(",", ".")))
+    return np.asarray(out, dtype=np.float64)
 
 
 @dataclass(frozen=True)
@@ -354,11 +400,53 @@ PUBLIC_DATASETS = [
         extractor=_extract_household_power,
         notes="Original DEBS 2012 sample links returned 404; substituted with public voltage telemetry from UCI household power data.",
     ),
+    PublicDataset(
+        ds_id="DS-09",
+        name="CWRU Bearing Drive End 48kHz (109.mat)",
+        source_url="https://engineering.case.edu/sites/default/files/109.mat",
+        license_name="Public research dataset (Case Western Reserve University Bearing Data Center terms)",
+        raw_filename="109.mat",
+        sample_rate_hz=48_000.0,
+        extractor=_extract_cwru_48k_drive_end,
+        notes="Direct Case Western Reserve University Bearing Data Center 48kHz drive-end file.",
+    ),
+    PublicDataset(
+        ds_id="DS-10",
+        name="UCI HAR Smartphone Inertial Signals (body_acc_x test split)",
+        source_url="https://archive.ics.uci.edu/static/public/240/human+activity+recognition+using+smartphones.zip",
+        license_name="CC BY 4.0 (UCI repository terms)",
+        raw_filename="uci_har_outer.zip",
+        sample_rate_hz=50.0,
+        extractor=_extract_har_test,
+        notes="Extracted test split body_acc_x from the same public UCI HAR archive to avoid duplicating DS-04 train split.",
+    ),
+    PublicDataset(
+        ds_id="DS-12",
+        name="UCI Electricity Load Diagrams (MT_001)",
+        source_url="https://archive.ics.uci.edu/static/public/321/electricityloaddiagrams20112014.zip",
+        license_name="CC BY 4.0 (UCI repository terms)",
+        raw_filename="electricityloaddiagrams20112014.zip",
+        sample_rate_hz=1.0 / 900.0,
+        extractor=_extract_electricity_load,
+        notes="Extracted the first public smart-meter channel (MT_001) from the UCI electricity load archive.",
+    ),
 ]
 
-SYNTH_DATASETS = {
-    "DS-09": {"name": "Synthetic White Noise", "generated": True},
-    "DS-10": {"name": "Synthetic Sine Sweep", "generated": True},
+BLOCKED_DATASETS = {
+    "DS-11": {
+        "status": "BLOCKED",
+        "name": "SMAP Telemetry (P-1)",
+        "provenance_class": "real_public",
+        "source_url": "https://raw.githubusercontent.com/khundman/telemanom/master/data/train/P-1.npy",
+        "license": "Telemanom / NASA anomaly dataset (current upstream access now requires credentialed mirror)",
+        "notes": (
+            "Requested SMAP P-1 telemetry channel from the Telemanom corpus."
+        ),
+        "blocked_reason": (
+            "2026-03-21 verification found the raw GitHub path returns 404, the historical S3 bundle returns 403, "
+            "and the upstream telemanom README now directs users to a Kaggle download; the named no-login source is not currently viable."
+        ),
+    },
 }
 
 
@@ -392,20 +480,6 @@ def _build_public_dataset(spec: PublicDataset, force: bool) -> tuple[dict, bool]
     return entry, downloaded
 
 
-def _build_synthetic_dataset(ds_id: str, name: str, force: bool) -> dict:
-    npz_path = DATASET_DIR / ds_id / "data.npz"
-    if force or not npz_path.exists():
-        samples, sr = _generate_proxy(ds_id, seed=(9 if ds_id == "DS-09" else 10) * 17)
-        _save_dataset(ds_id, name, samples, sr, provenance="synthetic")
-
-    return {
-        "status": "READY",
-        "name": name,
-        "generated": True,
-        "provenance_class": "proxy",
-    }
-
-
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -431,27 +505,27 @@ def main() -> None:
         action = "DOWNLOADED" if downloaded else "REUSED"
         print(f"[{action}] {spec.ds_id} -> {spec.name}")
 
-    for ds_id, info in SYNTH_DATASETS.items():
-        should_force = force_all or ds_id in force_set
-        manifest[ds_id] = _build_synthetic_dataset(ds_id, info["name"], force=should_force)
-        print(f"[OK] {ds_id} synthetic dataset ready")
+    for ds_id, info in BLOCKED_DATASETS.items():
+        manifest[ds_id] = dict(info)
+        print(f"[BLOCKED] {ds_id} -> {info['name']}")
 
     (DATASET_DIR / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
     readme = DATASET_DIR / "README.md"
     readme.write_text(
         "# Dataset Provenance\n\n"
-        "DS-01..DS-08 are now sourced from real public datasets (E1).\n"
+        "DS-01..DS-10 and DS-12 are sourced from real public datasets (E1).\n"
+        "DS-11 is explicitly blocked because the named no-login Telemanom source is no longer directly accessible.\n"
         "Raw artifacts are stored under `validation/datasets/raw/DS-XX/` and transformed into standard `data.npz` files.\n\n"
         "Manifest policy:\n"
         "- `validation/datasets/manifest.json` records provenance class, source URL, license, retrieval timestamp, and SHA256 hashes.\n"
-        "- For DS-01..DS-08, provenance is considered valid only when `verify_provenance.py` succeeds.\n"
+        "- For READY datasets, provenance is considered valid only when `verify_provenance.py` succeeds.\n"
         "- If an upstream dataset becomes unavailable, mark `status=BLOCKED` explicitly rather than silently promoting PASS claims.\n\n"
         "Credential policy:\n"
         "- `HF_TOKEN`: optional for public Hugging Face pulls; required for private/gated assets.\n"
         "- `GH_TOKEN`: optional for low-volume public fetch; required/recommended for API-heavy or private GitHub access.\n"
         "- Kaggle auth: `KAGGLE_API_TOKEN` supported, with legacy compatibility via `KAGGLE_USERNAME` + `KAGGLE_KEY`.\n"
-        "- Current DS-01..DS-08 sources are public-first and run tokenless by default; auth failures emit explicit remediation hints.\n"
+        "- Current READY sources are public-first and run tokenless by default; auth failures emit explicit remediation hints.\n"
     )
 
     print("Dataset manifest written to validation/datasets/manifest.json")

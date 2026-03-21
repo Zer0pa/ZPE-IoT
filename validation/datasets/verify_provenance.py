@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate dataset provenance manifest and hash integrity for DS-01..DS-08."""
+"""Validate dataset provenance manifest and hash integrity for sensor datasets."""
 
 from __future__ import annotations
 
@@ -13,8 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DATASETS_DIR = ROOT / "validation" / "datasets"
 MANIFEST_PATH = DATASETS_DIR / "manifest.json"
 
-REQUIRED_IDS = [f"DS-{i:02d}" for i in range(1, 9)]
-REQUIRED_FIELDS = [
+READY_REQUIRED_FIELDS = [
     "provenance_class",
     "source_url",
     "license",
@@ -22,6 +21,13 @@ REQUIRED_FIELDS = [
     "raw_sha256",
     "transform_sha256",
     "notes",
+]
+BLOCKED_REQUIRED_FIELDS = [
+    "provenance_class",
+    "source_url",
+    "license",
+    "notes",
+    "blocked_reason",
 ]
 CLASS_ORDER = {"proxy": 0, "real_public": 1, "real_customer": 2}
 
@@ -47,8 +53,10 @@ def _is_iso_utc(ts: str) -> bool:
 
 def _validate_entry(ds_id: str, entry: dict, min_class: str, allow_blocked: bool) -> tuple[str, list[str]]:
     issues: list[str] = []
+    status = str(entry.get("status", "READY")).upper()
 
-    for field in REQUIRED_FIELDS:
+    required_fields = BLOCKED_REQUIRED_FIELDS if status == "BLOCKED" else READY_REQUIRED_FIELDS
+    for field in required_fields:
         if field not in entry:
             issues.append(f"missing field `{field}`")
 
@@ -60,7 +68,6 @@ def _validate_entry(ds_id: str, entry: dict, min_class: str, allow_blocked: bool
         issues.append(f"invalid provenance_class `{prov_class}`")
         return "FAIL", issues
 
-    status = str(entry.get("status", "READY")).upper()
     if status not in {"READY", "BLOCKED"}:
         issues.append(f"invalid status `{status}`")
 
@@ -68,44 +75,46 @@ def _validate_entry(ds_id: str, entry: dict, min_class: str, allow_blocked: bool
     if not source_url.startswith(("http://", "https://")):
         issues.append("source_url must be http(s)")
 
-    retrieval_date_utc = str(entry["retrieval_date_utc"]).strip()
-    if not _is_iso_utc(retrieval_date_utc):
-        issues.append("retrieval_date_utc must be ISO8601")
-
-    raw_sha = str(entry["raw_sha256"]).strip().lower()
-    tf_sha = str(entry["transform_sha256"]).strip().lower()
-    if len(raw_sha) != 64 or any(c not in "0123456789abcdef" for c in raw_sha):
-        issues.append("raw_sha256 must be a 64-char hex SHA256")
-    if len(tf_sha) != 64 or any(c not in "0123456789abcdef" for c in tf_sha):
-        issues.append("transform_sha256 must be a 64-char hex SHA256")
-
-    ds_dir = DATASETS_DIR / ds_id
-    transform_path = ds_dir / "data.npz"
-    raw_rel = str(entry.get("raw_artifact", "")).strip()
-    raw_path = (ROOT / raw_rel) if raw_rel else None
-
-    if not transform_path.exists():
-        issues.append(f"missing transformed artifact `{transform_path}`")
-    else:
-        actual_tf_sha = _sha256(transform_path)
-        if actual_tf_sha != tf_sha:
-            issues.append("transform_sha256 mismatch")
-
-    if raw_path is None:
-        issues.append("missing `raw_artifact` path")
-    elif not raw_path.exists():
-        issues.append(f"missing raw artifact `{raw_path}`")
-    else:
-        actual_raw_sha = _sha256(raw_path)
-        if actual_raw_sha != raw_sha:
-            issues.append("raw_sha256 mismatch")
-
     if status == "BLOCKED":
         blocked_reason = str(entry.get("blocked_reason", "")).strip()
         if not blocked_reason:
             issues.append("status=BLOCKED requires blocked_reason")
         if not allow_blocked:
             issues.append("blocked dataset not allowed in strict verification")
+        if allow_blocked and not issues:
+            return "BLOCKED", [blocked_reason]
+    else:
+        retrieval_date_utc = str(entry["retrieval_date_utc"]).strip()
+        if not _is_iso_utc(retrieval_date_utc):
+            issues.append("retrieval_date_utc must be ISO8601")
+
+        raw_sha = str(entry["raw_sha256"]).strip().lower()
+        tf_sha = str(entry["transform_sha256"]).strip().lower()
+        if len(raw_sha) != 64 or any(c not in "0123456789abcdef" for c in raw_sha):
+            issues.append("raw_sha256 must be a 64-char hex SHA256")
+        if len(tf_sha) != 64 or any(c not in "0123456789abcdef" for c in tf_sha):
+            issues.append("transform_sha256 must be a 64-char hex SHA256")
+
+        ds_dir = DATASETS_DIR / ds_id
+        transform_path = ds_dir / "data.npz"
+        raw_rel = str(entry.get("raw_artifact", "")).strip()
+        raw_path = (ROOT / raw_rel) if raw_rel else None
+
+        if not transform_path.exists():
+            issues.append(f"missing transformed artifact `{transform_path}`")
+        else:
+            actual_tf_sha = _sha256(transform_path)
+            if actual_tf_sha != tf_sha:
+                issues.append("transform_sha256 mismatch")
+
+        if raw_path is None:
+            issues.append("missing `raw_artifact` path")
+        elif not raw_path.exists():
+            issues.append(f"missing raw artifact `{raw_path}`")
+        else:
+            actual_raw_sha = _sha256(raw_path)
+            if actual_raw_sha != raw_sha:
+                issues.append("raw_sha256 mismatch")
 
     min_rank = CLASS_ORDER[min_class]
     if CLASS_ORDER[prov_class] < min_rank:
@@ -122,6 +131,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--min-class", choices=sorted(CLASS_ORDER), default="real_public")
     parser.add_argument("--allow-blocked", action="store_true")
+    parser.add_argument("--datasets", nargs="*", default=None)
     args = parser.parse_args()
 
     if not MANIFEST_PATH.exists():
@@ -134,9 +144,14 @@ def main() -> int:
         print(f"[FAIL] invalid JSON manifest: {exc}")
         return 1
 
+    dataset_ids = args.datasets or sorted(
+        (ds_id for ds_id in manifest if ds_id.startswith("DS-")),
+        key=lambda ds_id: int(ds_id.split("-")[1]),
+    )
+
     overall_ok = True
     blocked_count = 0
-    for ds_id in REQUIRED_IDS:
+    for ds_id in dataset_ids:
         entry = manifest.get(ds_id)
         if not isinstance(entry, dict):
             print(f"[FAIL] {ds_id}: missing manifest entry")
