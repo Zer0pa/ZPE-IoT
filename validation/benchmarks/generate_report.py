@@ -51,6 +51,12 @@ def _pt6_status(payload: dict) -> str:
     return "PASS" if bool(payload.get("pt6_pass", False)) else "FAIL"
 
 
+def _dataset_scope_label(dataset_ids: list[str]) -> str:
+    if not dataset_ids:
+        return "0 datasets"
+    return f"{len(dataset_ids)} datasets ({', '.join(dataset_ids)})"
+
+
 def main() -> int:
     summary = load(latest("bench_summary"))
     e0 = load(latest("bench_summary_E0_proxy"))
@@ -66,6 +72,7 @@ def main() -> int:
     pt6_final_status = _pt6_status(claim_payload)
     pt6_provisional_status = _pt6_status(e0)
     nrmse_label = summary.get("fidelity_metric_label", "NRMSE(window-normalized)")
+    dataset_scope = _dataset_scope_label([r["dataset"] for r in summary["datasets"]])
 
     ds = [r["dataset"] for r in summary["datasets"]]
     zpe_cr = [r["zpe_iot_cr"] for r in summary["datasets"]]
@@ -156,7 +163,7 @@ def main() -> int:
     lines.append(f"- PT-6 PROVISIONAL (E0): **{pt6_provisional_status}** ({e0.get('wins', 0)}/{e0.get('total', 0)} wins)")
     lines.append("")
     lines.append("## Methodology")
-    lines.append("- Benchmarks run on DS-01..DS-08 with identical raw float64 inputs for all compressors.")
+    lines.append(f"- Benchmarks run on {dataset_scope} with identical raw float64 inputs for all compressors.")
     lines.append("- Comparators: zstd(level=3), LZ4, zlib(level=6), Gorilla-proxy.")
     lines.append(f"- Fidelity metric in benchmark table: `{nrmse_label}`")
     method_meta = summary.get("method_metadata", {})
@@ -172,7 +179,7 @@ def main() -> int:
     lines.append(f"- E2 summary artifact: `{rel(latest('bench_summary_E2_real_customer'))}`")
     lines.append("")
     lines.append("## Results Summary")
-    lines.append(f"- Mean zpe-iot CR across DS-01..DS-08: **{summary['mean_cr']:.2f}x**")
+    lines.append(f"- Mean zpe-iot CR across {dataset_scope}: **{summary['mean_cr']:.2f}x**")
     lines.append(f"- Active claim tier mean CR ({claim_tier}): **{claim_payload['mean_cr']:.2f}x**")
     lines.append("")
     lines.append("## Detailed Results")

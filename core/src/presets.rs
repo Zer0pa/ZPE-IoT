@@ -50,9 +50,9 @@ impl Preset {
 
         match self {
             Preset::Temperature => {
-                cfg.mode = Mode::Fast;
+                cfg.mode = Mode::Balanced;
                 cfg.threshold = 0.05;
-                cfg.step = 0.1;
+                cfg.step = 0.0;
                 cfg.bands = [1.0, 2.0, 4.0];
             }
             Preset::Vibration => {
@@ -76,7 +76,7 @@ impl Preset {
             Preset::GpsTrack => {
                 cfg.mode = Mode::Balanced;
                 cfg.threshold = 0.001;
-                cfg.step = 0.0001;
+                cfg.step = 0.0;
                 cfg.bands = [1.0, 4.0, 16.0];
             }
             Preset::Voltage => {
@@ -92,9 +92,9 @@ impl Preset {
                 cfg.bands = [1.0, 4.0, 16.0];
             }
             Preset::Flow => {
-                cfg.mode = Mode::Fast;
-                cfg.threshold = 0.03;
-                cfg.step = 0.1;
+                cfg.mode = Mode::Balanced;
+                cfg.threshold = 0.05;
+                cfg.step = 0.0;
                 cfg.bands = [1.0, 2.0, 8.0];
             }
             Preset::Generic => {
@@ -130,5 +130,38 @@ impl Preset {
         } else {
             None
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::Preset;
+    use crate::codec::Mode;
+
+    #[test]
+    fn ratified_temperature_preset_matches_canonical_values() {
+        let cfg = Preset::Temperature.config();
+        assert_eq!(cfg.mode, Mode::Balanced);
+        assert_eq!(cfg.threshold, 0.05);
+        assert_eq!(cfg.step, 0.0);
+        assert_eq!(cfg.bands, [1.0, 2.0, 4.0]);
+    }
+
+    #[test]
+    fn ratified_gps_preset_matches_canonical_values() {
+        let cfg = Preset::GpsTrack.config();
+        assert_eq!(cfg.mode, Mode::Balanced);
+        assert_eq!(cfg.threshold, 0.001);
+        assert_eq!(cfg.step, 0.0);
+        assert_eq!(cfg.bands, [1.0, 4.0, 16.0]);
+    }
+
+    #[test]
+    fn ratified_flow_preset_matches_canonical_values() {
+        let cfg = Preset::Flow.config();
+        assert_eq!(cfg.mode, Mode::Balanced);
+        assert_eq!(cfg.threshold, 0.05);
+        assert_eq!(cfg.step, 0.0);
+        assert_eq!(cfg.bands, [1.0, 2.0, 8.0]);
     }
 }

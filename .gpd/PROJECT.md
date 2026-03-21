@@ -1,22 +1,34 @@
-# ZPE-IoT Authority Recovery And Wedge Validation
+# ZPE-IoT Authority Recovery And Wave 2 Technical Closure
 
 ## What This Is
 
-This project uses the GPD workflow to decide whether ZPE-IoT currently has a truthful commercial wedge on the real public E1 IoT benchmark surface while preserving honest release and packaging claims. The governing evidence is the March 20, 2026 authority surface: managed preflight, strict DT, and the latest real public E1 benchmark summary.
+This project uses the GPD workflow to decide whether ZPE-IoT currently has a truthful commercial wedge on the real public E1 IoT benchmark surface while preserving honest release and packaging claims. The governing evidence now starts from the March 21, 2026 closure surface: the green E1 benchmark rerun, strict DT recovery, clean-workspace portability proof, cold-wheel smoke proof, and the bounded final wedge verdict.
 
-The expected outputs are compact engineering evidence artifacts rather than a paper: reconciled status docs, DS-01 and DS-05 loss diagnosis, portability and wheel verification notes, and a bounded wedge verdict that says exactly what is and is not supported.
+The expected outputs are compact engineering evidence artifacts rather than a paper. Milestone `v1.0` closed the bounded wedge honestly. Milestone `v1.1` now pursues technical closure on the remaining live engineering gaps without weakening the sovereign benchmark gate.
+
+## Current Milestone: v1.1 Wave 2 Technical Closure
+
+**Goal:** Convert the bounded March 21, 2026 wedge into a cleaner technical closure surface by fixing preset parity, attacking `DS-05` honestly, bundling the native wheel path, expanding the real-public benchmark surface, wiring canonical Comet/Opik observability, and updating only factually wrong docs.
+
+**Target results:**
+
+- Rust and Python preset tables agree for all 9 presets, with parity and DT evidence.
+- `DS-05` is either lifted honestly or closed as a documented structural boundary under a non-regressing benchmark guardrail.
+- Native wheel packaging is verified against the ZPE-IMC packaging pattern with a cold-install `native_available = true` proof.
+- The authority benchmark surface expands from 8 to 12 real-public datasets with provenance and rerun evidence.
+- Benchmark observability uses the canonical `zer0pa` workspace plus the ratified Classic Comet and Opik project constants, with local fallback when credentials are absent.
 
 ## Core Research Question
 
-Can ZPE-IoT honestly claim a commercial wedge on the unchanged real public E1 surface while maintaining truthful release, portability, and packaging evidence?
+Can ZPE-IoT turn the bounded March 21, 2026 wedge into a cleaner technical closure by resolving preset parity, `DS-05`, native wheel packaging, expanded real-public benchmarking, and canonical observability without regressing the authority surface?
 
 ## Scoping Contract Summary
 
 ### Contract Coverage
 
-- `claim-release-completion`: Success means project docs accurately reflect the March 20, 2026 preflight + DT authority surface instead of the older blocked state.
-- `claim-benchmark-wedge`: Success means either the unchanged E1 surface reaches `mean CR >= 5.0x` and `PT-6 >= 7/8`, or the project records a verified reason that the wedge is not yet established.
-- `claim-honest-positioning`: Success means blind-clone and wheel-install evidence are closed or honestly bounded, with no stale or proxy win narrative.
+- `claim-release-completion`: Closed in `v1.0`; follow-on work must not reopen it with stale blocker narratives.
+- `claim-benchmark-wedge`: Closed in bounded form in `v1.0`; follow-on work may only improve or narrow the remaining `DS-05` boundary without weakening the benchmark surface.
+- `claim-honest-positioning`: Closed in bounded form in `v1.0`; follow-on work may strengthen native wheel and observability claims only with new evidence.
 
 ### User Guidance To Preserve
 
@@ -103,10 +115,11 @@ Can ZPE-IoT honestly claim a commercial wedge on the unchanged real public E1 su
 
 ### Active
 
-- [ ] What exact doc surfaces still contradict the March 20 authority artifacts?
-- [ ] Why do DS-01 and DS-05 lose on the real public E1 surface?
-- [ ] Can targeted uplift improve the unchanged E1 benchmark surface enough to support a wedge claim?
-- [ ] What is the smallest honest artifact set that closes blind-clone and wheel-install evidence?
+- [ ] Which preset values for `temperature`, `gps_track`, and `flow` should be canonical across Rust and Python under the current DT-12 and parity gates?
+- [ ] Can `DS-05` be lifted to competitor parity or victory without regressing benchmark fidelity or the wider authority surface?
+- [ ] Can the wheel expose `native_available = true` on cold install while following the ZPE-IMC packaging pattern exactly?
+- [ ] Can the real-public benchmark surface expand to 12 datasets with truthful provenance and still support the existing wedge?
+- [ ] Can Classic Comet and Opik logging be instantiated with the canonical project constants and degrade locally when credentials are absent?
 
 ### Out Of Scope
 
@@ -136,12 +149,13 @@ This is an empirical benchmarking and release-authority project rather than a fo
 ### Known Results
 
 - March 20 managed preflight closed substantive release-preflight gates with only deferred publish remaining.
-- March 20 strict DT passed mandatory checks.
-- March 20 real public E1 benchmark remains below the wedge threshold at `mean CR 4.3691x` and `6/8`.
+- March 21 strict DT returned to `27 PASS`, `0 FAIL`, `0 SKIPPED`, `0 BLOCKED`.
+- March 21 real public E1 benchmark closed at `mean CR 6.557750648944099x` and `7/8`, with `DS-05` as the only remaining competitor win.
+- Clean-workspace portability and cold-wheel smoke are closed at bounded scope, but native-bundled distribution parity is not yet established.
 
 ### What Is New
 
-This project reconciles the live authority truth into the GPD workflow, diagnoses the remaining benchmark losses instead of narrating around them, and forces portability and packaging claims to stand on their own evidence.
+This follow-on milestone starts from the already-green March 21 authority surface and targets the remaining engineering gaps that still weaken the technical closure story: preset parity, `DS-05`, native wheel packaging, benchmark-surface breadth, and benchmark observability.
 
 ### Target Venue
 
@@ -194,4 +208,4 @@ Full log: `.gpd/DECISIONS.md`
 
 ---
 
-_Last updated: 2026-03-20 after approved scope and contract persistence_
+_Last updated: 2026-03-21 after starting milestone v1.1 Wave 2 Technical Closure_

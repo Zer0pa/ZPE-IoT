@@ -22,6 +22,7 @@ from validation.metrics.fidelity import FidelityMode, fidelity_label, nrmse
 from zpe_iot import decode, encode
 
 RESULTS_DIR = ROOT / "validation" / "results"
+MANIFEST = ROOT / "validation" / "datasets" / "manifest.json"
 BENCHMARK_FIDELITY_MODE = FidelityMode.WINDOW_NORMALIZED
 
 
@@ -154,6 +155,10 @@ def ds_preset(ds_id: str) -> str:
         "DS-06": "generic",
         "DS-07": "gps_track",
         "DS-08": "voltage",
+        "DS-09": "vibration",
+        "DS-10": "accelerometer",
+        "DS-11": "generic",
+        "DS-12": "voltage",
     }
     return mapping.get(ds_id, "generic")
 
@@ -213,4 +218,16 @@ def save_results(prefix: str, rows: list[dict], method_metadata: dict | None = N
 
 
 def available_sensor_datasets() -> list[str]:
-    return [d for d in list_available_datasets() if d in {f"DS-{i:02d}" for i in range(1, 9)}]
+    if not MANIFEST.exists():
+        return list_available_datasets()
+
+    manifest = json.loads(MANIFEST.read_text())
+    ready: list[str] = []
+    for ds_id in list_available_datasets():
+        entry = manifest.get(ds_id, {})
+        if not ds_id.startswith("DS-"):
+            continue
+        if str(entry.get("status", "READY")).upper() != "READY":
+            continue
+        ready.append(ds_id)
+    return ready

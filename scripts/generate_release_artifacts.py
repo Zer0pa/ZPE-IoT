@@ -10,8 +10,12 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
+from runtime_surface import environment_root, python_executable, tool_command, tool_path
+
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS_DIR = ROOT / "validation" / "results"
+PYTHON_BIN = str(python_executable())
+PIP_BIN = tool_command("pip")
 
 
 def _run(cmd: list[str], cwd: Path | None = None) -> subprocess.CompletedProcess[str]:
@@ -81,19 +85,19 @@ def main() -> int:
     rust_sbom = RESULTS_DIR / f"sbom_rust_{ts}.json"
     combined_sbom = RESULTS_DIR / f"sbom_{ts}.json"
 
-    cyclonedx_py = ROOT / ".venv" / "bin" / "cyclonedx-py"
-    if not cyclonedx_py.exists():
+    cyclonedx_py = tool_path("cyclonedx-py")
+    if cyclonedx_py is None:
         discovered = shutil.which("cyclonedx-py")
         if discovered:
             cyclonedx_py = Path(discovered)
         else:
-            raise RuntimeError("cyclonedx-py not found in project venv or PATH")
+            raise RuntimeError("cyclonedx-py not found in the active Python environment or PATH")
 
     _run(
         [
             str(cyclonedx_py),
             "environment",
-            str(ROOT / ".venv"),
+            str(environment_root()),
             "--of",
             "JSON",
             "--output-reproducible",
@@ -152,15 +156,21 @@ def main() -> int:
     license_manifest.write_text(json.dumps(license_payload, indent=2) + "\n", encoding="utf-8")
 
     dt_latest = _latest("dt_results_*.json")
-    bench_latest = _latest("bench_summary_[0-9]*.json")
+    benchmark_candidates = [
+        _latest("bench_summary_[0-9]*.json"),
+        _latest("bench_summary_E0_proxy_*.json"),
+        _latest("bench_summary_E1_real_public_*.json"),
+        _latest("bench_summary_E2_real_customer_*.json"),
+    ]
     vuln_latest = _latest("vulnerability_scan_*.json")
 
-    artifact_paths = [p for p in [dt_latest, bench_latest, vuln_latest, py_sbom, rust_sbom, combined_sbom, license_manifest] if p]
+    benchmark_artifacts = [p for p in benchmark_candidates if p is not None]
+    artifact_paths = [p for p in [dt_latest, vuln_latest, py_sbom, rust_sbom, combined_sbom, license_manifest, *benchmark_artifacts] if p]
     artifact_hashes = {str(p): _sha256(p) for p in artifact_paths}
 
     git_sha = _tool_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"])
-    python_version = _tool_output([str(ROOT / ".venv" / "bin" / "python"), "--version"])
-    pip_version = _tool_output([str(ROOT / ".venv" / "bin" / "pip"), "--version"])
+    python_version = _tool_output([PYTHON_BIN, "--version"])
+    pip_version = _tool_output([PIP_BIN, "--version"])
     cargo_version = _tool_output(["cargo", "--version"])
     rustc_version = _tool_output(["rustc", "-Vv"])
 
@@ -180,7 +190,7 @@ def main() -> int:
         "commit_sha": git_sha,
         "build_toolchain": toolchain_raw,
         "build_toolchain_hashes": toolchain_hashes,
-        "benchmark_artifacts": [str(p) for p in [bench_latest] if p],
+        "benchmark_artifacts": [str(p) for p in benchmark_artifacts],
         "dt_artifacts": [str(p) for p in [dt_latest] if p],
         "security_artifacts": [str(p) for p in [vuln_latest, combined_sbom, license_manifest] if p],
         "artifact_sha256": artifact_hashes,

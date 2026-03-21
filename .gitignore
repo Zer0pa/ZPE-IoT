@@ -10,12 +10,16 @@ __pycache__/
 python/.coverage
 
 core/target/
+python/native/target/
 python/build/
 python/dist/
 *.egg-info/
 /results/
 examples/rust/embedded_demo/target/
 examples/c/arduino_demo/*.o
+python/zpe_iot/_zpe_iot_native*.so
+validation/datasets/raw/
+.gpd/*.bak
 
 validation/results/**/*.png
 validation/results/**/*.json

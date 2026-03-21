@@ -11,6 +11,8 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
+from runtime_surface import tool_path
+
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS_DIR = ROOT / "validation" / "results"
 
@@ -128,13 +130,13 @@ def main() -> int:
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")
 
-    pip_audit_path = ROOT / ".venv" / "bin" / "pip-audit"
-    if not pip_audit_path.exists():
+    pip_audit_path = tool_path("pip-audit")
+    if pip_audit_path is None:
         discovered = shutil.which("pip-audit")
         if discovered:
             pip_audit_path = Path(discovered)
         else:
-            raise SystemExit("pip-audit not found in project venv or PATH")
+            raise SystemExit("pip-audit not found in the active Python environment or PATH")
 
     py_cmd = [
         str(pip_audit_path),

@@ -11,29 +11,61 @@ dependencies = [
     "cffi>=1.16",
 ]
 
+[project.urls]
+Homepage = "https://github.com/Zer0pa/ZPE-IoT"
+Repository = "https://github.com/Zer0pa/ZPE-IoT"
+Documentation = "https://github.com/Zer0pa/ZPE-IoT/tree/main/docs"
+Issues = "https://github.com/Zer0pa/ZPE-IoT/issues"
+
 [project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=5.0",
+    "hypothesis>=6.0",
+]
+bench = [
+    "matplotlib>=3.7",
+    "zstandard>=0.22",
+    "lz4>=4.3",
+]
+observability = [
+    "comet_ml>=3.35",
+    "opik>=1.10,<2.0",
+]
+release = [
+    "maturin>=1.8,<2.0",
+    "build>=1.2",
+    "twine>=5.1",
+    "pip-audit>=2.7",
+    "cyclonedx-bom>=4.0",
+]
 dev = [
     "pytest>=7.0",
     "pytest-cov>=5.0",
     "hypothesis>=6.0",
     "comet_ml>=3.35",
+    "opik>=1.10,<2.0",
     "matplotlib>=3.7",
     "zstandard>=0.22",
     "lz4>=4.3",
+    "maturin>=1.8,<2.0",
     "build>=1.2",
     "twine>=5.1",
+    "pip-audit>=2.7",
+    "cyclonedx-bom>=4.0",
 ]
 
 [project.scripts]
 zpe-iot = "zpe_iot.cli:main"
 
 [build-system]
-requires = ["setuptools>=68.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["maturin>=1.8,<2.0"]
+build-backend = "maturin"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["zpe_iot*"]
+[tool.maturin]
+manifest-path = "native/Cargo.toml"
+python-source = "."
+module-name = "zpe_iot._zpe_iot_native"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -5,6 +5,9 @@ edition = "2021"
 description = "8-primitive geometric compression SDK for IoT sensor data"
 license = "MIT"
 keywords = ["compression", "iot", "sensor", "embedded", "no_std"]
+homepage = "https://github.com/Zer0pa/ZPE-IoT"
+repository = "https://github.com/Zer0pa/ZPE-IoT"
+documentation = "https://github.com/Zer0pa/ZPE-IoT/tree/main/docs"
 
 [lib]
 crate-type = ["staticlib", "cdylib", "rlib"]
