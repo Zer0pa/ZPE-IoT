@@ -1,6 +1,14 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # Test Matrix
 
-Date: 2026-03-09
+Date: 2026-03-21
+
+<p>
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
 
 ## Scope
 
@@ -36,12 +44,12 @@ Release-grade quality matrix for Rust core, Python SDK/CLI, destruct tests, and 
 - Enforced in `python/pyproject.toml` via pytest addopts:
   - `--cov=zpe_iot`
   - `--cov-fail-under=85`
-- Latest March 9 artifact paths:
+- Current artifact paths:
   - `validation/results/coverage/python_coverage.xml`
   - `validation/results/coverage/python_html/index.html`
 - Latest observed result:
-  - `70 passed`
-  - `86.53%` total coverage
+  - `85 passed`
+  - `86.37%` total coverage
 
 ## Baseline Commands
 
@@ -57,8 +65,12 @@ cargo clippy -- -D warnings
 
 The test matrix is not itself a release verdict.
 
-As of 2026-03-09:
+As of 2026-03-21:
 
 - core test surfaces are green
 - Python and DT surfaces are green
-- full release preflight is still blocked by `C07_SBOM_RELEASE_MANIFEST` and `C10_CHEMOSENSE_CLI_SMOKE`
+- managed preflight is green with only `D01_DEFERRED_PUBLISH` intentionally deferred by policy
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

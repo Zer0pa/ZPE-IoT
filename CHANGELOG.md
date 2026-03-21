@@ -1,4 +1,14 @@
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # Changelog
+
+This file records repo-surface changes that materially affect current install, release, validation, or documentation truth.
+
+<p>
+  <img src=".github/assets/readme/section-bars/release-notes.svg" alt="RELEASE NOTES" width="100%">
+</p>
 
 ## 2026-03-21
 
@@ -21,3 +31,7 @@
 - Rust core codec with bitpack and CRC
 - Python reference SDK with CLI
 - DT harness and benchmark tooling
+
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

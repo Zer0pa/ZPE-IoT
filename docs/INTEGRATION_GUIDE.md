@@ -1,4 +1,12 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # ZPE-IoT Integration Guide
+
+<p>
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
 
 ## 1. Quick Start (Python)
 ```python
@@ -66,3 +74,7 @@ Inputs: device count, KB/day, cellular cost/MB, expected compression.
 - `Native library unavailable`: build Rust library (`cargo build --target x86_64-apple-darwin` or your host triple).
 - `CRC mismatch`: packet corrupted in transport; retransmit.
 - Low CR on noisy data: switch to `fast` mode or tune threshold with `scripts/tuning_wizard.py`.
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

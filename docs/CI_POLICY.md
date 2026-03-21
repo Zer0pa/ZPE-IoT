@@ -1,6 +1,14 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # CI and Branch Policy
 
 Date: 2026-02-19
+
+<p>
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
 
 ## Required Checks on `main`
 
@@ -18,12 +26,15 @@ No direct pushes to `main` are allowed when branch protection is enabled.
 
 - `.github/workflows/ci.yml`
 - `.github/workflows/packaging_warnings.yml`
+- `.github/workflows/build_wheels.yml`
 
 ## Release Tagging
 
 Conventional tags:
 
 - `vMAJOR.MINOR.PATCH` (for release candidates and formal releases)
+
+Do not push tags or invoke publication workflows without explicit owner ratification.
 
 Example:
 
@@ -45,3 +56,7 @@ Then promote curated content into release notes during RC packaging.
 ## Fail-Fast Packaging Rule
 
 `packaging_warnings.yml` fails the pipeline if Python build output contains packaging warnings or deprecation warnings. This prevents shipping warning-tainted artifacts.
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

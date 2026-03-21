@@ -2,7 +2,7 @@
   "iot_package_version": "0.1.0",
   "imc_contract_version_consumed": "wave1.0",
   "imc_vector_sha256": "9c8b905f6c1d30d057955aa9adf0f7ff9139853494dca673e5fbe69f24fba10e",
-  "imc_vector_path": "/Users/Zer0pa/ZPE-IMC-REPO/v0.0/docs/family/IMC_COMPATIBILITY_VECTOR.json",
+  "imc_vector_path": "https://github.com/Zer0pa/ZPE-IMC/blob/main/v0.0/docs/family/IMC_COMPATIBILITY_VECTOR.json",
   "canonical_demo_metric_authority": {
     "source": "IMC_COMPATIBILITY_VECTOR.json",
     "metric": "canonical_demo_metrics.total_words",

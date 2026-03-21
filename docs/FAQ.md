@@ -4,7 +4,7 @@
 
 # FAQ
 
-If your question is not answered here, see `SUPPORT.md`.
+If your question is not answered here, start with [SUPPORT.md](SUPPORT.md).
 
 <p>
   <img src="../.github/assets/readme/section-bars/architecture-and-theory.svg" alt="ARCHITECTURE AND THEORY" width="100%">
@@ -35,7 +35,7 @@ The relationship is contractual, not runtime-coupled. ZPE-IoT pins to the IMC `w
 Use a private repo checkout or an owner-shared wheel:
 
 ```bash
-git clone https://github.com/Zer0pa/ZPE-IoT
+git clone https://github.com/Zer0pa/ZPE-IoT zpe-iot
 cd zpe-iot
 python -m pip install -e './python[dev]'
 ```
@@ -44,7 +44,7 @@ The March 21 local arm64 macOS wheel path is also evidenced, but it is not a pub
 
 **What does the current repo actually prove?**
 
-As of 2026-03-21, the repo proves a passing managed preflight (`17 PASS / 0 FAIL / 1 DEFERRED`), a passing strict DT surface (`27/27`), a local arm64 wheel cold-install smoke pass, and an active E1 benchmark surface of `10/11` wins at `17.16x` mean CR.
+The current repo proves the managed preflight, strict DT, native cold-install smoke, and the promoted E1 benchmark surface described in `../proofs/FINAL_STATUS.md`. Use that file for the exact current values instead of treating this FAQ as the status ledger.
 
 **Where do I verify the current gate quickly?**
 
@@ -60,7 +60,7 @@ Start with:
 
 **Does ZPE-IoT beat general-purpose compressors everywhere?**
 
-No. The current E1 surface is `10/11` wins. `DS-12` remains a competitor win and `DS-11` remains explicitly blocked from the active E1 surface.
+No. The promoted benchmark surface still contains a competitor win and a blocked dataset. Use `BENCHMARKS.md` for the exact current scoreline instead of treating this FAQ as the live benchmark ledger.
 
 **Is the native path available by default for every platform?**
 
@@ -69,3 +69,7 @@ No public multi-platform claim is made. The currently evidenced native install p
 **What is the chemosense surface here?**
 
 The Python package includes `zpe_iot.chemosense`, with smoke, contract, and benchmark artifacts in the repo. It is part of the staged engineering surface, but it does not replace the sensor benchmark authority surface in `BENCHMARKS.md`.
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

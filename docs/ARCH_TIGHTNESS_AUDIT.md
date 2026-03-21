@@ -1,7 +1,17 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # Architecture Tightness Audit
 
 Date: 2026-02-14
 Scope: `core/src/codec.rs`, `core/src/bitpack.rs`, `core/src/rle.rs`, examples/scripts, mandatory fallback paths.
+
+<p>
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
+
+Historical/operator audit retained for lineage. It is not a current status surface.
 
 ## Summary
 
@@ -45,11 +55,11 @@ This audit removed or constrained circuitous paths that affected hot-path clarit
 
 ## Evidence Paths
 
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/core/src/codec.rs`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/README.md`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/scripts/customer_demo.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/destruct_tests/dt06_ram_budget.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/destruct_tests/dt16_benchmark_regression.py`
+- `../core/src/codec.rs`
+- `../README.md`
+- `../scripts/customer_demo.py`
+- `../validation/destruct_tests/dt06_ram_budget.py`
+- `../validation/destruct_tests/dt16_benchmark_regression.py`
 
 ## Update 2026-02-19 (Phase E2)
 
@@ -72,13 +82,13 @@ This audit removed or constrained circuitous paths that affected hot-path clarit
 
 ### Added Evidence Paths
 
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/metrics/fidelity.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/docs/FIDELITY_SEMANTICS.md`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/destruct_tests/dt01_fidelity.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/destruct_tests/dt04_noise_robustness.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/destruct_tests/dt12_preset_coverage.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/benchmarks/_common.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/benchmarks/run_benchmarks.py`
+- `../validation/metrics/fidelity.py`
+- `FIDELITY_SEMANTICS.md`
+- `../validation/destruct_tests/dt01_fidelity.py`
+- `../validation/destruct_tests/dt04_noise_robustness.py`
+- `../validation/destruct_tests/dt12_preset_coverage.py`
+- `../validation/benchmarks/_common.py`
+- `../validation/benchmarks/run_benchmarks.py`
 
 ## Update 2026-02-20 (Chemosense Hardening Delta)
 
@@ -101,9 +111,13 @@ This audit removed or constrained circuitous paths that affected hot-path clarit
 
 ### Added Evidence Paths
 
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/_native.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense/taste/fusion_scheduler.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense/contract.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/benchmarks/profile_chemosense.py`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/perf_profile_chemosense_20260220T035037.json`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/docs/perf/chemosense_profile_20260220T035037.md`
+- `../python/zpe_iot/_native.py`
+- `../python/zpe_iot/chemosense/taste/fusion_scheduler.py`
+- `../python/zpe_iot/chemosense/contract.py`
+- `../validation/benchmarks/profile_chemosense.py`
+- `../validation/results/perf_profile_chemosense_20260220T035037.json`
+- `perf/chemosense_profile_20260220T035037.md`
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

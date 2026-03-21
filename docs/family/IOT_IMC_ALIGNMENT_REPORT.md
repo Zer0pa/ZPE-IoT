@@ -1,12 +1,24 @@
+<p>
+  <img src="../../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # IoT-IMC Alignment Report (Wave-1)
 
 Date: 2026-03-21
-Repo: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot`
+Repository URL: `https://github.com/Zer0pa/ZPE-IoT`
+
+<p>
+  <img src="../../.github/assets/readme/section-bars/family-alignment.svg" alt="FAMILY ALIGNMENT" width="100%">
+</p>
 
 ## Consumed IMC Freeze
-- Contract: `/Users/Zer0pa/ZPE-IMC-REPO/v0.0/docs/family/IMC_INTERFACE_CONTRACT.md`
-- Vector: `/Users/Zer0pa/ZPE-IMC-REPO/v0.0/docs/family/IMC_COMPATIBILITY_VECTOR.json`
-- Release note: `/Users/Zer0pa/ZPE-IMC-REPO/v0.0/docs/family/IMC_RELEASE_NOTE_FOR_BIO_IOT.md`
+- Contract: `https://github.com/Zer0pa/ZPE-IMC/blob/main/v0.0/docs/family/IMC_INTERFACE_CONTRACT.md`
+- Vector: `https://github.com/Zer0pa/ZPE-IMC/blob/main/v0.0/docs/family/IMC_COMPATIBILITY_VECTOR.json`
+- Release note: `https://github.com/Zer0pa/ZPE-IMC/blob/main/v0.0/docs/family/IMC_RELEASE_NOTE_FOR_BIO_IOT.md`
+
+<p>
+  <img src="../../.github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">
+</p>
 
 ## Verification
 - `contract_version` consumed: `wave1.0`
@@ -34,3 +46,7 @@ Repo: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot`
 - `validation/results/iot_wave1_phase5_alignment.txt`
 - `proofs/FINAL_STATUS.md`
 - `validation/results/release_preflight_report_20260321T205127.json`
+
+<p>
+  <img src="../../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

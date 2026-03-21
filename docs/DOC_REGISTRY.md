@@ -15,7 +15,7 @@ This file indexes the active documentation and evidence surface for ZPE-IoT.
 Canonical current-status values live in `../README.md` and `../proofs/FINAL_STATUS.md`. This registry maps where deeper concerns live and which files are historical or generated.
 
 <p>
-  <img src="../.github/assets/readme/section-bars/proof-corpus.svg" alt="PROOF CORPUS" width="100%">
+  <img src="../.github/assets/readme/section-bars/evidence-and-claims.svg" alt="EVIDENCE AND CLAIMS" width="100%">
 </p>
 
 | Path | Class | Purpose | Status | Authority level |
@@ -51,12 +51,9 @@ Canonical current-status values live in `../README.md` and `../proofs/FINAL_STAT
 | `FIDELITY_SEMANTICS.md` | Metrics | Fidelity definitions and boundary language | Current |
 | `TEST_MATRIX.md` | Validation | Test and gate coverage map | Current |
 | `INTEGRATION_GUIDE.md` | Integration | Consumer guidance for repo surfaces | Current |
-| `FAQ.md` | Reader support | Quick answers for install, release state, and scope limits | Current |
-| `SUPPORT.md` | Reader support | Contact and issue-routing surface | Current |
-| `LEGAL_BOUNDARIES.md` | Legal boundary | Compact legal and publication boundary | Current |
-| `ARCH_TIGHTNESS_AUDIT.md` | Audit | Architecture-tightness review artifact | Current |
 | `CI_POLICY.md` | CI | CI policy and workflow expectations | Current |
-| `ZPE_IOT_SALES_BRIEF.md` | Operator/commercial | Internal briefing surface, not front-door authority | Current but non-canonical |
+| `ARCH_TIGHTNESS_AUDIT.md` | Audit/history | Legacy architecture-tightness review artifact | Historical/operator |
+| `ZPE_IOT_SALES_BRIEF.md` | Operator/commercial | Internal briefing surface, not front-door authority | Historical/operator |
 
 <p>
   <img src="../.github/assets/readme/section-bars/family-alignment.svg" alt="FAMILY ALIGNMENT" width="100%">
@@ -95,3 +92,7 @@ Canonical current-status values live in `../README.md` and `../proofs/FINAL_STAT
 | `../validation/runbooks/` | Operational | Execution notes, not reader-facing truth |
 | older `../release/RC_*` | Historical | Prior packets remain lineage only |
 | `perf/` and historical prompt/PRD docs in `docs/` | Historical/operator | Useful context, not canonical status |
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

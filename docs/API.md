@@ -1,4 +1,12 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # ZPE-IoT API Reference
+
+<p>
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
 
 ## Python API
 
@@ -82,3 +90,7 @@ Run local comparison against general compressors.
 
 ### `zpe-iot info INPUT`
 Print packet metadata and compression stats.
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>

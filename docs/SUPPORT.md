@@ -4,6 +4,8 @@
 
 # Support
 
+This page routes readers. The repo-level support policy and response targets live in `../SUPPORT.md`.
+
 <p>
   <img src="../.github/assets/readme/section-bars/where-to-go.svg" alt="WHERE TO GO" width="100%">
 </p>
@@ -46,3 +48,7 @@ This is a private-stage source repository.
 - General support requests are acknowledged within 2 business days when possible.
 - Security reports are prioritized under `../SECURITY.md`.
 - Evidence disputes should cite exact files and exact dates.
+
+<p>
+  <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>
