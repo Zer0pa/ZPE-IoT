@@ -1,124 +1,100 @@
+<p>
+  <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # ZPE-IoT
+
+[Docs](docs/README.md) | [Proofs](proofs/PROOF_INDEX.md) | [API](docs/API.md) | [Benchmarks](docs/BENCHMARKS.md) | [Release](docs/RELEASE_CHECKLIST.md) | [Audit](AUDITOR_PLAYBOOK.md)
 
 Deterministic sensor compression and chemosense packetization for IoT time-series.
 
-## Current Status
+<p>
+  <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
+</p>
 
-This repository is the canonical private-stage repo candidate for ZPE-IoT.
+ZPE-IoT is the private-stage Zero-Point Encoding workstream for 1D IoT sensor compression. The canonical implementation surface is the Rust core in `core/`, exposed through the nested Python distribution in `python/` and a repo-local PyO3 native build in `python/native/`.
 
-It is not a public release and it is not yet proven ready for PyPI or crates.io publication.
+This front door promotes only the March 21, 2026 repo-local authority surface. It does not claim public package availability, universal compressor dominance, or runtime coupling to ZPE-IMC.
 
-Latest local managed evidence on 2026-03-09:
-
-- `cargo test --release`: PASS
-- `python -m pytest -q`: PASS (`70 passed`, `86.53%` coverage)
-- `python validation/destruct_tests/run_all_dts.py --strict-gates`: PASS (`27/27`)
-- benchmark refresh: PASS (`PT-6 FINAL`, `6/8` wins, mean E1 CR `4.37x`)
-- full release preflight: FAIL
-  - `C07_SBOM_RELEASE_MANIFEST`
-  - `C10_CHEMOSENSE_CLI_SMOKE` in the last managed run
-
-Start with:
-
-- `proofs/FINAL_STATUS.md`
-- `proofs/PROOF_INDEX.md`
-- `validation/results/release_preflight_report_20260309T040302.json`
-- `docs/BENCHMARKS.md`
-
-## Local Install
-
-Python editable install:
+<p>
+  <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
+</p>
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+git clone https://github.com/Zer0pa/ZPE-IoT
+cd zpe-iot
 python -m pip install -e './python[dev]'
-```
-
-Rust crate build/test from source:
-
-```bash
 cargo test --manifest-path core/Cargo.toml --release
+python validation/destruct_tests/run_all_dts.py --strict-gates
 ```
 
-Published install commands are intentionally omitted here because package publication has not been adjudicated.
+| Field | Current truth | Evidence |
+|---|---|---|
+| As of | `2026-03-21` | `proofs/FINAL_STATUS.md` |
+| Repository URL | `https://github.com/Zer0pa/ZPE-IoT` | `CITATION.cff` |
+| Repo classification | `private-stage multi-surface codec repo` | `proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md` |
+| Release unit | `python/` distribution with bundled native wheel; `core/` and `c/` remain sibling engineering surfaces | `proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md` |
+| Acquisition surface | Private repo checkout or owner-shared built wheel from `python/dist/` | `python/README.md` |
+| Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` | `validation/results/release_preflight_report_20260321T205127.json` |
+| Strict DT | `27/27 PASS` | `validation/results/dt_results_20260321T225304.json` |
+| Fresh install smoke | `PASS` on local arm64 macOS cold install | `validation/results/fresh_env_smoke_20260321T205515/smoke.log` |
+| Benchmark authority | `E1`, `10/11 wins`, `17.16x` mean CR | `validation/results/bench_summary_E1_real_public_20260321T225305.json` |
+| Known real blockers | `none` | `proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md` |
+| Publication posture | `tag/index publication and outreach deferred pending explicit owner approval` | `validation/results/release_preflight_report_20260321T205127.json` |
+| Canonical evidence entry | `proofs/PROOF_INDEX.md` | `proofs/PROOF_INDEX.md` |
 
-## Quick Start (Python)
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE-IoT Secondary Masthead" width="100%">
+</p>
 
-```python
-import numpy as np
-import zpe_iot
+<p>
+  <img src=".github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
+</p>
 
-signal = np.sin(np.linspace(0, 20, 1024))
-stream = zpe_iot.encode(signal, preset="vibration")
-packet = stream.to_bytes()
-restored = zpe_iot.decode(packet)
-print("CR:", stream.compression_ratio)
-```
-
-## Quick Start (Rust)
-
-```rust
-use zpe_iot::{decode_into, encode, Preset};
-
-let cfg = Preset::Vibration.config();
-let stream = encode::<2048>(&samples, &cfg)?;
-let mut out = [0.0_f64; 1024];
-let n = decode_into(&stream, &mut out)?;
-```
-
-## Benchmarks
-
-See `docs/BENCHMARKS.md` for the current evidence-labeled benchmark surface.
-
-Latest local summary:
-
-- E1 summary artifact: `validation/results/bench_summary_E1_real_public_20260309T060843.json`
-- mean E1 compression ratio: `4.37x`
-- PT-6 FINAL: `PASS (6/8 wins)`
-- E2 customer claim tier: `NOT_AVAILABLE`
-
-![CR comparison](docs/benchmarks/cr_comparison.png)
-
-## Chemosense Extension
-
-The Python package includes `zpe_iot.chemosense` for smell, taste, touch, and mental packetization.
-
-Module smoke path that passed in the latest managed preflight:
-
-```bash
-python -m zpe_iot.cli chemosense-smoke --json
-```
-
-The installed `zpe-iot` console-script entrypoint failed in the latest full preflight because the local virtualenv still carried a stale shebang from an older machine path. A local editable reinstall on 2026-03-09 repaired that wrapper and standalone CLI smoke now passes again, but the full managed preflight has not been rerun yet.
-
-Latest chemosense artifacts:
-
-- `validation/results/bench_summary_chemosense_20260309T060913.json`
-- `validation/results/perf_profile_chemosense_20260309T060912.json`
-
-## Supported Sensor Presets
-
-| Preset | Use Case |
+| Area | Purpose |
 |---|---|
-| `temperature` | Thermistor and weather trend data |
-| `vibration` | Machinery and bearing vibration |
-| `accelerometer` | IMU motion streams |
-| `pressure` | Barometric and process pressure |
-| `gps_track` | GPS trajectory deltas |
-| `voltage` | Electrical telemetry |
-| `current` | Current waveforms |
-| `flow` | Process flow sensors |
-| `generic` | Unknown or mixed sensors |
+| `README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `GOVERNANCE.md`, `RELEASING.md`, `ROADMAP.md`, `CITATION.cff`, `LICENSE` | Root truth, governance, release, and citation surface |
+| `python/` | Installable Python distribution, CLI, and package metadata |
+| `python/native/` | Repo-local PyO3 native build surface used for bundled wheels |
+| `core/` | Canonical Rust codec kernel and test surface |
+| `docs/` | Reader-facing architecture, benchmark, support, and legal routing |
+| `docs/family/` | IMC contract-alignment artifacts; documentary only, not runtime-coupled |
+| `proofs/` | Current verdict, proof routing, receipts, runbooks, and artifacts |
+| `validation/` | Datasets, benchmarks, destructive tests, and generated result JSON |
+| `project_docs/`, `release/RC_*` | Operator lineage and historical release packets, not the front-door authority surface |
 
-## Repo Guide
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>
 
-- `docs/README.md`: docs front door
-- `docs/family/`: IMC alignment and compatibility surfaces
-- `validation/`: tests, datasets, DTs, benchmarks
-- `proofs/`: proof index, status routing, audit pointers
-- `project_docs/`: operator mirror and historical planning material
+<p>
+  <img src=".github/assets/readme/section-bars/open-risks-non-blocking.svg" alt="OPEN RISKS (NON-BLOCKING)" width="100%">
+</p>
 
-## License
+| Risk lens | Current state |
+|---|---|
+| Publication | Public package publication remains deferred by policy; use the private repo or owner-shared wheel instead of claiming PyPI/crates.io availability. |
+| Benchmark boundary | The active E1 surface is `DS-01..DS-10` plus `DS-12`; `DS-11` remains explicitly `BLOCKED`. |
+| Comparator honesty | ZPE-IoT does not win every slice; `DS-12` is a competitor win on the current E1 real-public surface. |
+| Native scope | Local arm64 macOS wheel install is verified; the multi-platform publish workflow exists but has not been executed as a public release event. |
+| Fidelity boundary | ZPE-IoT is a bounded-lossy codec. It is not a fit for strict lossless reconstruction requirements. |
 
-This repo currently ships under MIT. Commercial posture and any publication packaging remain owner-controlled decisions.
+<p>
+  <img src=".github/assets/readme/section-bars/contributing-security-support.svg" alt="CONTRIBUTING, SECURITY, SUPPORT" width="100%">
+</p>
+
+| Route | Target |
+|---|---|
+| Documentation index | `docs/README.md` |
+| Canonical doc registry | `docs/DOC_REGISTRY.md` |
+| Architecture and runtime map | `docs/ARCHITECTURE.md` |
+| API and CLI details | `docs/API.md`, `docs/CLI_CONTRACT.md` |
+| Benchmark authority and boundaries | `docs/BENCHMARKS.md` |
+| Audit replay path | `AUDITOR_PLAYBOOK.md` |
+| Public audit boundary | `PUBLIC_AUDIT_LIMITS.md` |
+| Contribution rules | `CONTRIBUTING.md` |
+| Support routing | `docs/FAQ.md`, `docs/SUPPORT.md`, `SUPPORT.md` |
+| Security reporting | `SECURITY.md` |
+| Legal/release boundary | `docs/LEGAL_BOUNDARIES.md`, `RELEASING.md` |
+
+Treat `project_docs/` and older `release/RC_*` bundles as lineage. Current repo truth lives in the cited March 21 proof and validation artifacts above.

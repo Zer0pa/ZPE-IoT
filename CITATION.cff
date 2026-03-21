@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 title: ZPE-IoT
-message: If you use this staged repository, cite the repository URL and exact commit SHA.
+message: If you use this private-stage repository or its release artifacts, cite the repository URL and exact commit SHA.
 type: software
 authors:
   - family-names: Zer0pa
 repository-code: https://github.com/Zer0pa/ZPE-IoT
 license: MIT
 version: 0.1.0
-date-released: 2026-03-09
-abstract: Deterministic IoT sensor compression and chemosense packetization toolkit.
+date-released: 2026-03-21
+abstract: Private-stage deterministic IoT sensor compression and chemosense packetization toolkit.

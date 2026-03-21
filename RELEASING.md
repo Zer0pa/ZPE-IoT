@@ -1,33 +1,45 @@
 # Releasing
 
-This file describes the release posture for ZPE-IoT as of 2026-03-09.
+Date: 2026-03-21
+Scope: current private-stage repo truth only
 
 ## Current State
 
-- private repo staging: in scope
-- public release: out of scope
-- PyPI publish: blocked
-- crates.io publish: blocked
+| Surface | Status |
+|---|---|
+| Private repo staging | `ALLOWED` |
+| Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` |
+| Public package publication | `DEFERRED BY POLICY` |
+| Latest bundle | `release/RC_20260321T225526/` |
 
-## Current Blocking Checks
+The only non-pass in the current managed preflight is `D01_DEFERRED_PUBLISH`, which remains owner-controlled.
 
-- `C07_SBOM_RELEASE_MANIFEST`
-- `C10_CHEMOSENSE_CLI_SMOKE`
+## Current Authority Files
 
-See `proofs/FINAL_STATUS.md` and `validation/results/release_preflight_report_20260309T040302.json`.
+- `proofs/FINAL_STATUS.md`
+- `proofs/PROOF_INDEX.md`
+- `validation/results/release_preflight_report_20260321T205127.json`
+- `validation/results/dt_results_20260321T225304.json`
 
 ## Private Staging Flow
 
-1. keep the canonical boundary at the inner repo root
-2. keep proof and operator surfaces intact
-3. push `main` to the private GitHub repo without force
-4. stop before blind-clone verification or public release work
+1. Keep the canonical boundary at the inner repo root.
+2. Keep proof and operator surfaces intact.
+3. Push scoped changes to the private GitHub repo without force.
+4. Regenerate release artifacts when code or docs change the declared truth surface.
 
-## Public Release Prerequisites
+## What This File Does Not Claim
+
+- public PyPI availability
+- public crates.io availability
+- live multi-platform wheel publication
+- benchmark scope beyond the active March 21 E1 surface
+
+## Public Publication Prerequisites
 
 Do not publish until all of the following are true:
 
-- managed preflight is green
-- blind-clone verification is complete
-- current front-door docs do not outrun proof
-- suite linkage and central/public truth surfaces are reconciled
+- explicit owner ratification is given
+- current front-door docs and private GitHub render match the authority artifacts
+- publication credentials are available for the target package indexes
+- any publication-specific wheel or sdist workflow has been executed for the intended targets

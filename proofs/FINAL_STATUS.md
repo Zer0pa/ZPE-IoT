@@ -1,33 +1,34 @@
 # Final Status
 
-Date: 2026-03-09
-Repo stage: private GitHub staging candidate
+Date: 2026-03-21
+Repo stage: private GitHub staging repo
 
 ## Verdict
 
-- private staging: ALLOWED
-- release readiness: BLOCKED
-- public publication: BLOCKED
+- private staging: `ALLOWED`
+- managed release gate: `PASS (17 PASS / 0 FAIL / 1 DEFERRED)`
+- public package publication: `DEFERRED BY POLICY`
 
-## Passing Surfaces
+## Active Authority Surface
 
-- `cargo test --release`
-- `python -m pytest -q`
-- `python validation/destruct_tests/run_all_dts.py --strict-gates`
-- benchmark refresh and E1 report generation
-- security scan artifact generation
+| Surface | Current state | Evidence |
+|---|---|---|
+| Technical alignment | `PASS` | `proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md` |
+| Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` | `validation/results/release_preflight_report_20260321T205127.json` |
+| Strict DT | `27/27 PASS` | `validation/results/dt_results_20260321T225304.json` |
+| E1 real-public benchmark | `10/11 wins`, `17.16x` mean CR | `validation/results/bench_summary_E1_real_public_20260321T225305.json` |
+| Native wheel cold install | `PASS` on local arm64 macOS path | `validation/results/fresh_env_smoke_20260321T205515/smoke.log` |
+| Release bundle | `PASS` | `release/RC_20260321T225526/bundle_manifest.json` |
 
-## Current Blocking Surfaces
+## Current Caveats
 
-- `C07_SBOM_RELEASE_MANIFEST`
-  - `cyclonedx-py` exits `126` in the latest managed preflight
-- `C10_CHEMOSENSE_CLI_SMOKE`
-  - installed `zpe-iot` console-script pointed at a stale absolute Python path during the latest managed preflight
-  - local standalone CLI smoke passed again after editable reinstall on 2026-03-09
-  - full managed preflight has not been rerun, so the formal gate remains unresolved
+- `D01_DEFERRED_PUBLISH` remains deferred and requires explicit owner ratification.
+- `DS-11` remains explicitly blocked and outside the active E1 benchmark surface.
+- `DS-12` is a competitor win on the current E1 surface; the repo does not claim universal compressor dominance.
+- Public package-index publication is still not claimed.
 
-## Contradicted Historical Surface
+## Historical Or Superseded Surface
 
-`validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` says `READY_FOR_USER_RATIFICATION`.
-
-That is no longer current truth after the March 9 managed preflight failure.
+- `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md`
+- March 9 release-blocked front-door docs and preflight references
+- older `release/RC_*` bundles and operator runbooks under `project_docs/`

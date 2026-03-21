@@ -1,20 +1,26 @@
+<p>
+  <img src="../.github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
+</p>
+
 # Release Checklist
 
-Date: 2026-03-09
+Date: 2026-03-21
 Scope: current private-stage repo truth only
 
-## Current Managed Gate Snapshot
+<p>
+  <img src="../.github/assets/readme/section-bars/summary.svg" alt="SUMMARY" width="100%">
+</p>
 
-Source of truth:
+| Field | Current truth |
+|---|---|
+| Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` |
+| Private staging | `ALLOWED` |
+| Public publish | `DEFERRED BY POLICY` |
+| Source of truth | `../validation/results/release_preflight_report_20260321T205127.json`, `../proofs/FINAL_STATUS.md` |
 
-- `validation/results/release_preflight_report_20260309T040302.json`
-- `proofs/FINAL_STATUS.md`
-
-Current verdict:
-
-- release ready: `NO`
-- private staging allowed: `YES`
-- public publish allowed: `NO`
+<p>
+  <img src="../.github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">
+</p>
 
 ## Build And Validation Gates
 
@@ -24,33 +30,29 @@ Current verdict:
 - [x] strict DT run passes with mandatory `SKIPPED=0`
 - [x] benchmark split artifacts regenerated (`E0/E1/E2`)
 - [x] security scan artifact generated with high/critical = 0
-- [ ] SBOM + license manifest + release manifest regenerated cleanly
+- [x] SBOM + license manifest + release manifest regenerated cleanly
 
 ## Package And Install Gates
 
 - [x] `python -m build ./python`
 - [x] fresh-venv smoke artifact exists
-- [ ] installed `zpe-iot` console-script smoke re-adjudicated cleanly in managed preflight
-  - local note: standalone CLI smoke passed again after editable reinstall on 2026-03-09
+- [x] installed `zpe-iot` console-script smoke passes in managed preflight
 - [x] `python -m zpe_iot.cli chemosense-smoke --json`
 - [x] chemosense contract tests pass
 - [x] chemosense perf profile artifact generated
 - [x] chemosense benchmark summary artifact generated
 - [x] chemosense provenance manifest verified
+- [x] local arm64 native wheel cold-install smoke is closed
 
 ## Release Bundle Surface
 
-- [x] `release/RC_20260309T060913/` exists
-- [x] bundle manifest hash file exists
+- [x] `release/RC_20260321T225526/` exists
+- [x] bundle manifest exists
 - [x] operator mirror docs remain under `project_docs/`
 
-## Known Blocking Checks
-
-- `C07_SBOM_RELEASE_MANIFEST`
-  - blocker: `cyclonedx-py` exits `126` in the current managed preflight
-- `C10_CHEMOSENSE_CLI_SMOKE`
-  - blocker in last managed preflight: installed console-script wrapper pointed at a stale absolute Python path
-  - current local note: wrapper was normalized by editable reinstall and standalone CLI smoke now passes, but the full managed preflight has not been rerun
+<p>
+  <img src="../.github/assets/readme/section-bars/unreleased.svg" alt="UNRELEASED" width="100%">
+</p>
 
 ## Deferred Until Explicit Owner Approval
 
@@ -58,6 +60,14 @@ Current verdict:
 - [ ] PyPI publication
 - [ ] crates.io publication
 - [ ] public outreach
+
+The only deferred managed-preflight check is `D01_DEFERRED_PUBLISH`.
+
+## Current Non-Publish Boundaries
+
+- `DS-11` remains outside the active E1 benchmark authority surface.
+- The multi-platform wheel workflow exists, but public publication has not been executed.
+- Public package-index availability is not claimed anywhere in this repo.
 
 ## Preflight Command
 
