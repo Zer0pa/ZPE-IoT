@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Zer0pa
 repository-code: https://github.com/Zer0pa/ZPE-IoT
-license: MIT
+license: LicenseRef-Zer0pa-SAL-6.0
 version: 0.1.0
 date-released: 2026-03-21
 abstract: Private-stage deterministic IoT sensor compression and chemosense packetization toolkit.
