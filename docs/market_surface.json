@@ -1,7 +1,7 @@
 {
   "repo_name": "ZPE-IoT",
   "repo_role": "product_candidate",
-  "status": "private_stage",
+  "status": "PRIVATE_STAGE",
   "plain_english_summary": "Deterministic sensor compression SDK for IoT time-series and chemosense streams.",
   "commercial_wedge": "Reduce bandwidth and edge compute load for industrial IoT sensor streams. 17× mean compression on real public datasets with bounded-lossy fidelity guarantees and deterministic replay.",
   "technical_wedge": "Rust-core 8-primitive geometric codec with Python bindings. 17.16× mean CR across 11 real-public datasets, 27/27 destructive-test pass, byte-identical replay.",
@@ -21,5 +21,5 @@
   ],
   "family_position": "Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer.",
   "license": "LicenseRef-Zer0pa-SAL-6.0",
-  "contact": "architects@zer0pa.ai"
+  "contact": "hello@zer0pa.com"
 }
