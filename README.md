@@ -6,7 +6,27 @@
 
 [Docs](docs/README.md) | [Proofs](proofs/PROOF_INDEX.md) | [API](docs/API.md) | [Benchmarks](docs/BENCHMARKS.md) | [Release](docs/RELEASE_CHECKLIST.md) | [Audit](AUDITOR_PLAYBOOK.md)
 
-Deterministic sensor compression and chemosense packetization for IoT time-series.
+SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
+
+---
+
+## What This Is
+
+ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for environments where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3, edge-deployable.
+
+**17.16× mean compression** across 11 real public sensor datasets. **27/27 destructive tests passed.** Byte-identical deterministic replay on the tested corpus. The codec is bounded-lossy: it trades a controlled fidelity budget for substantially smaller packets. Every metric traces to committed artifacts under `validation/` and `proofs/`.
+
+The repo is **private-stage**. Install path and proof artifacts are real. Public package publication (PyPI / crates.io) deferred pending owner approval — acquisition today is repo checkout or owner-shared wheel.
+
+**Not claimed:** public package availability, universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or multi-platform release.
+
+| Anchor | Artifact |
+|---|---|
+| Run-of-record benchmark | [`bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json) |
+| Destructive-test verdicts | [`dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json) |
+| Release preflight report | [`release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json) |
+
+---
 
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
