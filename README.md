@@ -6,17 +6,17 @@
 
 [Docs](docs/README.md) | [Proofs](proofs/PROOF_INDEX.md) | [API](docs/API.md) | [Benchmarks](docs/BENCHMARKS.md) | [Release](docs/RELEASE_CHECKLIST.md) | [Audit](AUDITOR_PLAYBOOK.md)
 
+SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
+
 ---
 
 ## What This Is
 
-ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — time-series telemetry, chemosense packets, environmental sensor data. Rust core, Python bindings, edge-deployable.
+ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for environments where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3, edge-deployable.
 
-The current evidence surface: **17.16× mean compression** across 11 real public sensor datasets, **27/27 destructive tests passed**, and deterministic byte-identical replay on the tested corpus. The codec is bounded-lossy — it trades a controlled fidelity budget for substantially smaller packets. Every claim traces to committed artifacts under `validation/` and `proofs/`.
+**17.16× mean compression** across 11 real public sensor datasets. **27/27 destructive tests passed.** Byte-identical deterministic replay on the tested corpus. The codec is bounded-lossy: it trades a controlled fidelity budget for substantially smaller packets. Every metric traces to committed artifacts under `validation/` and `proofs/`.
 
-This matters for teams running constrained sensor fleets where bandwidth is expensive, reproducibility is non-negotiable, and vendor-opaque compression is unacceptable. The SDK ships its own proof surface: benchmarks against real public data, destructive-test verdicts, and a documented fidelity envelope — not marketing numbers.
-
-The repo is **private-stage**. The install path and proof artifacts are real. Public package publication (PyPI / crates.io) is deferred pending owner approval. Acquisition today is repo checkout or owner-shared wheel.
+The repo is **private-stage**. Install path and proof artifacts are real. Public package publication (PyPI / crates.io) deferred pending owner approval — acquisition today is repo checkout or owner-shared wheel.
 
 **Not claimed:** public package availability, universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or multi-platform release.
 
