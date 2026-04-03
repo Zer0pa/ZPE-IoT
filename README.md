@@ -10,55 +10,21 @@
 
 ## What This Is
 
-ZPE-IoT is a deterministic sensor compression SDK for IoT time-series and chemosense streams, built on a Rust core with Python bindings.
+ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — time-series telemetry, chemosense packets, environmental sensor data. Rust core, Python bindings, edge-deployable.
 
-## Commercial Wedge
+The current evidence surface: **17.16× mean compression** across 11 real public sensor datasets, **27/27 destructive tests passed**, and deterministic byte-identical replay on the tested corpus. The codec is bounded-lossy — it trades a controlled fidelity budget for substantially smaller packets. Every claim traces to committed artifacts under `validation/` and `proofs/`.
 
-This is for **industrial IoT platform teams, edge telemetry vendors, and environmental sensor system builders** who need to move less data from more sensors without sacrificing reproducibility. The business value is measurable bandwidth reduction (17× mean compression on real public sensor datasets), bounded-lossy guarantees with explicit fidelity checks, and an edge-friendly pipeline that ships with its own proof surface rather than marketing claims.
+This matters for teams running constrained sensor fleets where bandwidth is expensive, reproducibility is non-negotiable, and vendor-opaque compression is unacceptable. The SDK ships its own proof surface: benchmarks against real public data, destructive-test verdicts, and a documented fidelity envelope — not marketing numbers.
 
-## Technical Wedge
+The repo is **private-stage**. The install path and proof artifacts are real. Public package publication (PyPI / crates.io) is deferred pending owner approval. Acquisition today is repo checkout or owner-shared wheel.
 
-The technical edge is an 8-primitive geometric codec implemented as a Rust kernel (`core/`) with Python bindings (`python/`). Current evidence: **17.16× mean compression ratio** across 11 real public datasets, **27/27 destructive tests passed**, and **deterministic byte-identical replay** on the tested surface. The codec is bounded-lossy — it trades a controlled fidelity budget for substantially smaller packets.
-
-## Current Readiness
-
-**`PRIVATE_STAGE`** — The repo surface, install path, and proof artifacts are real. Public package publication (PyPI / crates.io) is deferred pending owner approval. Acquisition today is via private repo checkout or owner-shared wheel.
-
-## What Is Proved
-
-- 17.16× mean compression ratio on the E1 real-public benchmark tier (DS-01 through DS-10 plus DS-12), with 10/11 dataset wins
-- 27/27 strict destructive-test pass — every gate green
-- 17/17 managed preflight pass, 1 deferred (publication policy)
-- Fresh arm64 macOS cold-install smoke test pass
-- Deterministic byte-identical encode→decode replay on the tested corpus
-
-## What Is Not Being Claimed
-
-- Public package availability — publication is owner-deferred, not failed
-- Universal compressor dominance — DS-12 is an explicit competitor win; DS-11 is blocked
-- Lossless reconstruction — this is a bounded-lossy codec by design
-- Runtime coupling to ZPE-IMC — the family relationship is documentary and contractual, not a runtime dependency
-- Multi-platform wheel release — the CI workflow exists but has not been executed as a public release event
-
-## Ideal First Buyer
-
-Industrial IoT platform team or embedded edge-telemetry vendor seeking deterministic, auditable sensor compression with measurable bandwidth reduction.
-
-## Deployment Model
-
-SDK — Rust core with Python bindings. Private repo checkout or pre-built wheel today; public package when publication is approved.
-
-## Authority / Proof Anchors
+**Not claimed:** public package availability, universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or multi-platform release.
 
 | Anchor | Artifact |
 |---|---|
-| Run-of-record benchmark | [`validation/results/bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json) |
-| Destructive-test verdicts | [`validation/results/dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json) |
-| Release preflight report | [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json) |
-
-## Role In The Zer0pa Family
-
-ZPE-IoT is a product-candidate member of the Zer0pa deterministic encoding family. [ZPE-IMC](https://github.com/Zer0pa/ZPE-IMC) is the umbrella integration and dispatch layer; this repo is the domain-specific sensor compression wedge. Family alignment is documented in [`docs/family/`](docs/family/), not enforced at runtime.
+| Run-of-record benchmark | [`bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json) |
+| Destructive-test verdicts | [`dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json) |
+| Release preflight report | [`release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json) |
 
 ---
 
