@@ -3,6 +3,9 @@ name: Manual Wheel Helper
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     strategy:
