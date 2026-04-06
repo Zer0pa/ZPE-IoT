@@ -1,0 +1,37 @@
+{
+  "dataset": "DS-11",
+  "name": "SMAP Telemetry (P-1)",
+  "status": "BLOCKED",
+  "evidence_class": "E1",
+  "source": {
+    "source_url": "https://raw.githubusercontent.com/khundman/telemanom/master/data/train/P-1.npy",
+    "license": "Telemanom / NASA anomaly dataset (current upstream access now requires credentialed mirror)",
+    "blocked_reason": "2026-03-21 verification found the raw GitHub path returns 404, the historical S3 bundle returns 403, and the upstream telemanom README now directs users to a Kaggle download; the named no-login source is not currently viable.",
+    "notes": "Requested SMAP P-1 telemetry channel from the Telemanom corpus."
+  },
+  "observability": {
+    "workspace": "zer0pa",
+    "classic_project": "zpe-iot-performance",
+    "classic_status": "HOLD",
+    "classic_project_url": "",
+    "classic_experiment_key": "",
+    "classic_experiment_url": "",
+    "opik_project": "zpe-iot-performance",
+    "opik_status": "HOLD",
+    "opik_project_url": "",
+    "opik_trace_id": "",
+    "opik_trace_url": "",
+    "opik_host": "https://www.comet.com/opik/api",
+    "notes": [
+      "classic Comet adapter disabled by missing credential",
+      "Opik adapter disabled by missing credential"
+    ]
+  },
+  "source_artifacts": {
+    "manifest": "validation/datasets/manifest.json",
+    "summary": "validation/results/bench_summary_E1_real_public_20260321T225305.json",
+    "tracking": "validation/results/benchmark_tracking_context_20260321T225305.json",
+    "phase8_proof": "proofs/artifacts/PHASE8_DATASET_EXPANSION_20260321.md",
+    "phase9_proof": "proofs/artifacts/PHASE9_BENCHMARK_OBSERVABILITY_20260321.md"
+  }
+}

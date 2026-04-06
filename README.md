@@ -1,3 +1,4 @@
+[![CI](https://github.com/Zer0pa/ZPE-IoT/actions/workflows/ci.yml/badge.svg)](https://github.com/Zer0pa/ZPE-IoT/actions/workflows/ci.yml)
 <p>
   <img src=".github/assets/readme/zpe-masthead.gif" alt="ZPE-IoT Masthead" width="100%">
 </p>
@@ -120,3 +121,7 @@ python validation/destruct_tests/run_all_dts.py --strict-gates
 | Legal/release boundary | `docs/LEGAL_BOUNDARIES.md`, `RELEASING.md` |
 
 Treat `project_docs/` and older `release/RC_*` bundles as lineage. Current repo truth lives in the cited March 21 proof and validation artifacts above.
+
+## ZPE Ecosystem
+This package is part of the [Zer0pa ZPE](https://github.com/Zer0pa) codec portfolio.
+See also: zpe-xr, zpe-robotics, zpe-geo, zpe-finance, zpe-ink, zpe-multimodal, zpe-neuro, zpe-mocap, zpe-prosody, zpe-bio.
