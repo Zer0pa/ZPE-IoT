@@ -1,0 +1,65 @@
+{
+  "dataset": "DS-06",
+  "name": "Numenta NAB NYC Taxi",
+  "status": "READY",
+  "evidence_class": "E1",
+  "preset": "generic",
+  "source": {
+    "source_url": "https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause/nyc_taxi.csv",
+    "license": "MIT",
+    "raw_sha256": "d8fa6f7f0734bf5c8be12c52a94e20a82664c397d9dec4449156bd453d32856d",
+    "transform_sha256": "78d8a79ccb08555874d78afc2484e0bd796cc5be95f4e15c225ccfc49ef6e728"
+  },
+  "zpe_iot": {
+    "compression_ratio": 6.240327588524611,
+    "encode_latency_us": 7037.085,
+    "decode_latency_us": 1316.236,
+    "nrmse": 0.317491546771405
+  },
+  "comparators": {
+    "zstd_cr": 2.929529486906536,
+    "lz4_cr": 1.8373205741626795,
+    "zlib_cr": 2.9176237763720536,
+    "gorilla_cr": 2.985247324269598
+  },
+  "winner": "zpe-iot",
+  "roundtrip": {
+    "checked_windows": 8,
+    "packet_roundtrip_bit_parity": false,
+    "failure_windows": [
+      0,
+      1,
+      2
+    ],
+    "definition": "encode(window) bytes must equal encode(decode(packet)) bytes on sampled windows"
+  },
+  "observability": {
+    "workspace": "zer0pa",
+    "classic_project": "zpe-iot-performance",
+    "classic_status": "HOLD",
+    "classic_project_url": "",
+    "classic_experiment_key": "",
+    "classic_experiment_url": "",
+    "opik_project": "zpe-iot-performance",
+    "opik_status": "HOLD",
+    "opik_project_url": "",
+    "opik_trace_id": "",
+    "opik_trace_url": "",
+    "opik_host": "https://www.comet.com/opik/api",
+    "notes": [
+      "classic Comet adapter disabled by missing credential",
+      "Opik adapter disabled by missing credential"
+    ]
+  },
+  "source_artifacts": {
+    "manifest": "validation/datasets/manifest.json",
+    "summary": "validation/results/bench_summary_E1_real_public_20260321T225305.json",
+    "tracking": "validation/results/benchmark_tracking_context_20260321T225305.json",
+    "zstd": "validation/results/bench_vs_zstd_20260321T225331.json",
+    "lz4": "validation/results/bench_vs_lz4_20260321T225355.json",
+    "zlib": "validation/results/bench_vs_zlib_20260321T225424.json",
+    "gorilla": "validation/results/bench_vs_gorilla_20260321T225451.json",
+    "phase8_proof": "proofs/artifacts/PHASE8_DATASET_EXPANSION_20260321.md",
+    "phase9_proof": "proofs/artifacts/PHASE9_BENCHMARK_OBSERVABILITY_20260321.md"
+  }
+}

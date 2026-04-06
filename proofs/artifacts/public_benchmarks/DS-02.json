@@ -1,0 +1,65 @@
+{
+  "dataset": "DS-02",
+  "name": "PHM 2012 Bearing Challenge (Learning_set/Bearing1_1)",
+  "status": "READY",
+  "evidence_class": "E1",
+  "preset": "vibration",
+  "source": {
+    "source_url": "https://raw.githubusercontent.com/wkzs111/phm-ieee-2012-data-challenge-dataset/master/Learning_set/Bearing1_1/acc_00001.csv",
+    "license": "Citation-required academic use (PHM 2012 challenge terms)",
+    "raw_sha256": "c90d6bba4aea17ce228387e844b09d660e3a3dd16827c966a365d65e16c84c3f",
+    "transform_sha256": "179cf1d293dcd2f1d2145003dc6fc01ceaf1516a08c04dcb337fbbd1456e3d92"
+  },
+  "zpe_iot": {
+    "compression_ratio": 6.39722204594255,
+    "encode_latency_us": 6765.181,
+    "decode_latency_us": 1268.27,
+    "nrmse": 0.015088628916700986
+  },
+  "comparators": {
+    "zstd_cr": 1.6982637989116351,
+    "lz4_cr": 1.5895221925782197,
+    "zlib_cr": 1.6900304296250452,
+    "gorilla_cr": 1.6799794924378364
+  },
+  "winner": "zpe-iot",
+  "roundtrip": {
+    "checked_windows": 8,
+    "packet_roundtrip_bit_parity": false,
+    "failure_windows": [
+      0,
+      1,
+      2
+    ],
+    "definition": "encode(window) bytes must equal encode(decode(packet)) bytes on sampled windows"
+  },
+  "observability": {
+    "workspace": "zer0pa",
+    "classic_project": "zpe-iot-performance",
+    "classic_status": "HOLD",
+    "classic_project_url": "",
+    "classic_experiment_key": "",
+    "classic_experiment_url": "",
+    "opik_project": "zpe-iot-performance",
+    "opik_status": "HOLD",
+    "opik_project_url": "",
+    "opik_trace_id": "",
+    "opik_trace_url": "",
+    "opik_host": "https://www.comet.com/opik/api",
+    "notes": [
+      "classic Comet adapter disabled by missing credential",
+      "Opik adapter disabled by missing credential"
+    ]
+  },
+  "source_artifacts": {
+    "manifest": "validation/datasets/manifest.json",
+    "summary": "validation/results/bench_summary_E1_real_public_20260321T225305.json",
+    "tracking": "validation/results/benchmark_tracking_context_20260321T225305.json",
+    "zstd": "validation/results/bench_vs_zstd_20260321T225331.json",
+    "lz4": "validation/results/bench_vs_lz4_20260321T225355.json",
+    "zlib": "validation/results/bench_vs_zlib_20260321T225424.json",
+    "gorilla": "validation/results/bench_vs_gorilla_20260321T225451.json",
+    "phase8_proof": "proofs/artifacts/PHASE8_DATASET_EXPANSION_20260321.md",
+    "phase9_proof": "proofs/artifacts/PHASE9_BENCHMARK_OBSERVABILITY_20260321.md"
+  }
+}

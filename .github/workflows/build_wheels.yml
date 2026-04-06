@@ -1,7 +1,6 @@
-name: Build Wheels
+name: Manual Wheel Helper
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:

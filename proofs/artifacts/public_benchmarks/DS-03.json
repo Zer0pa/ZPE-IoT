@@ -1,0 +1,65 @@
+{
+  "dataset": "DS-03",
+  "name": "MIT Intel Lab Data (temperature)",
+  "status": "READY",
+  "evidence_class": "E1",
+  "preset": "temperature",
+  "source": {
+    "source_url": "https://db.csail.mit.edu/labdata/data.txt.gz",
+    "license": "Academic research dataset (Intel Lab Data page)",
+    "raw_sha256": "d99288c8f406ca6604d359ceaa0d8adfffa79e7095061a1e27dc4399f48c7225",
+    "transform_sha256": "11e3598c84127e748c25b04e34dabc3113e8a3274afa3b9600adaecfe455ba98"
+  },
+  "zpe_iot": {
+    "compression_ratio": 7.656956823634123,
+    "encode_latency_us": 6184.161,
+    "decode_latency_us": 1056.886,
+    "nrmse": 0.0060415249635933106
+  },
+  "comparators": {
+    "zstd_cr": 3.7486629486629486,
+    "lz4_cr": 2.325662272219166,
+    "zlib_cr": 3.8134473829682,
+    "gorilla_cr": 1.639445146280754
+  },
+  "winner": "zpe-iot",
+  "roundtrip": {
+    "checked_windows": 8,
+    "packet_roundtrip_bit_parity": false,
+    "failure_windows": [
+      0,
+      1,
+      2
+    ],
+    "definition": "encode(window) bytes must equal encode(decode(packet)) bytes on sampled windows"
+  },
+  "observability": {
+    "workspace": "zer0pa",
+    "classic_project": "zpe-iot-performance",
+    "classic_status": "HOLD",
+    "classic_project_url": "",
+    "classic_experiment_key": "",
+    "classic_experiment_url": "",
+    "opik_project": "zpe-iot-performance",
+    "opik_status": "HOLD",
+    "opik_project_url": "",
+    "opik_trace_id": "",
+    "opik_trace_url": "",
+    "opik_host": "https://www.comet.com/opik/api",
+    "notes": [
+      "classic Comet adapter disabled by missing credential",
+      "Opik adapter disabled by missing credential"
+    ]
+  },
+  "source_artifacts": {
+    "manifest": "validation/datasets/manifest.json",
+    "summary": "validation/results/bench_summary_E1_real_public_20260321T225305.json",
+    "tracking": "validation/results/benchmark_tracking_context_20260321T225305.json",
+    "zstd": "validation/results/bench_vs_zstd_20260321T225331.json",
+    "lz4": "validation/results/bench_vs_lz4_20260321T225355.json",
+    "zlib": "validation/results/bench_vs_zlib_20260321T225424.json",
+    "gorilla": "validation/results/bench_vs_gorilla_20260321T225451.json",
+    "phase8_proof": "proofs/artifacts/PHASE8_DATASET_EXPANSION_20260321.md",
+    "phase9_proof": "proofs/artifacts/PHASE9_BENCHMARK_OBSERVABILITY_20260321.md"
+  }
+}

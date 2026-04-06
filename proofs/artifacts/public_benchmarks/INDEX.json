@@ -1,0 +1,162 @@
+{
+  "evidence_class": "E1",
+  "benchmark_boundary": "11 READY + 1 BLOCKED",
+  "surface": {
+    "ready_dataset_count": 11,
+    "blocked_dataset_count": 1,
+    "benchmark_executable_dataset_count": 11,
+    "exported_receipt_count": 12
+  },
+  "requested_datasets": [
+    "DS-01",
+    "DS-02",
+    "DS-03",
+    "DS-04",
+    "DS-05",
+    "DS-06",
+    "DS-07",
+    "DS-08",
+    "DS-09",
+    "DS-10",
+    "DS-11",
+    "DS-12"
+  ],
+  "wins": 10,
+  "total": 11,
+  "mean_cr": 17.163613932777356,
+  "blocked_datasets": [
+    {
+      "dataset": "DS-11",
+      "name": "SMAP Telemetry (P-1)",
+      "status": "BLOCKED",
+      "provenance_class": "real_public",
+      "source_url": "https://raw.githubusercontent.com/khundman/telemanom/master/data/train/P-1.npy",
+      "license": "Telemanom / NASA anomaly dataset (current upstream access now requires credentialed mirror)",
+      "notes": "Requested SMAP P-1 telemetry channel from the Telemanom corpus.",
+      "blocked_reason": "2026-03-21 verification found the raw GitHub path returns 404, the historical S3 bundle returns 403, and the upstream telemanom README now directs users to a Kaggle download; the named no-login source is not currently viable."
+    }
+  ],
+  "datasets": [
+    {
+      "dataset": "DS-01",
+      "name": "UCI AirQuality (CO channel)",
+      "status": "READY",
+      "winner": "zpe-iot",
+      "compression_ratio": 6.184694121802311,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-01.json"
+    },
+    {
+      "dataset": "DS-02",
+      "name": "PHM 2012 Bearing Challenge (Learning_set/Bearing1_1)",
+      "status": "READY",
+      "winner": "zpe-iot",
+      "compression_ratio": 6.39722204594255,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-02.json"
+    },
+    {
+      "dataset": "DS-03",
+      "name": "MIT Intel Lab Data (temperature)",
+      "status": "READY",
+      "winner": "zpe-iot",
+      "compression_ratio": 7.656956823634123,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-03.json"
+    },
+    {
+      "dataset": "DS-04",
+      "name": "UCI HAR Smartphone Inertial Signals (body_acc_x)",
+      "status": "READY",
+      "winner": "zpe-iot",
+      "compression_ratio": 7.159965904843323,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-04.json"
+    },
+    {
+      "dataset": "DS-05",
+      "name": "NOAA Global Hourly (station 01001099999)",
+      "status": "READY",
+      "winner": "zpe-iot",
+      "compression_ratio": 7.290115821056622,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-05.json"
+    },
+    {
+      "dataset": "DS-06",
+      "name": "Numenta NAB NYC Taxi",
+      "status": "READY",
+      "winner": "zpe-iot",
+      "compression_ratio": 6.240327588524611,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-06.json"
+    },
+    {
+      "dataset": "DS-07",
+      "name": "UCI GPS Trajectories (go_track trackpoints)",
+      "status": "READY",
+      "winner": "zpe-iot",
+      "compression_ratio": 6.977718665392963,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-07.json"
+    },
+    {
+      "dataset": "DS-08",
+      "name": "UCI Household Power Consumption (Voltage channel)",
+      "status": "READY",
+      "winner": "zpe-iot",
+      "compression_ratio": 6.5710898070463655,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-08.json"
+    },
+    {
+      "dataset": "DS-09",
+      "name": "CWRU Bearing Drive End 48kHz (109.mat)",
+      "status": "READY",
+      "winner": "zpe-iot",
+      "compression_ratio": 6.380880412591241,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-09.json"
+    },
+    {
+      "dataset": "DS-10",
+      "name": "UCI HAR Smartphone Inertial Signals (body_acc_x test split)",
+      "status": "READY",
+      "winner": "zpe-iot",
+      "compression_ratio": 7.4701938344227035,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-10.json"
+    },
+    {
+      "dataset": "DS-11",
+      "name": "SMAP Telemetry (P-1)",
+      "status": "BLOCKED",
+      "winner": "blocked",
+      "compression_ratio": null,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-11.json"
+    },
+    {
+      "dataset": "DS-12",
+      "name": "UCI Electricity Load Diagrams (MT_001)",
+      "status": "READY",
+      "winner": "competitor",
+      "compression_ratio": 120.47058823529412,
+      "artifact": "proofs/artifacts/public_benchmarks/DS-12.json"
+    }
+  ],
+  "observability": {
+    "workspace": "zer0pa",
+    "classic_project": "zpe-iot-performance",
+    "classic_status": "HOLD",
+    "classic_handshake_error": "COMET_API_KEY missing",
+    "opik_project": "zpe-iot-performance",
+    "opik_status": "HOLD",
+    "opik_handshake_error": "OPIK_API_KEY missing",
+    "opik_host": "https://www.comet.com/opik/api",
+    "notes": [
+      "classic Comet adapter disabled by missing credential",
+      "Opik adapter disabled by missing credential"
+    ]
+  },
+  "source_artifacts": {
+    "manifest": "validation/datasets/manifest.json",
+    "summary": "validation/results/bench_summary_E1_real_public_20260321T225305.json",
+    "tracking": "validation/results/benchmark_tracking_context_20260321T225305.json",
+    "zstd": "validation/results/bench_vs_zstd_20260321T225331.json",
+    "lz4": "validation/results/bench_vs_lz4_20260321T225355.json",
+    "zlib": "validation/results/bench_vs_zlib_20260321T225424.json",
+    "gorilla": "validation/results/bench_vs_gorilla_20260321T225451.json",
+    "phase8_proof": "proofs/artifacts/PHASE8_DATASET_EXPANSION_20260321.md",
+    "phase9_proof": "proofs/artifacts/PHASE9_BENCHMARK_OBSERVABILITY_20260321.md"
+  }
+}
