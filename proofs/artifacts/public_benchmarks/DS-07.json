@@ -1,0 +1,65 @@
+{
+  "dataset": "DS-07",
+  "name": "UCI GPS Trajectories (go_track trackpoints)",
+  "status": "READY",
+  "evidence_class": "E1",
+  "preset": "gps_track",
+  "source": {
+    "source_url": "https://archive.ics.uci.edu/static/public/354/gps+trajectories.zip",
+    "license": "CC BY 4.0 (UCI repository terms)",
+    "raw_sha256": "0e19d39a7562722b8aaa02580deade3ae0893921f9dc28d14dedacbde2c2cc94",
+    "transform_sha256": "ffc13a2298bf75e93c4c8069e2a8415a5c80474951c83eb907ea94504bc98d35"
+  },
+  "zpe_iot": {
+    "compression_ratio": 6.977718665392963,
+    "encode_latency_us": 6826.466,
+    "decode_latency_us": 1235.03,
+    "nrmse": 0.01736154505253017
+  },
+  "comparators": {
+    "zstd_cr": 1.3718065454697688,
+    "lz4_cr": 1.2483404287741555,
+    "zlib_cr": 1.3688695797476815,
+    "gorilla_cr": 1.2152274286561962
+  },
+  "winner": "zpe-iot",
+  "roundtrip": {
+    "checked_windows": 8,
+    "packet_roundtrip_bit_parity": false,
+    "failure_windows": [
+      0,
+      1,
+      2
+    ],
+    "definition": "encode(window) bytes must equal encode(decode(packet)) bytes on sampled windows"
+  },
+  "observability": {
+    "workspace": "zer0pa",
+    "classic_project": "zpe-iot-performance",
+    "classic_status": "HOLD",
+    "classic_project_url": "",
+    "classic_experiment_key": "",
+    "classic_experiment_url": "",
+    "opik_project": "zpe-iot-performance",
+    "opik_status": "HOLD",
+    "opik_project_url": "",
+    "opik_trace_id": "",
+    "opik_trace_url": "",
+    "opik_host": "https://www.comet.com/opik/api",
+    "notes": [
+      "classic Comet adapter disabled by missing credential",
+      "Opik adapter disabled by missing credential"
+    ]
+  },
+  "source_artifacts": {
+    "manifest": "validation/datasets/manifest.json",
+    "summary": "validation/results/bench_summary_E1_real_public_20260321T225305.json",
+    "tracking": "validation/results/benchmark_tracking_context_20260321T225305.json",
+    "zstd": "validation/results/bench_vs_zstd_20260321T225331.json",
+    "lz4": "validation/results/bench_vs_lz4_20260321T225355.json",
+    "zlib": "validation/results/bench_vs_zlib_20260321T225424.json",
+    "gorilla": "validation/results/bench_vs_gorilla_20260321T225451.json",
+    "phase8_proof": "proofs/artifacts/PHASE8_DATASET_EXPANSION_20260321.md",
+    "phase9_proof": "proofs/artifacts/PHASE9_BENCHMARK_OBSERVABILITY_20260321.md"
+  }
+}

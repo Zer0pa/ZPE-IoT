@@ -1,0 +1,65 @@
+{
+  "dataset": "DS-04",
+  "name": "UCI HAR Smartphone Inertial Signals (body_acc_x)",
+  "status": "READY",
+  "evidence_class": "E1",
+  "preset": "accelerometer",
+  "source": {
+    "source_url": "https://archive.ics.uci.edu/static/public/240/human+activity+recognition+using+smartphones.zip",
+    "license": "CC BY 4.0 (UCI repository terms)",
+    "raw_sha256": "c00b803081a5c797cd5e4b83700a9810b38d53d9d84e01917e090e1fdbc81031",
+    "transform_sha256": "a198b75674810dd42246f77da4f6f22aa61acc5436f32e7e885f60928dd35744"
+  },
+  "zpe_iot": {
+    "compression_ratio": 7.159965904843323,
+    "encode_latency_us": 6222.768,
+    "decode_latency_us": 1136.11,
+    "nrmse": 0.04398747013196421
+  },
+  "comparators": {
+    "zstd_cr": 1.0454313425216948,
+    "lz4_cr": 0.9997940487723018,
+    "zlib_cr": 1.0492811169105638,
+    "gorilla_cr": 1.043301069791136
+  },
+  "winner": "zpe-iot",
+  "roundtrip": {
+    "checked_windows": 8,
+    "packet_roundtrip_bit_parity": false,
+    "failure_windows": [
+      0,
+      1,
+      2
+    ],
+    "definition": "encode(window) bytes must equal encode(decode(packet)) bytes on sampled windows"
+  },
+  "observability": {
+    "workspace": "zer0pa",
+    "classic_project": "zpe-iot-performance",
+    "classic_status": "HOLD",
+    "classic_project_url": "",
+    "classic_experiment_key": "",
+    "classic_experiment_url": "",
+    "opik_project": "zpe-iot-performance",
+    "opik_status": "HOLD",
+    "opik_project_url": "",
+    "opik_trace_id": "",
+    "opik_trace_url": "",
+    "opik_host": "https://www.comet.com/opik/api",
+    "notes": [
+      "classic Comet adapter disabled by missing credential",
+      "Opik adapter disabled by missing credential"
+    ]
+  },
+  "source_artifacts": {
+    "manifest": "validation/datasets/manifest.json",
+    "summary": "validation/results/bench_summary_E1_real_public_20260321T225305.json",
+    "tracking": "validation/results/benchmark_tracking_context_20260321T225305.json",
+    "zstd": "validation/results/bench_vs_zstd_20260321T225331.json",
+    "lz4": "validation/results/bench_vs_lz4_20260321T225355.json",
+    "zlib": "validation/results/bench_vs_zlib_20260321T225424.json",
+    "gorilla": "validation/results/bench_vs_gorilla_20260321T225451.json",
+    "phase8_proof": "proofs/artifacts/PHASE8_DATASET_EXPANSION_20260321.md",
+    "phase9_proof": "proofs/artifacts/PHASE9_BENCHMARK_OBSERVABILITY_20260321.md"
+  }
+}

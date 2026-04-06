@@ -1,0 +1,65 @@
+{
+  "dataset": "DS-05",
+  "name": "NOAA Global Hourly (station 01001099999)",
+  "status": "READY",
+  "evidence_class": "E1",
+  "preset": "pressure",
+  "source": {
+    "source_url": "https://www.ncei.noaa.gov/data/global-hourly/access/2022/01001099999.csv",
+    "license": "U.S. Government work (public domain)",
+    "raw_sha256": "4c73a9f6c141d7b166f76edc02ad2d4398d331e24f2b78be4e73053fbe440f39",
+    "transform_sha256": "6044eb9a9be374f214e3d00b6c7ceb462e88f636e7c81a9b4fa5588158ae2a64"
+  },
+  "zpe_iot": {
+    "compression_ratio": 7.290115821056622,
+    "encode_latency_us": 5893.758,
+    "decode_latency_us": 1073.92,
+    "nrmse": 0.004069836457596158
+  },
+  "comparators": {
+    "zstd_cr": 5.829567692581391,
+    "lz4_cr": 2.9142653859836356,
+    "zlib_cr": 7.021212770516391,
+    "gorilla_cr": 6.216657180800607
+  },
+  "winner": "zpe-iot",
+  "roundtrip": {
+    "checked_windows": 8,
+    "packet_roundtrip_bit_parity": false,
+    "failure_windows": [
+      4,
+      5,
+      6
+    ],
+    "definition": "encode(window) bytes must equal encode(decode(packet)) bytes on sampled windows"
+  },
+  "observability": {
+    "workspace": "zer0pa",
+    "classic_project": "zpe-iot-performance",
+    "classic_status": "HOLD",
+    "classic_project_url": "",
+    "classic_experiment_key": "",
+    "classic_experiment_url": "",
+    "opik_project": "zpe-iot-performance",
+    "opik_status": "HOLD",
+    "opik_project_url": "",
+    "opik_trace_id": "",
+    "opik_trace_url": "",
+    "opik_host": "https://www.comet.com/opik/api",
+    "notes": [
+      "classic Comet adapter disabled by missing credential",
+      "Opik adapter disabled by missing credential"
+    ]
+  },
+  "source_artifacts": {
+    "manifest": "validation/datasets/manifest.json",
+    "summary": "validation/results/bench_summary_E1_real_public_20260321T225305.json",
+    "tracking": "validation/results/benchmark_tracking_context_20260321T225305.json",
+    "zstd": "validation/results/bench_vs_zstd_20260321T225331.json",
+    "lz4": "validation/results/bench_vs_lz4_20260321T225355.json",
+    "zlib": "validation/results/bench_vs_zlib_20260321T225424.json",
+    "gorilla": "validation/results/bench_vs_gorilla_20260321T225451.json",
+    "phase8_proof": "proofs/artifacts/PHASE8_DATASET_EXPANSION_20260321.md",
+    "phase9_proof": "proofs/artifacts/PHASE9_BENCHMARK_OBSERVABILITY_20260321.md"
+  }
+}

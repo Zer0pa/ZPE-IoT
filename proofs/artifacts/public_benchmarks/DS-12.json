@@ -1,0 +1,61 @@
+{
+  "dataset": "DS-12",
+  "name": "UCI Electricity Load Diagrams (MT_001)",
+  "status": "READY",
+  "evidence_class": "E1",
+  "preset": "voltage",
+  "source": {
+    "source_url": "https://archive.ics.uci.edu/static/public/321/electricityloaddiagrams20112014.zip",
+    "license": "CC BY 4.0 (UCI repository terms)",
+    "raw_sha256": "f6c4d0e0df12ecdb9ea008dd6eef3518adb52c559d04a9bac2e1b81dcfc8d4e1",
+    "transform_sha256": "5d2ca23975e83eb6b651d4a32b337af40882a8d482e7d64bb19c20a8ff370f9c"
+  },
+  "zpe_iot": {
+    "compression_ratio": 120.47058823529412,
+    "encode_latency_us": 3758.547,
+    "decode_latency_us": 127.539,
+    "nrmse": 0.0
+  },
+  "comparators": {
+    "zstd_cr": 5957.818181818182,
+    "lz4_cr": 234.05714285714285,
+    "zlib_cr": 879.6778523489933,
+    "gorilla_cr": 814.111801242236
+  },
+  "winner": "competitor",
+  "roundtrip": {
+    "checked_windows": 8,
+    "packet_roundtrip_bit_parity": true,
+    "failure_windows": [],
+    "definition": "encode(window) bytes must equal encode(decode(packet)) bytes on sampled windows"
+  },
+  "observability": {
+    "workspace": "zer0pa",
+    "classic_project": "zpe-iot-performance",
+    "classic_status": "HOLD",
+    "classic_project_url": "",
+    "classic_experiment_key": "",
+    "classic_experiment_url": "",
+    "opik_project": "zpe-iot-performance",
+    "opik_status": "HOLD",
+    "opik_project_url": "",
+    "opik_trace_id": "",
+    "opik_trace_url": "",
+    "opik_host": "https://www.comet.com/opik/api",
+    "notes": [
+      "classic Comet adapter disabled by missing credential",
+      "Opik adapter disabled by missing credential"
+    ]
+  },
+  "source_artifacts": {
+    "manifest": "validation/datasets/manifest.json",
+    "summary": "validation/results/bench_summary_E1_real_public_20260321T225305.json",
+    "tracking": "validation/results/benchmark_tracking_context_20260321T225305.json",
+    "zstd": "validation/results/bench_vs_zstd_20260321T225331.json",
+    "lz4": "validation/results/bench_vs_lz4_20260321T225355.json",
+    "zlib": "validation/results/bench_vs_zlib_20260321T225424.json",
+    "gorilla": "validation/results/bench_vs_gorilla_20260321T225451.json",
+    "phase8_proof": "proofs/artifacts/PHASE8_DATASET_EXPANSION_20260321.md",
+    "phase9_proof": "proofs/artifacts/PHASE9_BENCHMARK_OBSERVABILITY_20260321.md"
+  }
+}
