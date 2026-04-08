@@ -13,13 +13,17 @@ SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ## What This Is
 
-ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for environments where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3, edge-deployable.
+ZPE-IoT is a deterministic bounded-lossy sensor compression SDK for constrained IoT streams. It is not a strict lossless codec. Built for MQTT payloads, LoRaWAN uplinks, BLE sensor beacons, and other bandwidth-priced telemetry paths. Rust core. Python bindings via PyO3. Edge-deployable.
 
-**17.16× mean compression** across 11 real public sensor datasets. **27/27 destructive tests passed.** Byte-identical deterministic replay on the tested corpus. The codec is bounded-lossy: it trades a controlled fidelity budget for substantially smaller packets. Every metric traces to committed artifacts under `validation/` and `proofs/`.
+**17.16× mean compression** across 11 real public sensor datasets. **27/27 destructive tests passed.** Byte-identical deterministic replay on the tested corpus. Every metric traces to committed artifacts under `validation/` and `proofs/`.
 
-The repo is **private-stage**. Install path and proof artifacts are real. Public package publication (PyPI / crates.io) deferred pending owner approval — acquisition today is repo checkout or owner-shared wheel.
+Open-source IoT compression remains sparse. [`blisc`](https://github.com/marcauberer/blisc) is archived. Current verified install path: repo checkout plus editable build from `python/`.
 
-**Not claimed:** public package availability, universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or multi-platform release.
+| Baseline snapshot | Raw bytes | gzip bytes | ZPE bytes | Winner |
+|---|---:|---:|---:|---|
+| UCI AirQuality CO trace (`DS-01`, 8,960 samples) | 71,680 | 16,892 (`4.26x`) | 11,590 (`6.18x`) | zpe-iot |
+
+Source: `validation/datasets/DS-01/data.npz`, evaluated locally with `zpe_iot.encode(..., preset="generic")` versus `gzip.compress(..., compresslevel=6)`.
 
 | Anchor | Artifact |
 |---|---|
@@ -33,13 +37,15 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-ZPE-IoT is a private-stage sensor compression SDK for 1D IoT time-series. The canonical implementation surface is the Rust core in `core/`, exposed through the nested Python distribution in `python/` and a repo-local PyO3 native build in `python/native/`.
+ZPE-IoT is a sensor compression SDK for 1D IoT time-series. The canonical implementation surface is the Rust core in `core/`, exposed through the nested Python distribution in `python/` and a repo-local PyO3 native build in `python/native/`.
 
-This front door promotes only the March 21, 2026 repo-local authority surface. It does not claim public package availability, universal compressor dominance, or runtime coupling to ZPE-IMC.
+This front door promotes the March 21, 2026 repo-local authority surface. Repo checkout install is verified. Public package publication is not yet active.
 
 <p>
   <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
 </p>
+
+### Install
 
 ```bash
 git clone https://github.com/Zer0pa/ZPE-IoT zpe-iot
@@ -53,7 +59,7 @@ python validation/destruct_tests/run_all_dts.py --strict-gates
 |---|---|---|
 | As of | `2026-03-21` | [Final status](proofs/FINAL_STATUS.md) |
 | Repository URL | `https://github.com/Zer0pa/ZPE-IoT` | [Citation](CITATION.cff) |
-| Repo classification | `private-stage multi-surface codec repo` | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
+| Repo classification | `multi-surface codec repo` | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
 | Release unit | `python/` distribution with bundled native wheel; `core/` and `c/` remain sibling engineering surfaces | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
 | Acquisition surface | Private repo checkout or owner-shared built wheel from `python/dist/` | [Native wheel verification](proofs/artifacts/PHASE7_NATIVE_WHEEL_VERIFICATION_20260321.md) |
 | Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` | [Preflight report](validation/results/release_preflight_report_20260321T205127.json) |

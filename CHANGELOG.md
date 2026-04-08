@@ -10,6 +10,11 @@ This file records repo-surface changes that materially affect current install, r
   <img src=".github/assets/readme/section-bars/release-notes.svg" alt="RELEASE NOTES" width="100%">
 </p>
 
+## Unreleased
+
+- added author metadata, changelog URL, and packaging classifiers to the Python distribution
+- clarified bounded-lossy fit, transport targets, install path, and baseline context on the repo front door
+
 ## 2026-03-21
 
 - aligned the technical release surface around the nested Python distribution and bundled native wheel path

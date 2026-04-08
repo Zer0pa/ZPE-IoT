@@ -3,8 +3,18 @@ name = "zpe-iot"
 version = "0.1.0"
 description = "8-primitive geometric compression SDK for IoT sensor data"
 license = "LicenseRef-Zer0pa-SAL-6.0"
+authors = [{name = "Zer0pa"}]
 readme = "README.md"
 requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Rust",
+    "Topic :: System :: Archiving :: Compression",
+]
 dependencies = [
     "numpy>=1.24",
     "click>=8.0",
@@ -16,6 +26,7 @@ Homepage = "https://github.com/Zer0pa/ZPE-IoT"
 Repository = "https://github.com/Zer0pa/ZPE-IoT"
 Documentation = "https://github.com/Zer0pa/ZPE-IoT/tree/main/docs"
 Issues = "https://github.com/Zer0pa/ZPE-IoT/issues"
+Changelog = "https://github.com/Zer0pa/ZPE-IoT/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 test = [
