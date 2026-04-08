@@ -15,6 +15,7 @@ This file records repo-surface changes that materially affect current install, r
 - added author metadata, changelog URL, and packaging classifiers to the Python distribution
 - clarified bounded-lossy fit, transport targets, install path, and baseline context on the repo front door
 - added clean-install verification, MQTT/LoRaWAN/BLE example scripts, and a root benchmark methodology entry point
+- published the 11-dataset Phase 3 benchmark tables at the repo root, verified the rerun against the promoted E1 artifact, and recorded the external EnOcean trace blocker
 
 ## 2026-03-21
 
