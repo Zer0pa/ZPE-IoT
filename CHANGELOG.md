@@ -14,6 +14,7 @@ This file records repo-surface changes that materially affect current install, r
 
 - added author metadata, changelog URL, and packaging classifiers to the Python distribution
 - clarified bounded-lossy fit, transport targets, install path, and baseline context on the repo front door
+- added clean-install verification, MQTT/LoRaWAN/BLE example scripts, and a root benchmark methodology entry point
 
 ## 2026-03-21
 
