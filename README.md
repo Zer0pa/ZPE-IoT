@@ -21,14 +21,6 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 
 **Not claimed:** public package availability, universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or multi-platform release.
 
-| Anchor | Artifact |
-|---|---|
-| Run-of-record benchmark | [`bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json) |
-| Destructive-test verdicts | [`dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json) |
-| Release preflight report | [`release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json) |
-
----
-
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
@@ -37,17 +29,63 @@ ZPE-IoT is a private-stage sensor compression SDK for 1D IoT time-series. The ca
 
 This front door promotes only the March 21, 2026 repo-local authority surface. It does not claim public package availability, universal compressor dominance, or runtime coupling to ZPE-IMC.
 
+| Field | Value |
+|-------|-------|
+| Architecture | SENSOR_STREAM |
+| Encoding | DT_CODEC |
+
+## Key Metrics
+
+| Metric | Value | Tag |
+|--------|-------|-----|
+| Compression | 17.16× | 11_DATASETS |
+| Destructive Tests | 27/27 | ALL_PASS |
+| Replay | byte-identical | DETERMINISTIC |
+| Datasets | 11 | REAL_PUBLIC |
+
+## What We Prove
+
+- 17.16× mean compression across 11 real public sensor datasets
+- 27/27 destructive tests passed
+- Byte-identical deterministic replay on tested corpus
+- Managed preflight 17 PASS / 0 FAIL / 1 DEFERRED
+- Fresh install smoke test PASS on arm64 macOS
+
+## What We Don't Claim
+
+- No claim of lossless reconstruction (bounded-lossy codec)
+- No claim of PyPI publication readiness
+- No claim of EnOcean or proprietary protocol support
+- No claim of MQTT/LoRaWAN production bridge
+
+<p>
+  <img src=".github/assets/readme/section-bars/open-risks-non-blocking.svg" alt="OPEN RISKS (NON-BLOCKING)" width="100%">
+</p>
+
+### Open Risks (Non-Blocking)
+
+| Risk lens | Current state |
+|---|---|
+| Publication | Public package publication remains deferred by policy; use the private repo or owner-shared wheel instead of claiming PyPI/crates.io availability. |
+| Benchmark boundary | The active E1 surface is `DS-01..DS-10` plus `DS-12`; `DS-11` remains explicitly `BLOCKED`. |
+| Comparator honesty | ZPE-IoT does not win every slice; `DS-12` is a competitor win on the current E1 real-public surface. |
+| Native scope | Local arm64 macOS wheel install is verified; the multi-platform publish workflow exists but has not been executed as a public release event. |
+| Fidelity boundary | ZPE-IoT is a bounded-lossy codec. It is not a fit for strict lossless reconstruction requirements. |
+
 <p>
   <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
 </p>
 
-```bash
-git clone https://github.com/Zer0pa/ZPE-IoT zpe-iot
-cd zpe-iot
-python -m pip install -e './python[dev]'
-cargo test --manifest-path core/Cargo.toml --release
-python validation/destruct_tests/run_all_dts.py --strict-gates
-```
+## Current Authority
+
+| Field | Value |
+|-------|-------|
+| Verdict | STAGED |
+| Commit SHA | b345798d3c7f |
+| Confidence | 94.4% |
+| Source | proofs/FINAL_STATUS.md |
+
+### Authority Notes
 
 | Field | Current truth | Evidence |
 |---|---|---|
@@ -64,7 +102,31 @@ python validation/destruct_tests/run_all_dts.py --strict-gates
 | Publication posture | `tag/index publication and outreach deferred pending explicit owner approval` | [Preflight report](validation/results/release_preflight_report_20260321T205127.json) |
 | Canonical evidence entry | `proofs/PROOF_INDEX.md` | [Proof index](proofs/PROOF_INDEX.md) |
 
+`Confidence` is derived from the managed-preflight completeness score in [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json): `17 / 18 = 94.4%`.
+
+## Verification Status
+
+| Code | Check | Verdict |
+|------|-------|---------|
+| V_01 | Technical alignment | PASS |
+| V_02 | Managed preflight | PASS |
+| V_03 | Strict destructive tests | PASS |
+| V_04 | E1 real-public benchmark | PASS |
+| V_05 | Native wheel cold install | PASS |
+| V_06 | Public package publication | INC |
+
 `Managed preflight` is the build/install/release gate, `strict DT` is the destructive-test gate, and `E1` is the promoted real-public benchmark tier.
+
+## Proof Anchors
+
+| Path | State |
+|------|-------|
+| proofs/FINAL_STATUS.md | VERIFIED |
+| proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md | VERIFIED |
+| validation/results/release_preflight_report_20260321T205127.json | VERIFIED |
+| validation/results/dt_results_20260321T225304.json | VERIFIED |
+| validation/results/bench_summary_E1_real_public_20260321T225305.json | VERIFIED |
+| validation/results/fresh_env_smoke_20260321T205515/smoke.log | VERIFIED |
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE-IoT Secondary Masthead" width="100%">
@@ -73,6 +135,18 @@ python validation/destruct_tests/run_all_dts.py --strict-gates
 <p>
   <img src=".github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
 </p>
+
+## Repo Shape
+
+| Field | Value |
+|-------|-------|
+| Proof Anchors | 6 |
+| Modality Lanes | 9 |
+| Authority Source | proofs/FINAL_STATUS.md |
+
+`Modality Lanes` counts the nine preset lanes exposed by `python/zpe_iot/presets.py`.
+
+### Directory Map
 
 | Area | Purpose |
 |---|---|
@@ -86,25 +160,23 @@ python validation/destruct_tests/run_all_dts.py --strict-gates
 | `validation/` | Datasets, benchmarks, destructive tests, and generated result JSON |
 | `project_docs/`, `release/RC_*` | Operator lineage and historical release packets, not the front-door authority surface |
 
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
-</p>
+## Quick Start
 
-<p>
-  <img src=".github/assets/readme/section-bars/open-risks-non-blocking.svg" alt="OPEN RISKS (NON-BLOCKING)" width="100%">
-</p>
+```bash
+git clone https://github.com/Zer0pa/ZPE-IoT zpe-iot
+cd zpe-iot
+python -m pip install -e './python[dev]'
+cargo test --manifest-path core/Cargo.toml --release
+python validation/destruct_tests/run_all_dts.py --strict-gates
+```
 
-| Risk lens | Current state |
-|---|---|
-| Publication | Public package publication remains deferred by policy; use the private repo or owner-shared wheel instead of claiming PyPI/crates.io availability. |
-| Benchmark boundary | The active E1 surface is `DS-01..DS-10` plus `DS-12`; `DS-11` remains explicitly `BLOCKED`. |
-| Comparator honesty | ZPE-IoT does not win every slice; `DS-12` is a competitor win on the current E1 real-public surface. |
-| Native scope | Local arm64 macOS wheel install is verified; the multi-platform publish workflow exists but has not been executed as a public release event. |
-| Fidelity boundary | ZPE-IoT is a bounded-lossy codec. It is not a fit for strict lossless reconstruction requirements. |
+Acquisition surface: private repo checkout or owner-shared built wheel from `python/dist/`.
 
 <p>
   <img src=".github/assets/readme/section-bars/contributing-security-support.svg" alt="CONTRIBUTING, SECURITY, SUPPORT" width="100%">
 </p>
+
+### Docs and Support
 
 | Route | Target |
 |---|---|
@@ -122,6 +194,10 @@ python validation/destruct_tests/run_all_dts.py --strict-gates
 
 Treat `project_docs/` and older `release/RC_*` bundles as lineage. Current repo truth lives in the cited March 21 proof and validation artifacts above.
 
-## ZPE Ecosystem
+<p>
+  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
+</p>
+
+## Ecosystem
 This package is part of the [Zer0pa ZPE](https://github.com/Zer0pa) codec portfolio.
 See also: zpe-xr, zpe-robotics, zpe-geo, zpe-finance, zpe-ink, zpe-multimodal, zpe-neuro, zpe-mocap, zpe-prosody, zpe-bio.
