@@ -76,7 +76,7 @@ This front door promotes only the March 21, 2026 repo-local authority surface. I
   <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
 </p>
 
-## Current Authority
+## Commercial Readiness
 
 | Field | Value |
 |-------|-------|
@@ -104,7 +104,7 @@ This front door promotes only the March 21, 2026 repo-local authority surface. I
 
 `Confidence` is derived from the managed-preflight completeness score in [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json): `17 / 18 = 94.4%`.
 
-## Verification Status
+## Tests and Verification
 
 | Code | Check | Verdict |
 |------|-------|---------|
