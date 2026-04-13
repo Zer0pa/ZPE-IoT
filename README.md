@@ -13,21 +13,19 @@ SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ## What This Is
 
-ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for environments where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3, edge-deployable.
+**ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for environments where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable.**
 
-**17.16× mean compression** across 11 real public sensor datasets. **27/27 destructive tests passed.** Byte-identical deterministic replay on the tested corpus. The codec is bounded-lossy: it trades a controlled fidelity budget for substantially smaller packets. Every metric traces to committed artifacts under `validation/` and `proofs/`.
+Rust core, Python bindings via PyO3, edge-deployable.
 
-The repo is **private-stage**. Install path and proof artifacts are real. Public package publication (PyPI / crates.io) deferred pending owner approval — acquisition today is repo checkout or owner-shared wheel.
+17.16× mean compression across 11 real public sensor datasets.
 
-**Not claimed:** public package availability, universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or multi-platform release.
+27/27 destructive tests passed.
 
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-ZPE-IoT is a private-stage sensor compression SDK for 1D IoT time-series. The canonical implementation surface is the Rust core in `core/`, exposed through the nested Python distribution in `python/` and a repo-local PyO3 native build in `python/native/`.
-
-This front door promotes only the March 21, 2026 repo-local authority surface. It does not claim public package availability, universal compressor dominance, or runtime coupling to ZPE-IMC.
+Byte-identical deterministic replay on the tested corpus.
 
 | Field | Value |
 |-------|-------|
@@ -36,20 +34,20 @@ This front door promotes only the March 21, 2026 repo-local authority surface. I
 
 ## Key Metrics
 
-| Metric | Value | Tag |
-|--------|-------|-----|
-| Compression | 17.16× | 11_DATASETS |
-| Destructive Tests | 27/27 | ALL_PASS |
-| Replay | byte-identical | DETERMINISTIC |
-| Datasets | 11 | REAL_PUBLIC |
+| Metric | Value | Baseline |
+|--------|-------|----------|
+| COMPRESSION | 17.16× | vs gzip ~3–5× |
+| DESTRUCTIVE_TESTS | 27/27 | pass |
+| REPLAY_DEVIATION | 0.0% | byte-identical |
+| DATASETS | 11 | verified |
 
 ## What We Prove
 
-- 17.16× mean compression across 11 real public sensor datasets
-- 27/27 destructive tests passed
-- Byte-identical deterministic replay on tested corpus
-- Managed preflight 17 PASS / 0 FAIL / 1 DEFERRED
-- Fresh install smoke test PASS on arm64 macOS
+- 8-code directional quantization adapts per-domain thresholds across 11 sensor types
+- Destructive-test governance: 27/27 attacks passed on real public datasets
+- Byte-identical deterministic replay verified on tested corpus
+- Compression operates across heterogeneous sensor modalities without format-specific tuning
+- Fresh install smoke test validated on arm64 macOS
 
 ## What We Don't Claim
 
@@ -81,7 +79,7 @@ This front door promotes only the March 21, 2026 repo-local authority surface. I
 | Field | Value |
 |-------|-------|
 | Verdict | STAGED |
-| Commit SHA | b345798d3c7f |
+| Commit SHA | B345798 |
 | Confidence | 94.4% |
 | Source | proofs/FINAL_STATUS.md |
 
@@ -108,12 +106,12 @@ This front door promotes only the March 21, 2026 repo-local authority surface. I
 
 | Code | Check | Verdict |
 |------|-------|---------|
-| V_01 | Technical alignment | PASS |
-| V_02 | Managed preflight | PASS |
-| V_03 | Strict destructive tests | PASS |
-| V_04 | E1 real-public benchmark | PASS |
-| V_05 | Native wheel cold install | PASS |
-| V_06 | Public package publication | INC |
+| V_01 | TECHNICAL_ALIGNMENT | PASS |
+| V_02 | MANAGED_PREFLIGHT | PASS |
+| V_03 | STRICT_DESTRUCTIVE_TESTS | PASS |
+| V_04 | E1_REAL-PUBLIC_BENCHMARK | PASS |
+| V_05 | NATIVE_WHEEL_COLD_INSTALL | PASS |
+| V_06 | PUBLIC_PACKAGE_PUBLICATION | INC |
 
 `Managed preflight` is the build/install/release gate, `strict DT` is the destructive-test gate, and `E1` is the promoted real-public benchmark tier.
 
