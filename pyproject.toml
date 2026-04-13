@@ -63,10 +63,6 @@ requires = ["maturin>=1.8,<2.0"]
 build-backend = "maturin"
 
 [tool.maturin]
-manifest-path = "native/Cargo.toml"
-python-source = "."
+manifest-path = "python/native/Cargo.toml"
+python-source = "python"
 module-name = "zpe_iot._zpe_iot_native"
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-addopts = "--cov=zpe_iot --cov-fail-under=85 --cov-report=term-missing --cov-report=xml:../validation/results/coverage/python_coverage.xml --cov-report=html:../validation/results/coverage/python_html"

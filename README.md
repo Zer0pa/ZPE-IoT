@@ -36,12 +36,28 @@ This front door promotes only the March 21, 2026 repo-local authority surface. I
 
 ## Key Metrics
 
-| Metric | Value | Tag |
-|--------|-------|-----|
-| Compression | 17.16× | 11_DATASETS |
-| Destructive Tests | 27/27 | ALL_PASS |
-| Replay | byte-identical | DETERMINISTIC |
-| Datasets | 11 | REAL_PUBLIC |
+| Metric | Value | Baseline |
+|--------|-------|----------|
+| COMPRESSION | 17.163613932777356× | vs zstd 1.05–5.83×, zlib 1.05–7.02× |
+| E1_WINS | 10/11 | 11-dataset benchmark |
+| DT_PASS | 27/27 | strict determinism |
+| PREFLIGHT | 94.4% (17/18) | managed preflight |
+
+> Source: [`proofs/FINAL_STATUS.md`](proofs/FINAL_STATUS.md), [`validation/results/bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json), [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json), [`validation/results/dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json)
+
+## Competitive Benchmarks
+
+> Full competitive analysis: [`docs/BENCHMARKS.md`](docs/BENCHMARKS.md) | Source: [`proofs/artifacts/public_benchmarks/INDEX.json`](proofs/artifacts/public_benchmarks/INDEX.json)
+
+| Tool | Compression Ratio | Notes |
+|------|-------------------|-------|
+| **ZPE-IoT** | **17.163613932777356× mean** | Active E1 surface, 10/11 wins |
+| zstd (l3) | 1.05–5.83× on DS-01..DS-10 | ZPE-IoT wins 10/11; DS-12 loss at 5957.82× vs 120.47× |
+| LZ4 | 1.00–2.91× on DS-01..DS-10 | ZPE-IoT wins 10/11; DS-12 loss at 234.06× vs 120.47× |
+| zlib (l6) | 1.05–7.02× on DS-01..DS-10 | ZPE-IoT wins 10/11; DS-12 loss at 879.68× vs 120.47× |
+| Gorilla-proxy | 1.04–6.22× on DS-01..DS-10 | ZPE-IoT wins 10/11; DS-12 loss at 814.11× vs 120.47× |
+
+DS-12 is the explicit competitor-outlier slice on the active March authority surface. ZPE-IoT does not claim universal compressor dominance.
 
 ## What We Prove
 
