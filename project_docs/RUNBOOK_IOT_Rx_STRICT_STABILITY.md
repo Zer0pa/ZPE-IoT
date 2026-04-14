@@ -70,10 +70,10 @@ Append-only execution log for strict-gate reproducibility hardening.
 - Gate E (packaging + claim delta): PASS
 
 ### Key Evidence
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/2026-02-20_iot_external_baseline_dt09/dt09_semantics_recheck.json`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/2026-02-20_iot_external_baseline_dt09/gateD_strict_replay.json`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/2026-02-20_iot_external_baseline_dt09/iot_external_baseline_results.json`
-- `/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/2026-02-20_iot_external_baseline_dt09/claim_status_delta.md`
+- `/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/2026-02-20_iot_external_baseline_dt09/dt09_semantics_recheck.json`
+- `/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/2026-02-20_iot_external_baseline_dt09/gateD_strict_replay.json`
+- `/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/2026-02-20_iot_external_baseline_dt09/iot_external_baseline_results.json`
+- `/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/2026-02-20_iot_external_baseline_dt09/claim_status_delta.md`
 
 ### Notes
 - DT-09 now uses explicit native-required gate semantics when native path is available.
@@ -83,8 +83,8 @@ Append-only execution log for strict-gate reproducibility hardening.
 ## 2026-02-21T02:19:06Z - Augmented PRD execution kickoff (A0..A7)
 
 ### Scope and governance
-- PRD: `/Users/prinivenpillay/ZPE IoT/zpe-iot/docs/PRD_IOT_EXTERNAL_BASELINE_AND_DT09_2026-02-20.md`
-- Scope: `/Users/prinivenpillay/ZPE IoT/zpe-iot` only.
+- PRD: `/Users/zer0pa-build/ZPE IoT/zpe-iot/docs/PRD_IOT_EXTERNAL_BASELINE_AND_DT09_2026-02-20.md`
+- Scope: `/Users/zer0pa-build/ZPE IoT/zpe-iot` only.
 - No threshold relaxation; evidence-first claim updates only.
 
 ### Gate order

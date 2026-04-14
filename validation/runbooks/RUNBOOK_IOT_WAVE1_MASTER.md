@@ -1,8 +1,8 @@
 # RUNBOOK IoT Wave-1 Master
 
 Created: 2026-02-20T17:38:50Z
-PRD: /Users/prinivenpillay/ZPE IoT/zpe-iot/docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.md
-Scope root: /Users/prinivenpillay/ZPE IoT/zpe-iot
+PRD: /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.md
+Scope root: /Users/zer0pa-build/ZPE IoT/zpe-iot
 IMC freeze: contract_version=wave1.0, vector_sha256=9c8b905f6c1d30d057955aa9adf0f7ff9139853494dca673e5fbe69f24fba10e
 
 ## Execution Protocol
@@ -96,8 +96,8 @@ IMC freeze: contract_version=wave1.0, vector_sha256=9c8b905f6c1d30d057955aa9adf0
 - [x] Phase 6 RC Rehearsal and Handover
 
 ### 2026-02-20T20:29:01Z External Baseline + DT-09 PRD kickoff
-- PRD: /Users/prinivenpillay/ZPE IoT/zpe-iot/docs/PRD_IOT_EXTERNAL_BASELINE_AND_DT09_2026-02-20.md
-- Scope lock: operate only inside /Users/prinivenpillay/ZPE IoT/zpe-iot.
+- PRD: /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/PRD_IOT_EXTERNAL_BASELINE_AND_DT09_2026-02-20.md
+- Scope lock: operate only inside /Users/zer0pa-build/ZPE IoT/zpe-iot.
 
 Atomic execution steps (hard-gated):
 1. Gate A baseline freeze:
@@ -122,8 +122,8 @@ Rollback notes:
 - Do not mark claims upgraded unless corresponding mandatory artifact exists and gate is green.
 
 ### 2026-02-20T21:21:03Z External Baseline + DT-09 execution completed
-- PRD: /Users/prinivenpillay/ZPE IoT/zpe-iot/docs/PRD_IOT_EXTERNAL_BASELINE_AND_DT09_2026-02-20.md
-- Output root: /Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/2026-02-20_iot_external_baseline_dt09
+- PRD: /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/PRD_IOT_EXTERNAL_BASELINE_AND_DT09_2026-02-20.md
+- Output root: /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/2026-02-20_iot_external_baseline_dt09
 
 Gate outcomes:
 - Gate A baseline freeze and strict capture: PASS
@@ -145,13 +145,13 @@ Rollback note:
 - Stop conditions were not triggered; strict replay stability improved to deterministic 5/5 green with mandatory failures empty.
 
 ### 2026-02-21T02:19:06Z Augmented external-baseline execution kickoff (A0..A7)
-- PRD: /Users/prinivenpillay/ZPE IoT/zpe-iot/docs/PRD_IOT_EXTERNAL_BASELINE_AND_DT09_2026-02-20.md
-- Scope lock: /Users/prinivenpillay/ZPE IoT/zpe-iot only (no IMC/Bio edits).
+- PRD: /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/PRD_IOT_EXTERNAL_BASELINE_AND_DT09_2026-02-20.md
+- Scope lock: /Users/zer0pa-build/ZPE IoT/zpe-iot only (no IMC/Bio edits).
 - Mandatory evidence inputs read:
-  - /Users/prinivenpillay/ZPE Multimodality/ZPE IoT_ Research Concept & Agent Execution Document.md
-  - /Users/prinivenpillay/ZPE Multimodality/ZPE_IMC_TECHNICAL_DOSSIER.md
-  - /Users/prinivenpillay/ZPE IoT/zpe-iot/docs/BENCHMARKS.md
-  - /Users/prinivenpillay/ZPE IoT/zpe-iot/validation/destruct_tests/dt09_latency.py
+  - /Users/zer0pa-build/ZPE Multimodality/ZPE IoT_ Research Concept & Agent Execution Document.md
+  - /Users/zer0pa-build/ZPE Multimodality/ZPE_IMC_TECHNICAL_DOSSIER.md
+  - /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/BENCHMARKS.md
+  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/destruct_tests/dt09_latency.py
 
 Augmented gates (hard order):
 1. A0 baseline freeze + strict replay snapshot

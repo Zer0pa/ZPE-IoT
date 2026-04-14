@@ -2,7 +2,7 @@
 
 Date: 2026-02-20
 Owner: Product/Engineering
-Repo: `/Users/prinivenpillay/ZPE IoT/zpe-iot`
+Repo: `/Users/zer0pa-build/ZPE IoT/zpe-iot`
 Scope: code + release engineering only
 Priority: P0
 

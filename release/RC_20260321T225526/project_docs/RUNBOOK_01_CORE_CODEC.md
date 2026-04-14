@@ -21,13 +21,13 @@ Create the repository skeleton, implement the generalised 8-primitive codec in b
 
 - [x] **Action:** Create project directory and initialise git.
 ```bash
-cd "/Users/prinivenpillay/ZPE IoT"
+cd "/Users/zer0pa-build/ZPE IoT"
 mkdir -p zpe-iot
 cd zpe-iot
 git init
 git checkout -b main
 ```
-- [x] **Verify:** `pwd` outputs `/Users/prinivenpillay/ZPE IoT/zpe-iot` AND `.git/` exists.
+- [x] **Verify:** `pwd` outputs `/Users/zer0pa-build/ZPE IoT/zpe-iot` AND `.git/` exists.
 
 ### Step 0.2: Create Directory Skeleton
 
@@ -427,7 +427,7 @@ For Phase 1, DT-01 and DT-02 run on **synthetic datasets** (DS-09, DS-10) and an
 
 - [x] **Action:**
 ```bash
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot"
 python validation/destruct_tests/run_all_dts.py --priority P0
 ```
 
@@ -495,10 +495,10 @@ This addendum is memory-preserving: legacy steps remain valid historical record.
 
 - [x] **Action:** Re-run:
 ```bash
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot/core"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/core"
 cargo test
 cargo clippy -- -D warnings
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot/python"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/python"
 pytest -q
 ```
 - [x] **Verify:** All checks green with no quality regressions.
@@ -537,10 +537,10 @@ This addendum is append-only and extends architecture-tightness into measurable 
 
 - [ ] **Action:** Re-run:
 ```bash
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot/core"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/core"
 cargo test
 cargo clippy -- -D warnings
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot/python"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/python"
 pytest -q
 ```
 - [ ] **Action:** Re-run strict DT suite from project root.
@@ -587,12 +587,12 @@ This addendum is append-only and preserves all earlier execution history.
 
 - [x] **Action:** Re-run
 ```bash
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot/core"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/core"
 cargo test
 cargo clippy -- -D warnings
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot/python"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/python"
 source .venv/bin/activate && pytest -q
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot"
 source python/.venv/bin/activate && python validation/destruct_tests/run_all_dts.py --strict-gates
 ```
 - [x] **Verify:** No regression in strict gate counts (`PASS=21, FAIL=0, SKIPPED=0`).
@@ -705,12 +705,12 @@ This addendum is append-only and records the next expansion lane.
 - [ ] **Action:** Extend strict DT suite with touch/mental invariants.
 - [ ] **Action:** Re-run full quality stack:
 ```bash
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot/core"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/core"
 cargo test
 cargo clippy -- -D warnings
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot/python"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/python"
 source .venv/bin/activate && pytest -q
-cd "/Users/prinivenpillay/ZPE IoT/zpe-iot"
+cd "/Users/zer0pa-build/ZPE IoT/zpe-iot"
 source python/.venv/bin/activate && python validation/destruct_tests/run_all_dts.py --strict-gates
 ```
 - [ ] **Verify:** strict gate remains fully green with no mandatory SKIP/BLOCKED/FAIL.

@@ -39,7 +39,7 @@ TBD from PRD phase 1.
 [PASS] C16_RELEASE_BUNDLE: release RC bundle + bundle manifest hash generated
 [PASS] C17_MEMORY_DOC_SYNC: memory-doc snapshot synced into project_docs/
 [DEFERRED] D01_DEFERRED_PUBLISH: external publishing steps
-Saved report: /Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/release_preflight_report_20260220T181630.json
+Saved report: /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/release_preflight_report_20260220T181630.json
 Summary: total=18 pass=17 fail=0 critical_failures=0 into checklist-driven executable gates via .
 - Added machine-readable report output + schema output.
 - Output: 

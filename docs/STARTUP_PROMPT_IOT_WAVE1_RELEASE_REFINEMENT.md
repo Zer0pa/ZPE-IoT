@@ -1,8 +1,8 @@
 # Startup Prompt: IoT Wave-1 Coordinated Release Refinement Agent
 
 Execute only against:
-- PRD: `/Users/prinivenpillay/ZPE IoT/zpe-iot/docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.md`
-- Scope root: `/Users/prinivenpillay/ZPE IoT/zpe-iot`
+- PRD: `/Users/zer0pa-build/ZPE IoT/zpe-iot/docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.md`
+- Scope root: `/Users/zer0pa-build/ZPE IoT/zpe-iot`
 
 ## Mission
 Execute IoT release refinement end-to-end with strict executable release gates, compatibility hardening, and IMC alignment outputs.
@@ -10,7 +10,7 @@ Execute IoT release refinement end-to-end with strict executable release gates, 
 ## Hard Rules
 1. Runbook-first required.
 2. Code execution required; do not stop at planning.
-3. Modify only inside `/Users/prinivenpillay/ZPE IoT/zpe-iot`.
+3. Modify only inside `/Users/zer0pa-build/ZPE IoT/zpe-iot`.
 4. Do not relax destruct test strictness to force a pass.
 5. Convert checklist items into executable checks.
 6. On gate failure: patch and rerun full phase gates.

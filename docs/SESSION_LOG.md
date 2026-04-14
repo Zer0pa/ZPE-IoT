@@ -344,13 +344,13 @@
 | 2026-02-14T18:11:35.121498+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T18:11:40.379010+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T18:11:41.460455+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T18:11:42.368479+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T18:11:42.368479+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T18:11:43.842173+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T18:11:45.159420+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:11:46.289886+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:11:47.036472+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T18:11:47.933734+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T18:11:49.066604+00:00 | DT-20 | FAIL | `{"gain":0.5111204436952247,"repeats":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T103817.json; pathway= |
+| 2026-02-14T18:11:49.066604+00:00 | DT-20 | FAIL | `{"gain":0.5111204436952247,"repeats":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T103817.json; pathway= |
 | 2026-02-14T18:11:50.012366+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-14T18:11:58.700928+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-14T18:12:38.280606+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -367,13 +367,13 @@
 | 2026-02-14T18:15:09.772822+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T18:15:15.043331+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T18:15:16.089516+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T18:15:16.983024+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T18:15:16.983024+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T18:15:18.447601+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T18:15:19.740108+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:15:20.874411+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:15:21.596607+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T18:15:22.556593+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T18:15:23.419803+00:00 | DT-20 | FAIL | `{"gain":0.5111204436952247,"repeats":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T103817.json; pathway= |
+| 2026-02-14T18:15:23.419803+00:00 | DT-20 | FAIL | `{"gain":0.5111204436952247,"repeats":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T103817.json; pathway= |
 | 2026-02-14T18:15:24.393506+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-14T18:16:27.755414+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-14T18:17:07.403669+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -390,13 +390,13 @@
 | 2026-02-14T18:19:38.332163+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T18:19:43.445734+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T18:19:44.334138+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T18:19:45.311295+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T18:19:45.311295+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T18:19:46.606585+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T18:19:47.818989+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:19:48.865633+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:19:49.559381+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T18:19:50.390107+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T18:19:51.216511+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T201525.json |
+| 2026-02-14T18:19:51.216511+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T201525.json |
 | 2026-02-14T18:19:52.149042+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-14T18:20:00.610880+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-14T18:20:41.582248+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -413,13 +413,13 @@
 | 2026-02-14T18:23:22.390141+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T18:23:27.600874+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T18:23:28.558310+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T18:23:29.593306+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T18:23:29.593306+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T18:23:31.106050+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T18:23:32.416843+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:23:33.580777+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:23:34.328724+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T18:23:35.342388+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T18:23:36.347847+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T201525.json |
+| 2026-02-14T18:23:36.347847+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T201525.json |
 | 2026-02-14T18:23:37.245794+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-14T18:24:31.327972+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-14T18:25:10.302830+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -436,13 +436,13 @@
 | 2026-02-14T18:27:42.041762+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T18:27:47.359172+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T18:27:48.444687+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T18:27:49.520177+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T18:27:49.520177+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T18:27:50.903476+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T18:27:52.139536+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:27:53.196572+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:27:53.960202+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T18:27:54.960663+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T18:27:55.986973+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T201525.json |
+| 2026-02-14T18:27:55.986973+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T201525.json |
 | 2026-02-14T18:27:56.994227+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-14T18:33:16.828590+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-14T18:33:56.163443+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -459,13 +459,13 @@
 | 2026-02-14T18:36:27.518020+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T18:36:32.743343+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T18:36:33.805781+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T18:36:34.802915+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T18:36:34.802915+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T18:36:36.263439+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T18:36:37.429092+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:36:38.443849+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:36:39.292699+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T18:36:40.174565+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T18:36:41.165981+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T201525.json |
+| 2026-02-14T18:36:41.165981+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T201525.json |
 | 2026-02-14T18:36:42.162949+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-14T18:36:50.690632+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-14T18:37:30.892063+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -482,13 +482,13 @@
 | 2026-02-14T18:40:01.609647+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T18:40:07.220001+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T18:40:08.464115+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T18:40:09.375332+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T18:40:09.375332+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T18:40:10.865638+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T18:40:12.156955+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:40:13.187161+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:40:13.932886+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T18:40:14.943296+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T18:40:15.980241+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T201525.json |
+| 2026-02-14T18:40:15.980241+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T201525.json |
 | 2026-02-14T18:40:16.996627+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-14T18:41:07.656180+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-14T18:41:46.756064+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -505,13 +505,13 @@
 | 2026-02-14T18:44:15.220864+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T18:44:20.360264+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T18:44:21.473531+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T18:44:22.336521+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T18:44:22.336521+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T18:44:23.640097+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T18:44:24.738484+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:44:25.683417+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:44:26.371389+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T18:44:27.211602+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T18:44:28.155245+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
+| 2026-02-14T18:44:28.155245+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
 | 2026-02-14T18:44:29.088322+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-14T18:44:37.292738+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-14T18:45:16.229489+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -528,13 +528,13 @@
 | 2026-02-14T18:47:46.901634+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T18:47:51.871902+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T18:47:52.764054+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T18:47:53.795195+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T18:47:53.795195+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T18:47:55.156922+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T18:47:56.263342+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:47:57.336839+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:47:58.017911+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T18:47:58.847950+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T18:47:59.784640+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
+| 2026-02-14T18:47:59.784640+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
 | 2026-02-14T18:48:00.622828+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-14T18:48:17.563770+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-14T18:48:56.630641+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -551,13 +551,13 @@
 | 2026-02-14T18:51:24.274090+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T18:51:29.476765+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T18:51:34.543763+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T18:51:35.757911+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T18:51:35.757911+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T18:51:37.154276+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T18:51:38.495261+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:51:39.443074+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T18:51:40.129617+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T18:51:41.080842+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T18:51:41.909786+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
+| 2026-02-14T18:51:41.909786+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
 | 2026-02-14T18:51:42.736959+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-14T19:06:02.788726+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-14T19:06:43.612220+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -574,13 +574,13 @@
 | 2026-02-14T19:09:15.863598+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-14T19:09:21.314413+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-14T19:09:22.237189+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-14T19:09:23.246978+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-14T19:09:23.246978+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-14T19:09:24.742354+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-14T19:09:25.933587+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T19:09:27.054635+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-14T19:09:27.801947+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-14T19:09:28.702425+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-14T19:09:29.580166+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
+| 2026-02-14T19:09:29.580166+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
 | 2026-02-14T19:09:30.456561+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-19T00:04:03.339432+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-19T00:04:52.584630+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -597,13 +597,13 @@
 | 2026-02-19T00:07:37.334078+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-19T00:07:42.667185+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-19T00:07:43.577237+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-19T00:07:44.451306+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-19T00:07:44.451306+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-19T00:07:45.758708+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-19T00:07:46.999047+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T00:07:47.985491+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T00:07:48.715899+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-19T00:07:49.691195+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-19T00:07:50.558540+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
+| 2026-02-19T00:07:50.558540+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
 | 2026-02-19T00:07:51.416127+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-19T00:27:52.340070+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-19T00:29:38.975139+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
@@ -637,8 +637,8 @@
 | 2026-02-19T00:44:45.748344+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-19T00:44:47.364276+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
 | 2026-02-19T00:44:48.433034+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-19T00:44:50.146141+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
-| 2026-02-19T00:44:51.006867+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-19T00:44:50.146141+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-19T00:44:51.006867+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-19T00:44:53.265500+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-19T00:44:54.232933+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-19T00:44:56.207286+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
@@ -649,8 +649,8 @@
 | 2026-02-19T00:45:02.398430+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-19T00:45:04.304969+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
 | 2026-02-19T00:45:05.159965+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-19T00:45:06.890937+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
-| 2026-02-19T00:45:07.765174+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
+| 2026-02-19T00:45:06.890937+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
+| 2026-02-19T00:45:07.765174+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
 | 2026-02-19T00:45:09.574158+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-19T00:45:10.422179+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-19T00:45:21.566008+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
@@ -680,13 +680,13 @@
 | 2026-02-19T00:52:21.092590+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-19T00:52:25.550593+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-19T00:52:25.796248+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-19T00:52:26.003055+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-19T00:52:26.003055+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-19T00:52:26.684091+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-19T00:52:27.167596+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T00:52:27.478696+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T00:52:27.506037+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-19T00:52:27.784196+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-19T00:52:27.965064+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
+| 2026-02-19T00:52:27.965064+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
 | 2026-02-19T00:52:28.144014+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-19T00:52:36.007209+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-19T00:53:16.480807+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -703,13 +703,13 @@
 | 2026-02-19T00:55:45.323105+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-19T00:55:49.775091+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-19T00:55:50.012985+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-19T00:55:50.214117+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-19T00:55:50.214117+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-19T00:55:50.875887+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-19T00:55:51.337836+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T00:55:51.640423+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T00:55:51.667360+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-19T00:55:51.846901+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-19T00:55:52.023813+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
+| 2026-02-19T00:55:52.023813+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260214T204017.json |
 | 2026-02-19T00:55:52.201048+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-19T00:56:43.092088+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-19T00:57:20.940893+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -726,13 +726,13 @@
 | 2026-02-19T01:00:02.803379+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-19T01:00:07.184262+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-19T01:00:07.417232+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-19T01:00:07.619218+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-19T01:00:07.619218+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-19T01:00:08.280310+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-19T01:00:08.731307+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T01:00:09.026879+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T01:00:09.053641+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-19T01:00:09.234702+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-19T01:00:09.407568+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-19T01:00:09.407568+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-19T01:00:09.582229+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-19T01:00:17.194229+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-19T01:00:57.325166+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -749,13 +749,13 @@
 | 2026-02-19T01:03:21.007773+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-19T01:03:25.208443+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-19T01:03:25.442516+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-19T01:03:25.640799+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
+| 2026-02-19T01:03:25.640799+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260214T200706.json |
 | 2026-02-19T01:03:26.297761+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-19T01:03:26.749960+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T01:03:27.047677+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T01:03:27.074718+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-19T01:03:27.254546+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-19T01:03:27.426483+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-19T01:03:27.426483+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-19T01:03:27.599084+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-19T01:06:23.969751+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-19T01:07:03.877894+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -772,13 +772,13 @@
 | 2026-02-19T01:09:33.947468+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-19T01:09:38.322491+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-19T01:09:38.566675+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-19T01:09:38.771134+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260219T030604.json |
+| 2026-02-19T01:09:38.771134+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260219T030604.json |
 | 2026-02-19T01:09:39.549847+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-19T01:09:40.018655+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T01:09:40.321417+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-19T01:09:40.348712+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-19T01:09:40.533065+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-19T01:09:40.709301+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-19T01:09:40.709301+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-19T01:09:40.885884+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-19T01:09:51.168862+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-19T00:43:58+00:00 | E1-BUILD | PASS | `{"python_build":"wheel+sdist"}` | python -m build completed warning-free after SPDX/readme hardening. |
@@ -802,13 +802,13 @@
 | 2026-02-20T01:01:40.031916+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T01:01:47.698877+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T01:01:49.168547+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T01:01:50.559167+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260219T030604.json |
+| 2026-02-20T01:01:50.559167+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260219T030604.json |
 | 2026-02-20T01:01:52.829002+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T01:01:54.939493+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T01:01:56.781834+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T01:01:58.124037+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T01:01:59.571332+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T01:02:00.971192+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T01:02:00.971192+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T01:02:02.533333+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T01:04:40.517145+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-20T01:12:47.769860+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
@@ -827,13 +827,13 @@
 | 2026-02-20T01:20:25.082259+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T01:20:33.786996+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T01:20:35.456979+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T01:20:37.174878+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260219T030604.json |
+| 2026-02-20T01:20:37.174878+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260219T030604.json |
 | 2026-02-20T01:20:39.572606+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T01:20:41.493013+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T01:20:43.056980+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T01:20:44.250074+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T01:20:45.495710+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T01:20:47.191014+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T01:20:47.191014+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T01:20:48.809697+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T01:21:30.513766+00:00 | DT-09 | PASS | `{"latency_mean_ms":0.3605836319329683,"latency_p99_ms":0.48672093311324716}` |  |
 | 2026-02-20T01:24:34.491481+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
@@ -851,13 +851,13 @@
 | 2026-02-20T01:31:11.349865+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T01:31:17.489474+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T01:31:18.718680+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T01:31:19.771649+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260219T030604.json |
+| 2026-02-20T01:31:19.771649+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260219T030604.json |
 | 2026-02-20T01:31:21.477124+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T01:31:22.960814+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T01:31:24.264553+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T01:31:25.234616+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T01:31:26.399231+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T01:31:27.549511+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T01:31:27.549511+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T01:31:28.560511+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T01:39:12.074447+00:00 | DT-22 | PASS | `{"smell_words":7,"taste_words":6}` |  |
 | 2026-02-20T01:39:12.971382+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
@@ -884,13 +884,13 @@
 | 2026-02-20T01:47:10.637547+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T01:47:16.791045+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T01:47:17.921370+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T01:47:19.029089+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260219T030604.json |
+| 2026-02-20T01:47:19.029089+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260219T030604.json |
 | 2026-02-20T01:47:20.673850+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T01:47:22.252433+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T01:47:23.485835+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T01:47:24.518110+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T01:47:25.765323+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T01:47:26.850439+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T01:47:26.850439+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T01:47:27.931861+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T01:47:29.176561+00:00 | DT-22 | PASS | `{"smell_words":7,"taste_words":6}` |  |
 | 2026-02-20T01:47:30.446152+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
@@ -911,13 +911,13 @@
 | 2026-02-20T01:54:55.622781+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T01:55:02.269970+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T01:55:03.560270+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T01:55:04.705115+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T035021.json |
+| 2026-02-20T01:55:04.705115+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T035021.json |
 | 2026-02-20T01:55:06.237894+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T01:55:07.592270+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T01:55:08.750893+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T01:55:09.720233+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T01:55:10.872058+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T01:55:12.055449+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T01:55:12.055449+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T01:55:13.208448+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T01:55:14.229353+00:00 | DT-22 | PASS | `{"smell_words":7,"taste_words":6}` |  |
 | 2026-02-20T01:55:15.416138+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
@@ -927,7 +927,7 @@
 | 2026-02-20T01:57:50.085852+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T01:57:51.254751+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T035032.json baseline_tag=draconian_20260214C |
 | 2026-02-20T02:25:15.720800+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
-| 2026-02-20T02:25:24.520848+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T02:25:24.520848+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T02:25:55.770329+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-20T02:26:12.545757+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T02:27:00.034631+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -944,19 +944,19 @@
 | 2026-02-20T02:29:58.152483+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T02:30:04.185332+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T02:30:05.452954+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T02:30:06.539091+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T035021.json |
+| 2026-02-20T02:30:06.539091+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T035021.json |
 | 2026-02-20T02:30:08.293872+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T02:30:09.861189+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T02:30:11.245554+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T02:30:12.128092+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T02:30:13.355352+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T02:30:14.518205+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T02:30:14.518205+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T02:30:15.559165+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T02:30:16.557430+00:00 | DT-22 | FAIL | `{"issues":10}` | mental[0] is not extension-mode; mental[1] is not extension-mode; mental[2] is not extension-mode; mental[3] is not extension-mode; mental[4] is not extension-mode; mental[5] is not extension-mode; mental[6] collides with taste type bit; mental[7] collides with taste type bit; mental[8] collides with taste type bit; mental[9] collides with taste type bit |
 | 2026-02-20T02:30:17.493684+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T02:30:18.549830+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T02:30:19.613039+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T035032.json baseline_tag=draconian_20260214C |
-| 2026-02-20T02:30:20.708299+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T02:30:20.708299+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T02:30:21.772943+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T02:30:26.392844+00:00 | DT-22 | FAIL | `{"issues":10}` | mental[0] is not extension-mode; mental[1] is not extension-mode; mental[2] is not extension-mode; mental[3] is not extension-mode; mental[4] is not extension-mode; mental[5] is not extension-mode; mental[6] collides with taste type bit; mental[7] collides with taste type bit; mental[8] collides with taste type bit; mental[9] collides with taste type bit |
 | 2026-02-20T02:32:08.861749+00:00 | DT-22 | FAIL | `{"issues":6}` | mental[0] is not extension-mode; mental[1] is not extension-mode; mental[2] is not extension-mode; mental[3] is not extension-mode; mental[4] is not extension-mode; mental[5] is not extension-mode |
@@ -977,19 +977,19 @@
 | 2026-02-20T02:36:45.530424+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T02:36:50.823632+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T02:36:51.975367+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T02:36:53.061856+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T035021.json |
+| 2026-02-20T02:36:53.061856+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T035021.json |
 | 2026-02-20T02:36:54.666922+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T02:36:56.109649+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T02:36:57.222902+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T02:36:58.119816+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T02:36:59.199500+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T02:37:00.319780+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T02:37:00.319780+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T02:37:01.385853+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T02:37:02.496805+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T02:37:03.457955+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T02:37:04.567742+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T02:37:05.737240+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T035032.json baseline_tag=draconian_20260214C |
-| 2026-02-20T02:37:06.725454+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T02:37:06.725454+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T02:37:07.700136+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T02:39:52.692757+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
 | 2026-02-20T02:42:00.876385+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
@@ -1009,19 +1009,19 @@
 | 2026-02-20T02:49:08.153958+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T02:49:15.401207+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T02:49:16.802634+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T02:49:18.178501+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T02:49:18.178501+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T02:49:20.321744+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T02:49:22.263379+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T02:49:23.926061+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T02:49:24.991774+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T02:49:26.470118+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T02:49:27.953720+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T02:49:27.953720+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T02:49:29.275265+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T02:49:30.697511+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T02:49:32.020603+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T02:49:33.308720+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T02:49:34.764313+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T02:49:36.201369+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T02:49:36.201369+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T02:49:37.405613+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T02:49:47.792936+00:00 | DT-09 | PASS | `{"latency_mean_ms":0.3446611062681768,"latency_p99_ms":0.5158888964797369}` |  |
 | 2026-02-20T02:50:04.763845+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
@@ -1039,19 +1039,19 @@
 | 2026-02-20T02:53:42.262333+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T02:53:48.519270+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T02:53:49.647498+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T02:53:50.865891+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T02:53:50.865891+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T02:53:52.620273+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T02:53:54.250820+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T02:53:55.621579+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T02:53:56.500084+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T02:53:57.719280+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T02:53:58.819406+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T02:53:58.819406+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T02:53:59.920678+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T02:54:01.164754+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T02:54:02.273856+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T02:54:03.515884+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T02:54:04.959562+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T02:54:06.292077+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T02:54:06.292077+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T02:54:07.582924+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T02:55:54.532319+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T02:56:42.611653+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1068,19 +1068,19 @@
 | 2026-02-20T02:59:42.671904+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T02:59:48.946795+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T02:59:50.090825+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T02:59:51.087204+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T02:59:51.087204+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T02:59:52.747228+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T02:59:54.135720+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T02:59:55.345690+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T02:59:56.134925+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T02:59:57.218984+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T02:59:58.285398+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T02:59:58.285398+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T02:59:59.230020+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T03:00:00.301578+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T03:00:01.292890+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T03:00:02.530224+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T03:00:03.955581+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T03:00:05.061019+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T03:00:05.061019+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T03:00:06.153723+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T03:00:16.386997+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T03:01:04.085873+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1097,19 +1097,19 @@
 | 2026-02-20T03:03:49.215252+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T03:03:54.131968+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T03:03:55.220043+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T03:03:56.154546+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T03:03:56.154546+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T03:03:57.537886+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T03:03:58.768275+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T03:03:59.932352+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T03:04:00.682609+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T03:04:01.722927+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T03:04:02.847900+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
+| 2026-02-20T03:04:02.847900+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260219T025552.json |
 | 2026-02-20T03:04:03.898315+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T03:04:04.938564+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T03:04:05.858158+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T03:04:06.776469+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T03:04:07.830675+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T03:04:08.767925+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T03:04:08.767925+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T03:04:09.803966+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T11:00:04.598309+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T11:01:03.950591+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1126,19 +1126,19 @@
 | 2026-02-20T11:04:41.092500+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T11:04:48.536129+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T11:04:51.622103+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T11:04:54.290536+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T11:04:54.290536+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T11:04:57.527607+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T11:05:00.644076+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T11:05:03.474483+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T11:05:05.830512+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T11:05:08.679656+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T11:05:11.379308+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T11:05:11.379308+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T11:05:14.148903+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T11:05:16.966686+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T11:05:19.662537+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T11:05:22.481513+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T11:05:25.187714+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T11:05:27.905871+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T11:05:27.905871+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T11:05:30.726612+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T11:08:33.745773+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-20T11:08:54.748409+00:00 | DT-09 | PASS | `{"latency_mean_ms":0.2699426027829759,"latency_p99_ms":0.3180170670384541}` |  |
@@ -1181,19 +1181,19 @@
 | 2026-02-20T11:40:20.843657+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T11:40:29.630345+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T11:40:33.055321+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T11:40:36.312026+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T11:40:36.312026+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T11:40:40.220382+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T11:40:43.695502+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T11:40:47.045092+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T11:40:50.175186+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T11:40:53.478245+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T11:40:56.706600+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T11:40:56.706600+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T11:40:59.930068+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T11:41:03.207155+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T11:41:06.381139+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T11:41:09.489405+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T11:41:12.866400+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T11:41:16.075511+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T11:41:16.075511+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T11:41:19.332314+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T11:43:35.239157+00:00 | DT-09 | PASS | `{"latency_mean_ms":0.324486283203125,"latency_p99_ms":0.496174625,"warmup_iterations":256,"sample_count":512,"inner_loops":8}` |  |
 | 2026-02-20T11:43:50.450145+00:00 | DT-09 | PASS | `{"latency_mean_ms":0.3588249865722656,"latency_p99_ms":0.48865240499999996,"warmup_iterations":256,"sample_count":512,"inner_loops":8}` |  |
@@ -1219,19 +1219,19 @@
 | 2026-02-20T11:53:00.227598+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T11:53:11.726107+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T11:53:15.918329+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T11:53:20.250183+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T11:53:20.250183+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T11:53:25.213210+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T11:53:30.315673+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T11:53:34.642104+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T11:53:38.464312+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T11:53:42.544766+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T11:53:46.815323+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T11:53:46.815323+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T11:53:51.118116+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T11:53:55.537242+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T11:53:59.946925+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T11:54:04.475184+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T11:54:09.063671+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T11:54:13.741930+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T11:54:13.741930+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T11:54:18.605116+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T11:54:36.140371+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T11:55:47.844840+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1248,19 +1248,19 @@
 | 2026-02-20T11:59:52.710492+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T12:00:00.705294+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T12:00:03.811783+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T12:00:06.174938+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T12:00:06.174938+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T12:00:09.323737+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T12:00:12.388308+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:00:15.242809+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:00:17.683952+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T12:00:20.360574+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T12:00:23.011524+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T12:00:23.011524+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T12:00:25.694435+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T12:00:28.337696+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T12:00:31.113355+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T12:00:33.794156+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T12:00:36.776738+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T12:00:39.881211+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T12:00:39.881211+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T12:00:43.384875+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T12:00:55.515900+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T12:01:40.649776+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1277,19 +1277,19 @@
 | 2026-02-20T12:05:16.651805+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T12:05:23.435370+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T12:05:26.231316+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T12:05:28.686123+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T12:05:28.686123+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T12:05:31.568839+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T12:05:34.273314+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:05:36.816401+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:05:39.219855+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T12:05:41.590048+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T12:05:44.083155+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T12:05:44.083155+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T12:05:46.555260+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T12:05:49.027711+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T12:05:51.409549+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T12:05:53.935631+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T12:05:56.494254+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T12:05:58.991208+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T12:05:58.991208+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T12:06:01.530322+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T12:06:11.470002+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T12:06:51.765321+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1306,19 +1306,19 @@
 | 2026-02-20T12:09:50.764477+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T12:09:57.877206+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T12:10:00.651370+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T12:10:03.357660+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T12:10:03.357660+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T12:10:06.570467+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T12:10:09.782885+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:10:12.457716+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:10:14.861250+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T12:10:17.412555+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T12:10:19.922028+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T12:10:19.922028+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T12:10:22.416884+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T12:10:24.960185+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T12:10:27.643071+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T12:10:30.137041+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T12:10:32.766441+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T12:10:35.435554+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T12:10:35.435554+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T12:10:37.949484+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T12:10:49.663811+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T12:11:33.182230+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1335,19 +1335,19 @@
 | 2026-02-20T12:14:48.586581+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T12:14:58.208489+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T12:15:01.057549+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T12:15:03.560002+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T12:15:03.560002+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T12:15:06.673178+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T12:15:09.581986+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:15:12.302497+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:15:14.717052+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T12:15:17.162985+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T12:15:19.759834+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T12:15:19.759834+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T12:15:22.412147+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T12:15:24.900112+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T12:15:27.396923+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T12:15:29.979790+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T12:15:32.716486+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T12:15:35.459733+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T12:15:35.459733+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T12:15:38.018507+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T12:16:20.207793+00:00 | DT-09 | PASS | `{"latency_mean_ms":0.2687991838378906,"latency_p99_ms":0.3039544837499998,"warmup_iterations":2048,"sample_count":512,"inner_loops":8}` |  |
 | 2026-02-20T12:16:37.743231+00:00 | DT-09 | PASS | `{"latency_mean_ms":0.26856799194335945,"latency_p99_ms":0.29365059499999996,"warmup_iterations":2048,"sample_count":512,"inner_loops":8}` |  |
@@ -1368,19 +1368,19 @@
 | 2026-02-20T12:21:50.454581+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T12:21:56.827981+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T12:21:59.434944+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T12:22:01.871798+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T12:22:01.871798+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T12:22:04.753243+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T12:22:07.487515+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:22:10.167370+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:22:12.537330+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T12:22:15.057142+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T12:22:17.611992+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T12:22:17.611992+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T12:22:20.014560+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T12:22:22.631207+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T12:22:25.037575+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T12:22:27.412614+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T12:22:30.015653+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T12:22:32.403108+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T12:22:32.403108+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T12:22:34.925118+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T12:22:44.738348+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T12:23:26.176243+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1397,19 +1397,19 @@
 | 2026-02-20T12:26:23.666476+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T12:26:30.585403+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T12:26:33.308481+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T12:26:35.920655+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T12:26:35.920655+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T12:26:38.835011+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T12:26:41.659548+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:26:44.420354+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:26:46.795439+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T12:26:49.319871+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T12:26:51.782978+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T12:26:51.782978+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T12:26:54.364880+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T12:26:56.867740+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T12:26:59.423971+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T12:27:02.021719+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T12:27:04.652547+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T12:27:07.176055+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T12:27:07.176055+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T12:27:09.882705+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T12:27:19.878359+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T12:28:01.081804+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1426,19 +1426,19 @@
 | 2026-02-20T12:31:11.525082+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T12:31:18.479075+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T12:31:21.124477+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T12:31:23.588977+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T12:31:23.588977+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T12:31:26.522917+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T12:31:29.296748+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:31:32.046367+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:31:34.466817+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T12:31:37.034461+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T12:31:39.628545+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T12:31:39.628545+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T12:31:42.093110+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T12:31:44.521953+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T12:31:46.947058+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T12:31:49.427465+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T12:31:51.997588+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T12:31:54.520473+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T12:31:54.520473+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T12:31:56.987194+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T12:32:07.249312+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T12:32:48.392781+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1455,19 +1455,19 @@
 | 2026-02-20T12:36:00.215998+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T12:36:08.142012+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T12:36:11.055378+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T12:36:14.221463+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T12:36:14.221463+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T12:36:18.048118+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T12:36:21.268287+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:36:24.066314+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:36:26.539249+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T12:36:29.202980+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T12:36:32.322756+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T12:36:32.322756+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T12:36:35.322699+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T12:36:40.010671+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T12:36:43.197851+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T12:36:46.099622+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T12:36:49.079563+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T12:36:52.206561+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T12:36:52.206561+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T12:36:55.180102+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T12:37:06.829850+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T12:37:50.862062+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1484,19 +1484,19 @@
 | 2026-02-20T12:41:15.909545+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T12:41:23.152383+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T12:41:27.762578+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T12:41:30.356573+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T12:41:30.356573+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T12:41:33.398796+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T12:41:36.303702+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:41:39.237574+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:41:41.594040+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T12:41:44.107194+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T12:41:46.927285+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T12:41:46.927285+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T12:42:00.969077+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T12:42:03.694642+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T12:42:06.485072+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T12:42:09.856425+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T12:42:12.868294+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T12:42:15.640902+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T12:42:15.640902+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T12:42:18.256483+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T12:42:48.611931+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-20T12:47:02.487912+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
@@ -1514,19 +1514,19 @@
 | 2026-02-20T12:51:56.812592+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T12:52:06.367680+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T12:52:10.829710+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T12:52:14.671672+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T12:52:14.671672+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T12:52:19.168442+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T12:52:24.759053+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:52:29.033926+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T12:52:34.850785+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T12:52:38.633437+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T12:52:43.232980+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T12:52:43.232980+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T12:52:46.933727+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T12:52:50.443894+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T12:52:54.060732+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T12:52:57.833730+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T12:53:02.361227+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T12:53:05.896373+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T12:53:05.896373+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T12:53:09.796634+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T12:58:35.577926+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-20T12:58:32.559517+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
@@ -1546,19 +1546,19 @@
 | 2026-02-20T17:43:37.021471+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T17:43:43.871597+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T17:43:46.641855+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T17:43:49.172690+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T17:43:49.172690+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T17:43:52.351426+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T17:43:55.179983+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T17:43:57.784710+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T17:44:00.178403+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T17:44:02.759959+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T17:44:05.172296+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T17:44:05.172296+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T17:44:07.651213+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T17:44:10.080877+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T17:44:12.491267+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T17:44:15.070869+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T17:44:17.818018+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T17:44:20.207358+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T17:44:20.207358+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T17:44:22.570427+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T17:48:13.553554+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-20T17:48:23.192537+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
@@ -1576,19 +1576,19 @@
 | 2026-02-20T17:51:50.283983+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T17:51:54.594708+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T17:51:54.868246+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T17:51:55.128130+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
+| 2026-02-20T17:51:55.128130+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T043931.json |
 | 2026-02-20T17:51:55.884826+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T17:51:56.463539+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T17:51:56.813968+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T17:51:56.843290+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T17:51:57.065960+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T17:51:57.274387+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T17:51:57.274387+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T17:51:57.478782+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T17:51:57.678921+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T17:51:57.885548+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T17:51:58.083652+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T17:51:58.411668+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T043714.json baseline_tag=draconian_20260214C |
-| 2026-02-20T17:51:58.640883+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T17:51:58.640883+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T17:51:58.848681+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T17:56:10.215515+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-20T17:56:20.682437+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
@@ -1606,19 +1606,19 @@
 | 2026-02-20T17:59:35.663804+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T17:59:40.083220+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T17:59:40.364940+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T17:59:40.595818+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T195418.json |
+| 2026-02-20T17:59:40.595818+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T195418.json |
 | 2026-02-20T17:59:41.310334+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T17:59:41.835972+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T17:59:42.155659+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T17:59:42.182001+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T17:59:42.394674+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T17:59:42.604529+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T17:59:42.604529+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T17:59:42.811841+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T17:59:43.022277+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T17:59:43.234405+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T17:59:43.438739+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T17:59:43.779535+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T195521.json baseline_tag=draconian_20260214C |
-| 2026-02-20T17:59:44.011500+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T17:59:44.011500+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T17:59:44.262370+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T18:09:08.157604+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-20T18:09:18.506041+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
@@ -1636,19 +1636,19 @@
 | 2026-02-20T18:12:46.275100+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T18:12:50.670396+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T18:12:50.938429+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T18:12:51.171586+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T200218.json |
+| 2026-02-20T18:12:51.171586+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T200218.json |
 | 2026-02-20T18:12:51.885187+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T18:12:52.416272+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T18:12:52.753461+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T18:12:52.781821+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T18:12:52.999517+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T18:12:53.209353+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T18:12:53.209353+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T18:12:53.416245+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T18:12:53.626354+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T18:12:53.831034+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T18:12:54.040829+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T18:12:54.384031+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T200250.json baseline_tag=draconian_20260214C |
-| 2026-02-20T18:12:54.619184+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T18:12:54.619184+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T18:12:54.830736+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T18:16:33.898919+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-20T18:16:43.531543+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
@@ -1666,19 +1666,19 @@
 | 2026-02-20T18:19:56.852060+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T18:20:01.178880+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T18:20:01.444958+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T18:20:01.673956+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T201459.json |
+| 2026-02-20T18:20:01.673956+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T201459.json |
 | 2026-02-20T18:20:02.379543+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T18:20:02.889250+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T18:20:03.212080+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T18:20:03.239900+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T18:20:03.447224+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T18:20:03.648448+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T18:20:03.648448+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T18:20:03.847535+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T18:20:04.043723+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T18:20:04.241147+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T18:20:04.437891+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T18:20:04.764832+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T201555.json baseline_tag=draconian_20260214C |
-| 2026-02-20T18:20:04.997725+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T18:20:04.997725+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T18:20:05.201442+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T20:31:49.068069+00:00 | DT-09 | PASS | `{"latency_mean_ms":0.3052964052734375,"latency_p99_ms":0.3711287024999999,"warmup_iterations":2048,"sample_count":512,"inner_loops":8}` |  |
 | 2026-02-20T20:32:00.625857+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
@@ -1697,20 +1697,20 @@
 | 2026-02-20T20:37:33.879284+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T20:37:47.542918+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T20:37:52.212554+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T20:37:56.624784+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T202210.json |
+| 2026-02-20T20:37:56.624784+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T202210.json |
 | 2026-02-20T20:38:02.161241+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
 | 2026-02-20T20:38:02.658226+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T20:38:08.704316+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T20:38:13.818878+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T20:38:18.403990+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T20:38:23.317388+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T20:38:28.004814+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T20:38:28.004814+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T20:38:32.936893+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T20:38:37.435893+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T20:38:42.154517+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T20:38:46.578924+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T20:38:51.280846+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-20T20:38:55.898449+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T20:38:55.898449+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T20:39:00.290109+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T20:40:27.082183+00:00 | DT-03 | PASS | `{"seeds":10000}` |  |
 | 2026-02-20T20:40:44.308719+00:00 | DT-09 | PASS | `{"latency_mean_ms":0.4198098557128906,"latency_p99_ms":0.5105799375,"warmup_iterations":2048,"sample_count":512,"inner_loops":8}` |  |
@@ -1729,19 +1729,19 @@
 | 2026-02-20T20:45:34.625043+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T20:45:41.531952+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T20:45:44.244840+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T20:45:46.861737+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T202210.json |
+| 2026-02-20T20:45:46.861737+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T202210.json |
 | 2026-02-20T20:45:50.003571+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T20:45:52.933130+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T20:45:55.637764+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T20:45:58.041508+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T20:46:00.590573+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T20:46:03.031979+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T20:46:03.031979+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T20:46:05.469634+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T20:46:07.868438+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T20:46:10.419316+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T20:46:12.858217+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T20:46:15.530198+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-20T20:46:17.989063+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T20:46:17.989063+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T20:46:20.597001+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T20:54:19.609583+00:00 | DT-09 | PASS | `{"thresholds":{"mean_ms_max":0.5,"p99_ms_max":2.0},"gate_semantics":"python_and_native_independent_thresholds","python":{"mean_ms":1.8176066372070312,"p99_ms":1.8857888449999998,"pass":false},"native":{"mean_ms":0.2667537634277344,"p99_ms":0.28366734374999997,"pass":true},"overall_pass":true,"native_required":true,"gate_driver":"native_required_when_available","latency_mean_ms":0.2667537634277344,"latency_p99_ms":0.28366734374999997,"latency_python_mean_ms":1.8176066372070312,"latency_python_p99_ms":1.8857888449999998,"latency_native_mean_ms":0.2667537634277344,"latency_native_p99_ms":0.28366734374999997,"warmup_iterations":2048,"sample_count":512,"inner_loops":8}` |  |
 | 2026-02-20T20:54:53.666488+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
@@ -1759,19 +1759,19 @@
 | 2026-02-20T20:58:33.612073+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T20:58:44.431528+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T20:58:47.151340+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T20:58:49.539015+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
+| 2026-02-20T20:58:49.539015+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
 | 2026-02-20T20:58:52.704555+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T20:58:55.540978+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T20:58:58.056103+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T20:59:00.273382+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T20:59:02.644335+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T20:59:05.004335+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T20:59:05.004335+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T20:59:07.494301+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T20:59:10.022982+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T20:59:12.380203+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T20:59:14.779529+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T20:59:17.303080+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-20T20:59:19.710251+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T20:59:19.710251+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T20:59:22.110878+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T20:59:31.915906+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T21:00:12.219049+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1788,19 +1788,19 @@
 | 2026-02-20T21:03:23.367479+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T21:03:30.204464+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T21:03:33.067840+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T21:03:35.660100+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
+| 2026-02-20T21:03:35.660100+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
 | 2026-02-20T21:03:38.905927+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T21:03:41.656359+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T21:03:44.448430+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T21:03:46.929647+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T21:03:49.548166+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T21:03:51.966177+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T21:03:51.966177+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T21:03:54.615943+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T21:03:57.322435+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T21:03:59.870434+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T21:04:02.598797+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T21:04:05.436180+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-20T21:04:08.083107+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T21:04:08.083107+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T21:04:10.877205+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T21:04:21.285379+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T21:05:02.273313+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1817,19 +1817,19 @@
 | 2026-02-20T21:08:07.022470+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T21:08:14.132468+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T21:08:16.979965+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T21:08:19.423220+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
+| 2026-02-20T21:08:19.423220+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
 | 2026-02-20T21:08:22.570888+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T21:08:25.285662+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T21:08:27.833816+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T21:08:30.328721+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T21:08:32.949670+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T21:08:35.397536+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T21:08:35.397536+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T21:08:38.142731+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T21:08:40.630321+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T21:08:43.005759+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T21:08:45.576910+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T21:08:48.111403+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-20T21:08:50.669667+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T21:08:50.669667+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T21:08:53.043985+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T21:09:03.158691+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T21:09:44.545170+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1846,19 +1846,19 @@
 | 2026-02-20T21:13:03.755670+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T21:13:11.763336+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T21:13:15.307759+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T21:13:18.808382+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
+| 2026-02-20T21:13:18.808382+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
 | 2026-02-20T21:13:22.470333+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T21:13:26.261634+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T21:13:30.251174+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T21:13:33.182413+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T21:13:35.958184+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T21:13:39.069679+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T21:13:39.069679+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T21:13:41.858658+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T21:13:44.674629+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T21:13:47.588176+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T21:13:50.374176+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T21:13:53.275593+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-20T21:13:56.234824+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T21:13:56.234824+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T21:13:59.183925+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T21:14:09.906021+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-20T21:14:54.457149+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -1875,19 +1875,19 @@
 | 2026-02-20T21:18:20.610158+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-20T21:18:27.713377+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-20T21:18:30.239664+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-20T21:18:32.785471+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
+| 2026-02-20T21:18:32.785471+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
 | 2026-02-20T21:18:35.743807+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-20T21:18:38.747896+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T21:18:41.279783+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-20T21:18:43.661500+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-20T21:18:46.155009+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-20T21:18:48.601274+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-20T21:18:48.601274+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-20T21:18:51.089303+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-20T21:18:53.626389+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-20T21:18:55.958815+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-20T21:18:58.497773+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-20T21:19:01.412856+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-20T21:19:03.910423+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-20T21:19:03.910423+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-20T21:19:06.287668+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-20T21:19:52.340250+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
 | 2026-02-20T21:30:57.352507+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
@@ -1914,19 +1914,19 @@
 | 2026-02-21T02:50:40.411096+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-21T02:51:01.072617+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-21T02:51:09.573838+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-21T02:51:17.968948+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
+| 2026-02-21T02:51:17.968948+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260220T225351.json |
 | 2026-02-21T02:51:25.108024+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-21T02:51:30.980404+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T02:51:36.990843+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T02:51:41.807766+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-21T02:51:47.373614+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-21T02:51:52.822177+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-21T02:51:52.822177+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-21T02:51:57.666488+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-21T02:52:02.741526+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-21T02:52:07.816750+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-21T02:52:13.152739+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-21T02:52:19.041818+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-21T02:52:24.071852+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-21T02:52:24.071852+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-21T02:52:29.385279+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-21T02:56:57.309506+00:00 | DT-09 | PASS | `{"thresholds":{"mean_ms_max":0.5,"p99_ms_max":2.0},"gate_semantics":"python_and_native_independent_thresholds","python":{"mean_ms":0.07073121948242186,"p99_ms":0.09246954125,"pass":true},"native":{"mean_ms":0.01029480078125,"p99_ms":0.01560471875,"pass":true},"overall_pass":true,"native_required":true,"gate_driver":"native_required_when_available","latency_mean_ms":0.01029480078125,"latency_p99_ms":0.01560471875,"latency_python_mean_ms":0.07073121948242186,"latency_python_p99_ms":0.09246954125,"latency_native_mean_ms":0.01029480078125,"latency_native_p99_ms":0.01560471875,"warmup_iterations":2048,"sample_count":512,"inner_loops":8}` |  |
 | 2026-02-21T03:02:40.598752+00:00 | DT-09 | PASS | `{"thresholds":{"mean_ms_max":0.5,"p99_ms_max":2.0},"gate_semantics":"python_and_native_independent_thresholds","python":{"mean_ms":0.07333721875,"p99_ms":0.10391415624999999,"pass":true},"native":{"mean_ms":0.010463483642578125,"p99_ms":0.015400249999999999,"pass":true},"overall_pass":true,"native_required":true,"gate_driver":"native_required_when_available","latency_mean_ms":0.010463483642578125,"latency_p99_ms":0.015400249999999999,"latency_python_mean_ms":0.07333721875,"latency_python_p99_ms":0.10391415624999999,"latency_native_mean_ms":0.010463483642578125,"latency_native_p99_ms":0.015400249999999999,"warmup_iterations":2048,"sample_count":512,"inner_loops":8}` |  |
@@ -1945,19 +1945,19 @@
 | 2026-02-21T03:10:09.720202+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-21T03:10:23.769785+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-21T03:10:29.546637+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-21T03:10:35.571016+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T045624.json |
+| 2026-02-21T03:10:35.571016+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T045624.json |
 | 2026-02-21T03:10:42.250384+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-21T03:10:48.737788+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:10:55.686775+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:11:01.417069+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-21T03:11:06.919100+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-21T03:11:12.634575+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-21T03:11:12.634575+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-21T03:11:18.281754+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-21T03:11:23.732216+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-21T03:11:29.405702+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-21T03:11:35.137514+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-21T03:11:40.863930+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-21T03:11:46.117296+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-21T03:11:46.117296+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-21T03:11:51.325717+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-21T03:16:20.524836+00:00 | DT-09 | PASS | `{"thresholds":{"mean_ms_max":0.5,"p99_ms_max":2.0},"gate_semantics":"python_and_native_independent_thresholds","python":{"mean_ms":0.05818251269531251,"p99_ms":0.07350830624999999,"pass":true},"native":{"mean_ms":0.009031194824218752,"p99_ms":0.013422444999999993,"pass":true},"overall_pass":true,"native_required":true,"gate_driver":"native_required_when_available","latency_mean_ms":0.009031194824218752,"latency_p99_ms":0.013422444999999993,"latency_python_mean_ms":0.05818251269531251,"latency_python_p99_ms":0.07350830624999999,"latency_native_mean_ms":0.009031194824218752,"latency_native_p99_ms":0.013422444999999993,"warmup_iterations":2048,"sample_count":512,"inner_loops":8}` |  |
 | 2026-02-21T03:16:45.234438+00:00 | DT-16 | FAIL | `{"baseline_tag":"unit_test_tag"}` | hash mismatch expected=0000000000000000000000000000000000000000000000000000000000000000 actual=be006c5fe78253abb2abd9a2bd656729175e04c29041b6f1d7c1912d3051f72d |
@@ -1976,19 +1976,19 @@
 | 2026-02-21T03:23:01.228071+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-21T03:23:13.165745+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-21T03:23:18.081012+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-21T03:23:22.657381+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T051555.json |
+| 2026-02-21T03:23:22.657381+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T051555.json |
 | 2026-02-21T03:23:28.122202+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-21T03:23:33.200231+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:23:38.230418+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:23:42.351137+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-21T03:23:46.805544+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-21T03:23:51.113733+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-21T03:23:51.113733+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-21T03:23:55.552706+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-21T03:23:59.943197+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-21T03:24:04.648657+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-21T03:24:08.992525+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-21T03:24:13.656615+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-21T03:24:18.530532+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-21T03:24:18.530532+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-21T03:24:23.253805+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-21T03:24:42.217460+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-21T03:25:58.222078+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -2005,19 +2005,19 @@
 | 2026-02-21T03:31:24.594313+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-21T03:31:36.401699+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-21T03:31:41.214345+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-21T03:31:45.955451+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T051555.json |
+| 2026-02-21T03:31:45.955451+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T051555.json |
 | 2026-02-21T03:31:51.077415+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-21T03:31:55.942329+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:32:00.858767+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:32:04.922920+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-21T03:32:09.320284+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-21T03:32:13.753780+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-21T03:32:13.753780+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-21T03:32:18.062422+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-21T03:32:22.739006+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-21T03:32:27.166664+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-21T03:32:31.884241+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-21T03:32:36.796292+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-21T03:32:41.189471+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-21T03:32:41.189471+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-21T03:32:45.635154+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-21T03:33:03.198076+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-21T03:34:16.300697+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -2034,19 +2034,19 @@
 | 2026-02-21T03:39:29.941765+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-21T03:39:41.672911+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-21T03:39:46.536360+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-21T03:39:50.895298+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T051555.json |
+| 2026-02-21T03:39:50.895298+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T051555.json |
 | 2026-02-21T03:39:56.047090+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-21T03:40:00.828868+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:40:05.720252+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:40:09.895503+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-21T03:40:14.141688+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-21T03:40:18.364527+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-21T03:40:18.364527+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-21T03:40:23.054549+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-21T03:40:27.342470+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-21T03:40:31.927465+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-21T03:40:36.173803+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-21T03:40:40.760058+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-21T03:40:45.353416+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-21T03:40:45.353416+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-21T03:40:49.854037+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-21T03:41:07.262517+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-21T03:42:20.096285+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -2063,19 +2063,19 @@
 | 2026-02-21T03:47:27.669237+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-21T03:47:39.453152+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-21T03:47:43.714475+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-21T03:47:47.875082+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T051555.json |
+| 2026-02-21T03:47:47.875082+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T051555.json |
 | 2026-02-21T03:47:53.145507+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-21T03:47:58.107663+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:48:02.519683+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:48:06.640059+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-21T03:48:11.124926+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-21T03:48:15.439431+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-21T03:48:15.439431+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-21T03:48:19.926826+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-21T03:48:24.199469+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-21T03:48:28.373368+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-21T03:48:32.775625+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-21T03:48:37.489532+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-21T03:48:41.722502+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-21T03:48:41.722502+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-21T03:48:45.997748+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-02-21T03:49:03.124888+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-02-21T03:50:14.049852+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
@@ -2092,19 +2092,19 @@
 | 2026-02-21T03:55:17.298829+00:00 | DT-13 | PASS | `{"streams":10000}` |  |
 | 2026-02-21T03:55:28.882065+00:00 | DT-14 | PASS | `{"crc_detection_rate":1.0}` |  |
 | 2026-02-21T03:55:33.278993+00:00 | DT-15 | PASS | `{"samples":4096}` |  |
-| 2026-02-21T03:55:37.696185+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T051555.json |
+| 2026-02-21T03:55:37.696185+00:00 | DT-16 | PASS | `{"degradation":0.0,"baseline_tag":"draconian_20260214C"}` | baseline=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/baseline/draconian_20260214C/bench_summary.json current=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/bench_summary_20260221T051555.json |
 | 2026-02-21T03:55:42.846167+00:00 | DT-17 | PASS | `{"returncode":0}` |  |
 | 2026-02-21T03:55:47.863672+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:55:52.487729+00:00 | DT-06 | SKIPPED | `{}` | forced skip for DT-18 |
 | 2026-02-21T03:55:56.237616+00:00 | DT-18 | PASS | `{"strict_rc":1,"relaxed_rc":0}` |  |
 | 2026-02-21T03:56:00.496509+00:00 | DT-19 | PASS | `{"evidence_class":"E1"}` |  |
-| 2026-02-21T03:56:04.977681+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/prinivenpillay/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
+| 2026-02-21T03:56:04.977681+00:00 | DT-20 | PASS | `{"gain":0.5062667882814955,"nrmse_delta":0.0,"retained":0}` | artifact=/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/wi1_ablation_20260220T050410.json |
 | 2026-02-21T03:56:09.268470+00:00 | DT-21 | PASS | `{"issues":0}` |  |
 | 2026-02-21T03:56:13.579551+00:00 | DT-22 | PASS | `{"mental_words":10,"smell_words":7,"taste_words":6,"touch_words":4}` |  |
 | 2026-02-21T03:56:17.895621+00:00 | DT-23 | PASS | `{"word_count":11,"event_count":2}` |  |
 | 2026-02-21T03:56:22.230727+00:00 | DT-24 | PASS | `{"fused_word_count":25,"event_count":2}` |  |
 | 2026-02-21T03:56:26.543669+00:00 | DT-25 | PASS | `{"decode_cases":3,"provenance_min_class":"E1","benchmark_baseline_pinned":1}` | verified bench_summary_chemosense_20260220T202238.json baseline_tag=draconian_20260214C |
-| 2026-02-21T03:56:31.040551+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/prinivenpillay/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
+| 2026-02-21T03:56:31.040551+00:00 | DT-26 | PASS | `{"matches":0,"path":"/Users/zer0pa-build/ZPE IoT/zpe-iot/python/zpe_iot/chemosense"}` |  |
 | 2026-02-21T03:56:35.126737+00:00 | DT-27 | PASS | `{"false_positives":0,"mixed_mental":1,"mixed_smell":1,"mixed_taste":1,"mixed_touch":1}` |  |
 | 2026-03-09T03:54:08.326053+00:00 | DT-01 | PASS | `{"datasets":8}` | {'DS-01': {'mean': 0.0019006710430525507, 'p95': 0.0024369539880147784, 'max': 0.002969313072450829}, 'DS-02': {'mean': 0.01382161884368962, 'p95': 0.016873315878502944, 'max': 0.016873315878502944}, 'DS-03': {'mean': 0.0012805645377215991, 'p95': 0.005602051326558664, 'max': 0.029213712632314485}, 'DS-04': {'mean': 0.005656941228073716, 'p95': 0.0145448325977868, 'max': 0.023131514924224484}, 'DS-05': {'mean': 0.002026290053749815, 'p95': 0.003914179322088779, 'max': 0.006291422335626003}, 'DS-06': {'mean': 0.0012688691240998436, 'p95': 0.001400023641139453, 'max': 0.0018114123958238653}, 'DS-07': {'mean': 0.0014872053775935906, 'p95': 0.0029379469914123314, 'max': 0.03804229969320737}, 'DS-08': {'mean': 0.0037385839762780542, 'p95': 0.004907028962990086, 'max': 0.006599646825369417}} |
 | 2026-03-09T03:54:24.579085+00:00 | DT-02 | PASS | `{"dataset_count":10}` |  |
