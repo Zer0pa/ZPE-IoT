@@ -17,7 +17,7 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for industrial IoT platform teams and edge telemetry vendors where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3. Every metric traces to committed artifacts under `validation/` and `proofs/`.
 
-The repo is **private-stage**. Install path and proof artifacts are real. Public package publication (PyPI / crates.io) deferred pending owner approval — acquisition today is repo checkout or owner-shared wheel.
+The repo is **private-stage**. Install path and proof artifacts are real. Published on PyPI as `zpe-iot`. Native wheels for Linux, macOS (Apple Silicon), and Windows.
 
 **Not claimed:** public package availability, universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or multi-platform release.
 
@@ -72,7 +72,7 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 ## What We Don't Claim
 
 - No claim of lossless reconstruction (bounded-lossy codec)
-- No claim of PyPI publication readiness
+- Published on PyPI as `zpe-iot`
 - No claim of EnOcean or proprietary protocol support
 - No claim of MQTT/LoRaWAN production bridge
 - No claim of direct Gorilla parity — our Gorilla-proxy comparator is a simplified XOR+zlib implementation, not Facebook's production Gorilla codec
@@ -87,7 +87,7 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 
 | Risk lens | Current state |
 |---|---|
-| Publication | Public package publication remains deferred by policy; use the private repo or owner-shared wheel instead of claiming PyPI/crates.io availability. |
+| Publication | Published on PyPI as `zpe-iot` (0.1.0). Native wheels for Linux, macOS (Apple Silicon), and Windows. |
 | Benchmark boundary | The active E1 surface is `DS-01..DS-10` plus `DS-12`; `DS-11` remains explicitly `BLOCKED`. |
 | Comparator honesty | ZPE-IoT does not win every slice; `DS-12` is a competitor win on the current E1 real-public surface. |
 | Native scope | Local arm64 macOS wheel install is verified; the multi-platform publish workflow exists but has not been executed as a public release event. |
@@ -120,13 +120,13 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 | Repository URL | `https://github.com/Zer0pa/ZPE-IoT` | [Citation](CITATION.cff) |
 | Repo classification | `private-stage multi-surface codec repo` | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
 | Release unit | `python/` distribution with bundled native wheel; `core/` and `c/` remain sibling engineering surfaces | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
-| Acquisition surface | Private repo checkout or owner-shared built wheel from `python/dist/` | [Native wheel verification](proofs/artifacts/PHASE7_NATIVE_WHEEL_VERIFICATION_20260321.md) |
+| Acquisition surface | `pip install zpe-iot` from PyPI, or private repo checkout | [PyPI](https://pypi.org/project/zpe-iot/) |
 | Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` | [Preflight report](validation/results/release_preflight_report_20260321T205127.json) |
 | Strict DT | `27/27 PASS` | [DT report](validation/results/dt_results_20260321T225304.json) |
 | Fresh install smoke | `PASS` on local arm64 macOS cold install | [Cold-install smoke](validation/results/fresh_env_smoke_20260321T205515/smoke.log) |
 | Benchmark authority | `E1`, `10/11 wins`, `6.65×` DS-01..DS-10 mean CR | [E1 summary](validation/results/bench_summary_E1_real_public_20260321T225305.json) |
 | Known real blockers | `none` | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
-| Publication posture | `tag/index publication and outreach deferred pending explicit owner approval` | [Preflight report](validation/results/release_preflight_report_20260321T205127.json) |
+| Publication posture | `published on PyPI as zpe-iot 0.1.0` | [PyPI](https://pypi.org/project/zpe-iot/) |
 | Canonical evidence entry | `proofs/PROOF_INDEX.md` | [Proof index](proofs/PROOF_INDEX.md) |
 
 `Confidence` is derived from the managed-preflight completeness score in [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json): `17 / 18 = 94.4%`.
@@ -140,7 +140,7 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 | V_03 | Strict destructive tests | PASS |
 | V_04 | E1 real-public benchmark | PASS |
 | V_05 | Native wheel cold install | PASS |
-| V_06 | Public package publication | INC |
+| V_06 | Public package publication | PASS |
 
 `Managed preflight` is the build/install/release gate, `strict DT` is the destructive-test gate, and `E1` is the promoted real-public benchmark tier.
 
@@ -189,6 +189,14 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 
 ## Quick Start
 
+**Install from PyPI (recommended):**
+
+```bash
+pip install zpe-iot
+```
+
+**Install from source:**
+
 ```bash
 git clone https://github.com/Zer0pa/ZPE-IoT zpe-iot
 cd zpe-iot
@@ -196,8 +204,6 @@ python -m pip install -e './python[dev]'
 cargo test --manifest-path core/Cargo.toml --release
 python validation/destruct_tests/run_all_dts.py --strict-gates
 ```
-
-Acquisition surface: private repo checkout or owner-shared built wheel from `python/dist/`.
 
 <p>
   <img src=".github/assets/readme/section-bars/contributing-security-support.svg" alt="CONTRIBUTING, SECURITY, SUPPORT" width="100%">
