@@ -13,9 +13,9 @@ SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ## What This Is
 
-ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for environments where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3, edge-deployable.
+17× sensor compression without losing fidelity or determinism. 27/27 destructive tests passed. Bounded-lossy with byte-identical replay. Edge-deployable.
 
-**17.16× mean compression** across 11 real public sensor datasets. **27/27 destructive tests passed.** Byte-identical deterministic replay on the tested corpus. The codec is bounded-lossy: it trades a controlled fidelity budget for substantially smaller packets. Every metric traces to committed artifacts under `validation/` and `proofs/`.
+ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for industrial IoT platform teams and edge telemetry vendors where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3. Every metric traces to committed artifacts under `validation/` and `proofs/`.
 
 The repo is **private-stage**. Install path and proof artifacts are real. Public package publication (PyPI / crates.io) deferred pending owner approval — acquisition today is repo checkout or owner-shared wheel.
 
@@ -24,10 +24,6 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
-
-ZPE-IoT is a private-stage sensor compression SDK for 1D IoT time-series. The canonical implementation surface is the Rust core in `core/`, exposed through the nested Python distribution in `python/` and a repo-local PyO3 native build in `python/native/`.
-
-This front door promotes only the March 21, 2026 repo-local authority surface. It does not claim public package availability, universal compressor dominance, or runtime coupling to ZPE-IMC.
 
 | Field | Value |
 |-------|-------|
@@ -60,6 +56,8 @@ This front door promotes only the March 21, 2026 repo-local authority surface. I
 DS-12 is the explicit competitor-outlier slice on the active March authority surface. ZPE-IoT does not claim universal compressor dominance.
 
 ## What We Prove
+
+> Auditable guarantees backed by committed proof artifacts. Start at `AUDITOR_PLAYBOOK.md`.
 
 - 17.16× mean compression across 11 real public sensor datasets
 - 27/27 destructive tests passed
@@ -100,6 +98,8 @@ DS-12 is the explicit competitor-outlier slice on the active March authority sur
 | Commit SHA | b345798d3c7f |
 | Confidence | 94.4% |
 | Source | proofs/FINAL_STATUS.md |
+
+> **Evaluators:** Ready for technical evaluation. `pip install -e .` in a clean venv. Contact hello@zer0pa.com for integration guidance.
 
 ### Authority Notes
 
@@ -217,3 +217,12 @@ Treat `project_docs/` and older `release/RC_*` bundles as lineage. Current repo 
 ## Ecosystem
 This package is part of the [Zer0pa ZPE](https://github.com/Zer0pa) codec portfolio.
 See also: zpe-xr, zpe-robotics, zpe-geo, zpe-finance, zpe-ink, zpe-multimodal, zpe-neuro, zpe-mocap, zpe-prosody, zpe-bio.
+
+## Who This Is For
+
+| | |
+|---|---|
+| **Ideal first buyer** | Industrial IoT platform team or edge telemetry vendor |
+| **Pain** | High-frequency sensor streams overwhelm bandwidth and storage at the edge — generic compression breaks fidelity guarantees and replay determinism |
+| **Deployment** | SDK with Rust core and Python bindings |
+| **Family position** | Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer |
