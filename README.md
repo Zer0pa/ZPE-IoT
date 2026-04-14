@@ -13,7 +13,7 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ## What This Is
 
-6.6× sensor compression without losing fidelity or determinism. 27/27 destructive tests passed. Bounded-lossy with byte-identical replay. Edge-deployable. Sensor deltas are encoded using an 8-direction amplitude gear codebook with log-magnitude quantisation and RLE.
+6.6× sensor compression without losing fidelity or determinism. 27/27 destructive tests passed. Bounded-lossy with decode-deterministic replay. Edge-deployable. Sensor deltas are encoded using an 8-direction amplitude gear codebook with log-magnitude quantisation and RLE.
 
 ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for industrial IoT platform teams and edge telemetry vendors where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3. Every metric traces to committed artifacts under `validation/` and `proofs/`.
 
@@ -65,7 +65,7 @@ The repo is **private-stage**. Install path and proof artifacts are real. Publis
 
 - 6.65× mean compression across DS-01..DS-10 (10 non-outlier sensor datasets); DS-12 excluded from headline — see Competitive Benchmarks
 - 27/27 destructive tests passed
-- Byte-identical deterministic replay on tested corpus
+- Decode-deterministic replay on tested corpus
 - Managed preflight 17 PASS / 0 FAIL / 1 DEFERRED
 - Fresh install smoke test PASS on arm64 macOS
 
@@ -78,6 +78,7 @@ The repo is **private-stage**. Install path and proof artifacts are real. Publis
 - No claim of direct Gorilla parity — our Gorilla-proxy comparator is a simplified XOR+zlib implementation, not Facebook's production Gorilla codec
 - No claim of unlimited stream length — codec has a 65,536-sample hard cap (2-byte header); approximately 16 minutes at 60 Hz
 - No claim of NaN/Inf tolerance — non-finite floating-point inputs cause codec failure
+- No claim of signal-level roundtrip idempotency — as a bounded-lossy codec, encode(decode(encode(x))) ≠ encode(x) is expected; determinism applies to the decode path (same packet → same output)
 
 <p>
   <img src=".github/assets/readme/section-bars/open-risks-non-blocking.svg" alt="OPEN RISKS (NON-BLOCKING)" width="100%">

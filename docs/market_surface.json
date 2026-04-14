@@ -4,7 +4,7 @@
   "status": "PRIVATE_STAGE",
   "plain_english_summary": "Deterministic sensor compression SDK for IoT time-series and chemosense streams.",
   "commercial_wedge": "Reduce bandwidth and edge compute load for industrial IoT sensor streams. 17× mean compression on real public datasets with bounded-lossy fidelity guarantees and deterministic replay.",
-  "technical_wedge": "Rust-core 8-primitive geometric codec with Python bindings. 17.16× mean CR across 11 real-public datasets, 27/27 destructive-test pass, byte-identical replay.",
+  "technical_wedge": "Rust-core 8-primitive geometric codec with Python bindings. 17.16× mean CR across 11 real-public datasets, 27/27 destructive-test pass, decode-deterministic replay.",
   "ideal_first_buyer": "Industrial IoT platform team or edge telemetry vendor",
   "deployment_model": "SDK with Rust core and Python bindings",
   "proof_anchors": [
@@ -20,7 +20,8 @@
     "Multi-platform wheel release",
     "Direct Gorilla parity (Gorilla-proxy comparator is a simplified XOR+zlib proxy, not Facebook's production codec)",
     "Unlimited stream length (65,536-sample hard cap via 2-byte header; ~16 min at 60 Hz)",
-    "NaN/Inf tolerance (non-finite inputs cause codec failure)"
+    "NaN/Inf tolerance (non-finite inputs cause codec failure)",
+    "Signal-level roundtrip idempotency (encode(decode(encode(x))) ≠ encode(x) is expected for bounded-lossy codec; determinism applies to decode path only)"
   ],
   "benchmark_methodology": {
     "cr_denominator": "float64 (8 bytes/sample) raw size",
