@@ -7,7 +7,7 @@
 
 [Docs](docs/README.md) | [Proofs](proofs/PROOF_INDEX.md) | [API](docs/API.md) | [Benchmarks](docs/BENCHMARKS.md) | [Release](docs/RELEASE_CHECKLIST.md) | [Audit](AUDITOR_PLAYBOOK.md)
 
-SAL v6.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
+SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ---
 
