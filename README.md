@@ -13,7 +13,7 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ## What This Is
 
-6.6× sensor compression without losing fidelity or determinism. 27/27 destructive tests passed. Bounded-lossy with byte-identical replay. Edge-deployable.
+6.6× sensor compression without losing fidelity or determinism. 27/27 destructive tests passed. Bounded-lossy with byte-identical replay. Edge-deployable. Sensor deltas are encoded using an 8-direction amplitude gear codebook with log-magnitude quantisation and RLE.
 
 ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for industrial IoT platform teams and edge telemetry vendors where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3. Every metric traces to committed artifacts under `validation/` and `proofs/`.
 
