@@ -20,7 +20,7 @@ You are building **ZPE-IoT**: an 8-primitive geometric compression SDK for IoT s
 ## 1. Project Layout
 
 ```
-/Users/zer0pa-build/ZPE IoT/                        ← PROJECT ROOT
+<WORKSPACE>/ZPE IoT/                        ← PROJECT ROOT
 ├── ZPE_IOT_SENSOR_COMPRESSION_SDK_PRD_v1.0.md        ← THE PRD (source of truth)
 ├── PRD_06_ENTERPRISE_EXECUTION_v1.0.md               ← Enterprise execution PRD
 ├── RUNBOOK_00_MASTER.md                               ← THIS FILE (orchestration)
@@ -113,7 +113,7 @@ VELOCITY 4: Am I gold-plating? Ship ugly > ship never.
 Run before any dataset pull, benchmark, or publish-adjacent step:
 
 ```bash
-cd "/Users/zer0pa-build/ZPE IoT/zpe-iot"
+cd "<REPO_ROOT>"
 command -v gh >/dev/null || echo "MISSING: gh"
 command -v kaggle >/dev/null || echo "MISSING: kaggle cli"
 command -v huggingface-cli >/dev/null || echo "MISSING: huggingface-cli (optional if using HTTP token checks)"
@@ -543,7 +543,7 @@ This addendum is append-only and does not replace prior history.
 ### 13.3 Execution Update (2026-02-20)
 
 - [x] **C0 Recon + Copy-In**
-  - Source dossier reviewed: `/Users/zer0pa-build/ZPE Multimodality/ZPE_IMC_TECHNICAL_DOSSIER.md`.
+  - Source dossier reviewed: `<WORKSPACE>/ZPE Multimodality/ZPE_IMC_TECHNICAL_DOSSIER.md`.
   - Modules copied into:
     - `zpe-iot/python/zpe_iot/chemosense/common/`
     - `zpe-iot/python/zpe_iot/chemosense/smell/`
@@ -665,9 +665,9 @@ This addendum is append-only and does not overwrite prior sections.
 External capability trees verified:
 
 1. Touch source available at:
-   - `/Users/zer0pa-build/ZPE Multimodality/touch/source/`
+   - `<WORKSPACE>/ZPE Multimodality/touch/source/`
 2. Mental source available at:
-   - `/Users/zer0pa-build/ZPE Multimodality/mental/source/`
+   - `<WORKSPACE>/ZPE Multimodality/mental/source/`
 
 Both include dedicated tests and runbooks in their originating workstreams.
 

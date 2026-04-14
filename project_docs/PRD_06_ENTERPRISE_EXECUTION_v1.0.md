@@ -3,7 +3,7 @@
 Status: ACTIVE  
 Owner: Zer0pa Lab  
 Date: 2026-02-19  
-Scope: `/Users/zer0pa-build/ZPE IoT/zpe-iot` and project memory docs in `/Users/zer0pa-build/ZPE IoT`
+Scope: `<REPO_ROOT>` and project memory docs in `<BUILD_HOME>/ZPE IoT`
 
 ---
 
@@ -121,7 +121,7 @@ Objective:
 
 Tasks:
 
-- [ ] E0.1 Confirm canonical code repo remains `/Users/zer0pa-build/ZPE IoT/zpe-iot`.
+- [ ] E0.1 Confirm canonical code repo remains `<REPO_ROOT>`.
 - [ ] E0.2 In root folder, create `REPO_TOPOLOGY.md` documenting:
   - root memory docs role,
   - canonical code repo path,
@@ -161,7 +161,7 @@ Tasks:
 Validation commands:
 
 ```bash
-cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/python"
+cd "<REPO_ROOT>/python"
 ../.venv/bin/python -m build
 python -m venv /tmp/zpe-enterprise-smoke
 source /tmp/zpe-enterprise-smoke/bin/activate
@@ -411,15 +411,15 @@ Gate E9 PASS when:
 
 ```bash
 # Baseline quality (must stay green)
-cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/core"
+cd "<REPO_ROOT>/core"
 cargo test
 cargo clippy -- -D warnings
 
-cd "/Users/zer0pa-build/ZPE IoT/zpe-iot/python"
+cd "<REPO_ROOT>/python"
 ../.venv/bin/python -m pytest -q
 ../.venv/bin/python -m build
 
-cd "/Users/zer0pa-build/ZPE IoT/zpe-iot"
+cd "<REPO_ROOT>"
 .venv/bin/python validation/destruct_tests/run_all_dts.py --strict-gates
 .venv/bin/python validation/benchmarks/run_benchmarks.py
 .venv/bin/python validation/benchmarks/generate_report.py

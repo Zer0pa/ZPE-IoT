@@ -1,8 +1,8 @@
 # IOT Wave-1 Release Readiness Report
 
 Date (UTC): 2026-02-20T18:18:45Z
-Repo: /Users/zer0pa-build/ZPE IoT/zpe-iot
-PRD: /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.md
+Repo: <REPO_ROOT>
+PRD: <REPO_ROOT>/docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.md
 
 ## IMC Freeze Validation
 - IMC contract version consumed: `wave1.0`
@@ -12,35 +12,35 @@ PRD: /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.m
 
 ## Phase Gate Summary
 - Phase 0: PASS
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase0_inventory.txt
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase0_baseline.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase0_inventory.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase0_baseline.txt
 - Phase 1: PASS
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase1_preflight_dryrun.txt
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase1_preflight_schema.json
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase1_preflight_report.json
+  - <REPO_ROOT>/validation/results/iot_wave1_phase1_preflight_dryrun.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase1_preflight_schema.json
+  - <REPO_ROOT>/validation/results/iot_wave1_phase1_preflight_report.json
 - Phase 2: PASS
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase2_build_clean.txt
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase2_fresh_env_smoke.txt
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase2_checksums.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase2_build_clean.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase2_fresh_env_smoke.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase2_checksums.txt
 - Phase 3: PASS
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase3_golden_packets.txt
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase3_malformed_behavior.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase3_golden_packets.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase3_malformed_behavior.txt
 - Phase 4: PASS
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase4_security_scan.txt
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase4_sbom_manifest.txt
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase4_release_attestation.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase4_security_scan.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase4_sbom_manifest.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase4_release_attestation.txt
 - Phase 5: PASS
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/family/IOT_IMC_ALIGNMENT_REPORT.md
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/family/IOT_COMPATIBILITY_VECTOR.json
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/family/IOT_RELEASE_NOTE_FOR_COORDINATION.md
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase5_alignment.txt
+  - <REPO_ROOT>/docs/family/IOT_IMC_ALIGNMENT_REPORT.md
+  - <REPO_ROOT>/docs/family/IOT_COMPATIBILITY_VECTOR.json
+  - <REPO_ROOT>/docs/family/IOT_RELEASE_NOTE_FOR_COORDINATION.md
+  - <REPO_ROOT>/validation/results/iot_wave1_phase5_alignment.txt
 - Phase 6: PASS
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase6_rc_rehearsal.txt
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase6_preflight_report.json
-  - /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase6_preflight_schema.json
+  - <REPO_ROOT>/validation/results/iot_wave1_phase6_rc_rehearsal.txt
+  - <REPO_ROOT>/validation/results/iot_wave1_phase6_preflight_report.json
+  - <REPO_ROOT>/validation/results/iot_wave1_phase6_preflight_schema.json
 
 ## P0 Gate Outcomes (Phase 6 preflight)
-Source: /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/iot_wave1_phase6_preflight_report.json
+Source: <REPO_ROOT>/validation/results/iot_wave1_phase6_preflight_report.json
 - C01_RUST_TEST: PASS
 - C02_RUST_CLIPPY: PASS
 - C03_PYTEST: PASS
@@ -67,15 +67,15 @@ Preflight summary:
 - critical_failures: 0
 
 ## Strict DT Evidence Snapshot
-- Latest strict DT artifact: /Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/dt_results_20260220T201254.json
+- Latest strict DT artifact: <REPO_ROOT>/validation/results/dt_results_20260220T201254.json
 - Strict mode: true
 - Result count: 27
 - Summary: PASS=27, FAIL=0, SKIPPED=0, BLOCKED=0, NOT_IMPLEMENTED=0, TIMEOUT=0
 
 ## Family Coordination Outputs
-- /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/family/IOT_IMC_ALIGNMENT_REPORT.md
-- /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/family/IOT_COMPATIBILITY_VECTOR.json
-- /Users/zer0pa-build/ZPE IoT/zpe-iot/docs/family/IOT_RELEASE_NOTE_FOR_COORDINATION.md
+- <REPO_ROOT>/docs/family/IOT_IMC_ALIGNMENT_REPORT.md
+- <REPO_ROOT>/docs/family/IOT_COMPATIBILITY_VECTOR.json
+- <REPO_ROOT>/docs/family/IOT_RELEASE_NOTE_FOR_COORDINATION.md
 
 ## Unresolved Blockers / Risks
 - External publishing and outreach are intentionally deferred by policy.

@@ -16,8 +16,8 @@ Read order for this phase:
 4. `proofs/artifacts/WAVE2_GPD_BRIEF_20260320.md`
 5. `proofs/FINAL_STATUS.md`
 6. `PUBLIC_AUDIT_LIMITS.md`
-7. `/Users/Zer0pa/ZPE/ZPE IoT/team_status_packet_2026-03-20/00_STATUS_AND_AUGMENTATION_SUMMARY.md`
-8. `/Users/Zer0pa/ZPE/ZPE IoT/.gpd/research-map/CONCERNS.md`
+7. `<WORKSPACE>/ZPE IoT/team_status_packet_2026-03-20/00_STATUS_AND_AUGMENTATION_SUMMARY.md`
+8. `<WORKSPACE>/ZPE IoT/.gpd/research-map/CONCERNS.md`
 
 ## Established March 20 Baseline
 

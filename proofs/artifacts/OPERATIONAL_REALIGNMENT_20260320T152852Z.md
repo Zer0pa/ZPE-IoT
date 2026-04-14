@@ -2,8 +2,8 @@
 
 Timestamp: 2026-03-20T15:28:52Z
 Lane: ZPE IoT
-Outer workspace: `/Users/Zer0pa/ZPE/ZPE IoT`
-Inner repo: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot`
+Outer workspace: `<WORKSPACE>/ZPE IoT`
+Inner repo: `<REPO_ROOT>`
 Authority repo: inner repo only
 Branch: `main`
 Active gate: release preflight blocker realignment for `C07_SBOM_RELEASE_MANIFEST` and `C10_CHEMOSENSE_CLI_SMOKE`
@@ -25,7 +25,7 @@ Active gate: release preflight blocker realignment for `C07_SBOM_RELEASE_MANIFES
   - reinstalling `cyclonedx-bom` inside the inner repo venv
   - reinstalling the editable `zpe-iot` Python package with dev extras
 - verified the repaired wrappers now resolve to:
-  - `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/.venv/bin/python`
+  - `<REPO_ROOT>/.venv/bin/python`
 - reran the previously failing `C10` CLI smoke locally and captured a file-backed result
 - reran the `C07` release artifact generator locally and produced fresh manifest artifacts
 - logged this operational run to Comet
@@ -33,13 +33,13 @@ Active gate: release preflight blocker realignment for `C07_SBOM_RELEASE_MANIFES
 ## Evidence
 
 - `C10` local smoke output:
-  - `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/chemosense_cli_smoke_20260320T164200.json`
+  - `<REPO_ROOT>/validation/results/chemosense_cli_smoke_20260320T164200.json`
 - `C07` local SBOM command output:
-  - `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/sbom_python_20260320T000000.json`
+  - `<REPO_ROOT>/validation/results/sbom_python_20260320T000000.json`
 - `C07` local release artifact generation:
-  - `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/sbom_20260320T152736.json`
-  - `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/license_manifest_20260320T152736.json`
-  - `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/release_manifest_20260320T152736.json`
+  - `<REPO_ROOT>/validation/results/sbom_20260320T152736.json`
+  - `<REPO_ROOT>/validation/results/license_manifest_20260320T152736.json`
+  - `<REPO_ROOT>/validation/results/release_manifest_20260320T152736.json`
 - Comet run:
   - `https://www.comet.com/zer0pa/zpe-iot/0b858d24ac3d469e8f0e789471182290`
 

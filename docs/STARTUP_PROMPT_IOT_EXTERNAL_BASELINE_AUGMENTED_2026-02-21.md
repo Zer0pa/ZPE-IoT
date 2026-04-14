@@ -1,8 +1,8 @@
 # Startup Prompt: IoT External Baseline + Codec Augmentation Agent
 
 Date: 2026-02-21
-Scope root: `/Users/zer0pa-build/ZPE IoT/zpe-iot`
-PRD to execute first: `/Users/zer0pa-build/ZPE IoT/zpe-iot/docs/PRD_IOT_EXTERNAL_BASELINE_AND_DT09_2026-02-20.md`
+Scope root: `<REPO_ROOT>`
+PRD to execute first: `<REPO_ROOT>/docs/PRD_IOT_EXTERNAL_BASELINE_AND_DT09_2026-02-20.md`
 
 ## Mission
 Execute the augmented IoT baseline-and-augmentation wave end-to-end with evidence-first discipline:
@@ -14,7 +14,7 @@ Execute the augmented IoT baseline-and-augmentation wave end-to-end with evidenc
 ## Hard Rules
 1. Read the PRD fully before any code edits.
 2. Runbook-first is mandatory: extend runbooks before coding.
-3. Stay lane-local: edit only inside `/Users/zer0pa-build/ZPE IoT/zpe-iot`.
+3. Stay lane-local: edit only inside `<REPO_ROOT>`.
 4. Do not relax thresholds to force PASS.
 5. No claim upgrades without direct artifact evidence.
 6. If blocked, classify using `IMP-LICENSE`, `IMP-ACCESS`, `IMP-COMPUTE`, `IMP-STORAGE`, or `IMP-NOCODE` with command/error proof.
@@ -35,7 +35,7 @@ Execute the augmented IoT baseline-and-augmentation wave end-to-end with evidenc
 
 ## Mandatory Artifacts
 Output folder must be:
-`/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/2026-02-21_iot_external_baseline_augmented/`
+`<REPO_ROOT>/validation/results/2026-02-21_iot_external_baseline_augmented/`
 
 Required files:
 1. `handoff_manifest.json`

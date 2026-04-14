@@ -17,8 +17,17 @@
     "Universal compressor dominance (DS-12 competitor win, DS-11 blocked)",
     "Lossless reconstruction (bounded-lossy by design)",
     "Runtime coupling to ZPE-IMC",
-    "Multi-platform wheel release"
+    "Multi-platform wheel release",
+    "Direct Gorilla parity (Gorilla-proxy comparator is a simplified XOR+zlib proxy, not Facebook's production codec)",
+    "Unlimited stream length (65,536-sample hard cap via 2-byte header; ~16 min at 60 Hz)",
+    "NaN/Inf tolerance (non-finite inputs cause codec failure)"
   ],
+  "benchmark_methodology": {
+    "cr_denominator": "float64 (8 bytes/sample) raw size",
+    "cr_note": "Against float32 baselines, ratios are approximately half",
+    "gorilla_proxy": "Simplified ~25-line XOR-delta + zlib proxy inspired by Facebook Gorilla; not the production codec",
+    "lossy_vs_lossless": "ZPE-IoT is bounded-lossy; baselines (zstd, LZ4, zlib, Gorilla-proxy) are lossless"
+  },
   "family_position": "Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer.",
   "license": "LicenseRef-Zer0pa-SAL-6.2",
   "license_surface": "Free below $100M annual revenue",

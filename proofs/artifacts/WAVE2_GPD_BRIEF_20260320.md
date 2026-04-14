@@ -28,12 +28,12 @@ The current stack is Rust core -> C ABI -> Python SDK -> CLI. The work is not to
 
 Read in this order:
 
-1. `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/release_preflight_report_20260320T154022.json`
-2. `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/dt_results_20260320T174518.json`
-3. `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/proofs/FINAL_STATUS.md`
-4. `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/PUBLIC_AUDIT_LIMITS.md`
-5. `/Users/Zer0pa/ZPE/ZPE IoT/team_status_packet_2026-03-20/00_STATUS_AND_AUGMENTATION_SUMMARY.md`
-6. `/Users/Zer0pa/ZPE/ZPE IoT/.gpd/research-map/CONCERNS.md`
+1. `<REPO_ROOT>/validation/results/release_preflight_report_20260320T154022.json`
+2. `<REPO_ROOT>/validation/results/dt_results_20260320T174518.json`
+3. `<REPO_ROOT>/proofs/FINAL_STATUS.md`
+4. `<REPO_ROOT>/PUBLIC_AUDIT_LIMITS.md`
+5. `<WORKSPACE>/ZPE IoT/team_status_packet_2026-03-20/00_STATUS_AND_AUGMENTATION_SUMMARY.md`
+6. `<WORKSPACE>/ZPE IoT/.gpd/research-map/CONCERNS.md`
 
 ## Current Verified State As Of 2026-03-20
 

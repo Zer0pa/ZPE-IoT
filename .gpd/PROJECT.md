@@ -56,40 +56,40 @@ Can ZPE-IoT turn the bounded March 21, 2026 wedge into a cleaner technical closu
 
 ### Active Anchor Registry
 
-- `ref-preflight-20260320`: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/release_preflight_report_20260320T154022.json`
+- `ref-preflight-20260320`: `<REPO_ROOT>/validation/results/release_preflight_report_20260320T154022.json`
   - Why it matters: Defines the live release-preflight authority surface.
   - Carry forward: `planning`, `execution`, `verification`, `writing`
   - Required action: `read`, `compare`, `cite`
-- `ref-dt-20260320`: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/dt_results_20260320T174518.json`
+- `ref-dt-20260320`: `<REPO_ROOT>/validation/results/dt_results_20260320T174518.json`
   - Why it matters: Confirms strict DT closure on March 20, 2026.
   - Carry forward: `planning`, `execution`, `verification`, `writing`
   - Required action: `read`, `compare`, `cite`
-- `ref-bench-e1-20260320`: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/validation/results/bench_summary_E1_real_public_20260320T174720.json`
+- `ref-bench-e1-20260320`: `<REPO_ROOT>/validation/results/bench_summary_E1_real_public_20260320T174720.json`
   - Why it matters: Defines the current benchmark authority surface, including `mean CR 4.3691x`, `wins 6/8`, and the `DS-01` / `DS-05` losses.
   - Carry forward: `planning`, `execution`, `verification`, `writing`
   - Required action: `read`, `compare`, `cite`
-- `ref-wave2-brief`: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/proofs/artifacts/WAVE2_GPD_BRIEF_20260320.md`
+- `ref-wave2-brief`: `<REPO_ROOT>/proofs/artifacts/WAVE2_GPD_BRIEF_20260320.md`
   - Why it matters: Preserves the user brief and the anti-proxy framing.
   - Carry forward: `planning`, `execution`
   - Required action: `read`, `use`
-- `ref-public-audit`: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/PUBLIC_AUDIT_LIMITS.md`
+- `ref-public-audit`: `<REPO_ROOT>/PUBLIC_AUDIT_LIMITS.md`
   - Why it matters: Captures the stale blocked-state surface that must now be reconciled.
   - Carry forward: `planning`, `execution`, `verification`
   - Required action: `read`, `compare`, `avoid`
-- `ref-concerns-map`: `/Users/Zer0pa/ZPE/ZPE IoT/.gpd/research-map/CONCERNS.md`
+- `ref-concerns-map`: `<WORKSPACE>/ZPE IoT/.gpd/research-map/CONCERNS.md`
   - Why it matters: Preserves the outer commercial-wedge concerns and forbidden-proxy discipline.
   - Carry forward: `planning`, `execution`, `verification`, `writing`
   - Required action: `read`, `use`
-- `ref-team-status-summary`: `/Users/Zer0pa/ZPE/ZPE IoT/team_status_packet_2026-03-20/00_STATUS_AND_AUGMENTATION_SUMMARY.md`
+- `ref-team-status-summary`: `<WORKSPACE>/ZPE IoT/team_status_packet_2026-03-20/00_STATUS_AND_AUGMENTATION_SUMMARY.md`
   - Why it matters: Supplies the current internal status framing and augmentation priorities.
   - Carry forward: `planning`, `execution`, `writing`
   - Required action: `read`, `use`
 
 ### Carry-Forward Inputs
 
-- `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/proofs/artifacts/WAVE2_GPD_BRIEF_20260320.md`
-- `/Users/Zer0pa/ZPE/ZPE IoT/team_status_packet_2026-03-20/00_STATUS_AND_AUGMENTATION_SUMMARY.md`
-- `/Users/Zer0pa/ZPE/ZPE IoT/team_status_packet_2026-03-20/04_BENCHMARKS.md`
+- `<REPO_ROOT>/proofs/artifacts/WAVE2_GPD_BRIEF_20260320.md`
+- `<WORKSPACE>/ZPE IoT/team_status_packet_2026-03-20/00_STATUS_AND_AUGMENTATION_SUMMARY.md`
+- `<WORKSPACE>/ZPE IoT/team_status_packet_2026-03-20/04_BENCHMARKS.md`
 - March 20 preflight, DT, and E1 authority artifacts
 
 ### Skeptical Review
@@ -163,7 +163,7 @@ Internal authority packet and commercial diligence artifacts for ZPE-IoT. If the
 
 ### Computational Environment
 
-Primary execution environment is the local Mac M1 Air workspace at `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot`, with disk pressure treated as a real constraint. Clean-environment checks must stay compact and reproducible.
+Primary execution environment is the local Mac M1 Air workspace at `<REPO_ROOT>`, with disk pressure treated as a real constraint. Clean-environment checks must stay compact and reproducible.
 
 ## Notation And Conventions
 

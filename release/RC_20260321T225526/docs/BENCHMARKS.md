@@ -7,7 +7,7 @@
 
 ## Methodology
 - Benchmarks run on 11 datasets (DS-01, DS-02, DS-03, DS-04, DS-05, DS-06, DS-07, DS-08, DS-09, DS-10, DS-12) with identical raw float64 inputs for all compressors.
-- Comparators: zstd(level=3), LZ4, zlib(level=6), Gorilla-proxy.
+- Comparators: zstd(level=3), LZ4, zlib(level=6), Gorilla-proxy (XOR+zlib).
 - Fidelity metric in benchmark table: `NRMSE(window-normalized)`
 - Encode/decode pathway: `zpe:encode_to_packet_bytes_then_decode_from_packet_bytes; baselines:compress_raw_bytes_then_decompress_raw_bytes`
 - Iterations: 5 (warmup 1)
@@ -22,7 +22,11 @@
 
 ## Detailed Results
 
-| Dataset | Evidence | zpe-iot CR | zpe-iot NRMSE(window-normalized) | zstd CR | LZ4 CR | zlib CR | Gorilla CR | Winner |
+**Gorilla-proxy disclosure:** The "Gorilla-proxy" comparator is a simplified ~25-line XOR-delta + zlib implementation inspired by Facebook Gorilla's XOR encoding approach. It is **not** Facebook's production Gorilla time-series codec.
+
+**Baseline methodology:** All compression ratios use float64 (8 bytes/sample) as the raw-size denominator. Against a float32 baseline, ratios would be approximately half. ZPE-IoT is bounded-lossy; baselines are lossless.
+
+| Dataset | Evidence | zpe-iot CR | zpe-iot NRMSE(window-normalized) | zstd CR | LZ4 CR | zlib CR | Gorilla-proxy CR | Winner |
 |---|---|---:|---:|---:|---:|---:|---:|---|
 | DS-01 | E1 | 6.18 | 0.0029 | 4.07 | 2.49 | 4.26 | 4.17 | zpe-iot |
 | DS-02 | E1 | 6.40 | 0.0151 | 1.70 | 1.59 | 1.69 | 1.68 | zpe-iot |

@@ -1,10 +1,10 @@
 # Repo Technical Alignment Plan
 
 Date: 2026-03-21
-Repo: /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot
+Repo: <REPO_ROOT>
 Instruction Surface:
-- /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/proofs/runbooks/REPO_TECHNICAL_ALIGNMENT_EXECUTION_PROMPT.md
-- /Users/Zer0pa/ZPE/ZPE IoT/zpe-iot/proofs/runbooks/REPO_TECHNICAL_EXECUTION_SUPPLEMENT.md
+- <REPO_ROOT>/proofs/runbooks/REPO_TECHNICAL_ALIGNMENT_EXECUTION_PROMPT.md
+- <REPO_ROOT>/proofs/runbooks/REPO_TECHNICAL_EXECUTION_SUPPLEMENT.md
 
 ## Classification Hypothesis
 

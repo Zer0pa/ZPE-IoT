@@ -1,7 +1,7 @@
 # Docs Falsification Report
 
 Date: 2026-03-22
-Repo: `/Users/Zer0pa/ZPE/ZPE IoT/zpe-iot`
+Repo: `<REPO_ROOT>`
 
 ## Unsupported Claims Removed Or Downgraded
 

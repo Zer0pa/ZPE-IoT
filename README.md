@@ -51,9 +51,13 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 | zstd (l3) | 2.87× mean (DS-01..DS-10) | DS-12: 5957.82× — zstd wins the outlier |
 | LZ4 | 1.00–2.91× (DS-01..DS-10) | DS-12: 234.06× |
 | zlib (l6) | 1.05–7.02× (DS-01..DS-10) | DS-12: 879.68× |
-| Gorilla-proxy | 1.04–6.22× (DS-01..DS-10) | DS-12: 814.11× |
+| Gorilla-proxy (XOR+zlib) | 1.04–6.22× (DS-01..DS-10) | DS-12: 814.11× |
 
 **DS-12 outlier disclosure:** DS-12 is a high-redundancy dataset where general-purpose compressors vastly outperform ZPE-IoT (e.g. zstd achieves 5957.82× vs ZPE's 120.47×). Including DS-12 inflates ZPE's mean to 17.16× but inflates competitors even more, making the all-datasets mean misleading for both sides. The headline 6.65× (DS-01..DS-10) is the honest comparison surface. ZPE-IoT does not claim universal compressor dominance.
+
+**Gorilla-proxy disclosure:** The "Gorilla-proxy" comparator is a simplified ~25-line XOR-delta + zlib implementation inspired by Facebook Gorilla's XOR encoding approach. It is **not** Facebook's production Gorilla time-series codec. See `validation/benchmarks/bench_vs_gorilla.py` for the full implementation.
+
+**Baseline methodology:** All compression ratios use float64 (8 bytes/sample) as the raw-size denominator. Against a float32 (4 bytes/sample) baseline, ratios would be approximately half the reported values. ZPE-IoT is a bounded-lossy codec; general-purpose baselines (zstd, LZ4, zlib) are lossless.
 
 ## What We Prove
 
@@ -71,6 +75,9 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 - No claim of PyPI publication readiness
 - No claim of EnOcean or proprietary protocol support
 - No claim of MQTT/LoRaWAN production bridge
+- No claim of direct Gorilla parity — our Gorilla-proxy comparator is a simplified XOR+zlib implementation, not Facebook's production Gorilla codec
+- No claim of unlimited stream length — codec has a 65,536-sample hard cap (2-byte header); approximately 16 minutes at 60 Hz
+- No claim of NaN/Inf tolerance — non-finite floating-point inputs cause codec failure
 
 <p>
   <img src=".github/assets/readme/section-bars/open-risks-non-blocking.svg" alt="OPEN RISKS (NON-BLOCKING)" width="100%">
@@ -85,6 +92,10 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 | Comparator honesty | ZPE-IoT does not win every slice; `DS-12` is a competitor win on the current E1 real-public surface. |
 | Native scope | Local arm64 macOS wheel install is verified; the multi-platform publish workflow exists but has not been executed as a public release event. |
 | Fidelity boundary | ZPE-IoT is a bounded-lossy codec. It is not a fit for strict lossless reconstruction requirements. |
+| Gorilla-proxy comparator | The Gorilla-proxy benchmark comparator is a simplified XOR+zlib proxy, not Facebook's production Gorilla codec. |
+| Stream length cap | Codec enforces a 65,536-sample hard cap (2-byte header). At 60 Hz this is ~16 minutes of data. |
+| Non-finite inputs | NaN and Inf values are not handled; they cause codec failure. |
+| CR denominator format | Compression ratios use float64 raw size as denominator. Against float32 baselines, ratios are approximately half. |
 
 <p>
   <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">

@@ -4,22 +4,22 @@ Status: Canonical as of 2026-02-19
 
 ## Canonical Paths
 
-- Project root (memory/governance docs): `/Users/zer0pa-build/ZPE IoT`
-- Canonical code repository: `/Users/zer0pa-build/ZPE IoT/zpe-iot`
+- Project root (memory/governance docs): `<BUILD_HOME>/ZPE IoT`
+- Canonical code repository: `<REPO_ROOT>`
 
 ## Roles
 
-- Root repository (`/Users/zer0pa-build/ZPE IoT`): append-only PRD/runbook memory and orchestration governance.
-- Code repository (`/Users/zer0pa-build/ZPE IoT/zpe-iot`): executable source, tests, benchmarks, release artifacts, and packaging logic.
+- Root repository (`<BUILD_HOME>/ZPE IoT`): append-only PRD/runbook memory and orchestration governance.
+- Code repository (`<REPO_ROOT>`): executable source, tests, benchmarks, release artifacts, and packaging logic.
 
 ## Sync and Export Policy
 
 - Source of truth for memory docs remains root files.
-- Release bundles use a synced snapshot in `/Users/zer0pa-build/ZPE IoT/zpe-iot/project_docs`.
+- Release bundles use a synced snapshot in `<REPO_ROOT>/project_docs`.
 - Snapshot is produced by:
 
 ```bash
-cd '/Users/zer0pa-build/ZPE IoT/zpe-iot'
+cd '<REPO_ROOT>'
 bash scripts/sync_memory_docs.sh
 ```
 
@@ -28,4 +28,4 @@ bash scripts/sync_memory_docs.sh
 
 ## Engineer Quick Answer
 
-Canonical product repo is: `/Users/zer0pa-build/ZPE IoT/zpe-iot`
+Canonical product repo is: `<REPO_ROOT>`

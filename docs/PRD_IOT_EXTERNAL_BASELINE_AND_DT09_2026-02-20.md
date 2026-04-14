@@ -1,7 +1,7 @@
 # PRD: IoT External Baseline + DT-09 Semantics Correction
 
 - Date: 2026-02-20
-- Repo root: `/Users/zer0pa-build/ZPE IoT/zpe-iot`
+- Repo root: `<REPO_ROOT>`
 - Priority: P0
 
 ## 1) Mission (Measurable)
@@ -10,9 +10,9 @@ Close remaining IoT engineering gap by:
 2. Correcting DT-09 gate semantics so native regressions cannot be masked.
 
 ## 2) Baseline Evidence Anchors
-1. `/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/destruct_tests/dt09_latency.py`
-2. `/Users/zer0pa-build/ZPE IoT/zpe-iot/docs/BENCHMARKS.md`
-3. `/Users/zer0pa-build/ZPE Multimodality/ZPE_IMC_TECHNICAL_DOSSIER.md`
+1. `<REPO_ROOT>/validation/destruct_tests/dt09_latency.py`
+2. `<REPO_ROOT>/docs/BENCHMARKS.md`
+3. `<WORKSPACE>/ZPE Multimodality/ZPE_IMC_TECHNICAL_DOSSIER.md`
 
 ## 3) In Scope / Out Of Scope
 In scope:
@@ -49,7 +49,7 @@ Plus payload-economics row:
 
 ## 7) Mandatory Artifacts
 Output folder:
-- `/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/<DATE>_iot_external_baseline_dt09/`
+- `<REPO_ROOT>/validation/results/<DATE>_iot_external_baseline_dt09/`
 
 Required:
 1. `handoff_manifest.json`
@@ -69,13 +69,13 @@ No latency-robustness closure claim without explicit python/native metric separa
 ## 10) Augmentation Addendum (2026-02-21, Evidence-Bound)
 Purpose:
 1. Extend this PRD from DT-09 semantics correction into full external-baseline closure and high-ROI codec augmentation.
-2. Convert all material claims in `/Users/zer0pa-build/ZPE Multimodality/ZPE IoT_ Research Concept & Agent Execution Document.md` into executable gates with reproducible artifacts.
+2. Convert all material claims in `<WORKSPACE>/ZPE Multimodality/ZPE IoT_ Research Concept & Agent Execution Document.md` into executable gates with reproducible artifacts.
 
 Evidence inputs (mandatory read before execution):
-1. `/Users/zer0pa-build/ZPE Multimodality/ZPE IoT_ Research Concept & Agent Execution Document.md`
-2. `/Users/zer0pa-build/ZPE Multimodality/ZPE_IMC_TECHNICAL_DOSSIER.md`
-3. `/Users/zer0pa-build/ZPE IoT/zpe-iot/docs/BENCHMARKS.md`
-4. `/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/destruct_tests/dt09_latency.py`
+1. `<WORKSPACE>/ZPE Multimodality/ZPE IoT_ Research Concept & Agent Execution Document.md`
+2. `<WORKSPACE>/ZPE Multimodality/ZPE_IMC_TECHNICAL_DOSSIER.md`
+3. `<REPO_ROOT>/docs/BENCHMARKS.md`
+4. `<REPO_ROOT>/validation/destruct_tests/dt09_latency.py`
 
 ## 11) Augmented Objectives (Measurable)
 1. Preserve DT-09 strict semantics closure from Sections 1-9 (non-negotiable).
@@ -153,7 +153,7 @@ Gate failure policy:
 
 ## 17) Mandatory Artifacts (Augmented Wave)
 Output folder:
-- `/Users/zer0pa-build/ZPE IoT/zpe-iot/validation/results/2026-02-21_iot_external_baseline_augmented/`
+- `<REPO_ROOT>/validation/results/2026-02-21_iot_external_baseline_augmented/`
 
 Required files:
 1. `handoff_manifest.json`
@@ -186,6 +186,6 @@ Rollback:
 3. Re-run failed gate and all downstream gates.
 
 ## 19) No-Scope-Escape Rule
-1. Work only inside `/Users/zer0pa-build/ZPE IoT/zpe-iot`.
+1. Work only inside `<REPO_ROOT>`.
 2. No edits in IMC/Bio repos for this wave.
 3. IMC integration claims must be referenced as external contract consumption only.

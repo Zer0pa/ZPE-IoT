@@ -77,7 +77,7 @@ import zlib
 
 - [x] **Action:**
 ```bash
-cd "/Users/zer0pa-build/ZPE IoT/zpe-iot"
+cd "<REPO_ROOT>"
 python validation/benchmarks/run_benchmarks.py
 ```
 

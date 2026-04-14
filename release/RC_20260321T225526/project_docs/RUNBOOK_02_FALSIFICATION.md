@@ -308,7 +308,7 @@ No divergence, no NaN, no zero-lock.
 
 - [x] **Action:**
 ```bash
-cd "/Users/zer0pa-build/ZPE IoT/zpe-iot"
+cd "<REPO_ROOT>"
 python validation/destruct_tests/run_all_dts.py
 ```
 
@@ -406,7 +406,7 @@ This addendum closes integrity gaps while preserving prior phase history.
 
 - [x] **Action:** Run strict full suite and regenerate baseline artifacts:
 ```bash
-cd "/Users/zer0pa-build/ZPE IoT/zpe-iot"
+cd "<REPO_ROOT>"
 python validation/destruct_tests/run_all_dts.py --strict-gates
 ```
 - [x] **Verify:** Mandatory DTs report PASS with zero SKIP in strict mode.
@@ -444,7 +444,7 @@ This addendum preserves Addendum A and appends stricter local closure steps.
 
 - [ ] **Action:** After B.1 and B.2 changes:
 ```bash
-cd "/Users/zer0pa-build/ZPE IoT/zpe-iot"
+cd "<REPO_ROOT>"
 python validation/destruct_tests/run_all_dts.py --strict-gates
 python validation/benchmarks/run_benchmarks.py
 python validation/destruct_tests/dt16_benchmark_regression.py --baseline-tag <tag>

@@ -46,7 +46,11 @@ This page promotes the current benchmark authority surface. `PT-6` is the harnes
 | Generated proxy split | Non-promoted proxy view | `../validation/results/bench_summary_E0_proxy_20260321T225305.json` |
 | Generated customer split | Placeholder only; no READY customer datasets are promoted here | `../validation/results/bench_summary_E2_real_customer_20260321T225305.json` |
 
-Comparator set: `zstd(level=3)`, `LZ4`, `zlib(level=6)`, `Gorilla-proxy`.
+Comparator set: `zstd(level=3)`, `LZ4`, `zlib(level=6)`, `Gorilla-proxy (XOR+zlib)`.
+
+**Gorilla-proxy disclosure:** The "Gorilla-proxy" comparator is a simplified ~25-line XOR-delta + zlib implementation inspired by Facebook Gorilla's XOR encoding approach. It is **not** Facebook's production Gorilla time-series codec. See `validation/benchmarks/bench_vs_gorilla.py` for the full source.
+
+**Baseline methodology:** All compression ratios use float64 (8 bytes/sample) as the raw-size denominator. Against a float32 baseline, ratios would be approximately half. ZPE-IoT is bounded-lossy; zstd, LZ4, zlib, and Gorilla-proxy are lossless.
 
 Winner rule: the highest compression ratio wins for a dataset, subject to the same decode path and fidelity measurement rules.
 
@@ -63,7 +67,7 @@ Iterations: `5` with warmup `1`.
 | DS-03 | E1 | 7.66 | 0.0060 | zlib `3.81` | zpe-iot |
 | DS-04 | E1 | 7.16 | 0.0440 | zstd/zlib `1.05` | zpe-iot |
 | DS-05 | E1 | 7.29 | 0.0041 | zlib `7.02` | zpe-iot |
-| DS-06 | E1 | 6.24 | 0.3175 | Gorilla `2.99` | zpe-iot |
+| DS-06 | E1 | 6.24 | 0.3175 | Gorilla-proxy `2.99` | zpe-iot |
 | DS-07 | E1 | 6.98 | 0.0174 | zstd/zlib `1.37` | zpe-iot |
 | DS-08 | E1 | 6.57 | 0.0299 | zstd `3.57` | zpe-iot |
 | DS-09 | E1 | 6.38 | 0.0055 | zstd `2.55` | zpe-iot |
@@ -88,6 +92,10 @@ Full comparator-by-dataset detail lives in the per-run summary JSON rather than 
 | `DS-12` | Competitor win on the current E1 real-public surface |
 | E2 | No active real-customer claim tier is promoted |
 | Fit | ZPE-IoT is not a strict lossless codec and is not a fit for already-compressed or cryptographically random payloads |
+| Gorilla-proxy comparator | Simplified XOR+zlib proxy, not Facebook's production Gorilla codec |
+| Stream length cap | 65,536-sample hard cap (2-byte header); ~16 minutes at 60 Hz |
+| Non-finite inputs | NaN and Inf values cause codec failure |
+| CR denominator | All ratios use float64 raw size as denominator; against float32 baselines, ratios are approximately half |
 
 <p>
   <img src="../.github/assets/readme/section-bars/running-the-test-suite.svg" alt="RUNNING THE TEST SUITE" width="100%">

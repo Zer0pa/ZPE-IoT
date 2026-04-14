@@ -233,7 +233,7 @@ Total overhead: 14 bytes fixed. For a 256-sample window at 5x compression, paylo
 ### 3.1 Project Layout
 
 ```
-/Users/zer0pa-build/ZPE IoT/                        ← PROJECT ROOT
+<WORKSPACE>/ZPE IoT/                        ← PROJECT ROOT
 ├── ZPE_IOT_SENSOR_COMPRESSION_SDK_PRD_v1.0.md        ← THIS FILE (source of truth)
 ├── RUNBOOK_00_MASTER.md                               ← Master orchestration
 ├── RUNBOOK_01_CORE_CODEC.md                           ← Phase 1: Core codec
@@ -1116,7 +1116,7 @@ The following hypotheses are additive workstreams and must pass strict falsifica
 Before any execution session proceeds past setup:
 
 1. Confirm working directory:
-   - `/Users/zer0pa-build/ZPE IoT/zpe-iot`
+   - `<REPO_ROOT>`
 2. Confirm required CLIs:
    - `gh` (required for GitHub auth checks)
    - `kaggle` (required for Kaggle API pulls)
