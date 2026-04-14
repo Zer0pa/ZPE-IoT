@@ -66,3 +66,4 @@ build-backend = "maturin"
 manifest-path = "python/native/Cargo.toml"
 python-source = "python"
 module-name = "zpe_iot._zpe_iot_native"
+include = ["LICENSE"]
