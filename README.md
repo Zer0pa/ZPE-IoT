@@ -13,7 +13,7 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ## What This Is
 
-17× sensor compression without losing fidelity or determinism. 27/27 destructive tests passed. Bounded-lossy with byte-identical replay. Edge-deployable.
+6.6× sensor compression without losing fidelity or determinism. 27/27 destructive tests passed. Bounded-lossy with byte-identical replay. Edge-deployable.
 
 ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for industrial IoT platform teams and edge telemetry vendors where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3. Every metric traces to committed artifacts under `validation/` and `proofs/`.
 
@@ -34,7 +34,7 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 
 | Metric | Value | Baseline |
 |--------|-------|----------|
-| COMPRESSION | 17.16× | vs zstd 1.05–5.83× |
+| COMPRESSION | 6.65× | DS-01..DS-10 mean vs zstd 2.87× |
 | E1_WINS | 10/11 | 11-dataset benchmark |
 | DT_PASS | 27/27 | strict determinism |
 | PREFLIGHT | 94.4% | managed preflight (17/18) |
@@ -47,19 +47,19 @@ The repo is **private-stage**. Install path and proof artifacts are real. Public
 
 | Tool | Compression Ratio | Notes |
 |------|-------------------|-------|
-| **ZPE-IoT** | **17.16× mean** | Active E1 surface, 10/11 wins |
-| zstd (l3) | 1.05–5.83× on DS-01..DS-10 | ZPE-IoT wins 10/11; DS-12 loss at 5957.82× vs 120.47× |
-| LZ4 | 1.00–2.91× on DS-01..DS-10 | ZPE-IoT wins 10/11; DS-12 loss at 234.06× vs 120.47× |
-| zlib (l6) | 1.05–7.02× on DS-01..DS-10 | ZPE-IoT wins 10/11; DS-12 loss at 879.68× vs 120.47× |
-| Gorilla-proxy | 1.04–6.22× on DS-01..DS-10 | ZPE-IoT wins 10/11; DS-12 loss at 814.11× vs 120.47× |
+| **ZPE-IoT** | **6.65× mean (DS-01..DS-10)** | Wins 10/11; DS-12 outlier: 120.47× |
+| zstd (l3) | 2.87× mean (DS-01..DS-10) | DS-12: 5957.82× — zstd wins the outlier |
+| LZ4 | 1.00–2.91× (DS-01..DS-10) | DS-12: 234.06× |
+| zlib (l6) | 1.05–7.02× (DS-01..DS-10) | DS-12: 879.68× |
+| Gorilla-proxy | 1.04–6.22× (DS-01..DS-10) | DS-12: 814.11× |
 
-DS-12 is the explicit competitor-outlier slice on the active March authority surface. ZPE-IoT does not claim universal compressor dominance.
+**DS-12 outlier disclosure:** DS-12 is a high-redundancy dataset where general-purpose compressors vastly outperform ZPE-IoT (e.g. zstd achieves 5957.82× vs ZPE's 120.47×). Including DS-12 inflates ZPE's mean to 17.16× but inflates competitors even more, making the all-datasets mean misleading for both sides. The headline 6.65× (DS-01..DS-10) is the honest comparison surface. ZPE-IoT does not claim universal compressor dominance.
 
 ## What We Prove
 
 > Auditable guarantees backed by committed proof artifacts. Start at `AUDITOR_PLAYBOOK.md`.
 
-- 17.16× mean compression across 11 real public sensor datasets
+- 6.65× mean compression across DS-01..DS-10 (10 non-outlier sensor datasets); DS-12 excluded from headline — see Competitive Benchmarks
 - 27/27 destructive tests passed
 - Byte-identical deterministic replay on tested corpus
 - Managed preflight 17 PASS / 0 FAIL / 1 DEFERRED
@@ -113,7 +113,7 @@ DS-12 is the explicit competitor-outlier slice on the active March authority sur
 | Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` | [Preflight report](validation/results/release_preflight_report_20260321T205127.json) |
 | Strict DT | `27/27 PASS` | [DT report](validation/results/dt_results_20260321T225304.json) |
 | Fresh install smoke | `PASS` on local arm64 macOS cold install | [Cold-install smoke](validation/results/fresh_env_smoke_20260321T205515/smoke.log) |
-| Benchmark authority | `E1`, `10/11 wins`, `17.16x` mean CR | [E1 summary](validation/results/bench_summary_E1_real_public_20260321T225305.json) |
+| Benchmark authority | `E1`, `10/11 wins`, `6.65×` DS-01..DS-10 mean CR | [E1 summary](validation/results/bench_summary_E1_real_public_20260321T225305.json) |
 | Known real blockers | `none` | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
 | Publication posture | `tag/index publication and outreach deferred pending explicit owner approval` | [Preflight report](validation/results/release_preflight_report_20260321T205127.json) |
 | Canonical evidence entry | `proofs/PROOF_INDEX.md` | [Proof index](proofs/PROOF_INDEX.md) |
