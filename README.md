@@ -218,6 +218,8 @@ Treat `project_docs/` and older `release/RC_*` bundles as lineage. Current repo 
 This package is part of the [Zer0pa ZPE](https://github.com/Zer0pa) codec portfolio.
 See also: zpe-xr, zpe-robotics, zpe-geo, zpe-finance, zpe-ink, zpe-multimodal, zpe-neuro, zpe-mocap, zpe-prosody, zpe-bio.
 
+**Observability:** [Comet dashboard](https://www.comet.com/zer0pa/zpe-iot/view/new/panels) (public)
+
 ## Who This Is For
 
 | | |
