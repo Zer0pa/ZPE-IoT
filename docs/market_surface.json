@@ -6,18 +6,19 @@
   "commercial_wedge": "Deterministic replay and bounded-lossy fidelity guarantees for industrial IoT sensor streams. 6.65× mean compression on real public datasets with 9 domain-aware presets.",
   "technical_wedge": "Rust-core 8-primitive geometric codec with Python bindings. 6.65× mean CR (DS-01..DS-10), 27/27 destructive-test pass, decode-deterministic replay.",
   "ideal_first_buyer": "Industrial IoT platform team or edge telemetry vendor",
-  "deployment_model": "SDK with Rust core and Python bindings",
+  "deployment_model": "Published Python package plus repo-local Rust core and Python bindings. Repo remains private-stage and is not presented as a full public release packet.",
   "proof_anchors": [
+    "validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md",
     "validation/results/bench_summary_E1_real_public_20260321T225305.json",
     "validation/results/dt_results_20260321T225304.json",
     "validation/results/release_preflight_report_20260321T205127.json"
   ],
   "not_claimed": [
-    "Public package availability (publication owner-deferred)",
+    "Full public release readiness beyond the published package surface",
     "Universal compressor dominance (DS-12 competitor win, DS-11 blocked)",
     "Lossless reconstruction (bounded-lossy by design)",
     "Runtime coupling to ZPE-IMC",
-    "Multi-platform wheel release",
+    "Multi-platform wheel closure",
     "Direct Gorilla parity (Gorilla-proxy comparator is a simplified XOR+zlib proxy, not Facebook's production codec)",
     "Unlimited stream length (65,536-sample hard cap via 2-byte header; ~16 min at 60 Hz)",
     "NaN/Inf tolerance (non-finite inputs cause codec failure)",

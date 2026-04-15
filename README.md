@@ -5,7 +5,7 @@
 
 # ZPE-IoT
 
-[Docs](docs/README.md) | [Proofs](proofs/PROOF_INDEX.md) | [API](docs/API.md) | [Benchmarks](docs/BENCHMARKS.md) | [Release](docs/RELEASE_CHECKLIST.md) | [Audit](AUDITOR_PLAYBOOK.md)
+[Architecture](docs/ARCHITECTURE.md) | [Readiness](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) | [API](docs/API.md) | [Benchmarks](proofs/artifacts/public_benchmarks/INDEX.json) | [Legal](docs/LEGAL_BOUNDARIES.md) | [Package](python/README.md)
 
 SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
@@ -17,9 +17,9 @@ Decode-deterministic sensor codec with 9 domain presets. 6.6× bounded-lossy com
 
 ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for industrial IoT platform teams and edge telemetry vendors where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3. Every metric traces to committed artifacts under `validation/` and `proofs/`.
 
-The repo is **private-stage**. Install path and proof artifacts are real. Published on PyPI as `zpe-iot`. Native wheels for Linux, macOS (Apple Silicon), and Windows.
+The repo is **private-stage**. Install path and proof artifacts are real. Published on PyPI as `zpe-iot`. Local arm64 macOS wheel install is verified; multi-platform wheel closure is not claimed here.
 
-**Not claimed:** public package availability, universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or multi-platform release.
+**Not claimed:** universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or protocol/runtime closure beyond the published package surface.
 
 <p>
   <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
@@ -43,7 +43,7 @@ The repo is **private-stage**. Install path and proof artifacts are real. Publis
 
 ## Competitive Benchmarks
 
-> Full competitive analysis: [`docs/BENCHMARKS.md`](docs/BENCHMARKS.md) | Source: [`proofs/artifacts/public_benchmarks/INDEX.json`](proofs/artifacts/public_benchmarks/INDEX.json)
+> Competitive benchmark evidence: [`proofs/artifacts/public_benchmarks/INDEX.json`](proofs/artifacts/public_benchmarks/INDEX.json)
 
 > **Framing disclosure:** ZPE-IoT is a bounded-lossy codec (NRMSE ≤ 0.004, bit_parity=false). All comparators below (zstd, zlib, LZ4, Gorilla-proxy) are lossless. Direct ratio comparison is informative but not apples-to-apples — ZPE-IoT achieves higher compression in part because it tolerates bounded reconstruction error that lossless codecs do not permit. Margins below ~1.5× (e.g. DS-05 NOAA: ZPE 7.29× vs zlib 7.02×) may fall within the lossy advantage alone.
 
@@ -66,7 +66,7 @@ Comparators above use default or moderate compression levels; at max compression
 
 ## What We Prove
 
-> Auditable guarantees backed by committed proof artifacts. Start at `AUDITOR_PLAYBOOK.md`.
+> Auditable guarantees backed by committed proof artifacts. Start at `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md`.
 
 - 6.65× mean compression across DS-01..DS-10 (10 non-outlier sensor datasets); DS-12 excluded from headline — see Competitive Benchmarks
 - 27/27 destructive tests passed
@@ -77,7 +77,7 @@ Comparators above use default or moderate compression levels; at max compression
 ## What We Don't Claim
 
 - No claim of lossless reconstruction (bounded-lossy codec)
-- Published on PyPI as `zpe-iot`
+- Broad deployment/runtime closure beyond the published package surface
 - No claim of EnOcean or proprietary protocol support
 - No claim of MQTT/LoRaWAN production bridge
 - No claim of direct Gorilla parity — our Gorilla-proxy comparator is a simplified XOR+zlib implementation, not Facebook's production Gorilla codec
@@ -114,26 +114,26 @@ Comparators above use default or moderate compression levels; at max compression
 | Verdict | STAGED |
 | Commit SHA | b345798d3c7f |
 | Confidence | 94.4% |
-| Source | proofs/FINAL_STATUS.md (removed) |
+| Source | validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md + validation/results/release_preflight_report_20260321T205127.json |
 
-> **Evaluators:** Ready for technical evaluation. `pip install -e .` in a clean venv. Contact hello@zer0pa.com for integration guidance.
+> **Evaluators:** `pip install zpe-iot` closes the public package surface. For repo-local evaluation, use `python -m pip install -e './python[dev]'` in a clean venv. Contact hello@zer0pa.com for integration guidance.
 
 ### Authority Notes
 
 | Field | Current truth | Evidence |
 |---|---|---|
-| As of | `2026-03-21` | Final status (removed) |
-| Repository URL | `https://github.com/Zer0pa/ZPE-IoT` | [Citation](CITATION.cff) |
-| Repo classification | `private-stage multi-surface codec repo` | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
-| Release unit | `python/` distribution with bundled native wheel; `core/` and `c/` remain sibling engineering surfaces | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
+| As of | `2026-03-21` | [Wave-1 readiness report](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) |
+| Repository URL | `https://github.com/Zer0pa/ZPE-IoT` | `https://github.com/Zer0pa/ZPE-IoT` |
+| Repo classification | `private-stage multi-surface codec repo` | [Wave-1 readiness report](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) |
+| Release unit | `python/` distribution with repo-local native build surface; `core/` and `c/` remain sibling engineering surfaces | [python/README.md](python/README.md) |
 | Acquisition surface | `pip install zpe-iot` from PyPI, or private repo checkout | [PyPI](https://pypi.org/project/zpe-iot/) |
 | Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` | [Preflight report](validation/results/release_preflight_report_20260321T205127.json) |
 | Strict DT | `27/27 PASS` | [DT report](validation/results/dt_results_20260321T225304.json) |
 | Fresh install smoke | `PASS` on local arm64 macOS cold install | [Cold-install smoke](validation/results/fresh_env_smoke_20260321T205515/smoke.log) |
 | Benchmark authority | `E1`, `10/11 wins`, `6.65×` DS-01..DS-10 mean CR | [E1 summary](validation/results/bench_summary_E1_real_public_20260321T225305.json) |
-| Known real blockers | `none` | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
+| Known real blockers | `none internal`; publication closure beyond the package surface remains outside this repo's staged gate | [Wave-1 readiness report](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) |
 | Publication posture | `published on PyPI as zpe-iot 0.1.0` | [PyPI](https://pypi.org/project/zpe-iot/) |
-| Canonical evidence entry | `proofs/PROOF_INDEX.md` | [Proof index](proofs/PROOF_INDEX.md) |
+| Canonical evidence entry | `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` | [Wave-1 readiness report](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) |
 
 `Confidence` is derived from the managed-preflight completeness score in [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json): `17 / 18 = 94.4%`.
 
@@ -154,8 +154,8 @@ Comparators above use default or moderate compression levels; at max compression
 
 | Path | State |
 |------|-------|
-| proofs/FINAL_STATUS.md | REMOVED |
-| proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md | VERIFIED |
+| validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md | VERIFIED |
+| proofs/artifacts/public_benchmarks/INDEX.json | VERIFIED |
 | validation/results/release_preflight_report_20260321T205127.json | VERIFIED |
 | validation/results/dt_results_20260321T225304.json | VERIFIED |
 | validation/results/bench_summary_E1_real_public_20260321T225305.json | VERIFIED |
@@ -175,7 +175,7 @@ Comparators above use default or moderate compression levels; at max compression
 |-------|-------|
 | Proof Anchors | 6 |
 | Modality Lanes | 9 |
-| Authority Source | proofs/FINAL_STATUS.md (removed) |
+| Authority Source | validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md |
 
 `Modality Lanes` counts the nine preset lanes exposed by `python/zpe_iot/presets.py`.
 
@@ -219,15 +219,15 @@ python validation/destruct_tests/run_all_dts.py --strict-gates
 
 | Route | Target |
 |---|---|
-| Documentation index | `docs/README.md` |
-| Canonical doc registry | `docs/DOC_REGISTRY.md` |
+| Documentation index | `docs/ARCHITECTURE.md` |
+| Canonical doc registry | `README.md` |
 | Architecture and runtime map | `docs/ARCHITECTURE.md` |
 | API and CLI details | `docs/API.md`, `docs/CLI_CONTRACT.md` |
-| Benchmark authority and boundaries | `docs/BENCHMARKS.md` |
-| Audit replay path | `AUDITOR_PLAYBOOK.md` |
-| Public audit boundary | `PUBLIC_AUDIT_LIMITS.md` |
+| Benchmark authority and boundaries | `proofs/artifacts/public_benchmarks/INDEX.json` |
+| Audit replay path | `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` |
+| Public audit boundary | `docs/LEGAL_BOUNDARIES.md` |
 | Contribution rules | `CONTRIBUTING.md` |
-| Support routing | `docs/FAQ.md` first, then `docs/SUPPORT.md`, then `SUPPORT.md` for repo-level policy |
+| Support routing | `docs/INTEGRATION_GUIDE.md`, then `docs/LEGAL_BOUNDARIES.md`, then `SUPPORT.md` for repo-level policy |
 | Security reporting | `SECURITY.md` |
 | Legal/release boundary | `docs/LEGAL_BOUNDARIES.md`, `RELEASING.md` |
 
