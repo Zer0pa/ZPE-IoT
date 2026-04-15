@@ -13,7 +13,7 @@ SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ## What This Is
 
-6.6× sensor compression without losing fidelity or determinism. 27/27 destructive tests passed. Bounded-lossy with decode-deterministic replay. Edge-deployable. Sensor deltas are encoded using an 8-direction amplitude gear codebook with log-magnitude quantisation and RLE.
+Decode-deterministic sensor codec with 9 domain presets. 6.6× bounded-lossy compression. 27/27 destructive tests passed. Edge-deployable. Sensor deltas are encoded using an 8-direction amplitude gear codebook with log-magnitude quantisation and RLE.
 
 ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for industrial IoT platform teams and edge telemetry vendors where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3. Every metric traces to committed artifacts under `validation/` and `proofs/`.
 
@@ -34,9 +34,9 @@ The repo is **private-stage**. Install path and proof artifacts are real. Publis
 
 | Metric | Value | Baseline |
 |--------|-------|----------|
+| DT_PASS | 27/27 | strict determinism |
 | COMPRESSION | 6.65× (bounded-lossy) | DS-01..DS-10 mean vs zstd 2.87× (lossless) |
 | E1_WINS | 10/11 | 11-dataset benchmark (bounded-lossy vs lossless comparators) |
-| DT_PASS | 27/27 | strict determinism |
 | PREFLIGHT | 94.4% | managed preflight (17/18) |
 
 > Source: [`proofs/FINAL_STATUS.md`](proofs/FINAL_STATUS.md), [`validation/results/bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json), [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json), [`validation/results/dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json)
