@@ -1,26 +1,51 @@
+# Build & distribution
+build/
+dist/
+target/
+*.egg-info/
+
+# Virtual environments
 .venv/
+.venv*/
+.codex-augment-venv/
+
+# Python caches
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .pytest_cache/
+.ruff_cache/
 .hypothesis/
-.DS_Store
 .coverage
 python/.coverage
 
+# OS artifacts
+.DS_Store
+
+# Rust build targets
 core/target/
 python/native/target/
+examples/rust/embedded_demo/target/
+
+# Python build
 python/build/
 python/dist/
-*.egg-info/
-/results/
-examples/rust/embedded_demo/target/
-examples/c/arduino_demo/*.o
+
+# Native extension
 python/zpe_iot/_zpe_iot_native*.so
+
+# Datasets
 validation/datasets/raw/
+
+# GPD backups
 .gpd/*.bak
 
+# Arduino build artifacts
+examples/c/arduino_demo/*.o
+
+# Validation results (keep gitkeep)
+/results/
 validation/results/**/*.png
 validation/results/**/*.json
 !validation/results/.gitkeep
