@@ -39,7 +39,7 @@ The repo is **private-stage**. Install path and proof artifacts are real. Publis
 | E1_WINS | 10/11 | 11-dataset benchmark (bounded-lossy vs lossless comparators) |
 | PREFLIGHT | 94.4% | managed preflight (17/18) |
 
-> Source: [`proofs/FINAL_STATUS.md`](proofs/FINAL_STATUS.md), [`validation/results/bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json), [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json), [`validation/results/dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json)
+> Source: [`validation/results/bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json), [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json), [`validation/results/dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json)
 
 ## Competitive Benchmarks
 
@@ -114,7 +114,7 @@ Comparators above use default or moderate compression levels; at max compression
 | Verdict | STAGED |
 | Commit SHA | b345798d3c7f |
 | Confidence | 94.4% |
-| Source | proofs/FINAL_STATUS.md |
+| Source | proofs/FINAL_STATUS.md (removed) |
 
 > **Evaluators:** Ready for technical evaluation. `pip install -e .` in a clean venv. Contact hello@zer0pa.com for integration guidance.
 
@@ -122,7 +122,7 @@ Comparators above use default or moderate compression levels; at max compression
 
 | Field | Current truth | Evidence |
 |---|---|---|
-| As of | `2026-03-21` | [Final status](proofs/FINAL_STATUS.md) |
+| As of | `2026-03-21` | Final status (removed) |
 | Repository URL | `https://github.com/Zer0pa/ZPE-IoT` | [Citation](CITATION.cff) |
 | Repo classification | `private-stage multi-surface codec repo` | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
 | Release unit | `python/` distribution with bundled native wheel; `core/` and `c/` remain sibling engineering surfaces | [Technical alignment proof](proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md) |
@@ -154,7 +154,7 @@ Comparators above use default or moderate compression levels; at max compression
 
 | Path | State |
 |------|-------|
-| proofs/FINAL_STATUS.md | VERIFIED |
+| proofs/FINAL_STATUS.md | REMOVED |
 | proofs/artifacts/REPO_TECHNICAL_ALIGNMENT_20260321.md | VERIFIED |
 | validation/results/release_preflight_report_20260321T205127.json | VERIFIED |
 | validation/results/dt_results_20260321T225304.json | VERIFIED |
@@ -175,7 +175,7 @@ Comparators above use default or moderate compression levels; at max compression
 |-------|-------|
 | Proof Anchors | 6 |
 | Modality Lanes | 9 |
-| Authority Source | proofs/FINAL_STATUS.md |
+| Authority Source | proofs/FINAL_STATUS.md (removed) |
 
 `Modality Lanes` counts the nine preset lanes exposed by `python/zpe_iot/presets.py`.
 
