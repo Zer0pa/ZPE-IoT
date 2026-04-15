@@ -54,6 +54,9 @@ The repo is **private-stage**. Install path and proof artifacts are real. Publis
 | LZ4 | 1.00–2.91× (DS-01..DS-10) | Lossless; DS-12: 234.06× |
 | zlib (l6) | 1.05–7.02× (DS-01..DS-10) | Lossless; DS-12: 879.68× |
 | Gorilla-proxy (XOR+zlib) | 1.04–6.22× (DS-01..DS-10) | Lossless; DS-12: 814.11× |
+| Brotli (q11) | 9.34× (DS-05) | Lossless; max-compression baseline |
+
+Comparators above use default or moderate compression levels; at max compression (brotli-11, zstd-22), lossless baselines can exceed ZPE-IoT on individual datasets.
 
 **DS-12 outlier disclosure:** DS-12 is a high-redundancy dataset where general-purpose compressors vastly outperform ZPE-IoT (e.g. zstd achieves 5957.82× vs ZPE's 120.47×). Including DS-12 inflates ZPE's mean to 17.16× but inflates competitors even more, making the all-datasets mean misleading for both sides. The headline 6.65× (DS-01..DS-10) is the honest comparison surface. ZPE-IoT does not claim universal compressor dominance.
 
