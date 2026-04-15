@@ -34,8 +34,8 @@ The repo is **private-stage**. Install path and proof artifacts are real. Publis
 
 | Metric | Value | Baseline |
 |--------|-------|----------|
-| COMPRESSION | 6.65× | DS-01..DS-10 mean vs zstd 2.87× |
-| E1_WINS | 10/11 | 11-dataset benchmark |
+| COMPRESSION | 6.65× (bounded-lossy) | DS-01..DS-10 mean vs zstd 2.87× (lossless) |
+| E1_WINS | 10/11 | 11-dataset benchmark (bounded-lossy vs lossless comparators) |
 | DT_PASS | 27/27 | strict determinism |
 | PREFLIGHT | 94.4% | managed preflight (17/18) |
 
@@ -45,13 +45,15 @@ The repo is **private-stage**. Install path and proof artifacts are real. Publis
 
 > Full competitive analysis: [`docs/BENCHMARKS.md`](docs/BENCHMARKS.md) | Source: [`proofs/artifacts/public_benchmarks/INDEX.json`](proofs/artifacts/public_benchmarks/INDEX.json)
 
+> **Framing disclosure:** ZPE-IoT is a bounded-lossy codec (NRMSE ≤ 0.004, bit_parity=false). All comparators below (zstd, zlib, LZ4, Gorilla-proxy) are lossless. Direct ratio comparison is informative but not apples-to-apples — ZPE-IoT achieves higher compression in part because it tolerates bounded reconstruction error that lossless codecs do not permit. Margins below ~1.5× (e.g. DS-05 NOAA: ZPE 7.29× vs zlib 7.02×) may fall within the lossy advantage alone.
+
 | Tool | Compression Ratio | Notes |
 |------|-------------------|-------|
-| **ZPE-IoT** | **6.65× mean (DS-01..DS-10)** | Wins 10/11; DS-12 outlier: 120.47× |
-| zstd (l3) | 2.87× mean (DS-01..DS-10) | DS-12: 5957.82× — zstd wins the outlier |
-| LZ4 | 1.00–2.91× (DS-01..DS-10) | DS-12: 234.06× |
-| zlib (l6) | 1.05–7.02× (DS-01..DS-10) | DS-12: 879.68× |
-| Gorilla-proxy (XOR+zlib) | 1.04–6.22× (DS-01..DS-10) | DS-12: 814.11× |
+| **ZPE-IoT** | **6.65× mean (DS-01..DS-10)** | Wins 10/11 (bounded-lossy vs lossless); DS-12 outlier: 120.47× |
+| zstd (l3) | 2.87× mean (DS-01..DS-10) | Lossless; DS-12: 5957.82× — zstd wins the outlier |
+| LZ4 | 1.00–2.91× (DS-01..DS-10) | Lossless; DS-12: 234.06× |
+| zlib (l6) | 1.05–7.02× (DS-01..DS-10) | Lossless; DS-12: 879.68× |
+| Gorilla-proxy (XOR+zlib) | 1.04–6.22× (DS-01..DS-10) | Lossless; DS-12: 814.11× |
 
 **DS-12 outlier disclosure:** DS-12 is a high-redundancy dataset where general-purpose compressors vastly outperform ZPE-IoT (e.g. zstd achieves 5957.82× vs ZPE's 120.47×). Including DS-12 inflates ZPE's mean to 17.16× but inflates competitors even more, making the all-datasets mean misleading for both sides. The headline 6.65× (DS-01..DS-10) is the honest comparison surface. ZPE-IoT does not claim universal compressor dominance.
 
