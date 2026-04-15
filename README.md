@@ -112,6 +112,7 @@ Comparators above use default or moderate compression levels; at max compression
 | Field | Value |
 |-------|-------|
 | Verdict | STAGED |
+| Release posture | Live work in progress; not a final official release |
 | Commit SHA | b345798d3c7f |
 | Confidence | 94.4% |
 | Source | validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md + validation/results/release_preflight_report_20260321T205127.json |
