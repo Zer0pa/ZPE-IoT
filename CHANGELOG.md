@@ -10,6 +10,12 @@ This file records repo-surface changes that materially affect current install, r
   <img src=".github/assets/readme/section-bars/release-notes.svg" alt="RELEASE NOTES" width="100%">
 </p>
 
+## 2026-04-17
+
+- reoriented the repo docs to the portfolio-not-platform ethos and always-in-beta public posture
+- removed stale stage-language, missing-file, and outdated proof-router references from the front-door docs
+- added repo-specific reorientation deliverables for the downstream license and audit passes
+
 ## 2026-03-21
 
 - aligned the technical release surface around the nested Python distribution and bundled native wheel path
@@ -20,10 +26,10 @@ This file records repo-surface changes that materially affect current install, r
 
 ## 2026-03-09
 
-- normalized the repo front door for private GitHub staging
+- normalized the repo front door for a live beta GitHub surface
 - added docs, proof, audit, governance, and suite-linkage surfaces
 - repaired active family-linkage paths to the current IMC repo location
-- downgraded repo-facing publication and readiness claims to match current evidence
+- tightened repo-facing publication and readiness claims to match current evidence
 
 ## 0.1.0 - 2026-02-13
 

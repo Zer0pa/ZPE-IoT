@@ -38,13 +38,14 @@ Repository URL: `https://github.com/Zer0pa/ZPE-IoT`
 ## Divergence Boundaries
 - IoT packet framing differs from IMC word-stream framing; alignment is contract-level, not byte-identical framing.
 - Experimental wrappers (`WI-1`, `ZH-1`) remain feature-flagged and non-default in wave-1.
-- Suite linkage is contract-based for private staging, not runtime-coupled to the IMC repo.
+- IMC acts as a coordination contract for this repo, not as a shared runtime substrate.
+- Suite linkage is contract-based for always-in-beta coordination, not runtime-coupled to the IMC repo.
 
 ## Artifacts
 - `docs/family/IOT_COMPATIBILITY_VECTOR.json`
 - `docs/family/IOT_RELEASE_NOTE_FOR_COORDINATION.md`
 - `validation/results/iot_wave1_phase5_alignment.txt`
-- `proofs/FINAL_STATUS.md`
+- `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md`
 - `validation/results/release_preflight_report_20260321T205127.json`
 
 <p>

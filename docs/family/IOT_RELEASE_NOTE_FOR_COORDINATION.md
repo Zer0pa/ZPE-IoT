@@ -31,11 +31,11 @@ Status Date: `2026-03-21`
 ## Downstream Expectations
 1. Bio/IMC/IoT coordination should use `docs/family/IOT_COMPATIBILITY_VECTOR.json` for wave-1 compatibility posture.
 2. Any packet-version or dispatch-semantics break must trigger wave-note and compatibility vector update.
-3. For private staging, treat IMC linkage as a compatibility contract, not as runtime repo coupling.
+3. For live beta coordination, treat IMC linkage as a compatibility contract, not as runtime repo coupling.
 
 ## Deferred Actions
-1. External publishing remains deferred pending explicit ratification.
-2. Public-release suite interlocks remain deferred until owner-ratified publication and final public truth alignment are complete.
+1. Broader public distribution and outreach beyond the live PyPI package remain owner-controlled.
+2. Wider release-ceremony interlocks remain deferred until owner-ratified public truth alignment is wanted.
 
 <p>
   <img src="../../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">

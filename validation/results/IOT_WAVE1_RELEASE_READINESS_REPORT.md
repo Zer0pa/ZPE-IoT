@@ -1,8 +1,8 @@
 # IOT Wave-1 Release Readiness Report
 
-Date (UTC): 2026-02-20T18:18:45Z
+Original wave rehearsal date (UTC): 2026-02-20T18:18:45Z
+Authority sync date (UTC): 2026-03-21T22:53:05Z
 Repo: <REPO_ROOT>
-PRD: <REPO_ROOT>/docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.md
 
 ## IMC Freeze Validation
 - IMC contract version consumed: `wave1.0`
@@ -10,77 +10,50 @@ PRD: <REPO_ROOT>/docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.md
 - Pin check result: PASS
 - Canonical coordination metric authority: IMC compatibility vector (`canonical_demo_metrics.total_words=844`)
 
-## Phase Gate Summary
-- Phase 0: PASS
-  - <REPO_ROOT>/validation/results/iot_wave1_phase0_inventory.txt
-  - <REPO_ROOT>/validation/results/iot_wave1_phase0_baseline.txt
-- Phase 1: PASS
-  - <REPO_ROOT>/validation/results/iot_wave1_phase1_preflight_dryrun.txt
-  - <REPO_ROOT>/validation/results/iot_wave1_phase1_preflight_schema.json
-  - <REPO_ROOT>/validation/results/iot_wave1_phase1_preflight_report.json
-- Phase 2: PASS
-  - <REPO_ROOT>/validation/results/iot_wave1_phase2_build_clean.txt
-  - <REPO_ROOT>/validation/results/iot_wave1_phase2_fresh_env_smoke.txt
-  - <REPO_ROOT>/validation/results/iot_wave1_phase2_checksums.txt
-- Phase 3: PASS
-  - <REPO_ROOT>/validation/results/iot_wave1_phase3_golden_packets.txt
-  - <REPO_ROOT>/validation/results/iot_wave1_phase3_malformed_behavior.txt
-- Phase 4: PASS
-  - <REPO_ROOT>/validation/results/iot_wave1_phase4_security_scan.txt
-  - <REPO_ROOT>/validation/results/iot_wave1_phase4_sbom_manifest.txt
-  - <REPO_ROOT>/validation/results/iot_wave1_phase4_release_attestation.txt
-- Phase 5: PASS
-  - <REPO_ROOT>/docs/family/IOT_IMC_ALIGNMENT_REPORT.md
-  - <REPO_ROOT>/docs/family/IOT_COMPATIBILITY_VECTOR.json
-  - <REPO_ROOT>/docs/family/IOT_RELEASE_NOTE_FOR_COORDINATION.md
-  - <REPO_ROOT>/validation/results/iot_wave1_phase5_alignment.txt
-- Phase 6: PASS
-  - <REPO_ROOT>/validation/results/iot_wave1_phase6_rc_rehearsal.txt
-  - <REPO_ROOT>/validation/results/iot_wave1_phase6_preflight_report.json
-  - <REPO_ROOT>/validation/results/iot_wave1_phase6_preflight_schema.json
+## Current Authority Anchors
+- Managed preflight: <REPO_ROOT>/validation/results/release_preflight_report_20260321T205127.json
+- Strict destructive tests: <REPO_ROOT>/validation/results/dt_results_20260321T225304.json
+- Real-public benchmark surface: <REPO_ROOT>/validation/results/bench_summary_E1_real_public_20260321T225305.json
+- Cold-install proof: <REPO_ROOT>/validation/results/fresh_env_smoke_20260321T205515/smoke.log
+- Release manifest: <REPO_ROOT>/validation/results/release_manifest_20260321T205457.json
+- License manifest: <REPO_ROOT>/validation/results/license_manifest_20260321T205457.json
+- SBOM surfaces: <REPO_ROOT>/validation/results/sbom_20260321T205457.json and <REPO_ROOT>/validation/results/sbom_python_20260321T205457.json
 
-## P0 Gate Outcomes (Phase 6 preflight)
-Source: <REPO_ROOT>/validation/results/iot_wave1_phase6_preflight_report.json
-- C01_RUST_TEST: PASS
-- C02_RUST_CLIPPY: PASS
-- C03_PYTEST: PASS
-- C04_STRICT_DT: PASS
-- C05_BENCH_SPLIT: PASS
-- C06_SECURITY_SCAN: PASS
-- C07_SBOM_RELEASE_MANIFEST: PASS
-- C08_PY_BUILD_WARNING_FREE: PASS
-- C09_FRESH_VENV_SMOKE: PASS
-- C10_CHEMOSENSE_CLI_SMOKE: PASS
-- C11_CHEMOSENSE_MODULE_SMOKE: PASS
-- C12_CHEMOSENSE_CONTRACT_TEST: PASS
-- C13_CHEMOSENSE_PERF_PROFILE: PASS
-- C14_CHEMOSENSE_BENCH_SUMMARY: PASS
-- C15_CHEMOSENSE_PROVENANCE: PASS
-- C16_RELEASE_BUNDLE: PASS
-- C17_MEMORY_DOC_SYNC: PASS
-- D01_DEFERRED_PUBLISH: DEFERRED (policy-controlled, non-critical)
+## Historical Wave Ledger
+- Phase 0..6 runbooks under `<REPO_ROOT>/validation/runbooks/` remain operator lineage from the February rehearsal.
+- Output paths inside those runbooks are historical capture points, not the front-door authority surface used by the current README and docs.
 
-Preflight summary:
+## Managed Gate Summary
+Source: <REPO_ROOT>/validation/results/release_preflight_report_20260321T205127.json
 - total checks: 18
 - pass: 17
 - fail: 0
 - critical_failures: 0
+- deferred only: `D01_DEFERRED_PUBLISH`
 
 ## Strict DT Evidence Snapshot
-- Latest strict DT artifact: <REPO_ROOT>/validation/results/dt_results_20260220T201254.json
+Source: <REPO_ROOT>/validation/results/dt_results_20260321T225304.json
 - Strict mode: true
 - Result count: 27
 - Summary: PASS=27, FAIL=0, SKIPPED=0, BLOCKED=0, NOT_IMPLEMENTED=0, TIMEOUT=0
 
-## Family Coordination Outputs
-- <REPO_ROOT>/docs/family/IOT_IMC_ALIGNMENT_REPORT.md
-- <REPO_ROOT>/docs/family/IOT_COMPATIBILITY_VECTOR.json
-- <REPO_ROOT>/docs/family/IOT_RELEASE_NOTE_FOR_COORDINATION.md
+## Benchmark Authority Snapshot
+Source: <REPO_ROOT>/validation/results/bench_summary_E1_real_public_20260321T225305.json
+- Headline surface: `6.65×` mean compression across `DS-01..DS-10`
+- Current real-public scoreline: `10/11` wins across 11 READY datasets
+- Honest outlier: `DS-12` is a real competitor win and stays disclosed
+- Honest blocker: `DS-11` remains blocked on source availability
+
+## Publication and Family Boundaries
+- PyPI package `zpe-iot==0.1.0` is live.
+- Local arm64 macOS cold-install proof is committed and cited above.
+- Broader multi-platform wheel closure and outreach remain owner-controlled.
+- IMC alignment is documentary and contractual, not runtime repo coupling.
 
 ## Unresolved Blockers / Risks
-- External publishing and outreach are intentionally deferred by policy.
-- No unresolved internal P0 gate failures.
+- No unresolved internal gate failures remain on the March authority surface.
+- Broader distribution closure beyond the current PyPI package and cited local cold-install proof remains outside this repo's current authority surface.
 
 ## Final Readiness Decision
-- READY_FOR_USER_RATIFICATION
-- Rationale: all Phase 0..6 gates passed; all critical (P0) checks are green in strict mode.
+- Useful now, improving continuously.
+- Rationale: the current March proof surface closes managed preflight, strict DT, benchmark disclosure, and cold-install validation without internal blockers.

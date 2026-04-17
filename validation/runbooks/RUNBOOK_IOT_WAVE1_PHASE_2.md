@@ -4,6 +4,8 @@ Created: 2026-02-20T17:38:50Z
 Phase: 2
 Status: IN_PROGRESS
 
+> Historical operator log. Output paths below reflect the February 2026 wave rehearsal, not the current front-door authority surface.
+
 ## Scope
 TBD from PRD phase 2.
 

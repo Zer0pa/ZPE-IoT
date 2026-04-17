@@ -5,6 +5,8 @@ PRD: <REPO_ROOT>/docs/PRD_IOT_WAVE1_RELEASE_REFINEMENT.md
 Scope root: <REPO_ROOT>
 IMC freeze: contract_version=wave1.0, vector_sha256=9c8b905f6c1d30d057955aa9adf0f7ff9139853494dca673e5fbe69f24fba10e
 
+> Historical operator log. The phase paths below reflect the February 2026 wave rehearsal. Current repo authority lives in `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` plus the March 21 proof anchors cited from `README.md`.
+
 ## Execution Protocol
 1. Runbook-first execution.
 2. Execute phases 0..6 in strict order.

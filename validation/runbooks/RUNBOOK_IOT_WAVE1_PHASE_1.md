@@ -4,6 +4,8 @@ Created: 2026-02-20T17:38:50Z
 Phase: 1
 Status: IN_PROGRESS
 
+> Historical operator log. Output paths below reflect the February 2026 wave rehearsal, not the current front-door authority surface.
+
 ## Scope
 TBD from PRD phase 1.
 
@@ -37,7 +39,7 @@ TBD from PRD phase 1.
 [PASS] C14_CHEMOSENSE_BENCH_SUMMARY: chemosense benchmark summary artifact generated
 [PASS] C15_CHEMOSENSE_PROVENANCE: chemosense provenance manifest verified
 [PASS] C16_RELEASE_BUNDLE: release RC bundle + bundle manifest hash generated
-[PASS] C17_MEMORY_DOC_SYNC: memory-doc snapshot synced into project_docs/
+[PASS] C17_MEMORY_DOC_SYNC: memory-doc snapshot synced into repo-lineage notes
 [DEFERRED] D01_DEFERRED_PUBLISH: external publishing steps
 Saved report: <REPO_ROOT>/validation/results/release_preflight_report_20260220T181630.json
 Summary: total=18 pass=17 fail=0 critical_failures=0 into checklist-driven executable gates via .

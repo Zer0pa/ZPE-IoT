@@ -8,13 +8,13 @@
   <img src="../.github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-This document defines the current software architecture boundary for the ZPE-IoT private-stage repo.
+This document defines the current software architecture boundary for the ZPE-IoT always-in-beta repo.
 
 Canonical anchors:
 
 - Repository: `https://github.com/Zer0pa/ZPE-IoT`
-- License: `MIT`
-- Current proof router: `../proofs/PROOF_INDEX.md`
+- Repo license surface: `../LICENSE` (`LicenseRef-Zer0pa-SAL-6.2`); Rust crate manifests remain local MIT metadata for now
+- Current proof router: `../validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` plus `../proofs/artifacts/public_benchmarks/INDEX.json`
 
 <p>
   <img src="../.github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
@@ -50,7 +50,7 @@ Canonical anchors:
 | Python CLI | `python/zpe_iot/cli.py` | Local CLI surface; contract details live in `CLI_CONTRACT.md` |
 | Native extension | `python/native/` | Bundled into the local arm64 wheel proof path |
 | Rust crate | `core/` | Canonical codec implementation and test surface |
-| Family compatibility | `family/*` | Documentary/static alignment to IMC `wave1.0` only |
+| Family compatibility | `family/*` | Documentary/static alignment to IMC `wave1.0` only; no shared runtime substrate is claimed |
 
 <p>
   <img src="../.github/assets/readme/section-bars/verification.svg" alt="VERIFICATION" width="100%">
@@ -62,7 +62,7 @@ Canonical anchors:
 | Strict destructive testing | `../validation/results/dt_results_20260321T225304.json` | Governing validation surface |
 | Benchmark authority | `../validation/results/bench_summary_E1_real_public_20260321T225305.json` | Promoted performance claim surface |
 | Native install proof | `../validation/results/fresh_env_smoke_20260321T205515/smoke.log` | Cold-install evidence for the local arm64 wheel |
-| Release bundle proof | `../release/RC_20260321T225526/bundle_manifest.json` | Current regenerated release packet |
+| Release manifest proof | `../validation/results/release_manifest_20260321T205457.json` | Current repo-local release manifest surface |
 
 <p>
   <img src="../.github/assets/readme/section-bars/no-change-guarantees.svg" alt="NO CHANGE GUARANTEES" width="100%">
@@ -70,7 +70,7 @@ Canonical anchors:
 
 The following boundaries remain explicit:
 
-- Public package-index publication is not claimed here.
+- PyPI package publication is live; broader multi-platform release guarantees beyond the cited cold-install proof are not claimed here.
 - ZPE-IoT aligns to ZPE-IMC by compatibility artifacts, not by runtime repo coupling.
 - The active E1 benchmark surface excludes `DS-11`, which remains explicitly blocked.
 - ZPE-IoT is a bounded-lossy codec and is not a strict lossless archive format.

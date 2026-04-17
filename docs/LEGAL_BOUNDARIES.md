@@ -10,10 +10,10 @@
 
 | Field | Current truth |
 |---|---|
-| License | `LicenseRef-Zer0pa-SAL-6.0` |
-| Citation surface | `../CITATION.cff` |
+| License | `LicenseRef-Zer0pa-SAL-6.2` |
+| Citation surface | `../README.md` plus the March proof anchors cited there |
 | Canonical repo URL | `https://github.com/Zer0pa/ZPE-IoT` |
-| Current package status | Private-stage repo and locally built artifacts only |
+| Current package status | Always-in-beta PyPI package is live; broader distribution guarantees remain owner-controlled |
 
 This file is a compact boundary note. The legal source of truth remains `../LICENSE`.
 
@@ -23,17 +23,16 @@ This file is a compact boundary note. The legal source of truth remains `../LICE
 
 The repo does not currently establish:
 
-- public PyPI availability
 - public crates.io availability
-- a public multi-platform wheel release
+- multi-platform wheel closure beyond the cited local arm64 cold-install proof
 - any production SLA beyond the cited repo artifacts
 
-Public publication and outreach remain owner-controlled.
+Broader release ceremony and outreach beyond the live PyPI package remain owner-controlled.
 
 | Need | Go to |
 |---|---|
 | Legal source of truth | `../LICENSE` |
-| Release decision boundary | `../RELEASING.md` |
+| Release decision boundary | `../validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` |
 | Family compatibility pin | `family/IOT_COMPATIBILITY_VECTOR.json` |
 | Family alignment note | `family/IOT_IMC_ALIGNMENT_REPORT.md` |
 
@@ -45,7 +44,7 @@ The family relationship to ZPE-IMC is documentary and contractual:
 
 - `docs/family/IOT_COMPATIBILITY_VECTOR.json` pins the IMC `wave1.0` contract
 - ZPE-IoT does not claim runtime repo coupling to ZPE-IMC
-- downstream consumers should pin to the family artifacts, not infer guarantees from internal implementation details
+- downstream consumers should pin to the family artifacts and current March proof anchors, not infer guarantees from internal implementation details
 
 <p>
   <img src="../.github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
