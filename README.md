@@ -33,9 +33,9 @@ Public posture is **always-in-beta**: useful now, improving continuously. `pip i
 | Metric | Value | Baseline |
 |--------|-------|----------|
 | DT_PASS | 27/27 | strict determinism |
-| COMPRESSION | 6.65× (bounded-lossy) | DS-01..DS-10 mean vs zstd 2.87× (lossless) |
-| E1_WINS | 10/11 | 11-dataset benchmark (bounded-lossy vs lossless comparators) |
+| SENSOR_PRESETS | 9 | temperature, vibration, accelerometer, pressure, GPS track, voltage, current, flow, generic |
 | PREFLIGHT | 94.4% | managed preflight (17/18) |
+| COMPRESSION | 6.65× (bounded-lossy) | DS-01..DS-10 mean vs zstd 2.87× (lossless) |
 
 > Source: [`validation/results/bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json), [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json), [`validation/results/dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json)
 
@@ -109,11 +109,11 @@ Comparators above use default or moderate compression levels; at max compression
 
 | Field | Value |
 |-------|-------|
-| Verdict | USEFUL_NOW |
+| Verdict | STAGED |
 | Release posture | Always-in-beta: useful now, improving continuously; not presented as a finished release line |
-| Commit SHA | e78501c7d52d |
+| Commit SHA | c6d1fbf631c5 |
 | Confidence | 94.4% |
-| Source | validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md + validation/results/release_preflight_report_20260321T205127.json |
+| Source | validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md |
 
 > **Evaluators:** `pip install zpe-iot` closes the public package surface. For repo-local evaluation, use `python -m pip install -e './python[dev]'` in a clean venv. Contact hello@zer0pa.com for integration guidance.
 
