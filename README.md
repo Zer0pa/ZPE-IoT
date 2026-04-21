@@ -112,31 +112,9 @@ Comparators above use default or moderate compression levels; at max compression
 | Field | Value |
 |-------|-------|
 | Verdict | STAGED |
-| Release posture | Live work in progress; not a final official release |
 | Commit SHA | b345798d3c7f |
 | Confidence | 94.4% |
-| Source | validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md + validation/results/release_preflight_report_20260321T205127.json |
-
-> **Evaluators:** `pip install zpe-iot` closes the public package surface. For repo-local evaluation, use `python -m pip install -e './python[dev]'` in a clean venv. Contact hello@zer0pa.com for integration guidance.
-
-### Authority Notes
-
-| Field | Current truth | Evidence |
-|---|---|---|
-| As of | `2026-03-21` | [Wave-1 readiness report](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) |
-| Repository URL | `https://github.com/Zer0pa/ZPE-IoT` | `https://github.com/Zer0pa/ZPE-IoT` |
-| Repo classification | `private-stage multi-surface codec repo` | [Wave-1 readiness report](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) |
-| Release unit | `python/` distribution with repo-local native build surface; `core/` and `c/` remain sibling engineering surfaces | [python/README.md](python/README.md) |
-| Acquisition surface | `pip install zpe-iot` from PyPI, or private repo checkout | [PyPI](https://pypi.org/project/zpe-iot/) |
-| Managed preflight | `17 PASS / 0 FAIL / 1 DEFERRED` | [Preflight report](validation/results/release_preflight_report_20260321T205127.json) |
-| Strict DT | `27/27 PASS` | [DT report](validation/results/dt_results_20260321T225304.json) |
-| Fresh install smoke | `PASS` on local arm64 macOS cold install | [Cold-install smoke](validation/results/fresh_env_smoke_20260321T205515/smoke.log) |
-| Benchmark authority | `E1`, `10/11 wins`, `6.65×` DS-01..DS-10 mean CR | [E1 summary](validation/results/bench_summary_E1_real_public_20260321T225305.json) |
-| Known real blockers | `none internal`; publication closure beyond the package surface remains outside this repo's staged gate | [Wave-1 readiness report](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) |
-| Publication posture | `published on PyPI as zpe-iot 0.1.0` | [PyPI](https://pypi.org/project/zpe-iot/) |
-| Canonical evidence entry | `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` | [Wave-1 readiness report](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) |
-
-`Confidence` is derived from the managed-preflight completeness score in [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json): `17 / 18 = 94.4%`.
+| Source | validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md |
 
 ## Tests and Verification
 
