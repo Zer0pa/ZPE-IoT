@@ -3,6 +3,7 @@ name = "zpe-iot-embedded-demo"
 version = "0.1.0"
 edition = "2021"
 
+license = "LicenseRef-Zer0pa-SAL-7.0"
 [dependencies]
 cortex-m-rt = "0.7"
 zpe-iot = { path = "../../../core", default-features = false, features = ["embedded"] }

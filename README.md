@@ -7,7 +7,7 @@
 
 [Architecture](docs/ARCHITECTURE.md) | [Readiness](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) | [API](docs/API.md) | [Benchmarks](proofs/artifacts/public_benchmarks/INDEX.json) | [Legal](docs/LEGAL_BOUNDARIES.md) | [Package](python/README.md)
 
-SAL v6.2 — free below $100M annual revenue. See [LICENSE](LICENSE).
+SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ---
 

@@ -10,7 +10,7 @@
 
 | Field | Current truth |
 |---|---|
-| License | `LicenseRef-Zer0pa-SAL-6.0` |
+| License | `LicenseRef-Zer0pa-SAL-7.0` |
 | Citation surface | `../CITATION.cff` |
 | Canonical repo URL | `https://github.com/Zer0pa/ZPE-IoT` |
 | Current package status | Private-stage repo and locally built artifacts only |

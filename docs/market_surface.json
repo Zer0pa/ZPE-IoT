@@ -31,7 +31,7 @@
     "lossy_vs_lossless": "ZPE-IoT is bounded-lossy; baselines (zstd, LZ4, zlib, Gorilla-proxy) are lossless"
   },
   "family_position": "Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer.",
-  "license": "LicenseRef-Zer0pa-SAL-6.2",
+  "license": "LicenseRef-Zer0pa-SAL-7.0",
   "license_surface": "Free below $100M annual revenue",
   "contact": "hello@zer0pa.com"
 }
