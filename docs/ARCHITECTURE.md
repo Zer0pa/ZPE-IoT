@@ -8,12 +8,12 @@
   <img src="../.github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
 </p>
 
-This document defines the current software architecture boundary for the ZPE-IoT private-stage repo.
+This document defines the current software architecture boundary for the ZPE-IoT repo.
 
 Canonical anchors:
 
 - Repository: `https://github.com/Zer0pa/ZPE-IoT`
-- License: `MIT`
+- License: `LicenseRef-Zer0pa-SAL-7.0`
 - Current proof router: `../proofs/PROOF_INDEX.md`
 
 <p>
