@@ -17,7 +17,7 @@ Decode-deterministic sensor codec with 9 domain presets. 6.6× bounded-lossy com
 
 ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for industrial IoT platform teams and edge telemetry vendors where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3. Every metric traces to committed artifacts under `validation/` and `proofs/`.
 
-The repo is **private-stage**. Install path and proof artifacts are real. Published on PyPI as `zpe-iot`. Local arm64 macOS wheel install is verified; multi-platform wheel closure is not claimed here.
+The repo is in active beta. Install path and proof artifacts are real. Published on PyPI as `zpe-iot`. Local arm64 macOS wheel install is verified; multi-platform wheel closure is not claimed here.
 
 **Not claimed:** universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or protocol/runtime closure beyond the published package surface.
 

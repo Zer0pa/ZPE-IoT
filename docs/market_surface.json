@@ -1,12 +1,12 @@
 {
   "repo_name": "ZPE-IoT",
   "repo_role": "product_candidate",
-  "status": "PRIVATE_STAGE",
+  "status": "ACTIVE_BETA",
   "plain_english_summary": "Deterministic sensor compression SDK for IoT time-series and chemosense streams.",
   "commercial_wedge": "Deterministic replay and bounded-lossy fidelity guarantees for industrial IoT sensor streams. 6.65× mean compression on real public datasets with 9 domain-aware presets.",
   "technical_wedge": "Rust-core 8-primitive geometric codec with Python bindings. 6.65× mean CR (DS-01..DS-10), 27/27 destructive-test pass, decode-deterministic replay.",
   "ideal_first_buyer": "Industrial IoT platform team or edge telemetry vendor",
-  "deployment_model": "Published Python package plus repo-local Rust core and Python bindings. Repo remains private-stage and is not presented as a full public release packet.",
+  "deployment_model": "Published Python package plus repo-local Rust core and Python bindings. Published on PyPI as `zpe-iot`; in active beta.",
   "proof_anchors": [
     "validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md",
     "validation/results/bench_summary_E1_real_public_20260321T225305.json",
@@ -31,7 +31,7 @@
     "lossy_vs_lossless": "ZPE-IoT is bounded-lossy; baselines (zstd, LZ4, zlib, Gorilla-proxy) are lossless"
   },
   "family_position": "Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer.",
-  "license": "LicenseRef-Zer0pa-SAL-6.2",
+  "license": "LicenseRef-Zer0pa-SAL-7.0",
   "license_surface": "Free below $100M annual revenue",
-  "contact": "hello@zer0pa.com"
+  "contact": "architects@zer0pa.ai"
 }
