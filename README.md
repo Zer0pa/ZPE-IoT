@@ -112,7 +112,7 @@ Comparators above use default or moderate compression levels; at max compression
 | Field | Value |
 |-------|-------|
 | Verdict | STAGED |
-| Commit SHA | b345798d3c7f |
+| Commit SHA | f4487ab86018 |
 | Confidence | 94.4% |
 | Source | validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md |
 
@@ -162,7 +162,7 @@ Comparators above use default or moderate compression levels; at max compression
 
 | Area | Purpose |
 |---|---|
-| `README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `GOVERNANCE.md`, `RELEASING.md`, `ROADMAP.md`, `CITATION.cff`, `LICENSE` | Root truth, governance, release, and citation surface |
+| `README.md`, `CHANGELOG.md`, `SECURITY.md`, `CITATION.cff`, `REPRODUCIBILITY.md`, `.zenodo.json`, `pyproject.toml`, `LICENSE` | Root truth, citation, reproducibility, and package metadata surface |
 | `python/` | Installable Python distribution, CLI, and package metadata |
 | `python/native/` | Repo-local PyO3 native build surface used for bundled wheels |
 | `core/` | Canonical Rust codec kernel and test surface |
@@ -170,7 +170,6 @@ Comparators above use default or moderate compression levels; at max compression
 | `docs/family/` | IMC contract-alignment artifacts; documentary only, not runtime-coupled |
 | `proofs/` | Current verdict, proof routing, receipts, runbooks, and artifacts |
 | `validation/` | Datasets, benchmarks, destructive tests, and generated result JSON |
-| `project_docs/`, `release/RC_*` | Operator lineage and historical release packets, not the front-door authority surface |
 
 ## Quick Start
 
@@ -205,12 +204,11 @@ python validation/destruct_tests/run_all_dts.py --strict-gates
 | Benchmark authority and boundaries | `proofs/artifacts/public_benchmarks/INDEX.json` |
 | Audit replay path | `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` |
 | Public audit boundary | `docs/LEGAL_BOUNDARIES.md` |
-| Contribution rules | `CONTRIBUTING.md` |
-| Support routing | `docs/INTEGRATION_GUIDE.md`, then `docs/LEGAL_BOUNDARIES.md`, then `SUPPORT.md` for repo-level policy |
+| Support routing | `docs/INTEGRATION_GUIDE.md`, then `docs/LEGAL_BOUNDARIES.md` |
 | Security reporting | `SECURITY.md` |
-| Legal/release boundary | `docs/LEGAL_BOUNDARIES.md`, `RELEASING.md` |
+| Legal/release boundary | `docs/LEGAL_BOUNDARIES.md`, `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` |
 
-Treat `project_docs/` and older `release/RC_*` bundles as lineage. Current repo truth lives in the cited March 21 proof and validation artifacts above.
+Current repo truth lives in the cited March 21 proof and validation artifacts above.
 
 <p>
   <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">

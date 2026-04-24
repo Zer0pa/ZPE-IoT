@@ -43,8 +43,7 @@ Repository URL: `https://github.com/Zer0pa/ZPE-IoT`
 ## Artifacts
 - `docs/family/IOT_COMPATIBILITY_VECTOR.json`
 - `docs/family/IOT_RELEASE_NOTE_FOR_COORDINATION.md`
-- `validation/results/iot_wave1_phase5_alignment.txt`
-- `proofs/FINAL_STATUS.md`
+- `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md`
 - `validation/results/release_preflight_report_20260321T205127.json`
 
 <p>
