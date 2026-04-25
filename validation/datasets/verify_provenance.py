@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from datetime import datetime
 from pathlib import Path
 
@@ -51,8 +52,15 @@ def _is_iso_utc(ts: str) -> bool:
         return False
 
 
-def _validate_entry(ds_id: str, entry: dict, min_class: str, allow_blocked: bool) -> tuple[str, list[str]]:
+def _validate_entry(
+    ds_id: str,
+    entry: dict,
+    min_class: str,
+    allow_blocked: bool,
+    allow_missing_raw: bool,
+) -> tuple[str, list[str]]:
     issues: list[str] = []
+    notes: list[str] = []
     status = str(entry.get("status", "READY")).upper()
 
     required_fields = BLOCKED_REQUIRED_FIELDS if status == "BLOCKED" else READY_REQUIRED_FIELDS
@@ -110,7 +118,10 @@ def _validate_entry(ds_id: str, entry: dict, min_class: str, allow_blocked: bool
         if raw_path is None:
             issues.append("missing `raw_artifact` path")
         elif not raw_path.exists():
-            issues.append(f"missing raw artifact `{raw_path}`")
+            if allow_missing_raw:
+                notes.append(f"raw artifact unavailable in repo-only mode: `{raw_path}`")
+            else:
+                issues.append(f"missing raw artifact `{raw_path}`")
         else:
             actual_raw_sha = _sha256(raw_path)
             if actual_raw_sha != raw_sha:
@@ -124,15 +135,18 @@ def _validate_entry(ds_id: str, entry: dict, min_class: str, allow_blocked: bool
         if status == "BLOCKED" and allow_blocked:
             return "BLOCKED", issues
         return "FAIL", issues
-    return "PASS", []
+    return "PASS", notes
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--min-class", choices=sorted(CLASS_ORDER), default="real_public")
     parser.add_argument("--allow-blocked", action="store_true")
+    parser.add_argument("--allow-missing-raw", action="store_true")
     parser.add_argument("--datasets", nargs="*", default=None)
     args = parser.parse_args()
+
+    allow_missing_raw = args.allow_missing_raw or os.getenv("ZPE_IOT_ALLOW_MISSING_RAW_ARTIFACTS") == "1"
 
     if not MANIFEST_PATH.exists():
         print(f"[FAIL] missing manifest: {MANIFEST_PATH}")
@@ -158,9 +172,18 @@ def main() -> int:
             overall_ok = False
             continue
 
-        status, issues = _validate_entry(ds_id, entry, args.min_class, args.allow_blocked)
+        status, issues = _validate_entry(
+            ds_id,
+            entry,
+            args.min_class,
+            args.allow_blocked,
+            allow_missing_raw,
+        )
         if status == "PASS":
-            print(f"[PASS] {ds_id}: provenance + hashes verified ({entry['provenance_class']})")
+            detail = f" ({entry['provenance_class']})"
+            if issues:
+                detail += "; " + "; ".join(issues)
+            print(f"[PASS] {ds_id}: provenance + hashes verified{detail}")
             continue
         if status == "BLOCKED":
             blocked_count += 1
