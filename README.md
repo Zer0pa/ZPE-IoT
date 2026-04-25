@@ -60,8 +60,8 @@ All comparisons below are drawn from committed E1 receipts run on the same 10 re
 |---|---|---|---|
 | zstd | 10 / 10 | 6.83x | 2.87x |
 | lz4 | 10 / 10 | 6.83x | 1.89x |
-| zlib | 10 / 10 | 6.83x | 3.09x |
-| gorilla | 10 / 10 | 6.83x | 2.43x |
+| zlib | 10 / 10 | 6.83x | 3.00x |
+| gorilla | 10 / 10 | 6.83x | 2.46x |
 
 **Structural highlight — high-entropy accelerometer (DS-04, UCI HAR body_acc_x):**
 
