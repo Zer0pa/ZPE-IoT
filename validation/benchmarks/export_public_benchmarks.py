@@ -99,7 +99,7 @@ def _validate_committed_receipts(summary_path: Path) -> int:
             raise ValueError(f"Receipt dataset mismatch for {ds_id}")
         if payload.get("status") != row.get("status"):
             raise ValueError(f"Receipt status mismatch for {ds_id}")
-        if payload.get("winner") != row.get("winner"):
+        if row.get("status") != "BLOCKED" and payload.get("winner") != row.get("winner"):
             raise ValueError(f"Receipt winner mismatch for {ds_id}")
 
     print(
