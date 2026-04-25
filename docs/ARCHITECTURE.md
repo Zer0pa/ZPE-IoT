@@ -14,7 +14,7 @@ Canonical anchors:
 
 - Repository: `https://github.com/Zer0pa/ZPE-IoT`
 - License: `LicenseRef-Zer0pa-SAL-7.0`
-- Current proof router: `../proofs/PROOF_INDEX.md`
+- Current proof router: `../validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md`
 
 <p>
   <img src="../.github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
@@ -62,7 +62,6 @@ Canonical anchors:
 | Strict destructive testing | `../validation/results/dt_results_20260321T225304.json` | Governing validation surface |
 | Benchmark authority | `../validation/results/bench_summary_E1_real_public_20260321T225305.json` | Promoted performance claim surface |
 | Native install proof | `../validation/results/fresh_env_smoke_20260321T205515/smoke.log` | Cold-install evidence for the local arm64 wheel |
-| Release bundle proof | `../release/RC_20260321T225526/bundle_manifest.json` | Current regenerated release packet |
 
 <p>
   <img src="../.github/assets/readme/section-bars/no-change-guarantees.svg" alt="NO CHANGE GUARANTEES" width="100%">

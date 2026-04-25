@@ -3,6 +3,7 @@ name = "zpe_iot_native"
 version = "0.1.0"
 edition = "2021"
 publish = false
+authors = ["Zer0pa (Pty) Ltd <architects@zer0pa.ai>"]
 license = "LicenseRef-Zer0pa-SAL-7.0"
 description = "Native Rust extension module for the ZPE-IoT runtime"
 homepage = "https://github.com/Zer0pa/ZPE-IoT"

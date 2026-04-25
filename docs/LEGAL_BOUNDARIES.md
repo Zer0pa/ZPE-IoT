@@ -33,7 +33,7 @@ Public publication and outreach remain owner-controlled.
 | Need | Go to |
 |---|---|
 | Legal source of truth | `../LICENSE` |
-| Release decision boundary | `../RELEASING.md` |
+| Release decision boundary | `../validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` |
 | Family compatibility pin | `family/IOT_COMPATIBILITY_VECTOR.json` |
 | Family alignment note | `family/IOT_IMC_ALIGNMENT_REPORT.md` |
 

@@ -1,0 +1,26 @@
+{
+  "title": "ZPE-IoT: Zero-Point Encoding IoT Sensor Codec",
+  "description": "ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams, built for edge telemetry teams that need bounded-lossy compression with committed proof artifacts. The repository packages a Rust core with Python bindings and validation surfaces for reproducible replay.",
+  "creators": [
+    {
+      "name": "Zer0pa (Pty) Ltd"
+    }
+  ],
+  "keywords": [
+    "iot",
+    "sensor-compression",
+    "telemetry",
+    "edge-codec",
+    "deterministic-replay"
+  ],
+  "license": "LicenseRef-Zer0pa-SAL-7.0",
+  "upload_type": "software",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Zer0pa/ZPE-IoT",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ]
+}
