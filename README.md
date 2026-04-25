@@ -5,9 +5,11 @@
 
 # ZPE-IoT
 
+**Deterministic bounded-lossy sensor compression — 6.83x mean vs zstd 2.87x across 10 real public datasets (E1 benchmark, 10/10 wins). Bounded-lossy vs lossless — see disclosure below.**
+
 [Architecture](docs/ARCHITECTURE.md) | [API](docs/API.md) | [Benchmarks](proofs/artifacts/public_benchmarks/INDEX.json) | [Package](python/README.md) | [Legal](docs/LEGAL_BOUNDARIES.md)
 
-SAL v7.0 - free below $100M annual revenue. See [LICENSE](LICENSE).
+SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ---
 
@@ -15,7 +17,7 @@ SAL v7.0 - free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ZPE-IoT is a deterministic sensor compression SDK for constrained telemetry streams. The repo ships a Rust core with PyO3 bindings, an installable Python package, committed benchmark receipts, and the validation scripts used to keep that surface honest.
 
-This README is intentionally narrower than the March audit packet. Claims stay only where this repo currently has both committed proof artifacts and a CI check that exercises the relevant surface.
+This README is intentionally narrower than the March audit packet. Claims stay only where this repo has both committed proof artifacts and a CI check that exercises the relevant surface.
 
 ## CI-Backed Surface
 
@@ -31,7 +33,9 @@ Source workflow: [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
 
 ## Public Benchmark Snapshot
 
-The committed E1 public benchmark surface reports a 10/11 win split for ZPE-IoT across DS-01..DS-10 plus DS-12, with DS-12 remaining an explicit competitor win.
+**Framing disclosure:** ZPE-IoT is a bounded-lossy codec. All E1 comparators (zstd, lz4, zlib, gorilla) are lossless — compression-ratio comparisons are informative but not apples-to-apples. DS-12 is the explicit case where the comparator surface wins.
+
+The committed E1 public benchmark surface reports a 10/11 win split for ZPE-IoT across DS-01..DS-10 plus DS-12.
 
 | Slice | Current committed receipt |
 |------|----------------------------|
@@ -47,8 +51,6 @@ Sources:
 - [`proofs/artifacts/public_benchmarks/INDEX.json`](proofs/artifacts/public_benchmarks/INDEX.json)
 - [`proofs/artifacts/public_benchmarks/DS-05.json`](proofs/artifacts/public_benchmarks/DS-05.json)
 - [`proofs/artifacts/public_benchmarks/DS-12.json`](proofs/artifacts/public_benchmarks/DS-12.json)
-
-**Benchmark framing disclosure:** ZPE-IoT is a bounded-lossy codec. The published comparators in the E1 surface are lossless, so direct compression-ratio comparisons are informative but not apples-to-apples. DS-12 remains the explicit case where the comparator surface wins.
 
 ## Comp Benchmarks vs Prior Art
 
@@ -166,6 +168,6 @@ python validation/benchmarks/export_public_benchmarks.py
 | Integration guidance | `docs/INTEGRATION_GUIDE.md` |
 | Security reporting | `SECURITY.md` |
 
-## Ecosystem
+## Portfolio Position
 
-This package is part of the [Zer0pa ZPE](https://github.com/Zer0pa) codec portfolio.
+ZPE-IoT is the constrained-telemetry lane in the [Zer0pa ZPE](https://github.com/Zer0pa) codec portfolio — one of 17 independent domain-specific encoding products, each with its own proof surface, sharing a license but not a shared platform.
