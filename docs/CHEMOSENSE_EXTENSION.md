@@ -24,7 +24,7 @@ The chemosense stack adds deterministic smell+taste+touch+mental encoding and fu
 3. Taste (`0x0400` type bit)
 4. Touch (`0x0800` type bit)
 
-All payloads remain 20-bit word compatible. Mental uses mode2/mode3 wire lanes with contract-level contamination guards.
+All payloads within the ZPE-IoT chemosense extension share a 20-bit packing contract scoped to this lane only — this is not a portfolio-wide transport format. Mental uses mode2/mode3 wire lanes with contract-level contamination guards.
 
 ## Stable Runtime Entrypoints
 
