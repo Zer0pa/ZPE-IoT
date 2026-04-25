@@ -10,6 +10,12 @@ This file records repo-surface changes that materially affect current install, r
   <img src=".github/assets/readme/section-bars/release-notes.svg" alt="RELEASE NOTES" width="100%">
 </p>
 
+## 0.1.1 - 2026-04-25
+
+- scrubbed '8-primitive' framing from pyproject description; replaced with neutral deterministic-codec language
+- aligned pyproject description to SAL v7.0 ethos surface
+- no functional code changes
+
 ## 2026-03-21
 
 - aligned the technical release surface around the nested Python distribution and bundled native wheel path

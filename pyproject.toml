@@ -1,7 +1,7 @@
 [project]
 name = "zpe-iot"
-version = "0.1.0"
-description = "8-primitive geometric compression SDK for IoT sensor data"
+version = "0.1.1"
+description = "Deterministic bounded-lossy compression SDK for constrained telemetry streams; Rust core with Python bindings"
 authors = [
     { name = "Zer0pa (Pty) Ltd", email = "architects@zer0pa.ai" },
 ]
