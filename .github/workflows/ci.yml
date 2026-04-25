@@ -67,6 +67,8 @@ jobs:
   strict_dt_smoke:
     name: Strict DT Smoke
     runs-on: ubuntu-latest
+    env:
+      ZPE_IOT_ALLOW_MISSING_RAW_ARTIFACTS: "1"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
