@@ -29,11 +29,9 @@ PHASE8_PROOF = ROOT / "proofs" / "artifacts" / "PHASE8_DATASET_EXPANSION_2026032
 PHASE9_PROOF = ROOT / "proofs" / "artifacts" / "PHASE9_BENCHMARK_OBSERVABILITY_20260321.md"
 
 
-def _latest(prefix: str) -> Path:
+def _latest(prefix: str) -> Path | None:
     files = sorted(RESULTS_DIR.glob(f"{prefix}_*.json"))
-    if not files:
-        raise FileNotFoundError(f"No benchmark artifact found for {prefix}")
-    return files[-1]
+    return files[-1] if files else None
 
 
 def _load(path: Path) -> dict:
@@ -69,6 +67,48 @@ def _parity_summary(ds_id: str, max_windows: int = 8) -> dict:
     }
 
 
+def _validate_committed_receipts(summary_path: Path) -> int:
+    index_path = OUTPUT_DIR / "INDEX.json"
+    if not index_path.exists():
+        raise FileNotFoundError(f"Committed benchmark index missing: {index_path}")
+
+    summary = _load(summary_path)
+    index = _load(index_path)
+
+    if summary.get("evidence_class") != "E1":
+        raise ValueError("Expected E1 benchmark summary")
+    if index.get("evidence_class") != summary.get("evidence_class"):
+        raise ValueError("Committed benchmark index evidence class drifted from summary")
+    if int(summary.get("wins", -1)) != 10 or int(summary.get("total", -1)) != 11:
+        raise ValueError("Committed benchmark summary no longer matches 10/11 E1 surface")
+
+    blocked = {row["dataset"]: row for row in index.get("blocked_datasets", [])}
+    if "DS-11" not in blocked or blocked["DS-11"].get("status") != "BLOCKED":
+        raise ValueError("DS-11 blocked disclosure missing from committed benchmark index")
+
+    receipts = {row["dataset"]: row for row in index.get("datasets", [])}
+    if "DS-12" not in receipts or receipts["DS-12"].get("winner") != "competitor":
+        raise ValueError("DS-12 competitor disclosure missing from committed benchmark receipts")
+
+    for ds_id, row in receipts.items():
+        artifact_path = ROOT / row["artifact"]
+        if not artifact_path.exists():
+            raise FileNotFoundError(f"Committed benchmark receipt missing: {artifact_path}")
+        payload = _load(artifact_path)
+        if payload.get("dataset") != ds_id:
+            raise ValueError(f"Receipt dataset mismatch for {ds_id}")
+        if payload.get("status") != row.get("status"):
+            raise ValueError(f"Receipt status mismatch for {ds_id}")
+        if row.get("status") != "BLOCKED" and payload.get("winner") != row.get("winner"):
+            raise ValueError(f"Receipt winner mismatch for {ds_id}")
+
+    print(
+        "Validated committed public benchmark receipts "
+        f"({len(receipts)} receipts, wins={summary['wins']}/{summary['total']}, DS-12 competitor disclosure present)"
+    )
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -81,13 +121,20 @@ def main() -> int:
 
     manifest = _load(MANIFEST)
     summary_path = _latest("bench_summary_E1_real_public")
+    if summary_path is None:
+        raise FileNotFoundError("No benchmark artifact found for bench_summary_E1_real_public")
+
     tracking_path = _latest("benchmark_tracking_context")
-    summary = _load(summary_path)
-    tracking_context = _load(tracking_path)
     zstd_path = _latest("bench_vs_zstd")
     lz4_path = _latest("bench_vs_lz4")
     zlib_path = _latest("bench_vs_zlib")
     gorilla_path = _latest("bench_vs_gorilla")
+
+    if None in {tracking_path, zstd_path, lz4_path, zlib_path, gorilla_path}:
+        return _validate_committed_receipts(summary_path)
+
+    summary = _load(summary_path)
+    tracking_context = _load(tracking_path)
 
     zstd_rows = {row["dataset"]: row for row in _load(zstd_path)["results"]}
     lz4_rows = {row["dataset"]: row for row in _load(lz4_path)["results"]}

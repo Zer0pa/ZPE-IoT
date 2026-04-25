@@ -12,8 +12,8 @@ fn encode_empty_input_rejects() {
 #[test]
 fn decode_into_truncates_to_output_capacity() {
     let mut x = [0.0_f64; 256];
-    for i in 0..x.len() {
-        x[i] = ((i as f64) * 0.04).sin();
+    for (i, value) in x.iter_mut().enumerate() {
+        *value = ((i as f64) * 0.04).sin();
     }
 
     let cfg = Preset::Vibration.config();
@@ -28,8 +28,8 @@ fn decode_into_truncates_to_output_capacity() {
 #[test]
 fn fast_mode_roundtrip_is_finite() {
     let mut x = [0.0_f64; 512];
-    for i in 0..x.len() {
-        x[i] = ((i as f64) * 0.01).sin() + 0.25 * ((i as f64) * 0.07).cos();
+    for (i, value) in x.iter_mut().enumerate() {
+        *value = ((i as f64) * 0.01).sin() + 0.25 * ((i as f64) * 0.07).cos();
     }
 
     let mut cfg = Preset::Generic.config();

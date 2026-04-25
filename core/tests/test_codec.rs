@@ -8,11 +8,11 @@ fn nrmse(a: &[f64], b: &[f64]) -> f64 {
     let mut mse = 0.0;
     let mut min_v = f64::INFINITY;
     let mut max_v = f64::NEG_INFINITY;
-    for i in 0..n {
-        let d = a[i] - b[i];
+    for (&lhs, &rhs) in a.iter().zip(b.iter()).take(n) {
+        let d = lhs - rhs;
         mse += d * d;
-        min_v = min_v.min(a[i]);
-        max_v = max_v.max(a[i]);
+        min_v = min_v.min(lhs);
+        max_v = max_v.max(lhs);
     }
     mse /= n as f64;
     let range = (max_v - min_v).max(1e-9);
@@ -22,8 +22,8 @@ fn nrmse(a: &[f64], b: &[f64]) -> f64 {
 #[test]
 fn deterministic_encoding() {
     let mut x = [0.0f64; 256];
-    for i in 0..256 {
-        x[i] = ((i as f64) * 0.03).sin() + 0.1 * ((i as f64) * 0.33).cos();
+    for (i, value) in x.iter_mut().enumerate() {
+        *value = ((i as f64) * 0.03).sin() + 0.1 * ((i as f64) * 0.33).cos();
     }
 
     let cfg = Preset::Vibration.config();
@@ -35,8 +35,8 @@ fn deterministic_encoding() {
 #[test]
 fn balanced_roundtrip_quality() {
     let mut x = [0.0f64; 512];
-    for i in 0..512 {
-        x[i] = ((i as f64) * 0.02).sin() + 0.2 * ((i as f64) * 0.08).sin();
+    for (i, value) in x.iter_mut().enumerate() {
+        *value = ((i as f64) * 0.02).sin() + 0.2 * ((i as f64) * 0.08).sin();
     }
     let mut cfg = Config { ..Preset::Accelerometer.config() };
     cfg.mode = Mode::Balanced;

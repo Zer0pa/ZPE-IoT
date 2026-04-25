@@ -5,179 +5,60 @@
 
 # ZPE-IoT
 
-[Architecture](docs/ARCHITECTURE.md) | [Readiness](validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md) | [API](docs/API.md) | [Benchmarks](proofs/artifacts/public_benchmarks/INDEX.json) | [Legal](docs/LEGAL_BOUNDARIES.md) | [Package](python/README.md)
+[Architecture](docs/ARCHITECTURE.md) | [API](docs/API.md) | [Benchmarks](proofs/artifacts/public_benchmarks/INDEX.json) | [Package](python/README.md) | [Legal](docs/LEGAL_BOUNDARIES.md)
 
-SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
+SAL v7.0 - free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ---
 
 ## What This Is
 
-Decode-deterministic sensor codec with 9 domain presets. 6.6× bounded-lossy compression. 27/27 destructive tests passed. Edge-deployable. Sensor deltas are encoded using an 8-direction amplitude gear codebook with log-magnitude quantisation and RLE.
+ZPE-IoT is a deterministic sensor compression SDK for constrained telemetry streams. The repo ships a Rust core with PyO3 bindings, an installable Python package, committed benchmark receipts, and the validation scripts used to keep that surface honest.
 
-ZPE-IoT is a deterministic sensor compression SDK for constrained IoT streams — built for industrial IoT platform teams and edge telemetry vendors where transmission bandwidth is expensive, storage budgets are fixed, and lossy black-box codecs are unacceptable. Rust core, Python bindings via PyO3. Every metric traces to committed artifacts under `validation/` and `proofs/`.
+This README is intentionally narrower than the March audit packet. Claims stay only where this repo currently has both committed proof artifacts and a CI check that exercises the relevant surface.
 
-The repo is in active beta. Install path and proof artifacts are real. Published on PyPI as `zpe-iot`. Local arm64 macOS wheel install is verified; multi-platform wheel closure is not claimed here.
+## CI-Backed Surface
 
-**Not claimed:** universal compressor dominance, lossless reconstruction, runtime coupling to ZPE-IMC, or protocol/runtime closure beyond the published package surface.
+The default CI workflow currently checks:
 
-<p>
-  <img src=".github/assets/readme/section-bars/what-this-is.svg" alt="WHAT THIS IS" width="100%">
-</p>
+- Rust tests plus `cargo clippy -D warnings`
+- editable install, wheel build, and Python test matrix on Ubuntu and macOS for CPython 3.10-3.12
+- provenance smoke over the committed dataset manifest and transformed artifacts, plus DT-18 strict-gate enforcement
+- public benchmark receipt sanity against the committed E1 benchmark summary and receipt index
+- security scan plus release-manifest generation scripts
 
-| Field | Value |
-|-------|-------|
-| Architecture | SENSOR_STREAM |
-| Encoding | DT_CODEC |
+Source workflow: [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
 
-## Key Metrics
+## Public Benchmark Snapshot
 
-| Metric | Value | Baseline |
-|--------|-------|----------|
-| DT_PASS | 27/27 | strict determinism |
-| COMPRESSION | 6.65× (bounded-lossy) | DS-01..DS-10 mean vs zstd 2.87× (lossless) |
-| E1_WINS | 10/11 | 11-dataset benchmark (bounded-lossy vs lossless comparators) |
-| PREFLIGHT | 94.4% | managed preflight (17/18) |
+The committed E1 public benchmark surface reports a 10/11 win split for ZPE-IoT across DS-01..DS-10 plus DS-12, with DS-12 remaining an explicit competitor win.
 
-> Source: [`validation/results/bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json), [`validation/results/release_preflight_report_20260321T205127.json`](validation/results/release_preflight_report_20260321T205127.json), [`validation/results/dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json)
+| Slice | Current committed receipt |
+|------|----------------------------|
+| E1 wins | 10 / 11 |
+| DS-01..DS-10 mean compression | 6.65x |
+| DS-01..DS-10 mean zstd compression | 2.87x |
+| DS-12 | competitor win |
+| DS-05 | ZPE-IoT win with a narrow margin over zlib |
 
-## Competitive Benchmarks
+Sources:
 
-> Competitive benchmark evidence: [`proofs/artifacts/public_benchmarks/INDEX.json`](proofs/artifacts/public_benchmarks/INDEX.json)
+- [`validation/results/bench_summary_E1_real_public_20260321T225305.json`](validation/results/bench_summary_E1_real_public_20260321T225305.json)
+- [`proofs/artifacts/public_benchmarks/INDEX.json`](proofs/artifacts/public_benchmarks/INDEX.json)
+- [`proofs/artifacts/public_benchmarks/DS-05.json`](proofs/artifacts/public_benchmarks/DS-05.json)
+- [`proofs/artifacts/public_benchmarks/DS-12.json`](proofs/artifacts/public_benchmarks/DS-12.json)
 
-> **Framing disclosure:** ZPE-IoT is a bounded-lossy codec (NRMSE ≤ 0.004, bit_parity=false). All comparators below (zstd, zlib, LZ4, Gorilla-proxy) are lossless. Direct ratio comparison is informative but not apples-to-apples — ZPE-IoT achieves higher compression in part because it tolerates bounded reconstruction error that lossless codecs do not permit. Margins below ~1.5× (e.g. DS-05 NOAA: ZPE 7.29× vs zlib 7.02×) may fall within the lossy advantage alone.
-
-| Tool | Compression Ratio | Notes |
-|------|-------------------|-------|
-| **ZPE-IoT** | **6.65× mean (DS-01..DS-10)** | Wins 10/11 (bounded-lossy vs lossless); DS-12 outlier: 120.47× |
-| zstd (l3) | 2.87× mean (DS-01..DS-10) | Lossless; DS-12: 5957.82× — zstd wins the outlier |
-| LZ4 | 1.00–2.91× (DS-01..DS-10) | Lossless; DS-12: 234.06× |
-| zlib (l6) | 1.05–7.02× (DS-01..DS-10) | Lossless; DS-12: 879.68× |
-| Gorilla-proxy (XOR+zlib) | 1.04–6.22× (DS-01..DS-10) | Lossless; DS-12: 814.11× |
-| Brotli (q11) | 9.34× (DS-05) | Lossless; max-compression baseline |
-
-Comparators above use default or moderate compression levels; at max compression (brotli-11, zstd-22), lossless baselines can exceed ZPE-IoT on individual datasets.
-
-**DS-12 outlier disclosure:** DS-12 is a high-redundancy dataset where general-purpose compressors vastly outperform ZPE-IoT (e.g. zstd achieves 5957.82× vs ZPE's 120.47×). Including DS-12 inflates ZPE's mean to 17.16× but inflates competitors even more, making the all-datasets mean misleading for both sides. The headline 6.65× (DS-01..DS-10) is the honest comparison surface. ZPE-IoT does not claim universal compressor dominance.
-
-**Gorilla-proxy disclosure:** The "Gorilla-proxy" comparator is a simplified ~25-line XOR-delta + zlib implementation inspired by Facebook Gorilla's XOR encoding approach. It is **not** Facebook's production Gorilla time-series codec. See `validation/benchmarks/bench_vs_gorilla.py` for the full implementation.
-
-**Baseline methodology:** All compression ratios use float64 (8 bytes/sample) as the raw-size denominator. Against a float32 (4 bytes/sample) baseline, ratios would be approximately half the reported values. ZPE-IoT is a bounded-lossy codec; general-purpose baselines (zstd, LZ4, zlib) are lossless.
-
-## What We Prove
-
-> Auditable guarantees backed by committed proof artifacts. Start at `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md`.
-
-- 6.65× mean compression across DS-01..DS-10 (10 non-outlier sensor datasets); DS-12 excluded from headline — see Competitive Benchmarks
-- 27/27 destructive tests passed
-- Decode-deterministic replay on tested corpus
-- Managed preflight 17 PASS / 0 FAIL / 1 DEFERRED
-- Fresh install smoke test PASS on arm64 macOS
+**Benchmark framing disclosure:** ZPE-IoT is a bounded-lossy codec. The published comparators in the E1 surface are lossless, so direct compression-ratio comparisons are informative but not apples-to-apples. DS-12 remains the explicit case where the comparator surface wins.
 
 ## What We Don't Claim
 
-- No claim of lossless reconstruction (bounded-lossy codec)
-- Broad deployment/runtime closure beyond the published package surface
-- No claim of EnOcean or proprietary protocol support
-- No claim of MQTT/LoRaWAN production bridge
-- No claim of direct Gorilla parity — our Gorilla-proxy comparator is a simplified XOR+zlib implementation, not Facebook's production Gorilla codec
-- No claim of unlimited stream length — codec has a 65,536-sample hard cap (2-byte header); approximately 16 minutes at 60 Hz
-- No claim of NaN/Inf tolerance — non-finite floating-point inputs cause codec failure
-- No claim of signal-level roundtrip idempotency — as a bounded-lossy codec, encode(decode(encode(x))) ≠ encode(x) is expected; determinism applies to the decode path (same packet → same output)
-
-<p>
-  <img src=".github/assets/readme/section-bars/open-risks-non-blocking.svg" alt="OPEN RISKS (NON-BLOCKING)" width="100%">
-</p>
-
-### Open Risks (Non-Blocking)
-
-| Risk lens | Current state |
-|---|---|
-| Publication | Published on PyPI as `zpe-iot` (0.1.0). Native wheels for Linux, macOS (Apple Silicon), and Windows. |
-| Benchmark boundary | The active E1 surface is `DS-01..DS-10` plus `DS-12`; `DS-11` remains explicitly `BLOCKED`. |
-| Comparator honesty | ZPE-IoT does not win every slice; `DS-12` is a competitor win on the current E1 real-public surface. |
-| Native scope | Local arm64 macOS wheel install is verified; the multi-platform publish workflow exists but has not been executed as a public release event. |
-| Fidelity boundary | ZPE-IoT is a bounded-lossy codec. It is not a fit for strict lossless reconstruction requirements. |
-| Gorilla-proxy comparator | The Gorilla-proxy benchmark comparator is a simplified XOR+zlib proxy, not Facebook's production Gorilla codec. |
-| Stream length cap | Codec enforces a 65,536-sample hard cap (2-byte header). At 60 Hz this is ~16 minutes of data. |
-| Non-finite inputs | NaN and Inf values are not handled; they cause codec failure. |
-| CR denominator format | Compression ratios use float64 raw size as denominator. Against float32 baselines, ratios are approximately half. |
-
-<p>
-  <img src=".github/assets/readme/section-bars/quickstart-and-authority-point.svg" alt="QUICKSTART AND AUTHORITY POINT" width="100%">
-</p>
-
-## Commercial Readiness
-
-| Field | Value |
-|-------|-------|
-| Verdict | STAGED |
-| Commit SHA | f4487ab86018 |
-| Confidence | 94.4% |
-| Source | validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md |
-
-## Tests and Verification
-
-| Code | Check | Verdict |
-|------|-------|---------|
-| V_01 | Technical alignment | PASS |
-| V_02 | Managed preflight | PASS |
-| V_03 | Strict destructive tests | PASS |
-| V_04 | E1 real-public benchmark | PASS |
-| V_05 | Native wheel cold install | PASS |
-| V_06 | Public package publication | PASS |
-
-`Managed preflight` is the build/install/release gate, `strict DT` is the destructive-test gate, and `E1` is the promoted real-public benchmark tier.
-
-## Proof Anchors
-
-| Path | State |
-|------|-------|
-| validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md | VERIFIED |
-| proofs/artifacts/public_benchmarks/INDEX.json | VERIFIED |
-| validation/results/release_preflight_report_20260321T205127.json | VERIFIED |
-| validation/results/dt_results_20260321T225304.json | VERIFIED |
-| validation/results/bench_summary_E1_real_public_20260321T225305.json | VERIFIED |
-| validation/results/fresh_env_smoke_20260321T205515/smoke.log | VERIFIED |
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3-2.gif" alt="ZPE-IoT Secondary Masthead" width="100%">
-</p>
-
-<p>
-  <img src=".github/assets/readme/section-bars/repo-shape.svg" alt="REPO SHAPE" width="100%">
-</p>
-
-## Repo Shape
-
-| Field | Value |
-|-------|-------|
-| Proof Anchors | 6 |
-| Modality Lanes | 9 |
-| Authority Source | validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md |
-
-`Modality Lanes` counts the nine preset lanes exposed by `python/zpe_iot/presets.py`.
-
-### Directory Map
-
-| Area | Purpose |
-|---|---|
-| `README.md`, `CHANGELOG.md`, `SECURITY.md`, `CITATION.cff`, `REPRODUCIBILITY.md`, `.zenodo.json`, `pyproject.toml`, `LICENSE` | Root truth, citation, reproducibility, and package metadata surface |
-| `python/` | Installable Python distribution, CLI, and package metadata |
-| `python/native/` | Repo-local PyO3 native build surface used for bundled wheels |
-| `core/` | Canonical Rust codec kernel and test surface |
-| `docs/` | Reader-facing architecture, benchmark, support, and legal routing |
-| `docs/family/` | IMC contract-alignment artifacts; documentary only, not runtime-coupled |
-| `proofs/` | Current verdict, proof routing, receipts, runbooks, and artifacts |
-| `validation/` | Datasets, benchmarks, destructive tests, and generated result JSON |
+- no universal compressor dominance
+- no lossless reconstruction
+- no production protocol bridge beyond the published package surface
+- no CI-backed claim about live PyPI publication state
+- no CI-backed claim that the raw public dataset mirror is present on every clean checkout
 
 ## Quick Start
-
-**Install from PyPI (recommended):**
-
-```bash
-pip install zpe-iot
-```
 
 **Install from source:**
 
@@ -186,45 +67,37 @@ git clone https://github.com/Zer0pa/ZPE-IoT zpe-iot
 cd zpe-iot
 python -m pip install -e './python[dev]'
 cargo test --manifest-path core/Cargo.toml --release
-python validation/destruct_tests/run_all_dts.py --strict-gates
+python -m pytest python/tests -v
 ```
 
-<p>
-  <img src=".github/assets/readme/section-bars/contributing-security-support.svg" alt="CONTRIBUTING, SECURITY, SUPPORT" width="100%">
-</p>
+**Run the benchmark receipt sanity check:**
 
-### Docs and Support
+```bash
+python validation/benchmarks/export_public_benchmarks.py
+```
+
+## Repo Shape
+
+| Area | Purpose |
+|---|---|
+| `README.md`, `pyproject.toml`, `LICENSE` | repo front door and package metadata |
+| `core/` | canonical Rust codec kernel and Rust test surface |
+| `python/` | installable Python package and CLI |
+| `docs/` | architecture, API, integration, and legal docs |
+| `proofs/` | committed public benchmark receipts and related proof routing |
+| `validation/` | datasets, destructive tests, benchmark scripts, and result artifacts |
+
+## Docs and Support
 
 | Route | Target |
 |---|---|
-| Documentation index | `docs/ARCHITECTURE.md` |
-| Canonical doc registry | `README.md` |
-| Architecture and runtime map | `docs/ARCHITECTURE.md` |
-| API and CLI details | `docs/API.md`, `docs/CLI_CONTRACT.md` |
-| Benchmark authority and boundaries | `proofs/artifacts/public_benchmarks/INDEX.json` |
-| Audit replay path | `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` |
-| Public audit boundary | `docs/LEGAL_BOUNDARIES.md` |
-| Support routing | `docs/INTEGRATION_GUIDE.md`, then `docs/LEGAL_BOUNDARIES.md` |
+| Architecture | `docs/ARCHITECTURE.md` |
+| API and CLI | `docs/API.md`, `docs/CLI_CONTRACT.md` |
+| Benchmark authority | `proofs/artifacts/public_benchmarks/INDEX.json` |
+| Legal boundary | `docs/LEGAL_BOUNDARIES.md` |
+| Integration guidance | `docs/INTEGRATION_GUIDE.md` |
 | Security reporting | `SECURITY.md` |
-| Legal/release boundary | `docs/LEGAL_BOUNDARIES.md`, `validation/results/IOT_WAVE1_RELEASE_READINESS_REPORT.md` |
-
-Current repo truth lives in the cited March 21 proof and validation artifacts above.
-
-<p>
-  <img src=".github/assets/readme/zpe-masthead-option-3-3.gif" alt="ZPE-IoT Tertiary Masthead" width="100%">
-</p>
 
 ## Ecosystem
+
 This package is part of the [Zer0pa ZPE](https://github.com/Zer0pa) codec portfolio.
-See also: zpe-xr, zpe-robotics, zpe-geo, zpe-finance, zpe-ink, zpe-multimodal, zpe-neuro, zpe-mocap, zpe-prosody, zpe-bio.
-
-**Observability:** [Comet dashboard](https://www.comet.com/zer0pa/zpe-iot/view/new/panels) (public)
-
-## Who This Is For
-
-| | |
-|---|---|
-| **Ideal first buyer** | Industrial IoT platform team or edge telemetry vendor |
-| **Pain** | High-frequency sensor streams overwhelm bandwidth and storage at the edge — generic compression breaks fidelity guarantees and replay determinism |
-| **Deployment** | SDK with Rust core and Python bindings |
-| **Family position** | Product candidate in the Zer0pa deterministic encoding family. ZPE-IMC is the umbrella integration layer |
