@@ -36,10 +36,10 @@ The committed E1 public benchmark surface reports a 10/11 win split for ZPE-IoT 
 | Slice | Current committed receipt |
 |------|----------------------------|
 | E1 wins | 10 / 11 |
-| DS-01..DS-10 mean compression | 6.65x |
+| DS-01..DS-10 mean compression | 6.83x |
 | DS-01..DS-10 mean zstd compression | 2.87x |
 | DS-12 | competitor win |
-| DS-05 | ZPE-IoT win with a narrow margin over zlib |
+| DS-05 | ZPE-IoT win (7.29x) with narrow margin over zlib (7.02x) |
 
 Sources:
 
@@ -49,6 +49,74 @@ Sources:
 - [`proofs/artifacts/public_benchmarks/DS-12.json`](proofs/artifacts/public_benchmarks/DS-12.json)
 
 **Benchmark framing disclosure:** ZPE-IoT is a bounded-lossy codec. The published comparators in the E1 surface are lossless, so direct compression-ratio comparisons are informative but not apples-to-apples. DS-12 remains the explicit case where the comparator surface wins.
+
+## Comp Benchmarks vs Prior Art
+
+All comparisons below are drawn from committed E1 receipts run on the same 10 real public datasets (DS-01..DS-10). Baselines are lossless; ZPE-IoT is bounded-lossy. NRMSE is window-normalized. Latency is per-window encode at the native (Rust) layer.
+
+**Per-comparator win count (DS-01..DS-10, 10 datasets):**
+
+| Comparator | ZPE-IoT wins | ZPE-IoT mean CR | Comparator mean CR |
+|---|---|---|---|
+| zstd | 10 / 10 | 6.83x | 2.87x |
+| lz4 | 10 / 10 | 6.83x | 1.89x |
+| zlib | 10 / 10 | 6.83x | 3.00x |
+| gorilla | 10 / 10 | 6.83x | 2.46x |
+
+**Structural highlight — high-entropy accelerometer (DS-04, UCI HAR body_acc_x):**
+
+On high-entropy inertial signals, lossless codecs approach break-even or below, while ZPE-IoT's bounded-lossy design continues to compress:
+
+| Codec | Compression ratio |
+|---|---|
+| ZPE-IoT | **7.16x** |
+| zstd | 1.05x |
+| lz4 | ~1.00x (break-even) |
+| zlib | 1.05x |
+| gorilla | 1.04x |
+
+Source: [`proofs/artifacts/public_benchmarks/DS-04.json`](proofs/artifacts/public_benchmarks/DS-04.json) + CI job `benchmark_sanity` in [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
+
+**GPS trajectory (DS-07, UCI GPS Trajectories):**
+
+| Codec | Compression ratio |
+|---|---|
+| ZPE-IoT | **6.98x** |
+| zstd | 1.37x |
+| zlib | 1.37x |
+| gorilla | 1.22x |
+
+Source: [`proofs/artifacts/public_benchmarks/DS-07.json`](proofs/artifacts/public_benchmarks/DS-07.json)
+
+**Per-preset compression ratios (DT-12, committed CI result):**
+
+| Preset | Mean CR | Mean NRMSE (window-norm) |
+|---|---|---|
+| temperature | 8.03x | 0.0074 |
+| gps_track | 7.80x | 0.0191 |
+| pressure | 7.29x | 0.0041 |
+| accelerometer | 7.12x | 0.0397 |
+| flow | 8.03x | 0.0074 |
+| voltage | 6.60x | 0.0283 |
+| current | 6.60x | 0.0283 |
+| vibration | 6.40x | 0.0151 |
+| generic | 6.24x | 0.0020 |
+
+Source: [`validation/results/dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json) (DT-12) + CI job `strict_dt_smoke`
+
+## Latency and Throughput
+
+Committed DT-09 result (per-window encode/decode, 256-sample window):
+
+| Layer | Mean latency | p99 latency |
+|---|---|---|
+| Native (Rust) | 0.031 ms | 0.035 ms |
+| Python (PyO3) | 0.723 ms | 0.789 ms |
+| Threshold gate | mean < 0.500 ms | p99 < 2.000 ms |
+
+Committed DT-07 result: 10 million samples encoded in 0.30 s (latch-freedom check, no queue buildup).
+
+Sources: [`validation/results/dt_results_20260321T225304.json`](validation/results/dt_results_20260321T225304.json) (DT-07, DT-09) + CI job `strict_dt_smoke`
 
 ## What We Don't Claim
 
