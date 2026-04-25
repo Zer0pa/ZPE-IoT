@@ -5,7 +5,7 @@
 
 # ZPE-IoT
 
-**Deterministic bounded-lossy sensor compression — 6.83x mean vs zstd 2.87x across 10 real public datasets (E1 benchmark, 10/10 wins). Bounded-lossy vs lossless — see disclosure below.**
+**Deterministic bounded-lossy sensor compression — 6.83x mean vs zstd 2.87x across 10 real public datasets (E1 benchmark, 10/10 wins on DS-01..DS-10; DS-12 is a separate competitor win — see disclosure below). Bounded-lossy vs lossless.**
 
 [Architecture](docs/ARCHITECTURE.md) | [API](docs/API.md) | [Benchmarks](proofs/artifacts/public_benchmarks/INDEX.json) | [Package](python/README.md) | [Legal](docs/LEGAL_BOUNDARIES.md)
 
