@@ -171,3 +171,10 @@ python validation/benchmarks/export_public_benchmarks.py
 ## Portfolio Position
 
 ZPE-IoT is the constrained-telemetry lane in the [Zer0pa ZPE](https://github.com/Zer0pa) codec portfolio — one of 17 independent domain-specific encoding products, each with its own proof surface, sharing a license but not a shared platform.
+
+## Upcoming Workstreams
+
+This section captures the active lane priorities — what the next agent or contributor picks up, and what investors should expect. Cadence is continuous, not milestoned.
+
+- **Production protocol bridge** — Active Engineering. Pick one of MQTT, Kafka, or SparkplugB; ship a thin adapter (encoder reads from broker → emits zpe-iot frames → decoder publishes back). Single SDK→deployment unlock.
+- **DS-12 loss diagnosis** — Research-Deferred — Investigation Underway. Profile what about DS-12 made it lose; decide whether it is a bounded-corpus exclusion (announce) or a primitive gap (close).
