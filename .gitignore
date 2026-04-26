@@ -38,6 +38,11 @@ python/zpe_iot/_zpe_iot_native*.so
 # Datasets
 validation/datasets/raw/
 
+# HF-only artifact archives and continuity material
+/raw/
+/release/
+/restart_prompts/
+
 # GPD backups
 .gpd/*.bak
 
