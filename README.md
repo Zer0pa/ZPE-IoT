@@ -138,11 +138,11 @@ Source: [`validation/results/dt_results_20260321T225304.json`](validation/result
 
 | Field | Value |
 |-------|-------|
-| Verdict | PARTIAL |
-| Commit SHA | 5b7604c |
+| Package preflight | 17/18 checks PASS in the retained source report |
+| Deferred item | D01_DEFERRED_PUBLISH deferred by policy; requires explicit user ratification |
 | Source | `validation/results/release_preflight_report_20260321T205127.json` |
 
-17/18 preflight checks PASS. D01_DEFERRED_PUBLISH is deferred pending protocol-bridge milestone. Publish pipeline infrastructure is in place (OIDC trusted publishing, PEP 740 attestations); live PyPI publication is not CI-backed at this commit.
+This is a package-surface preflight, not a portfolio verdict. Publish pipeline infrastructure is in place (OIDC trusted publishing, PEP 740 attestations); live PyPI publication is not CI-backed by this README's proof surface.
 
 ---
 
