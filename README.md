@@ -9,7 +9,7 @@
 
 [Architecture](docs/ARCHITECTURE.md) | [API](docs/API.md) | [Benchmarks](proofs/artifacts/public_benchmarks/INDEX.json) | [Package](python/README.md) | [Legal](docs/LEGAL_BOUNDARIES.md)
 
-SAL v7.0 — free below $100M annual revenue. See [LICENSE](LICENSE).
+SAL v7.1 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ---
 
