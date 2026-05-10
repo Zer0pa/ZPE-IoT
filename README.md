@@ -15,6 +15,8 @@ SAL v7.1 — free below $100M annual revenue. See [LICENSE](LICENSE).
 
 ## What This Is
 
+IoT telemetry still lacks a compact deterministic transport layer that stays honest about where it loses.
+
 Deterministic sensor-stream encoding. Delta-threshold packet surface with retained release preflight evidence and deferred publish caveat. Install from PyPI: `pip install zpe-iot`
 
 ZPE-IoT is a **bounded-lossy** codec — not a lossless compressor. It finds minimal and fundamental representations of smooth-trajectory sensor streams. It is **not** a protocol bridge, **not** a universal sensor platform, and **not** a lossless reconstruction codec.
@@ -222,7 +224,9 @@ python validation/benchmarks/export_public_benchmarks.py
 
 ## Upcoming Workstreams
 
-This section captures the active lane priorities — what the next agent or contributor picks up, and what investors should expect. Cadence is continuous, not milestoned.
+**Future trajectory — not currently claimed.** The hinge is declared-ground telemetry, not generic IoT ambition. ZPE-IoT proves where the codec wins and preserves the DS-12 loss where it does not. If those boundaries hold, sensor transport can become more trustworthy precisely because the non-claim remains attached.
+
+Below are the active lane priorities — what the next agent or contributor picks up. Cadence is continuous, not milestoned.
 
 - **Production protocol bridge** — Active Engineering. Pick one of MQTT, Kafka, or SparkplugB; ship a thin adapter (encoder reads from broker → emits zpe-iot frames → decoder publishes back). Single SDK→deployment unlock.
 - **DS-12 loss diagnosis** — Research-Deferred — Investigation Underway. Profile what about DS-12 made it lose; decide whether it is a bounded-corpus exclusion (announce) or a primitive gap (close).
